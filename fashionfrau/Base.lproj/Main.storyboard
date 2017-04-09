@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courgette-Regular.ttf">
+            <string>Courgette-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="333" affinity="minY"/>
+                        </userGuides>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Fw-k4t" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMQ-LU-8vv">
+                                <rect key="frame" x="169" y="160" width="76" height="87"/>
+                                <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="69"/>
+                                <color key="textColor" red="0.98039215686274506" green="0.47058823529411764" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Frau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-k3-BZ1">
+                                <rect key="frame" x="98" y="267" width="218" height="48"/>
+                                <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="38"/>
+                                <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moda de todas,  para todas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-ci-Igi">
+                                <rect key="frame" x="135.66666666666669" y="321" width="143.00000000000006" height="53"/>
+                                <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
+                                <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-Xt-b3J" userLabel="Login">
+                                <rect key="frame" x="57" y="636" width="309" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="FtG-Bx-AdX"/>
+                                    <constraint firstAttribute="height" constant="45" id="QAP-RG-jPi"/>
+                                </constraints>
+                                <state key="normal" image="Instagram Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l3-pF-IME">
+                                <rect key="frame" x="107" y="696" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="8aS-Ly-PKH"/>
+                                    <constraint firstAttribute="width" constant="200" id="W8Z-dr-3Ht"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="13"/>
+                                <state key="normal" title="Política de Privacidade e Termos">
+                                    <color key="titleColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1YP-k3-BZ1" firstAttribute="top" secondItem="aMQ-LU-8vv" secondAttribute="bottom" constant="20" id="4ke-rE-b2G"/>
+                            <constraint firstItem="6Lq-ci-Igi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IQg-3a-eRD"/>
+                            <constraint firstItem="6Lq-ci-Igi" firstAttribute="top" secondItem="1YP-k3-BZ1" secondAttribute="bottom" constant="6" id="IWU-K6-34X"/>
+                            <constraint firstItem="aMQ-LU-8vv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M2s-KD-D08"/>
+                            <constraint firstItem="aMQ-LU-8vv" firstAttribute="top" secondItem="bve-Fw-k4t" secondAttribute="top" constant="160" id="M4c-bX-ogX"/>
+                            <constraint firstItem="bve-Fw-k4t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NE3-Cg-heW"/>
+                            <constraint firstItem="8l3-pF-IME" firstAttribute="top" secondItem="D3Q-Xt-b3J" secondAttribute="bottom" constant="15" id="Ps7-rw-m9V"/>
+                            <constraint firstItem="8l3-pF-IME" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T8g-76-BN5"/>
+                            <constraint firstItem="D3Q-Xt-b3J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="4.5" id="dm3-JO-Q2U"/>
+                            <constraint firstItem="bve-Fw-k4t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZ7-b1-PEK"/>
+                            <constraint firstItem="1YP-k3-BZ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oaf-JD-dn1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D3Q-Xt-b3J" secondAttribute="bottom" constant="55" id="tNd-8A-UaU"/>
+                            <constraint firstItem="bve-Fw-k4t" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="ujN-AT-vHq"/>
+                            <constraint firstItem="bve-Fw-k4t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yXm-Bm-OQU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="32.608695652173914"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Instagram Button" width="520" height="80"/>
+        <image name="Login" width="375" height="667"/>
+    </resources>
+</document>
