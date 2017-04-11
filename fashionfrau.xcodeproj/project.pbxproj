@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06BBF2844766FF0089A9C8C2 /* Pods_fashionfrauTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFDA3C1CBB350ED246EDCF /* Pods_fashionfrauTests.framework */; };
 		0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */; };
 		0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */; };
 		0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57021E9A7C4E009B5BC8 /* Assets.xcassets */; };
@@ -15,6 +16,14 @@
 		0C8F571C1E9A7C4E009B5BC8 /* fashionfrauUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F571B1E9A7C4E009B5BC8 /* fashionfrauUITests.swift */; };
 		0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */; };
 		0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */; };
+		0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */; };
+		0C8F57331E9C22CA009B5BC8 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57321E9C22CA009B5BC8 /* OverlayView.xib */; };
+		0C8F57351E9C284E009B5BC8 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57341E9C284E009B5BC8 /* CardView.xib */; };
+		0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57361E9C308D009B5BC8 /* CardView.swift */; };
+		0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57391E9D55EF009B5BC8 /* Look.swift */; };
+		0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */; };
+		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
+		D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,21 @@
 		0C8F571D1E9A7C4E009B5BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
 		0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		0C8F57321E9C22CA009B5BC8 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		0C8F57341E9C284E009B5BC8 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		0C8F57361E9C308D009B5BC8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0C8F57391E9D55EF009B5BC8 /* Look.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
+		0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookError.swift; sourceTree = "<group>"; };
+		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
+		30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.release.xcconfig"; sourceTree = "<group>"; };
+		450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionfrauUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51044F289326D456E177BC6F /* Pods-fashionfrauTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7939767D4A479243490E751D /* Pods-fashionfrau.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrau.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrau/Pods-fashionfrau.debug.xcconfig"; sourceTree = "<group>"; };
+		7F3F248CDB7B75314B117A5D /* Pods-fashionfrauUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0DFDA3C1CBB350ED246EDCF /* Pods_fashionfrauTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionfrauTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionfrau.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8458596493DCAA6923AB5A4 /* Pods-fashionfrau.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrau.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrau/Pods-fashionfrau.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06BBF2844766FF0089A9C8C2 /* Pods_fashionfrauTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,8 @@
 				0C8F570F1E9A7C4E009B5BC8 /* fashionfrauTests */,
 				0C8F571A1E9A7C4E009B5BC8 /* fashionfrauUITests */,
 				0C8F56F91E9A7C4E009B5BC8 /* Products */,
+				C2D0143FC0A03B65693B969B /* Pods */,
+				113692F2CB128CF80858A0A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +128,9 @@
 		0C8F56FA1E9A7C4E009B5BC8 /* fashionfrau */ = {
 			isa = PBXGroup;
 			children = (
+				0C8F573B1E9D5B09009B5BC8 /* Exception */,
+				0C8F57381E9D55D6009B5BC8 /* DTO */,
+				0C8F57311E9C22B8009B5BC8 /* View */,
 				0C8F57291E9A7D80009B5BC8 /* resources */,
 				0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */,
 				0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */,
@@ -140,8 +172,58 @@
 			isa = PBXGroup;
 			children = (
 				0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */,
+				0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		0C8F57311E9C22B8009B5BC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C8F57321E9C22CA009B5BC8 /* OverlayView.xib */,
+				0C8F57341E9C284E009B5BC8 /* CardView.xib */,
+				0C8F57361E9C308D009B5BC8 /* CardView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0C8F57381E9D55D6009B5BC8 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				0C8F57391E9D55EF009B5BC8 /* Look.swift */,
+			);
+			name = DTO;
+			sourceTree = "<group>";
+		};
+		0C8F573B1E9D5B09009B5BC8 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */,
+			);
+			name = Exception;
+			sourceTree = "<group>";
+		};
+		113692F2CB128CF80858A0A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */,
+				B0DFDA3C1CBB350ED246EDCF /* Pods_fashionfrauTests.framework */,
+				450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2D0143FC0A03B65693B969B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7939767D4A479243490E751D /* Pods-fashionfrau.debug.xcconfig */,
+				D8458596493DCAA6923AB5A4 /* Pods-fashionfrau.release.xcconfig */,
+				51044F289326D456E177BC6F /* Pods-fashionfrauTests.debug.xcconfig */,
+				30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */,
+				7F3F248CDB7B75314B117A5D /* Pods-fashionfrauUITests.debug.xcconfig */,
+				22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8F57201E9A7C4E009B5BC8 /* Build configuration list for PBXNativeTarget "fashionfrau" */;
 			buildPhases = (
+				392D3914657EC5ADC573C394 /* [CP] Check Pods Manifest.lock */,
 				0C8F56F41E9A7C4E009B5BC8 /* Sources */,
 				0C8F56F51E9A7C4E009B5BC8 /* Frameworks */,
 				0C8F56F61E9A7C4E009B5BC8 /* Resources */,
+				DE797C88CB581CD4839F8403 /* [CP] Embed Pods Frameworks */,
+				5B41E796FF7A635DA8A7C6D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8F57231E9A7C4E009B5BC8 /* Build configuration list for PBXNativeTarget "fashionfrauTests" */;
 			buildPhases = (
+				32A4887DB81EC31E39D7FF8A /* [CP] Check Pods Manifest.lock */,
 				0C8F57081E9A7C4E009B5BC8 /* Sources */,
 				0C8F57091E9A7C4E009B5BC8 /* Frameworks */,
 				0C8F570A1E9A7C4E009B5BC8 /* Resources */,
+				694B86F9C2144434683D0C6A /* [CP] Embed Pods Frameworks */,
+				855CBC78658016BB9D651FBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,9 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C8F57261E9A7C4E009B5BC8 /* Build configuration list for PBXNativeTarget "fashionfrauUITests" */;
 			buildPhases = (
+				FD36ED0238EBA3FEF722590C /* [CP] Check Pods Manifest.lock */,
 				0C8F57131E9A7C4E009B5BC8 /* Sources */,
 				0C8F57141E9A7C4E009B5BC8 /* Frameworks */,
 				0C8F57151E9A7C4E009B5BC8 /* Resources */,
+				A766A6B4636F3AB5E6078528 /* [CP] Embed Pods Frameworks */,
+				5655810212B588881F6124B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8F57061E9A7C4E009B5BC8 /* LaunchScreen.storyboard in Resources */,
+				0C8F57351E9C284E009B5BC8 /* CardView.xib in Resources */,
 				0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */,
+				0C8F57331E9C22CA009B5BC8 /* OverlayView.xib in Resources */,
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
 				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
 			);
@@ -277,13 +370,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32A4887DB81EC31E39D7FF8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		392D3914657EC5ADC573C394 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5655810212B588881F6124B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B41E796FF7A635DA8A7C6D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fashionfrau/Pods-fashionfrau-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		694B86F9C2144434683D0C6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		855CBC78658016BB9D651FBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A766A6B4636F3AB5E6078528 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE797C88CB581CD4839F8403 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fashionfrau/Pods-fashionfrau-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD36ED0238EBA3FEF722590C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C8F56F41E9A7C4E009B5BC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */,
 				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
+				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
+				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
+				0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +666,7 @@
 		};
 		0C8F57211E9A7C4E009B5BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7939767D4A479243490E751D /* Pods-fashionfrau.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = THBX3ZCNYL;
@@ -444,6 +680,7 @@
 		};
 		0C8F57221E9A7C4E009B5BC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8458596493DCAA6923AB5A4 /* Pods-fashionfrau.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = THBX3ZCNYL;
@@ -457,6 +694,7 @@
 		};
 		0C8F57241E9A7C4E009B5BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51044F289326D456E177BC6F /* Pods-fashionfrauTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -472,6 +710,7 @@
 		};
 		0C8F57251E9A7C4E009B5BC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +726,7 @@
 		};
 		0C8F57271E9A7C4E009B5BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F3F248CDB7B75314B117A5D /* Pods-fashionfrauUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = THBX3ZCNYL;
@@ -501,6 +741,7 @@
 		};
 		0C8F57281E9A7C4E009B5BC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = THBX3ZCNYL;
@@ -532,6 +773,7 @@
 				0C8F57221E9A7C4E009B5BC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C8F57231E9A7C4E009B5BC8 /* Build configuration list for PBXNativeTarget "fashionfrauTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +782,7 @@
 				0C8F57251E9A7C4E009B5BC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C8F57261E9A7C4E009B5BC8 /* Build configuration list for PBXNativeTarget "fashionfrauUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +791,7 @@
 				0C8F57281E9A7C4E009B5BC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Card.init(params : [String : String]) -&gt; Card:Card.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "params[&quot;name&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Card.update() -&gt; ():Card.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "params![&quot;name&quot;]&#10;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
