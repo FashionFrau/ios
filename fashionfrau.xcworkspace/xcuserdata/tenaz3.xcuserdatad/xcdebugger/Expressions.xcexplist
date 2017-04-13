@@ -3,10 +3,29 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "CardView.updateUI() -&gt; ():CardView.swift">
+      </ContextState>
+      <ContextState
          contextName = "Card.init(params : [String : String]) -&gt; Card:Card.swift">
          <PersistentStrings>
             <PersistentString
                value = "params[&quot;name&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "KolodaView.setupDeck() -&gt; ():KolodaView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentCardIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CardsViewController.koloda(KolodaView, shouldSwipeCardAt : Int, in : SwipeResultDirection) -&gt; Bool:CardsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

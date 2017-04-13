@@ -146,6 +146,8 @@ open class KolodaView: UIView, DraggableCardDelegate {
     }
     
     private func layoutCard(_ card: DraggableCardView, at index: Int) {
+        card.layer.cornerRadius = 10.0
+        card.layer.masksToBounds = true
         if index == 0 {
             card.layer.transform = CATransform3DIdentity
             card.frame = frameForTopCard()

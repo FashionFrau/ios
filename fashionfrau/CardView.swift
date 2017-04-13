@@ -11,6 +11,8 @@ import AlamofireImage
 
 class CardView: UIView {
 
+    @IBOutlet weak var gradientView: UIView!
+
     @IBOutlet weak var lookImage: UIImageView!
 
     @IBOutlet weak var profileImage: UIImageView!
@@ -25,18 +27,37 @@ class CardView: UIView {
      }
      */
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        gradientEffect()
+
+        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
+        profileImage.layer.masksToBounds = true
+    }
+
     func update(look: Look) {
 
         nameLabel.text = look.profileName
 
         profileImage.af_setImage(withURL: look.profileUrl)
 
-        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
-            size: lookImage.frame.size,
-            radius: 20.0
-        )
+        lookImage.af_setImage(withURL: look.lookUrl)
+    }
 
-        lookImage.af_setImage(withURL: look.lookUrl, filter: filter, runImageTransitionIfCached: true)
+    private func gradientEffect() {
+        let gradient = CAGradientLayer()
+
+        gradient.frame = gradientView.bounds
+        gradient.startPoint = CGPoint(x: 0.5, y: 0.0)
+        gradient.endPoint = CGPoint(x:0.5, y:0.5)
+
+
+        gradient.colors = [UIColor.black.withAlphaComponent(0.0).cgColor, UIColor.black.withAlphaComponent(0.1).cgColor]
+
+        gradient.locations = [NSNumber(value: 0.0), NSNumber(value: 1.0)]
+
+        gradientView.layer.addSublayer(gradient)
     }
 
 }

@@ -22,6 +22,11 @@
 		0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57361E9C308D009B5BC8 /* CardView.swift */; };
 		0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57391E9D55EF009B5BC8 /* Look.swift */; };
 		0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */; };
+		0C9A160F1EA02DEC0092B6F1 /* FFNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */; };
+		0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16101EA02F2C0092B6F1 /* Colors.swift */; };
+		0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16141EA030E70092B6F1 /* FFTabBar.swift */; };
+		0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */; };
+		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
 		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
 		D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +69,11 @@
 		0C8F57361E9C308D009B5BC8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0C8F57391E9D55EF009B5BC8 /* Look.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
 		0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookError.swift; sourceTree = "<group>"; };
+		0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationBar.swift; sourceTree = "<group>"; };
+		0C9A16101EA02F2C0092B6F1 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0C9A16141EA030E70092B6F1 /* FFTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBar.swift; sourceTree = "<group>"; };
+		0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationItem.swift; sourceTree = "<group>"; };
+		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.release.xcconfig"; sourceTree = "<group>"; };
 		450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionfrauUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,9 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				0C8F573B1E9D5B09009B5BC8 /* Exception */,
-				0C8F57381E9D55D6009B5BC8 /* DTO */,
+				0C8F57381E9D55D6009B5BC8 /* DataObjects */,
 				0C8F57311E9C22B8009B5BC8 /* View */,
-				0C8F57291E9A7D80009B5BC8 /* resources */,
+				0C8F57291E9A7D80009B5BC8 /* Resources */,
 				0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */,
 				0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */,
 				0C8F57021E9A7C4E009B5BC8 /* Assets.xcassets */,
@@ -160,12 +170,14 @@
 			path = fashionfrauUITests;
 			sourceTree = "<group>";
 		};
-		0C8F57291E9A7D80009B5BC8 /* resources */ = {
+		0C8F57291E9A7D80009B5BC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */,
+				0CF4B9A71E9ECD80000F2AC4 /* Images.swift */,
+				0C9A16101EA02F2C0092B6F1 /* Colors.swift */,
 			);
-			name = resources;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		0C8F572E1E9AC09C009B5BC8 /* Controller */ = {
@@ -183,16 +195,19 @@
 				0C8F57321E9C22CA009B5BC8 /* OverlayView.xib */,
 				0C8F57341E9C284E009B5BC8 /* CardView.xib */,
 				0C8F57361E9C308D009B5BC8 /* CardView.swift */,
+				0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */,
+				0C9A16141EA030E70092B6F1 /* FFTabBar.swift */,
+				0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		0C8F57381E9D55D6009B5BC8 /* DTO */ = {
+		0C8F57381E9D55D6009B5BC8 /* DataObjects */ = {
 			isa = PBXGroup;
 			children = (
 				0C8F57391E9D55EF009B5BC8 /* Look.swift */,
 			);
-			name = DTO;
+			name = DataObjects;
 			sourceTree = "<group>";
 		};
 		0C8F573B1E9D5B09009B5BC8 /* Exception */ = {
@@ -514,10 +529,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */,
+				0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */,
+				0C9A160F1EA02DEC0092B6F1 /* FFNavigationBar.swift in Sources */,
 				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
+				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,
+				0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */,
+				0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */,
 				0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

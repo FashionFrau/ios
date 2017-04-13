@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z2b-Oq-CGj">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qT8-Ux-deu">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,35 +23,35 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="333" affinity="minY"/>
                         </userGuides>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Fw-k4t" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMQ-LU-8vv">
-                                <rect key="frame" x="169.33333333333337" y="160" width="75.666666666666657" height="86.333333333333343"/>
+                                <rect key="frame" x="149.5" y="160" width="76" height="86.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="69"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.47058823529411764" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Frau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-k3-BZ1">
-                                <rect key="frame" x="98.333333333333343" y="266.33333333333326" width="217.66666666666666" height="47.666666666666686"/>
+                                <rect key="frame" x="79" y="266.5" width="218" height="47.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="38"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moda de todas,  para todas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-ci-Igi">
-                                <rect key="frame" x="136" y="320" width="142.66666666666669" height="52.666666666666686"/>
+                                <rect key="frame" x="116.5" y="320" width="142.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-Xt-b3J" userLabel="Login">
-                                <rect key="frame" x="57" y="636" width="309" height="45"/>
+                                <rect key="frame" x="37.5" y="567" width="309" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="FtG-Bx-AdX"/>
                                     <constraint firstAttribute="height" constant="45" id="QAP-RG-jPi"/>
@@ -59,7 +59,7 @@
                                 <state key="normal" image="Instagram Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l3-pF-IME">
-                                <rect key="frame" x="107" y="696" width="200" height="31"/>
+                                <rect key="frame" x="87.5" y="627" width="200" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="8aS-Ly-PKH"/>
                                     <constraint firstAttribute="width" constant="200" id="W8Z-dr-3Ht"/>
@@ -93,6 +93,25 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="32.608695652173914"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="czM-83-R9O">
+            <objects>
+                <viewController id="YXa-KS-Zzq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0rx-eM-jXX"/>
+                        <viewControllerLayoutGuide type="bottom" id="NVr-wa-HrL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kaf-et-tts">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KoK-j5-Zdq" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbQ-eC-OMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="-670.61469265367316"/>
+        </scene>
         <!--Cards View Controller-->
         <scene sceneID="lXc-l5-eMp">
             <objects>
@@ -102,33 +121,140 @@
                         <viewControllerLayoutGuide type="bottom" id="fol-9v-PV8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="It5-Jh-NtJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1D-Fh-oZm" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="10" y="10" width="355" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="centerY" secondItem="It5-Jh-NtJ" secondAttribute="centerY" id="6d8-ck-gky"/>
-                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="centerX" secondItem="It5-Jh-NtJ" secondAttribute="centerX" id="CXt-nD-TmO"/>
-                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="width" secondItem="It5-Jh-NtJ" secondAttribute="width" id="ZUJ-df-xrJ"/>
-                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="height" secondItem="It5-Jh-NtJ" secondAttribute="height" id="gYj-6r-O8q"/>
+                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="top" secondItem="GoP-4U-VQ6" secondAttribute="bottom" constant="10" id="lck-1r-uLR"/>
+                            <constraint firstItem="fol-9v-PV8" firstAttribute="top" secondItem="o1D-Fh-oZm" secondAttribute="bottom" constant="10" id="oHy-Wc-A0k"/>
+                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="leading" secondItem="It5-Jh-NtJ" secondAttribute="leading" constant="10" id="yhK-hs-9SL"/>
+                            <constraint firstAttribute="trailing" secondItem="o1D-Fh-oZm" secondAttribute="trailing" constant="10" id="z4t-UZ-6eV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kDL-Cn-doy" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
                     <connections>
                         <outlet property="kolodaView" destination="o1D-Fh-oZm" id="ec2-aw-fuf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3D-ac-ALy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="44"/>
+            <point key="canvasLocation" x="2868" y="42.728635682158924"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BER-R7-9g7">
+            <objects>
+                <viewController id="wnz-zy-fez" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gu3-TE-Pvz"/>
+                        <viewControllerLayoutGuide type="bottom" id="tUO-6m-Hwl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6q2-Mv-a6Y">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B7o-k6-n1d" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGt-lK-Wup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868" y="737"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zu0-4l-Ruz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oFC-Ze-eb2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Heart" selectedImage="Heart Active" id="Qfm-ke-k4p"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="F5X-tF-lFx" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z2b-Oq-CGj" kind="relationship" relationship="rootViewController" id="sMt-o5-q4W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q04-Ow-nGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="43.206521739130437"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JDG-4N-QTo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qT8-Ux-deu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Bzg-79-ySP" customClass="FFTabBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.37250924110412598" green="0.37257683277130127" blue="0.37250030040740967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X49-7b-D1O" kind="relationship" relationship="viewControllers" id="e4M-K8-5lf"/>
+                        <segue destination="oFC-Ze-eb2" kind="relationship" relationship="viewControllers" id="hpT-tV-woX"/>
+                        <segue destination="K8R-IU-poh" kind="relationship" relationship="viewControllers" id="Wcu-TV-Pca"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSC-gU-Vsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.6231884057972" y="43.206521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KOA-yD-kkQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8R-IU-poh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Star" selectedImage="Star Active" id="rG2-sn-d0z"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Ylp-8P-OGr" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wnz-zy-fez" kind="relationship" relationship="rootViewController" id="ypa-Q4-2bj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUZ-xM-eWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="737"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WQf-qM-kVk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X49-7b-D1O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="Home Active" id="GU9-Jd-aey"/>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MST-Ms-QPI" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YXa-KS-Zzq" kind="relationship" relationship="rootViewController" id="TwF-r9-Pvk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgw-C1-DRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8" y="-671.51424287856082"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Heart" width="37" height="32"/>
+        <image name="Heart Active" width="37" height="32"/>
+        <image name="Home" width="33" height="30"/>
+        <image name="Home Active" width="33" height="30"/>
         <image name="Instagram Button" width="520" height="80"/>
         <image name="Login" width="375" height="667"/>
+        <image name="Star" width="32" height="30"/>
+        <image name="Star Active" width="32" height="30"/>
     </resources>
 </document>
