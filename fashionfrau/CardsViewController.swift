@@ -11,6 +11,7 @@ import Koloda
 
 private let kolodaCountOfVisibleCards = 2
 private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
+private let cardDetailSegue = "CardDetailViewController"
 
 class CardsViewController: UIViewController {
 
@@ -71,16 +72,15 @@ class CardsViewController: UIViewController {
         let ll3 = try! Look(builder: look3)
         dataSource = [ll1!, ll2!, ll3!]
     }
-    /*
-     // MARK: - Navigation
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CardDetailViewController {
+            if let selectedLook = sender as? Look {
+                destination.look = selectedLook
+            }
+        }
+    }
 }
 
 extension CardsViewController: KolodaViewDelegate {
@@ -89,7 +89,8 @@ extension CardsViewController: KolodaViewDelegate {
         kolodaView.resetCurrentCardIndex()
     }
 
-    func koloda(koloda: KolodaView, didSelectCardAt index: Int) {
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        performSegue(withIdentifier: cardDetailSegue, sender: dataSource[index])
     }
 }
 
@@ -110,6 +111,6 @@ extension CardsViewController: KolodaViewDataSource {
         return Bundle.main.loadNibNamed("CustomOverlayView",
                                         owner: self, options: nil)?.first as? OverlayView
     }
-
+    
 }
 

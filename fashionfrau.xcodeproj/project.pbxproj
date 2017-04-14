@@ -27,6 +27,7 @@
 		0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16141EA030E70092B6F1 /* FFTabBar.swift */; };
 		0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */; };
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
+		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
 		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
 		D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */; };
@@ -75,6 +76,7 @@
 		0C9A16141EA030E70092B6F1 /* FFTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBar.swift; sourceTree = "<group>"; };
 		0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationItem.swift; sourceTree = "<group>"; };
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */,
 				0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */,
+				0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */,
 				0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */,
 				0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */,
 				0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */,

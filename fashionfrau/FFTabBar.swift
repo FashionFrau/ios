@@ -16,6 +16,8 @@ class FFTabBar: UITabBar {
         tintColor = .fashionfrau
         barTintColor = .tabBar
 
+        layer.borderColor = UIColor.clear.cgColor
+        clipsToBounds = true
     }
 
     /*
