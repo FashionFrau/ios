@@ -13,7 +13,7 @@ class FFNavigationBar: UINavigationBar {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        barTintColor = UIColor.fashionfrau
+        barTintColor = .fashionfrau
 
         let courgetteFont = UIFont(name: "Courgette-Regular", size: 25) ??  UIFont.systemFont(ofSize: 25)
 

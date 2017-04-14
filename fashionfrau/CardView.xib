@@ -32,8 +32,8 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckB-Vk-YSQ">
-                    <rect key="frame" x="90.000000000000014" y="684.33333333333337" width="149.33333333333337" height="30"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <rect key="frame" x="90" y="686.33333333333337" width="132" height="26.333333333333258"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>

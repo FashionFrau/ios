@@ -13,6 +13,6 @@ class FFNavigationItem: UINavigationItem {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        title = "fashionfrau"
+        title = "ff"
     }
 }

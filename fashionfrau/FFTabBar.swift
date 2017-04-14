@@ -13,8 +13,9 @@ class FFTabBar: UITabBar {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        tintColor = UIColor.fashionfrau
-        barTintColor = UIColor.tabBar
+        tintColor = .fashionfrau
+        barTintColor = .tabBar
+
     }
 
     /*

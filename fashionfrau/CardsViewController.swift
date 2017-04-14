@@ -10,7 +10,7 @@ import UIKit
 import Koloda
 
 private let kolodaCountOfVisibleCards = 2
-private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
+private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
 
 class CardsViewController: UIViewController {
 
@@ -106,9 +106,10 @@ extension CardsViewController: KolodaViewDataSource {
 
     }
 
-    func koloda(koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView",
-                                        owner: self, options: nil)?[0] as? OverlayView
+    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+        return Bundle.main.loadNibNamed("CustomOverlayView",
+                                        owner: self, options: nil)?.first as? OverlayView
     }
+
 }
 

@@ -125,14 +125,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1D-Fh-oZm" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="10" y="10" width="355" height="534"/>
+                                <rect key="frame" x="10" y="10" width="355" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o1D-Fh-oZm" firstAttribute="top" secondItem="GoP-4U-VQ6" secondAttribute="bottom" constant="10" id="lck-1r-uLR"/>
-                            <constraint firstItem="fol-9v-PV8" firstAttribute="top" secondItem="o1D-Fh-oZm" secondAttribute="bottom" constant="10" id="oHy-Wc-A0k"/>
+                            <constraint firstItem="fol-9v-PV8" firstAttribute="top" secondItem="o1D-Fh-oZm" secondAttribute="bottom" constant="5" id="oHy-Wc-A0k"/>
                             <constraint firstItem="o1D-Fh-oZm" firstAttribute="leading" secondItem="It5-Jh-NtJ" secondAttribute="leading" constant="10" id="yhK-hs-9SL"/>
                             <constraint firstAttribute="trailing" secondItem="o1D-Fh-oZm" secondAttribute="trailing" constant="10" id="z4t-UZ-6eV"/>
                         </constraints>
@@ -169,10 +169,12 @@
         <scene sceneID="Zu0-4l-Ruz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oFC-Ze-eb2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Heart" selectedImage="Heart Active" id="Qfm-ke-k4p"/>
+                    <tabBarItem key="tabBarItem" title="" image="Heart" selectedImage="Heart Active" id="Qfm-ke-k4p">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="F5X-tF-lFx" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="F5X-tF-lFx" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -210,10 +212,12 @@
         <scene sceneID="KOA-yD-kkQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8R-IU-poh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Star" selectedImage="Star Active" id="rG2-sn-d0z"/>
+                    <tabBarItem key="tabBarItem" title="" image="Star" selectedImage="Star Active" id="rG2-sn-d0z">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Ylp-8P-OGr" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Ylp-8P-OGr" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -230,10 +234,12 @@
         <scene sceneID="WQf-qM-kVk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X49-7b-D1O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="Home Active" id="GU9-Jd-aey"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="Home Active" id="GU9-Jd-aey">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MST-Ms-QPI" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="MST-Ms-QPI" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
