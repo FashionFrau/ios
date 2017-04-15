@@ -26,6 +26,7 @@
 		0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16101EA02F2C0092B6F1 /* Colors.swift */; };
 		0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16141EA030E70092B6F1 /* FFTabBar.swift */; };
 		0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */; };
+		0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */; };
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
 		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
@@ -75,6 +76,7 @@
 		0C9A16101EA02F2C0092B6F1 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0C9A16141EA030E70092B6F1 /* FFTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBar.swift; sourceTree = "<group>"; };
 		0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationItem.swift; sourceTree = "<group>"; };
+		0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -197,13 +199,9 @@
 		0C8F57311E9C22B8009B5BC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */,
-				0C8F57341E9C284E009B5BC8 /* CardView.xib */,
-				0C8F57361E9C308D009B5BC8 /* CardView.swift */,
-				0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */,
-				0C9A16141EA030E70092B6F1 /* FFTabBar.swift */,
-				0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */,
-				0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */,
+				0CA1AE6E1EA2658700591856 /* Cards */,
+				0CA1AE6D1EA2657900591856 /* Navigation */,
+				0CA1AE6C1EA2651D00591856 /* Slider */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -222,6 +220,35 @@
 				0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */,
 			);
 			name = Exception;
+			sourceTree = "<group>";
+		};
+		0CA1AE6C1EA2651D00591856 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */,
+			);
+			name = Slider;
+			sourceTree = "<group>";
+		};
+		0CA1AE6D1EA2657900591856 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */,
+				0C9A16141EA030E70092B6F1 /* FFTabBar.swift */,
+				0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		0CA1AE6E1EA2658700591856 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */,
+				0C8F57341E9C284E009B5BC8 /* CardView.xib */,
+				0C8F57361E9C308D009B5BC8 /* CardView.swift */,
+				0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */,
+			);
+			name = Cards;
 			sourceTree = "<group>";
 		};
 		113692F2CB128CF80858A0A2 /* Frameworks */ = {
@@ -544,6 +571,7 @@
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
 				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,
+				0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */,
 				0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */,
 				0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */,
 				0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */,

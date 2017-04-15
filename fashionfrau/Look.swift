@@ -16,6 +16,8 @@ class LookBuilder {
 
     var lookUrl: String?
 
+    var gallery: [String]?
+
     typealias BuilderClosure = (LookBuilder) -> ()
 
 
@@ -28,18 +30,31 @@ class LookBuilder {
 
 struct Look {
 
-    var profileUrl: URL
+    let profileUrl: URL
 
     let profileName: String
 
-    var lookUrl: URL
+    let lookUrl: URL
 
+    let gallery: [URL]
 
     init?(builder: LookBuilder) throws {
 
-        if let lookUrl = builder.lookUrl, let profileName = builder.profileName, let profileUrl = builder.profileUrl {
+        if let lookUrl = builder.lookUrl, let profileName = builder.profileName, let profileUrl = builder.profileUrl, let gallery = builder.gallery {
 
             self.profileName = profileName
+
+            var galleryUrl = [URL]()
+
+            for urlString in gallery {
+                if let url = URL(string: urlString) {
+                    galleryUrl.append(url)
+                } else {
+                    throw LookError.BadUrl
+                }
+            }
+
+            self.gallery = galleryUrl
 
             if let urlLook = URL(string: lookUrl), let urlProfile = URL(string: profileUrl) {
 
@@ -48,7 +63,7 @@ struct Look {
                 self.profileUrl = urlProfile
 
             } else {
-                
+
                 throw LookError.BadUrl
                 
             }

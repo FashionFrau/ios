@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 
+
 class CardDetailViewController: UIViewController {
 
     private var _look: Look!
@@ -17,7 +18,7 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet weak var profileNameLabel: UILabel!
 
-    @IBOutlet weak var lookImageView: UIImageView!
+    @IBOutlet weak var sliderView: FFSliderView!
 
     var look: Look {
         get {
@@ -33,6 +34,9 @@ class CardDetailViewController: UIViewController {
 
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
         profileImageView.layer.masksToBounds = true
+
+        setupSlider()
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -41,8 +45,6 @@ class CardDetailViewController: UIViewController {
         profileNameLabel.text = look.profileName
 
         profileImageView.af_setImage(withURL: look.profileUrl)
-
-        lookImageView.af_setImage(withURL: look.lookUrl)
 
     }
     override func didReceiveMemoryWarning() {
@@ -59,5 +61,27 @@ class CardDetailViewController: UIViewController {
     @IBAction func skipLook(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
+
+    private func setupSlider() {
+
+        sliderView.datasource  = self
+    }
+}
+
+extension CardDetailViewController: FFSliderDataSource {
+
+    func slider(ffSliderNumberOfSlides slider: FFSliderView) -> Int {
+        return look.gallery.count
+    }
+
+    func slider(slider: FFSliderView, viewForSlideAtIndex index: Int) -> UIView {
+        let imageView = UIImageView()
+
+        let url = look.gallery[index]
+
+        imageView.af_setImage(withURL: url)
+
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }
 }

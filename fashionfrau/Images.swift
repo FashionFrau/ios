@@ -12,4 +12,7 @@ import Foundation
 struct Images {
     static let Heart = "Heart"
     static let HeartActive = "Heart Active"
+
+    static let PageOn = "Dot Active"
+    static let PageOff = "Dot"
 }
