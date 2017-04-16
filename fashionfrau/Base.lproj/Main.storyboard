@@ -297,24 +297,110 @@ Acabamentos desfiados.</string>
             </objects>
             <point key="canvasLocation" x="3789.375" y="42.25352112676056"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="BER-R7-9g7">
+        <!--Favorites Collection View Controller-->
+        <scene sceneID="jaQ-i8-n01">
             <objects>
-                <viewController id="wnz-zy-fez" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gu3-TE-Pvz"/>
-                        <viewControllerLayoutGuide type="bottom" id="tUO-6m-Hwl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6q2-Mv-a6Y">
+                <collectionViewController id="e9B-84-pFy" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="m0T-9s-OWw">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="B7o-k6-n1d" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yGt-lK-Wup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zHk-wE-y0r">
+                            <size key="itemSize" width="129" height="203"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCardCell" id="fVi-Pt-Hza" customClass="MiniCardViewCell" customModule="fashionfrau" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="129" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="129" height="203"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-Wr-Zcp">
+                                            <rect key="frame" x="0.0" y="0.0" width="129" height="203"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="centerX" secondItem="fVi-Pt-Hza" secondAttribute="centerX" id="Pr0-kZ-z0a"/>
+                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="height" secondItem="fVi-Pt-Hza" secondAttribute="height" id="dol-Bf-yRr"/>
+                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="width" secondItem="fVi-Pt-Hza" secondAttribute="width" id="h0L-Nb-r3v"/>
+                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="centerY" secondItem="fVi-Pt-Hza" secondAttribute="centerY" id="tx9-f0-mz3"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="Ovm-Wr-Zcp" id="jMv-a8-ewf"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCardHeaderCell" id="vOD-hZ-P89" customClass="MiniCardHeaderView" customModule="fashionfrau" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-6U-4Rl">
+                                    <rect key="frame" x="5" y="5" width="33" height="26.5"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
+                                    <color key="textColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pe-Af-79A">
+                                    <rect key="frame" x="20" y="31.5" width="14" height="12.5"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
+                                    <color key="textColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yRi-En-eip">
+                                    <rect key="frame" x="43" y="20" width="327" height="10"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkD-CS-vD1" userLabel="Dot">
+                                            <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                            <color key="backgroundColor" red="0.9137254901960784" green="0.18431372549019609" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="10" id="VaN-Qv-HMi"/>
+                                                <constraint firstAttribute="height" constant="10" id="od8-yg-jOy"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9x-DQ-8fx" userLabel="Line">
+                                            <rect key="frame" x="10" y="4.5" width="317" height="1"/>
+                                            <color key="backgroundColor" red="0.9137254901960784" green="0.18431372549019609" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="SAH-Pg-dgw"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="B9x-DQ-8fx" secondAttribute="trailing" id="ldH-kF-qeR"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="UU5-6U-4Rl" firstAttribute="leading" secondItem="vOD-hZ-P89" secondAttribute="leading" constant="5" id="0nY-mA-jhs"/>
+                                <constraint firstItem="yRi-En-eip" firstAttribute="leading" secondItem="vOD-hZ-P89" secondAttribute="leadingMargin" constant="35" id="18G-fj-1PQ"/>
+                                <constraint firstItem="UU5-6U-4Rl" firstAttribute="top" secondItem="vOD-hZ-P89" secondAttribute="top" constant="5" id="3vo-MV-Bwf"/>
+                                <constraint firstItem="5Pe-Af-79A" firstAttribute="top" secondItem="UU5-6U-4Rl" secondAttribute="bottom" id="AtG-4n-Lse"/>
+                                <constraint firstAttribute="trailing" secondItem="yRi-En-eip" secondAttribute="trailing" constant="5" id="PDR-4l-U8j"/>
+                                <constraint firstItem="yRi-En-eip" firstAttribute="centerY" secondItem="vOD-hZ-P89" secondAttribute="centerY" id="RML-Of-igK"/>
+                                <constraint firstItem="yRi-En-eip" firstAttribute="leading" secondItem="UU5-6U-4Rl" secondAttribute="trailing" constant="5" id="aO4-cz-6Xr"/>
+                                <constraint firstItem="5Pe-Af-79A" firstAttribute="centerX" secondItem="UU5-6U-4Rl" secondAttribute="centerX" constant="5" id="qUr-KN-i14"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dateLabel" destination="UU5-6U-4Rl" id="9gV-vQ-gLo"/>
+                                <outlet property="dayLabel" destination="5Pe-Af-79A" id="ZSa-3H-zTD"/>
+                                <outlet property="dotView" destination="dkD-CS-vD1" id="j5K-iX-yI3"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="e9B-84-pFy" id="MaF-34-Pbm"/>
+                            <outlet property="delegate" destination="e9B-84-pFy" id="B7e-zY-dbz"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="jGw-Mn-DY0"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVf-Yr-Oy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868" y="737"/>
+            <point key="canvasLocation" x="2868" y="735.38230884557731"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zu0-4l-Ruz">
@@ -374,7 +460,7 @@ Acabamentos desfiados.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="wnz-zy-fez" kind="relationship" relationship="rootViewController" id="ypa-Q4-2bj"/>
+                        <segue destination="e9B-84-pFy" kind="relationship" relationship="rootViewController" id="xRe-M6-Ech"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUZ-xM-eWY" userLabel="First Responder" sceneMemberID="firstResponder"/>

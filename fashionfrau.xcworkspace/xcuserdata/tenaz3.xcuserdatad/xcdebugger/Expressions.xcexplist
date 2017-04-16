@@ -3,7 +3,12 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "CardView.updateUI() -&gt; ():CardView.swift">
+         contextName = "KolodaView.setupDeck() -&gt; ():KolodaView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentCardIndex">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "Card.init(params : [String : String]) -&gt; Card:Card.swift">
@@ -14,10 +19,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "KolodaView.setupDeck() -&gt; ():KolodaView.swift">
+         contextName = "CardView.updateUI() -&gt; ():CardView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FavoritesCollectionViewController.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:FavoritesCollectionViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "currentCardIndex">
+               value = "dataSource[indexPath.row]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

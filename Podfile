@@ -2,21 +2,26 @@
 # platform :ios, '9.0'
 
 target 'fashionfrau' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
 
-  # Pods for fashionfrau
-  pod 'Koloda', '~> 4.0'
-  pod 'AlamofireImage', '~> 3.2'
+    # Pods for fashionfrau
+    pod 'Koloda', '~> 4.0'
 
-  target 'fashionfrauTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'Alamofire', '~> 4.4'
+    pod 'AlamofireObjectMapper', '~> 4.1'
+    pod 'AlamofireImage', '~> 3.2'
 
-  target 'fashionfrauUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'SwiftDate', '~> 4.1'
 
+    target 'fashionfrauTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+
+    target 'fashionfrauUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
 end

@@ -11,5 +11,9 @@ import Foundation
 
 enum LookError: Error {
     case MissingField
-    case BadUrl
+}
+
+enum MiniLookCardError: Error {
+    case MissingField
+    case ParseDate
 }

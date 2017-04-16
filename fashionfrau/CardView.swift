@@ -36,7 +36,7 @@ class CardView: UIView {
         profileImage.layer.masksToBounds = true
     }
 
-    func update(look: Look) {
+    func update(look: LookCard) {
 
         nameLabel.text = look.profileName
 

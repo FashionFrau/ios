@@ -12,7 +12,7 @@ import AlamofireImage
 
 class CardDetailViewController: UIViewController {
 
-    private var _look: Look!
+    private var _look: LookCard!
 
     @IBOutlet weak var profileImageView: UIImageView!
 
@@ -20,7 +20,7 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet weak var sliderView: FFSliderView!
 
-    var look: Look {
+    var look: LookCard {
         get {
             return _look
         }
