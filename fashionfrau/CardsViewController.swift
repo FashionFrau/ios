@@ -30,9 +30,8 @@ class CardsViewController: UIViewController {
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
 
-        kolodaView.dataSource = self
         kolodaView.delegate = self
-
+        kolodaView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
