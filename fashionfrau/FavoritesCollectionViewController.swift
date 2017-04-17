@@ -81,7 +81,15 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
                 let look: MiniLookCard = looks![indexPath.row]
 
-                    cell.imageView.af_setImage(withURL: look.lookUrl)
+                cell.lookImage.af_setImage(withURL: look.lookUrl)
+
+                cell.profileImage.af_setImage(withURL: look.profileUrl)
+
+                cell.profileNameLabel.text = look.profileName
+
+                cell.likesLabel.text = "\(look.likes)"
+
+                cell.hashtagLabel.text = look.hashtag
             }
         }
         // Configure the cell
@@ -136,12 +144,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
      }
      */
 
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-//    }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 170, height: 300)
-//    }
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    }
 }

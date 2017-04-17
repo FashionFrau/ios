@@ -306,32 +306,121 @@ Acabamentos desfiados.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zHk-wE-y0r">
-                            <size key="itemSize" width="129" height="203"/>
+                            <size key="itemSize" width="138" height="199"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCardCell" id="fVi-Pt-Hza" customClass="MiniCardViewCell" customModule="fashionfrau" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="129" height="203"/>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardCell" id="fVi-Pt-Hza" customClass="MiniCardViewCell" customModule="fashionfrau" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="138" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="129" height="203"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-Wr-Zcp">
-                                            <rect key="frame" x="0.0" y="0.0" width="129" height="203"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3G-VU-De2" userLabel="Content View" customClass="MiniCardContentView" customModule="fashionfrau" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="138" height="199"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-Wr-Zcp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="138" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="O60-W8-MeE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-Pj-wa0" userLabel="Profile Stack View">
+                                                    <rect key="frame" x="10" y="140" width="118" height="25"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-2j-2iy" userLabel="Profile">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="Nox-8W-yBi"/>
+                                                                <constraint firstAttribute="width" constant="25" id="jib-ZB-62a"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poF-Wh-A6U">
+                                                            <rect key="frame" x="45" y="3" width="73" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="ksF-2j-2iy" firstAttribute="leading" secondItem="dZs-Pj-wa0" secondAttribute="leading" id="KcP-Do-DV9"/>
+                                                        <constraint firstItem="ksF-2j-2iy" firstAttribute="centerY" secondItem="dZs-Pj-wa0" secondAttribute="centerY" id="hUu-YN-acW"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-aH-iYD" userLabel="DividerStack View">
+                                                    <rect key="frame" x="0.0" y="175" width="138" height="1"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mma-TD-TkP" userLabel="Divider">
+                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="1"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="pGn-bI-Bhs"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Heart" translatesAutoresizingMaskIntoConstraints="NO" id="2s1-td-RgU" userLabel="Heart">
+                                                    <rect key="frame" x="7" y="181" width="12" height="11"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ff1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-fX-rgd">
+                                                    <rect key="frame" x="107.5" y="180.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txH-Xz-MIE" userLabel="Likes Label">
+                                                    <rect key="frame" x="26" y="180.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <color key="textColor" red="0.74117647058823533" green="0.68627450980392157" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="top" secondItem="Ovm-Wr-Zcp" secondAttribute="bottom" constant="10" id="9YS-OS-Kdv"/>
+                                                <constraint firstItem="Bj1-aH-iYD" firstAttribute="centerX" secondItem="z3G-VU-De2" secondAttribute="centerX" id="Eaz-fg-BB3"/>
+                                                <constraint firstItem="txH-Xz-MIE" firstAttribute="baseline" secondItem="2s1-td-RgU" secondAttribute="baseline" id="FW8-6L-pn8"/>
+                                                <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="centerX" secondItem="z3G-VU-De2" secondAttribute="centerX" id="H7o-uP-aJ1"/>
+                                                <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="top" secondItem="z3G-VU-De2" secondAttribute="top" id="Hkw-Bm-fwA"/>
+                                                <constraint firstItem="iey-fX-rgd" firstAttribute="centerY" secondItem="txH-Xz-MIE" secondAttribute="centerY" id="Iyc-2l-TwK"/>
+                                                <constraint firstAttribute="trailing" secondItem="iey-fX-rgd" secondAttribute="trailing" constant="7" id="LBe-ay-Rpd"/>
+                                                <constraint firstAttribute="bottom" secondItem="2s1-td-RgU" secondAttribute="bottom" constant="7" id="Wt8-wb-SP0"/>
+                                                <constraint firstItem="2s1-td-RgU" firstAttribute="leading" secondItem="z3G-VU-De2" secondAttribute="leading" constant="7" id="ZrX-lg-OsL"/>
+                                                <constraint firstItem="Bj1-aH-iYD" firstAttribute="width" secondItem="z3G-VU-De2" secondAttribute="width" id="hLs-TY-hua"/>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="centerX" secondItem="z3G-VU-De2" secondAttribute="centerX" id="mye-zn-GkG"/>
+                                                <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="width" secondItem="z3G-VU-De2" secondAttribute="width" id="nZh-iJ-8oO"/>
+                                                <constraint firstItem="txH-Xz-MIE" firstAttribute="leading" secondItem="2s1-td-RgU" secondAttribute="trailing" constant="7" id="tga-9T-xag"/>
+                                                <constraint firstItem="2s1-td-RgU" firstAttribute="top" secondItem="Bj1-aH-iYD" secondAttribute="bottom" constant="5" id="v65-ya-SMh"/>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="leading" secondItem="z3G-VU-De2" secondAttribute="leading" constant="10" id="xxR-dz-ZlH"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="centerX" secondItem="fVi-Pt-Hza" secondAttribute="centerX" id="Pr0-kZ-z0a"/>
-                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="height" secondItem="fVi-Pt-Hza" secondAttribute="height" id="dol-Bf-yRr"/>
-                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="width" secondItem="fVi-Pt-Hza" secondAttribute="width" id="h0L-Nb-r3v"/>
-                                    <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="centerY" secondItem="fVi-Pt-Hza" secondAttribute="centerY" id="tx9-f0-mz3"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="height" secondItem="fVi-Pt-Hza" secondAttribute="height" id="FUH-8U-e0w"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="width" secondItem="fVi-Pt-Hza" secondAttribute="width" id="Hia-O6-OtT"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="centerX" secondItem="fVi-Pt-Hza" secondAttribute="centerX" id="QBa-Uw-7TN"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="centerY" secondItem="fVi-Pt-Hza" secondAttribute="centerY" id="a6Q-f5-Sp5"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="imageView" destination="Ovm-Wr-Zcp" id="jMv-a8-ewf"/>
+                                    <outlet property="hashtagLabel" destination="iey-fX-rgd" id="aYJ-gh-qqe"/>
+                                    <outlet property="likesLabel" destination="txH-Xz-MIE" id="QkX-pd-RtE"/>
+                                    <outlet property="lookImage" destination="Ovm-Wr-Zcp" id="xS6-Uv-PV8"/>
+                                    <outlet property="profileImage" destination="ksF-2j-2iy" id="WZl-ea-OZF"/>
+                                    <outlet property="profileNameLabel" destination="poF-Wh-A6U" id="4Jw-df-3cA"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -396,7 +485,7 @@ Acabamentos desfiados.</string>
                             <outlet property="delegate" destination="e9B-84-pFy" id="B7e-zY-dbz"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="jGw-Mn-DY0"/>
+                    <navigationItem key="navigationItem" id="jGw-Mn-DY0" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVf-Yr-Oy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -499,6 +588,7 @@ Acabamentos desfiados.</string>
         <image name="Instagram Button" width="520" height="80"/>
         <image name="Like" width="54" height="45"/>
         <image name="Login" width="375" height="667"/>
+        <image name="Mini Heart" width="12" height="11"/>
         <image name="Share" width="43" height="43"/>
         <image name="Star" width="32" height="30"/>
         <image name="Star Active" width="32" height="30"/>

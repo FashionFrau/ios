@@ -11,6 +11,7 @@
 		0C0712C71EA43513004B17C9 /* MiniLooksCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712C61EA43513004B17C9 /* MiniLooksCard.swift */; };
 		0C0712C91EA43BAA004B17C9 /* MiniLookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712C81EA43BAA004B17C9 /* MiniLookDTO.swift */; };
 		0C0712CC1EA4D733004B17C9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CB1EA4D733004B17C9 /* Util.swift */; };
+		0C0712D01EA54247004B17C9 /* MiniCardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CF1EA54247004B17C9 /* MiniCardContentView.swift */; };
 		0C093DA21EA3F77F001C1646 /* LookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA11EA3F77F001C1646 /* LookDTO.swift */; };
 		0C093DA41EA40A66001C1646 /* MiniLookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookCard.swift */; };
 		0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 		0C0712C61EA43513004B17C9 /* MiniLooksCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLooksCard.swift; sourceTree = "<group>"; };
 		0C0712C81EA43BAA004B17C9 /* MiniLookDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookDTO.swift; sourceTree = "<group>"; };
 		0C0712CB1EA4D733004B17C9 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		0C0712CF1EA54247004B17C9 /* MiniCardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardContentView.swift; sourceTree = "<group>"; };
 		0C093DA11EA3F77F001C1646 /* LookDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookDTO.swift; sourceTree = "<group>"; };
 		0C093DA31EA40A66001C1646 /* MiniLookCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookCard.swift; sourceTree = "<group>"; };
 		0C8F56F81E9A7C4E009B5BC8 /* fashionfrau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionfrau.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +308,7 @@
 			children = (
 				0CAEF5F51EA2997900AB4ED7 /* MiniCardViewCell.swift */,
 				0CAEF5F81EA2A7F200AB4ED7 /* MiniCardHeaderView.swift */,
+				0C0712CF1EA54247004B17C9 /* MiniCardContentView.swift */,
 			);
 			name = MiniCards;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
 				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,
 				0CAEF6001EA3DBC500AB4ED7 /* DataSource.swift in Sources */,
+				0C0712D01EA54247004B17C9 /* MiniCardContentView.swift in Sources */,
 				0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */,
 				0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */,
 				0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */,
