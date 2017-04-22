@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Alamofire
 import AlamofireImage
 import SwiftDate
+import Device
 
 private let miniCardReuseIdentifier = "MiniCardCell"
 private let miniCardHeaderReuseIdentifier = "MiniCardHeaderCell"
+private let miniCardFooterReuseIdentifier = "MiniCardFooterCell"
+
+private let nibForHeader = "MiniCardHeaderView"
+private let nibForFooter = "MiniCardFooterView"
 
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -24,9 +30,18 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        //        self.collectionView!.register(MiniCardViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        let nibHeader = UINib(nibName: nibForHeader, bundle: nil)
+        self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHeaderReuseIdentifier)
+
+        let nibFooter = UINib(nibName: nibForFooter, bundle: nil)
+        self.collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFooterReuseIdentifier)
+
 
         // Do any additional setup after loading the view.
+        collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        if let layout = collectionView?.collectionViewLayout as? MiniCardsLayout {
+            layout.delegate = self
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,59 +107,63 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
                 cell.hashtagLabel.text = look.hashtag
             }
         }
-        // Configure the cell
 
         return cell
     }
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHeaderReuseIdentifier, for: indexPath) as! MiniCardHeaderView
+        if(kind == UICollectionElementKindSectionHeader) {
 
-        let date: DateInRegion? = dataSource[indexPath.section].date
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHeaderReuseIdentifier, for: indexPath) as! MiniCardHeaderView
 
-        if let date = date {
+            let date: DateInRegion? = dataSource[indexPath.section].date
 
-            header.dateLabel.text = "\(date.day)"
+            if let date = date {
 
-            header.dayLabel.text = date.weekdayName.cut(at: 2)
+                header.dateLabel.text = "\(date.day)"
+
+                header.dayLabel.text = date.weekdayName.cut(at: 2)
+            }
+
+            return header
+        } else {
+            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFooterReuseIdentifier, for: indexPath) as! MiniCardFooterView
+        }
+    }
+}
+
+extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
+
+    func collectionView(collectionView:UICollectionView, heightForMiniCardWithWidth:CGFloat) -> CGFloat {
+        var height: CGFloat = 200.0
+        switch Device.size() {
+        case .screen3_5Inch:  height = 115
+        case .screen4Inch:    height = 200
+        case .screen4_7Inch:  height = 200
+        case .screen5_5Inch:  height = 250
+        case .screen7_9Inch:  height = 400
+        case .screen9_7Inch:  height = 750
+        default:              height = 200
         }
 
-        return header
+        return height
     }
 
-    // MARK: UICollectionViewDelegate
+    func collectionViewFooterHeight() -> CGFloat {
+        return 25.0
+    }
 
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-
-     }
-     */
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+    func collectionViewHeaderWidthPercentage() -> CGFloat {
+        return 0.10
+    }
+    
+    func collectionViewMiniCardInset() -> UIEdgeInsets {
+        let top: CGFloat = 5.0
+        let left: CGFloat = 5.0
+        let bottom: CGFloat = 5.0
+        let right: CGFloat = 5.0
+        
+        return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
     }
 }

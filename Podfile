@@ -13,7 +13,8 @@ target 'fashionfrau' do
     pod 'AlamofireImage', '~> 3.2'
 
     pod 'SwiftDate', '~> 4.1'
-
+    pod 'Device', '~> 3.0'
+    
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing

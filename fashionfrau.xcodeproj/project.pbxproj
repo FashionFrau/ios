@@ -42,6 +42,10 @@
 		0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */; };
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
 		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
+		0CD2E6171EAA8EAB00F93DAE /* MiniCardHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6161EAA8EAB00F93DAE /* MiniCardHeaderView.xib */; };
+		0CD2E6191EAA8F8A00F93DAE /* MiniCardFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6181EAA8F8A00F93DAE /* MiniCardFooterView.xib */; };
+		0CD2E61B1EAA902500F93DAE /* MiniCardFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61A1EAA902500F93DAE /* MiniCardFooterView.swift */; };
+		0CD2E61D1EAA923800F93DAE /* MiniCardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61C1EAA923800F93DAE /* MiniCardsLayout.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
 		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
 		D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */; };
@@ -105,6 +109,10 @@
 		0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		0CD2E6161EAA8EAB00F93DAE /* MiniCardHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardHeaderView.xib; sourceTree = "<group>"; };
+		0CD2E6181EAA8F8A00F93DAE /* MiniCardFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFooterView.xib; sourceTree = "<group>"; };
+		0CD2E61A1EAA902500F93DAE /* MiniCardFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFooterView.swift; sourceTree = "<group>"; };
+		0CD2E61C1EAA923800F93DAE /* MiniCardsLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsLayout.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +317,10 @@
 				0CAEF5F51EA2997900AB4ED7 /* MiniCardViewCell.swift */,
 				0CAEF5F81EA2A7F200AB4ED7 /* MiniCardHeaderView.swift */,
 				0C0712CF1EA54247004B17C9 /* MiniCardContentView.swift */,
+				0CD2E6161EAA8EAB00F93DAE /* MiniCardHeaderView.xib */,
+				0CD2E6181EAA8F8A00F93DAE /* MiniCardFooterView.xib */,
+				0CD2E61A1EAA902500F93DAE /* MiniCardFooterView.swift */,
+				0CD2E61C1EAA923800F93DAE /* MiniCardsLayout.swift */,
 			);
 			name = MiniCards;
 			sourceTree = "<group>";
@@ -470,7 +482,9 @@
 				0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */,
 				0C8F57331E9C22CA009B5BC8 /* CustomOverlayView.xib in Resources */,
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
+				0CD2E6171EAA8EAB00F93DAE /* MiniCardHeaderView.xib in Resources */,
 				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
+				0CD2E6191EAA8F8A00F93DAE /* MiniCardFooterView.xib in Resources */,
 				0CAEF5FD1EA3AB1200AB4ED7 /* cards.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +650,7 @@
 			files = (
 				0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */,
 				0C093DA21EA3F77F001C1646 /* LookDTO.swift in Sources */,
+				0CD2E61B1EAA902500F93DAE /* MiniCardFooterView.swift in Sources */,
 				0C8F573A1E9D55EF009B5BC8 /* LookCard.swift in Sources */,
 				0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */,
 				0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */,
@@ -644,6 +659,7 @@
 				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardViewCell.swift in Sources */,
+				0CD2E61D1EAA923800F93DAE /* MiniCardsLayout.swift in Sources */,
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
 				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,

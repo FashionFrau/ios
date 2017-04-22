@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Device
 
 class MiniCardViewCell: UICollectionViewCell {
 
@@ -17,7 +18,7 @@ class MiniCardViewCell: UICollectionViewCell {
     @IBOutlet weak var profileNameLabel: UILabel!
 
     @IBOutlet weak var likesLabel: UILabel!
-    
+
     @IBOutlet weak var hashtagLabel: UILabel!
 
     override func awakeFromNib() {
@@ -29,12 +30,24 @@ class MiniCardViewCell: UICollectionViewCell {
         shadowEffect()
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        lookImage.af_cancelImageRequest()
+        lookImage.layer.removeAllAnimations()
+        lookImage.image = nil
+
+        profileImage.af_cancelImageRequest()
+        profileImage.layer.removeAllAnimations()
+        profileImage.image = nil
+    }
+
 
     func shadowEffect() {
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.shadowOffset = CGSize.zero
         layer.shadowOpacity = 0.15
-        layer.shadowRadius = 4
+        layer.shadowRadius = 5
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
     }
