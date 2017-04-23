@@ -19,6 +19,10 @@ class FFNavigationBar: UINavigationBar {
 
         titleTextAttributes = [NSFontAttributeName: courgetteFont, NSForegroundColorAttributeName:UIColor.white]
 
+        //  Remove bottom border
+        setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        shadowImage = UIImage()
+
     }
     /*
     // Only override draw() if you perform custom drawing.

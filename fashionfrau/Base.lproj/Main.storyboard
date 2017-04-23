@@ -40,13 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Frau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-k3-BZ1">
-                                <rect key="frame" x="79" y="266.5" width="218" height="47.5"/>
+                                <rect key="frame" x="78.5" y="266.5" width="218" height="47.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="38"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moda de todas,  para todas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-ci-Igi">
-                                <rect key="frame" x="116.5" y="320" width="142.5" height="52.5"/>
+                                <rect key="frame" x="117" y="320" width="142.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -94,24 +94,234 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="32.608695652173914"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="czM-83-R9O">
+        <!--Home Collection View Controller-->
+        <scene sceneID="Y7h-dk-hpE">
             <objects>
-                <viewController id="YXa-KS-Zzq" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0rx-eM-jXX"/>
-                        <viewControllerLayoutGuide type="bottom" id="NVr-wa-HrL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kaf-et-tts">
+                <collectionViewController id="biX-Ud-EZJ" customClass="HomeCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Lxk-ax-vdQ">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="KoK-j5-Zdq" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mbQ-eC-OMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HHH-5h-azb">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="200"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardHomeCell" id="bvA-AE-0Qk" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="200" width="166" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBr-7O-oJ8" userLabel="Content View" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsi-R2-4Po">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="126"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-0E-zHc" userLabel="Profile Stack View">
+                                                    <rect key="frame" x="10" y="141" width="146" height="25"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-b5-Jic" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="fGp-cw-4bN"/>
+                                                                <constraint firstAttribute="width" constant="25" id="gUV-48-msP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCn-4n-RMT">
+                                                            <rect key="frame" x="45" y="3" width="101" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="HF1-b5-Jic" firstAttribute="centerY" secondItem="Nxr-0E-zHc" secondAttribute="centerY" id="dRt-TF-c4I"/>
+                                                        <constraint firstItem="HF1-b5-Jic" firstAttribute="leading" secondItem="Nxr-0E-zHc" secondAttribute="leading" id="uGe-h7-PtS"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ySM-aq-8xm" userLabel="DividerStack View">
+                                                    <rect key="frame" x="0.0" y="176" width="166" height="1"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qK-NM-Pfs" userLabel="Divider">
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="1"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="bWK-fI-qtS"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Heart" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-6b-3QP" userLabel="Heart">
+                                                    <rect key="frame" x="7" y="182" width="12" height="11"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ff1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
+                                                    <rect key="frame" x="135.5" y="181.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-gu-81C" userLabel="Likes Label">
+                                                    <rect key="frame" x="26" y="181.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <color key="textColor" red="0.74117647060000003" green="0.68627450980000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ySM-aq-8xm" firstAttribute="width" secondItem="mBr-7O-oJ8" secondAttribute="width" id="55M-dQ-YQI"/>
+                                                <constraint firstItem="fsi-R2-4Po" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="5Gv-Dj-JFG"/>
+                                                <constraint firstItem="Nxr-0E-zHc" firstAttribute="leading" secondItem="mBr-7O-oJ8" secondAttribute="leading" constant="10" id="AyA-el-bCW"/>
+                                                <constraint firstItem="hoJ-6b-3QP" firstAttribute="top" secondItem="ySM-aq-8xm" secondAttribute="bottom" constant="5" id="EX0-Ei-sX7"/>
+                                                <constraint firstItem="fOS-gu-81C" firstAttribute="baseline" secondItem="hoJ-6b-3QP" secondAttribute="baseline" id="Lh8-qi-OVt"/>
+                                                <constraint firstItem="Nxr-0E-zHc" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="Psp-9E-ejb"/>
+                                                <constraint firstAttribute="trailing" secondItem="h3z-GV-mMx" secondAttribute="trailing" constant="7" id="T2I-L2-yPf"/>
+                                                <constraint firstItem="fOS-gu-81C" firstAttribute="leading" secondItem="hoJ-6b-3QP" secondAttribute="trailing" constant="7" id="TQF-6f-loT"/>
+                                                <constraint firstItem="ySM-aq-8xm" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="ZhR-qk-ywp"/>
+                                                <constraint firstItem="Nxr-0E-zHc" firstAttribute="top" secondItem="fsi-R2-4Po" secondAttribute="bottom" constant="15" id="aK7-wA-gW4"/>
+                                                <constraint firstItem="hoJ-6b-3QP" firstAttribute="leading" secondItem="mBr-7O-oJ8" secondAttribute="leading" constant="7" id="cwK-AJ-gMT"/>
+                                                <constraint firstItem="fsi-R2-4Po" firstAttribute="top" secondItem="mBr-7O-oJ8" secondAttribute="top" id="gCh-H2-Cn0"/>
+                                                <constraint firstAttribute="bottom" secondItem="hoJ-6b-3QP" secondAttribute="bottom" constant="7" id="gke-tu-K6e"/>
+                                                <constraint firstItem="ySM-aq-8xm" firstAttribute="top" secondItem="Nxr-0E-zHc" secondAttribute="bottom" constant="10" id="i9V-It-knA"/>
+                                                <constraint firstItem="fsi-R2-4Po" firstAttribute="width" secondItem="mBr-7O-oJ8" secondAttribute="width" id="lDc-il-VZC"/>
+                                                <constraint firstItem="h3z-GV-mMx" firstAttribute="centerY" secondItem="fOS-gu-81C" secondAttribute="centerY" id="vRw-rM-c0K"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="centerY" secondItem="bvA-AE-0Qk" secondAttribute="centerY" id="N4g-09-2Zd"/>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="width" secondItem="bvA-AE-0Qk" secondAttribute="width" id="TKK-Cb-wH6"/>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="height" secondItem="bvA-AE-0Qk" secondAttribute="height" id="hbS-Hq-iuf"/>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="centerX" secondItem="bvA-AE-0Qk" secondAttribute="centerX" id="zBT-Fr-FT2"/>
+                                </constraints>
+                                <size key="customSize" width="166" height="200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="likesLabel" destination="fOS-gu-81C" id="Gjt-36-3OK"/>
+                                    <outlet property="lookImage" destination="fsi-R2-4Po" id="ikt-ov-sYv"/>
+                                    <outlet property="profileImage" destination="HF1-b5-Jic" id="qiZ-ht-g87"/>
+                                    <outlet property="profileNameLabel" destination="rCn-4n-RMT" id="Cck-cu-0A6"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCell" id="Nj0-dd-ZkR" customClass="HomeHeaderView" customModule="fashionfrau" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DkX-qQ-Hac" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                                    <rect key="frame" x="137" y="18" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="6Rx-ae-jvh"/>
+                                        <constraint firstAttribute="width" constant="100" id="k2K-DL-FOL"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-UJ-5JZ" userLabel="Likes Stack View">
+                                    <rect key="frame" x="98.5" y="128" width="177.5" height="43"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o93-Md-ZL5">
+                                            <rect key="frame" x="0.0" y="0.0" width="39.5" height="43"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="291" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPP-Lv-icR">
+                                                    <rect key="frame" x="7" y="0.0" width="25.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-28-PIS">
+                                                    <rect key="frame" x="0.5" y="21.5" width="39" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-8p-RHK">
+                                            <rect key="frame" x="69.5" y="0.0" width="40.5" height="43"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-Gc-UN6">
+                                                    <rect key="frame" x="5" y="0.0" width="30.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhS-Dn-RRx">
+                                                    <rect key="frame" x="0.5" y="21.5" width="40" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uip-Ra-mf3">
+                                            <rect key="frame" x="140" y="0.0" width="37.5" height="43"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4315" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugt-lD-Es5">
+                                                    <rect key="frame" x="1.5" y="0.0" width="34.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-pd-ubi">
+                                                    <rect key="frame" x="0.0" y="21.5" width="37.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundRecentLiked" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-95-Q9F" userLabel="Background Recent Liked">
+                                    <rect key="frame" x="0.0" y="160" width="375" height="32"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT LIKED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3m-u9-haS">
+                                    <rect key="frame" x="130" y="165.5" width="115" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="kfe-95-Q9F" firstAttribute="width" secondItem="Nj0-dd-ZkR" secondAttribute="width" id="EUT-Ee-Rgz"/>
+                                <constraint firstItem="DkX-qQ-Hac" firstAttribute="top" secondItem="Nj0-dd-ZkR" secondAttribute="topMargin" constant="10" id="Je0-xq-hbL"/>
+                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="centerX" secondItem="DkX-qQ-Hac" secondAttribute="centerX" id="MIX-3E-r9R"/>
+                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerX" secondItem="kfe-95-Q9F" secondAttribute="centerX" id="OmQ-YP-0lC"/>
+                                <constraint firstItem="DkX-qQ-Hac" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="Ttf-7u-grl"/>
+                                <constraint firstItem="kfe-95-Q9F" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="cWd-ev-Rrs"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="kfe-95-Q9F" secondAttribute="bottom" id="fe9-TD-VI0"/>
+                                <constraint firstItem="kfe-95-Q9F" firstAttribute="height" secondItem="W3m-u9-haS" secondAttribute="height" constant="11" id="kqy-9V-54m"/>
+                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerY" secondItem="kfe-95-Q9F" secondAttribute="centerY" id="lxq-t3-0Ev"/>
+                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="top" secondItem="DkX-qQ-Hac" secondAttribute="bottom" constant="10" id="mpw-Vh-8Qv"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="profileImage" destination="DkX-qQ-Hac" id="CDt-yq-eQv"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="biX-Ud-EZJ" id="ohQ-Qe-yqA"/>
+                            <outlet property="delegate" destination="biX-Ud-EZJ" id="D3X-aE-ijd"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="DdF-6o-5hG"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4z9-Zd-Ju8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="-670.61469265367316"/>
+            <point key="canvasLocation" x="2868" y="-673.31334332833592"/>
         </scene>
         <!--Cards View Controller-->
         <scene sceneID="lXc-l5-eMp">
@@ -179,7 +389,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rqS-tw-v4a" userLabel="Stack View - Buttons">
                                 <rect key="frame" x="15" y="350" width="345" height="85"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1V-q4-PQ8" userLabel="Profile">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1V-q4-PQ8" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="17.5" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UYd-j1-Bez"/>
@@ -307,14 +517,14 @@ Acabamentos desfiados.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="bKa-RI-nM1" customClass="MiniCardsLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardCell" id="fVi-Pt-Hza" customClass="MiniCardViewCell" customModule="fashionfrau" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardFavoriteCell" id="fVi-Pt-Hza" customClass="MiniCardFavoriteCell" customModule="fashionfrau" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3G-VU-De2" userLabel="Content View" customClass="MiniCardContentView" customModule="fashionfrau" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3G-VU-De2" userLabel="Content View" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-Wr-Zcp">
@@ -323,7 +533,7 @@ Acabamentos desfiados.</string>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-Pj-wa0" userLabel="Profile Stack View">
                                                     <rect key="frame" x="10" y="141" width="146" height="25"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-2j-2iy" userLabel="Profile">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-2j-2iy" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="Nox-8W-yBi"/>
@@ -509,7 +719,7 @@ Acabamentos desfiados.</string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="YXa-KS-Zzq" kind="relationship" relationship="rootViewController" id="TwF-r9-Pvk"/>
+                        <segue destination="biX-Ud-EZJ" kind="relationship" relationship="rootViewController" id="6YM-wu-VCX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgw-C1-DRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -531,5 +741,6 @@ Acabamentos desfiados.</string>
         <image name="Star" width="32" height="30"/>
         <image name="Star Active" width="32" height="30"/>
         <image name="Unlike" width="55" height="47"/>
+        <image name="backgroundRecentLiked" width="3" height="32"/>
     </resources>
 </document>

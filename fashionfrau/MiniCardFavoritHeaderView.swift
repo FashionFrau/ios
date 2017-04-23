@@ -1,5 +1,5 @@
 //
-//  MiniCardHeaderView.swift
+//  MiniCardFavoriteHeaderView.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 15/04/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MiniCardHeaderView: UICollectionReusableView {
+class MiniCardFavoriteHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var dateLabel: UILabel!
 

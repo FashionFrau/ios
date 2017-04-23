@@ -15,7 +15,7 @@ class CardView: UIView {
 
     @IBOutlet weak var lookImage: UIImageView!
 
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: RoundImageView!
 
     @IBOutlet weak var nameLabel: UILabel!
 
@@ -32,8 +32,6 @@ class CardView: UIView {
 
         gradientEffect()
 
-        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
-        profileImage.layer.masksToBounds = true
     }
 
     func update(look: LookCard) {

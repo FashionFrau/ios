@@ -12,12 +12,12 @@ import AlamofireImage
 import SwiftDate
 import Device
 
-private let miniCardReuseIdentifier = "MiniCardCell"
-private let miniCardHeaderReuseIdentifier = "MiniCardHeaderCell"
-private let miniCardFooterReuseIdentifier = "MiniCardFooterCell"
+private let miniCardReuseIdentifier = "MiniCardFavoriteCell"
+private let miniCardHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
+private let miniCardFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
 
-private let nibForHeader = "MiniCardHeaderView"
-private let nibForFooter = "MiniCardFooterView"
+private let nibForHeader = "MiniCardFavoriteHeaderView"
+private let nibForFooter = "MiniCardFavoriteFooterView"
 
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -25,9 +25,6 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
         let nibHeader = UINib(nibName: nibForHeader, bundle: nil)
@@ -37,7 +34,6 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         self.collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFooterReuseIdentifier)
 
 
-        // Do any additional setup after loading the view.
         collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
         if let layout = collectionView?.collectionViewLayout as? MiniCardsLayout {
             layout.delegate = self
@@ -46,7 +42,6 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,20 +50,11 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     }
 
     func fakeData() {
-        CardService.cs.get(xhr: { (cards: [MiniLooksCard], error: NSError?) in
+        CardService.cs.get(miniCards: { (cards: [MiniLooksCard], error: NSError?) in
             self.dataSource = cards
             self.collectionView?.reloadData()
         })
     }
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
 
     // MARK: UICollectionViewDataSource
 
@@ -84,7 +70,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardReuseIdentifier, for: indexPath) as! MiniCardViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardReuseIdentifier, for: indexPath) as! MiniCardFavoriteCell
 
         let mini: MiniLooksCard? = dataSource[indexPath.section]
 
@@ -115,7 +101,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
         if(kind == UICollectionElementKindSectionHeader) {
 
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHeaderReuseIdentifier, for: indexPath) as! MiniCardHeaderView
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHeaderReuseIdentifier, for: indexPath) as! MiniCardFavoriteHeaderView
 
             let date: DateInRegion? = dataSource[indexPath.section].date
 
@@ -128,7 +114,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
             return header
         } else {
-            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFooterReuseIdentifier, for: indexPath) as! MiniCardFooterView
+            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFooterReuseIdentifier, for: indexPath) as! MiniCardFavoriteFooterView
         }
     }
 }

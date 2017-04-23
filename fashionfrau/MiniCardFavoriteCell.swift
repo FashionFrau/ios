@@ -1,5 +1,5 @@
 //
-//  CardCollectionViewCell.swift
+//  MiniCardFavoriteCell.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 15/04/2017.
@@ -9,11 +9,11 @@
 import UIKit
 import Device
 
-class MiniCardViewCell: UICollectionViewCell {
+class MiniCardFavoriteCell: UICollectionViewCell {
 
     @IBOutlet weak var lookImage: UIImageView!
 
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: RoundImageView!
 
     @IBOutlet weak var profileNameLabel: UILabel!
 
@@ -23,9 +23,6 @@ class MiniCardViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
-        profileImage.layer.masksToBounds = true
 
         shadowEffect()
     }
@@ -44,10 +41,10 @@ class MiniCardViewCell: UICollectionViewCell {
 
 
     func shadowEffect() {
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize.zero
         layer.shadowOpacity = 0.15
-        layer.shadowRadius = 5
+        layer.shadowRadius = 10
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
     }

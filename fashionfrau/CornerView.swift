@@ -1,5 +1,5 @@
 //
-//  MiniCardContentView.swift
+//  CornerView.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 17/04/2017.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class MiniCardContentView: UIView {
+class CornerView: UIView {
 
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {

@@ -136,8 +136,6 @@ class MiniCardsLayout: UICollectionViewLayout {
 
             // REAJUST CONTENT SIZE =====================================================================================
             contentHeight = max(contentHeight, footerCellAttributes.frame.maxY)
-
-
         }
     }
 

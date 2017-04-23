@@ -14,7 +14,7 @@ class CardDetailViewController: UIViewController {
 
     private var _look: LookCard!
 
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileImageView: RoundImageView!
 
     @IBOutlet weak var profileNameLabel: UILabel!
 
@@ -31,9 +31,6 @@ class CardDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
-        profileImageView.layer.masksToBounds = true
 
         setupSlider()
 

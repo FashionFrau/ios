@@ -23,6 +23,8 @@ class LookDTO: Mappable {
 
     var gallery: [String]?
 
+    var season: String?
+
     required init?(map: Map) {
         /// This function can be used to validate JSON prior to mapping. Return nil to cancel mapping at this point
     }
@@ -39,5 +41,7 @@ class LookDTO: Mappable {
         hashtag <- map["hashtag"]
 
         gallery <- map["gallery"]
+
+        season <- map["season"]
     }
 }
