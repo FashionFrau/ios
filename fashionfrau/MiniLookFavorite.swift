@@ -1,5 +1,5 @@
 //
-//  MiniLookCard.swift
+//  MiniLookFavorite.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 16/04/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MiniLookCardBuilder {
+class MiniLookFavoriteBuilder {
 
     var profileUrlString: String?
 
@@ -20,7 +20,7 @@ class MiniLookCardBuilder {
 
     var hashtag: String?
 
-    typealias BuilderClosure = (MiniLookCardBuilder) -> ()
+    typealias BuilderClosure = (MiniLookFavoriteBuilder) -> ()
 
     init(buildClosure: BuilderClosure) {
 
@@ -29,7 +29,7 @@ class MiniLookCardBuilder {
 
 }
 
-struct MiniLookCard {
+struct MiniLookFavorite {
 
     let profileUrl: URL
 
@@ -41,7 +41,7 @@ struct MiniLookCard {
 
     let hashtag: String
 
-    init?(builder: MiniLookCardBuilder) throws {
+    init?(builder: MiniLookFavoriteBuilder) throws {
 
         // Mandatory
         if let lookUrl = builder.lookUrlString, let profileName = builder.profileName, let profileUrl = builder.profileUrlString, let likes = builder.likes, let hashtag = builder.hashtag {

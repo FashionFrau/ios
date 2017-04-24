@@ -13,6 +13,11 @@ extension UIColor {
     static let fashionfrau = UIColor(rgb: 0xFA78A6)
     static let fashionfrauLight = UIColor(rgb: 0xFCF4FB)
 
+    static let fashionfrauWinter = UIColor(rgb: 0x4990E2)
+    static let fashionfrauSummer = UIColor(rgb: 0xF2B12D)
+    static let fashionfrauFall = UIColor(rgb: 0xB2261C)
+    static let fashionfrauSpring = UIColor(rgb: 0x286703)
+
     static let tabBar = UIColor(rgb: 0xFCF4FB)
 
     convenience init(red: Int, green: Int, blue: Int) {

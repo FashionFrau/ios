@@ -1,5 +1,5 @@
 //
-//  MiniLooksCard.swift
+//  MiniLooksFavorite.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 17/04/2017.
@@ -9,13 +9,13 @@
 import Foundation
 import SwiftDate
 
-class MiniLooksCardBuilder {
+class MiniLooksFavoriteBuilder {
 
     var date: String?
 
-    var looks: [MiniLookCardBuilder]?
+    var looks: [MiniLookFavoriteBuilder]?
 
-    typealias BuilderClosure = (MiniLooksCardBuilder) -> ()
+    typealias BuilderClosure = (MiniLooksFavoriteBuilder) -> ()
 
     init(buildClosure: BuilderClosure) {
 
@@ -23,13 +23,13 @@ class MiniLooksCardBuilder {
     }
 }
 
-struct MiniLooksCard {
+struct MiniLooksFavorite {
 
     let date: DateInRegion
 
-    let looks: [MiniLookCard]
+    let looks: [MiniLookFavorite]
 
-    init?(builder: MiniLooksCardBuilder) throws {
+    init?(builder: MiniLooksFavoriteBuilder) throws {
 
         // Mandatory
 
@@ -41,11 +41,11 @@ struct MiniLooksCard {
                 throw MiniLookCardError.ParseDate
             }
 
-            var looksMiniCard: [MiniLookCard] = []
+            var looksMiniCard: [MiniLookFavorite] = []
 
             for look in looks {
 
-                let builder = try MiniLookCard(builder: look)
+                let builder = try MiniLookFavorite(builder: look)
 
                 if let builded = builder {
 

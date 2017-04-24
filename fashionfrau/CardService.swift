@@ -54,23 +54,23 @@ class CardService {
         }
     }
 
-    func get(miniCards: (([MiniLooksCard], NSError?) -> Void)!) {
+    func get(miniCards: (([MiniLooksFavorite], NSError?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)".asURL()
 
-        var looks: [MiniLooksCard] = []
+        var looks: [MiniLooksFavorite] = []
 
-        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[MiniLookDTO]>) in
+        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[MiniLookFavoriteDTO]>) in
 
             let miniLooksDTO = response.result.value
 
-            let looksAsBuilder: [MiniLooksCardBuilder] = self.createMiniLooksCardBuilder(from: miniLooksDTO)
+            let looksAsBuilder: [MiniLooksFavoriteBuilder] = self.createMiniLooksFavoriteBuilder(from: miniLooksDTO)
 
             for lookAsBuilder in looksAsBuilder {
 
                 do {
 
-                    let builded = try MiniLooksCard(builder: lookAsBuilder)
+                    let builded = try MiniLooksFavorite(builder: lookAsBuilder)
 
                     if let look = builded {
 
@@ -86,23 +86,23 @@ class CardService {
         }
     }
 
-    func get(likedCards: (([MiniLooksCard], NSError?) -> Void)!) {
+    func get(likedCards: (([MiniLookHome], NSError?) -> Void)!) {
 
-        let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCards)".asURL()
+        let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
 
-        var looks: [MiniLooksCard] = []
+        var looks: [MiniLookHome] = []
 
-        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[MiniLookDTO]>) in
+        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[LookDTO]>) in
 
-            let miniLooksDTO = response.result.value
+            let looksDTO = response.result.value
 
-            let looksAsBuilder: [MiniLooksCardBuilder] = self.createMiniLooksCardBuilder(from: miniLooksDTO)
+            let looksAsBuilder: [MiniLookHomeBuilder] = self.createMiniLookHomeBuilder(from: looksDTO)
 
             for lookAsBuilder in looksAsBuilder {
 
                 do {
 
-                    let builded = try MiniLooksCard(builder: lookAsBuilder)
+                    let builded = try MiniLookHome(builder: lookAsBuilder)
 
                     if let look = builded {
 
@@ -148,19 +148,19 @@ extension  CardService {
         return looksAsBuilder
     }
 
-    fileprivate func createMiniLooksCardBuilder(from miniLooksDTO: [MiniLookDTO]?) -> [MiniLooksCardBuilder] {
+    fileprivate func createMiniLooksFavoriteBuilder(from miniLooksDTO: [MiniLookFavoriteDTO]?) -> [MiniLooksFavoriteBuilder] {
 
-        var looksAsBuilder: [MiniLooksCardBuilder] = []
+        var looksAsBuilder: [MiniLooksFavoriteBuilder] = []
 
         if miniLooksDTO?.isEmpty == false {
 
             for dto in miniLooksDTO! {
 
-                let builder = MiniLooksCardBuilder {
+                let builder = MiniLooksFavoriteBuilder {
 
                     $0.date = dto.date
 
-                    $0.looks = self.createMiniLookCardBuilder(from: dto.looks)
+                    $0.looks = self.createMiniLookFavoriteBuilder(from: dto.looks)
                 }
 
                 looksAsBuilder.append(builder)
@@ -170,15 +170,15 @@ extension  CardService {
         return looksAsBuilder
     }
 
-    fileprivate func createMiniLookCardBuilder(from looksDTO: [LookDTO]?) -> [MiniLookCardBuilder] {
+    fileprivate func createMiniLookFavoriteBuilder(from looksDTO: [LookDTO]?) -> [MiniLookFavoriteBuilder] {
 
-        var looksAsBuilder: [MiniLookCardBuilder] = []
+        var looksAsBuilder: [MiniLookFavoriteBuilder] = []
 
         if looksDTO?.isEmpty == false {
 
             for dto in looksDTO! {
 
-                let builder = MiniLookCardBuilder {
+                let builder = MiniLookFavoriteBuilder {
 
                     $0.profileName = dto.profileName
 
@@ -196,5 +196,33 @@ extension  CardService {
         }
         
         return looksAsBuilder
+    }
+
+    fileprivate func createMiniLookHomeBuilder(from looksDTO: [LookDTO]?) -> [MiniLookHomeBuilder] {
+
+        var miniLookHomeAsBuilder: [MiniLookHomeBuilder] = []
+
+        if looksDTO?.isEmpty == false {
+
+            for dto in looksDTO! {
+
+                let builder = MiniLookHomeBuilder {
+
+                    $0.profileName = dto.profileName
+
+                    $0.profileUrlString = dto.profileUrlString
+
+                    $0.lookUrlString = dto.lookUrlString
+
+                    $0.likes = dto.likes
+
+                    $0.season = dto.season
+                }
+                
+                miniLookHomeAsBuilder.append(builder)
+            }
+        }
+        
+        return miniLookHomeAsBuilder
     }
 }

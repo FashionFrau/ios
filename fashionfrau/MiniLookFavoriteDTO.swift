@@ -1,5 +1,5 @@
 //
-//  MiniLookDTO.swift
+//  MiniLookFavoriteDTO.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 17/04/2017.
@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class MiniLookDTO: Mappable {
+class MiniLookFavoriteDTO: Mappable {
 
     var date: String?
 

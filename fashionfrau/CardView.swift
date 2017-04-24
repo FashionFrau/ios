@@ -32,7 +32,15 @@ class CardView: UIView {
 
         gradientEffect()
 
+        profileImage.af_cancelImageRequest()
+        profileImage.layer.removeAllAnimations()
+        profileImage.image = nil
+
+        lookImage.af_cancelImageRequest()
+        lookImage.layer.removeAllAnimations()
+        lookImage.image = nil
     }
+
 
     func update(look: LookCard) {
 

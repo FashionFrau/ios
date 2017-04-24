@@ -21,7 +21,7 @@ private let nibForFooter = "MiniCardFavoriteFooterView"
 
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    private var dataSource: [MiniLooksCard] = []
+    private var dataSource: [MiniLooksFavorite] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +50,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     }
 
     func fakeData() {
-        CardService.cs.get(miniCards: { (cards: [MiniLooksCard], error: NSError?) in
+        CardService.cs.get(miniCards: { (cards: [MiniLooksFavorite], error: NSError?) in
             self.dataSource = cards
             self.collectionView?.reloadData()
         })
@@ -72,15 +72,15 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardReuseIdentifier, for: indexPath) as! MiniCardFavoriteCell
 
-        let mini: MiniLooksCard? = dataSource[indexPath.section]
+        let mini: MiniLooksFavorite? = dataSource[indexPath.section]
 
         if let miniLook = mini {
 
-            let looks: [MiniLookCard]? = miniLook.looks
+            let looks: [MiniLookFavorite]? = miniLook.looks
 
             if looks?.isEmpty == false {
 
-                let look: MiniLookCard = looks![indexPath.row]
+                let look: MiniLookFavorite = looks![indexPath.row]
 
                 cell.lookImage.af_setImage(withURL: look.lookUrl)
 
@@ -122,18 +122,16 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
 
     func collectionView(collectionView:UICollectionView, heightForMiniCardWithWidth:CGFloat) -> CGFloat {
-        var height: CGFloat = 200.0
-        switch Device.size() {
-        case .screen3_5Inch:  height = 115
-        case .screen4Inch:    height = 200
-        case .screen4_7Inch:  height = 200
-        case .screen5_5Inch:  height = 250
-        case .screen7_9Inch:  height = 400
-        case .screen9_7Inch:  height = 750
-        default:              height = 200
-        }
 
-        return height
+        switch Device.size() {
+        case .screen3_5Inch:  return 115
+        case .screen4Inch:    return 200
+        case .screen4_7Inch:  return 200
+        case .screen5_5Inch:  return 250
+        case .screen7_9Inch:  return 400
+        case .screen9_7Inch:  return 750
+        default:              return 200
+        }
     }
 
     func collectionViewFooterHeight() -> CGFloat {

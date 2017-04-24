@@ -102,14 +102,14 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HHH-5h-azb">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="50" height="200"/>
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="50" height="250"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardHomeCell" id="bvA-AE-0Qk" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="200" width="166" height="200"/>
+                                <rect key="frame" x="0.0" y="250" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
@@ -158,10 +158,19 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Heart" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-6b-3QP" userLabel="Heart">
                                                     <rect key="frame" x="7" y="182" width="12" height="11"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ff1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
-                                                    <rect key="frame" x="135.5" y="181.5" width="23.5" height="15"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-WI-xel" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
+                                                    <rect key="frame" x="130" y="182.5" width="28.5" height="12.5"/>
+                                                    <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
+                                                    <rect key="frame" x="130.5" y="183" width="28.5" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-gu-81C" userLabel="Likes Label">
@@ -175,10 +184,13 @@
                                             <constraints>
                                                 <constraint firstItem="ySM-aq-8xm" firstAttribute="width" secondItem="mBr-7O-oJ8" secondAttribute="width" id="55M-dQ-YQI"/>
                                                 <constraint firstItem="fsi-R2-4Po" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="5Gv-Dj-JFG"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="centerY" secondItem="h3z-GV-mMx" secondAttribute="centerY" id="5k9-Rf-qan"/>
                                                 <constraint firstItem="Nxr-0E-zHc" firstAttribute="leading" secondItem="mBr-7O-oJ8" secondAttribute="leading" constant="10" id="AyA-el-bCW"/>
                                                 <constraint firstItem="hoJ-6b-3QP" firstAttribute="top" secondItem="ySM-aq-8xm" secondAttribute="bottom" constant="5" id="EX0-Ei-sX7"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="height" secondItem="h3z-GV-mMx" secondAttribute="height" id="FpU-vJ-quf"/>
                                                 <constraint firstItem="fOS-gu-81C" firstAttribute="baseline" secondItem="hoJ-6b-3QP" secondAttribute="baseline" id="Lh8-qi-OVt"/>
                                                 <constraint firstItem="Nxr-0E-zHc" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="Psp-9E-ejb"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="width" secondItem="h3z-GV-mMx" secondAttribute="width" id="SmP-Xl-aB4"/>
                                                 <constraint firstAttribute="trailing" secondItem="h3z-GV-mMx" secondAttribute="trailing" constant="7" id="T2I-L2-yPf"/>
                                                 <constraint firstItem="fOS-gu-81C" firstAttribute="leading" secondItem="hoJ-6b-3QP" secondAttribute="trailing" constant="7" id="TQF-6f-loT"/>
                                                 <constraint firstItem="ySM-aq-8xm" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="ZhR-qk-ywp"/>
@@ -189,6 +201,7 @@
                                                 <constraint firstItem="ySM-aq-8xm" firstAttribute="top" secondItem="Nxr-0E-zHc" secondAttribute="bottom" constant="10" id="i9V-It-knA"/>
                                                 <constraint firstItem="fsi-R2-4Po" firstAttribute="width" secondItem="mBr-7O-oJ8" secondAttribute="width" id="lDc-il-VZC"/>
                                                 <constraint firstItem="h3z-GV-mMx" firstAttribute="centerY" secondItem="fOS-gu-81C" secondAttribute="centerY" id="vRw-rM-c0K"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="centerX" secondItem="h3z-GV-mMx" secondAttribute="centerX" id="wax-di-rvh"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -215,11 +228,13 @@
                                     <outlet property="lookImage" destination="fsi-R2-4Po" id="ikt-ov-sYv"/>
                                     <outlet property="profileImage" destination="HF1-b5-Jic" id="qiZ-ht-g87"/>
                                     <outlet property="profileNameLabel" destination="rCn-4n-RMT" id="Cck-cu-0A6"/>
+                                    <outlet property="seasonBackground" destination="2fX-WI-xel" id="XtV-ny-4tf"/>
+                                    <outlet property="seasonLabel" destination="h3z-GV-mMx" id="ASf-Zj-lqE"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCell" id="Nj0-dd-ZkR" customClass="HomeHeaderView" customModule="fashionfrau" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DkX-qQ-Hac" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
@@ -229,55 +244,55 @@
                                         <constraint firstAttribute="width" constant="100" id="k2K-DL-FOL"/>
                                     </constraints>
                                 </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-UJ-5JZ" userLabel="Likes Stack View">
-                                    <rect key="frame" x="98.5" y="128" width="177.5" height="43"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-UJ-5JZ" userLabel="Likes Stack View">
+                                    <rect key="frame" x="-0.5" y="143" width="375" height="38"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o93-Md-ZL5">
-                                            <rect key="frame" x="0.0" y="0.0" width="39.5" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="118.5" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="291" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPP-Lv-icR">
-                                                    <rect key="frame" x="7" y="0.0" width="25.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <rect key="frame" x="48" y="0.0" width="22.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-28-PIS">
-                                                    <rect key="frame" x="0.5" y="21.5" width="39" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-28-PIS">
+                                                    <rect key="frame" x="42" y="19" width="34.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-8p-RHK">
-                                            <rect key="frame" x="69.5" y="0.0" width="40.5" height="43"/>
+                                            <rect key="frame" x="128.5" y="0.0" width="118" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-Gc-UN6">
-                                                    <rect key="frame" x="5" y="0.0" width="30.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <rect key="frame" x="45.5" y="0.0" width="27" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhS-Dn-RRx">
-                                                    <rect key="frame" x="0.5" y="21.5" width="40" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhS-Dn-RRx">
+                                                    <rect key="frame" x="41.5" y="19" width="35" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uip-Ra-mf3">
-                                            <rect key="frame" x="140" y="0.0" width="37.5" height="43"/>
+                                            <rect key="frame" x="256.5" y="0.0" width="118.5" height="38"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4315" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugt-lD-Es5">
-                                                    <rect key="frame" x="1.5" y="0.0" width="34.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                    <rect key="frame" x="44" y="0.0" width="30.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-pd-ubi">
-                                                    <rect key="frame" x="0.0" y="21.5" width="37.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-pd-ubi">
+                                                    <rect key="frame" x="43" y="19" width="33" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -285,29 +300,32 @@
                                         </stackView>
                                     </subviews>
                                 </stackView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundRecentLiked" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-95-Q9F" userLabel="Background Recent Liked">
-                                    <rect key="frame" x="0.0" y="160" width="375" height="32"/>
-                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT LIKED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3m-u9-haS">
-                                    <rect key="frame" x="130" y="165.5" width="115" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="142" y="218.5" width="91" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lov-gU-IXR" userLabel="Background Recent Likied">
+                                    <rect key="frame" x="0.0" y="211" width="375" height="31"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="kfe-95-Q9F" firstAttribute="width" secondItem="Nj0-dd-ZkR" secondAttribute="width" id="EUT-Ee-Rgz"/>
+                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="width" secondItem="Nj0-dd-ZkR" secondAttribute="width" id="2Rl-Xr-ppx"/>
+                                <constraint firstItem="lov-gU-IXR" firstAttribute="width" secondItem="Nj0-dd-ZkR" secondAttribute="width" id="432-zW-ph6"/>
                                 <constraint firstItem="DkX-qQ-Hac" firstAttribute="top" secondItem="Nj0-dd-ZkR" secondAttribute="topMargin" constant="10" id="Je0-xq-hbL"/>
                                 <constraint firstItem="nRo-UJ-5JZ" firstAttribute="centerX" secondItem="DkX-qQ-Hac" secondAttribute="centerX" id="MIX-3E-r9R"/>
-                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerX" secondItem="kfe-95-Q9F" secondAttribute="centerX" id="OmQ-YP-0lC"/>
                                 <constraint firstItem="DkX-qQ-Hac" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="Ttf-7u-grl"/>
-                                <constraint firstItem="kfe-95-Q9F" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="cWd-ev-Rrs"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="kfe-95-Q9F" secondAttribute="bottom" id="fe9-TD-VI0"/>
-                                <constraint firstItem="kfe-95-Q9F" firstAttribute="height" secondItem="W3m-u9-haS" secondAttribute="height" constant="11" id="kqy-9V-54m"/>
-                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerY" secondItem="kfe-95-Q9F" secondAttribute="centerY" id="lxq-t3-0Ev"/>
-                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="top" secondItem="DkX-qQ-Hac" secondAttribute="bottom" constant="10" id="mpw-Vh-8Qv"/>
+                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerX" secondItem="lov-gU-IXR" secondAttribute="centerX" id="U54-ZT-xwL"/>
+                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerY" secondItem="lov-gU-IXR" secondAttribute="centerY" id="WiA-Fw-6sZ"/>
+                                <constraint firstItem="lov-gU-IXR" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="edk-xR-a9F"/>
+                                <constraint firstItem="lov-gU-IXR" firstAttribute="height" secondItem="W3m-u9-haS" secondAttribute="height" constant="15" id="lMu-ya-W5A"/>
+                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="top" secondItem="DkX-qQ-Hac" secondAttribute="bottom" constant="25" id="mpw-Vh-8Qv"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="lov-gU-IXR" secondAttribute="bottom" id="wM9-KP-8uA"/>
                             </constraints>
                             <connections>
+                                <outlet property="backgrounRecentLikedView" destination="lov-gU-IXR" id="ild-RL-aaz"/>
                                 <outlet property="profileImage" destination="DkX-qQ-Hac" id="CDt-yq-eQv"/>
                             </connections>
                         </collectionReusableView>
@@ -741,6 +759,5 @@ Acabamentos desfiados.</string>
         <image name="Star" width="32" height="30"/>
         <image name="Star Active" width="32" height="30"/>
         <image name="Unlike" width="55" height="47"/>
-        <image name="backgroundRecentLiked" width="3" height="32"/>
     </resources>
 </document>
