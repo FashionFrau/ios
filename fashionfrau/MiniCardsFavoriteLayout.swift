@@ -1,5 +1,5 @@
 //
-//  MiniCardsLayout.swift
+//  MiniCardsFavoriteLayout.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 21.04.17.
@@ -16,7 +16,7 @@ protocol MiniCardsLayoutDelegate {
     func collectionView(collectionView:UICollectionView, heightForMiniCardWithWidth:CGFloat) -> CGFloat
 }
 
-class MiniCardsLayout: UICollectionViewLayout {
+class MiniCardsFavoriteLayout: UICollectionViewLayout {
 
     var delegate: MiniCardsLayoutDelegate!
 
@@ -100,9 +100,9 @@ class MiniCardsLayout: UICollectionViewLayout {
 
 
             headerYOffset = CGFloat(section) * rowHeight
-            let hearderWidthOffset = headerContentWidth
+            let headerWidthOffset = headerContentWidth
 
-            headerCellAttributes.frame = CGRect(x: headerXOffset, y: headerYOffset, width: hearderWidthOffset, height: headerMiniCardHeight)
+            headerCellAttributes.frame = CGRect(x: headerXOffset, y: headerYOffset, width: headerWidthOffset, height: headerMiniCardHeight)
             headerAttributes.append(headerCellAttributes)
 
             // MINICARD FRAME =====================================================================================

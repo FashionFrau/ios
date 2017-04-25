@@ -41,14 +41,16 @@
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
 		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
 		0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */; };
+		0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */; };
 		0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */; };
 		0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */; };
 		0CD2E61B1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61A1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift */; };
-		0CD2E61D1EAA923800F93DAE /* MiniCardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61C1EAA923800F93DAE /* MiniCardsLayout.swift */; };
+		0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61C1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift */; };
 		0CD2E6201EABE3E800F93DAE /* MiniCardHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61F1EABE3E800F93DAE /* MiniCardHomeCell.swift */; };
 		0CD2E6221EABE4A100F93DAE /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6211EABE4A100F93DAE /* RoundImageView.swift */; };
 		0CD2E6241EACD86800F93DAE /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */; };
-		0CD2E6281EACF1D300F93DAE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6271EACF1D300F93DAE /* HomeHeaderView.swift */; };
+		0CD2E6281EACF1D300F93DAE /* MiniCardHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */; };
+		0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
 		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
 		D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */; };
@@ -111,14 +113,16 @@
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookHome.swift; sourceTree = "<group>"; };
+		0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardHomeHeaderView.xib; sourceTree = "<group>"; };
 		0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteHeaderView.xib; sourceTree = "<group>"; };
 		0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteFooterView.xib; sourceTree = "<group>"; };
 		0CD2E61A1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFavoriteFooterView.swift; sourceTree = "<group>"; };
-		0CD2E61C1EAA923800F93DAE /* MiniCardsLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsLayout.swift; sourceTree = "<group>"; };
+		0CD2E61C1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsFavoriteLayout.swift; sourceTree = "<group>"; };
 		0CD2E61F1EABE3E800F93DAE /* MiniCardHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardHomeCell.swift; sourceTree = "<group>"; };
 		0CD2E6211EABE4A100F93DAE /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
-		0CD2E6271EACF1D300F93DAE /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardHomeHeaderView.swift; sourceTree = "<group>"; };
+		0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsHomeLayout.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -328,7 +332,7 @@
 				0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */,
 				0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */,
 				0CD2E61A1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift */,
-				0CD2E61C1EAA923800F93DAE /* MiniCardsLayout.swift */,
+				0CD2E61C1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift */,
 			);
 			name = MiniCardsFavorite;
 			sourceTree = "<group>";
@@ -346,7 +350,9 @@
 			isa = PBXGroup;
 			children = (
 				0CD2E61F1EABE3E800F93DAE /* MiniCardHomeCell.swift */,
-				0CD2E6271EACF1D300F93DAE /* HomeHeaderView.swift */,
+				0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */,
+				0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */,
+				0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */,
 			);
 			name = MiniCardsHome;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				0C8F57351E9C284E009B5BC8 /* CardView.xib in Resources */,
 				0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */,
 				0C8F57331E9C22CA009B5BC8 /* CustomOverlayView.xib in Resources */,
+				0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */,
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
 				0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */,
 				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
@@ -663,7 +670,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD2E6281EACF1D300F93DAE /* HomeHeaderView.swift in Sources */,
+				0CD2E6281EACF1D300F93DAE /* MiniCardHomeHeaderView.swift in Sources */,
 				0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */,
 				0C093DA21EA3F77F001C1646 /* LookDTO.swift in Sources */,
 				0CD2E61B1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift in Sources */,
@@ -676,7 +683,7 @@
 				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
-				0CD2E61D1EAA923800F93DAE /* MiniCardsLayout.swift in Sources */,
+				0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */,
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
 				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,
@@ -689,6 +696,7 @@
 				0CAEF6021EA3DCC600AB4ED7 /* CardService.swift in Sources */,
 				0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */,
 				0CD2E6201EABE3E800F93DAE /* MiniCardHomeCell.swift in Sources */,
+				0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */,
 				0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */,
 				0C0712CC1EA4D733004B17C9 /* Util.swift in Sources */,
 				0C0712C91EA43BAA004B17C9 /* MiniLookFavoriteDTO.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  HomeHeaderView.swift
+//  MiniCardHomeHeaderView.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 23.04.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeHeaderView: UICollectionReusableView {
+class MiniCardHomeHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var profileImage: RoundImageView!
 

@@ -12,12 +12,12 @@ import AlamofireImage
 import SwiftDate
 import Device
 
-private let miniCardReuseIdentifier = "MiniCardFavoriteCell"
-private let miniCardHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
-private let miniCardFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
+private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
+private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
+private let miniCardFavoriteFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
 
-private let nibForHeader = "MiniCardFavoriteHeaderView"
-private let nibForFooter = "MiniCardFavoriteFooterView"
+private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
+private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
 
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -27,15 +27,15 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         super.viewDidLoad()
 
         // Register cell classes
-        let nibHeader = UINib(nibName: nibForHeader, bundle: nil)
-        self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHeaderReuseIdentifier)
+        let nibHeader = UINib(nibName: nibForFavoriteHeader, bundle: nil)
+        self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardFavoriteHeaderReuseIdentifier)
 
-        let nibFooter = UINib(nibName: nibForFooter, bundle: nil)
-        self.collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFooterReuseIdentifier)
+        let nibFooter = UINib(nibName: nibForFavoriteFooter, bundle: nil)
+        self.collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier)
 
 
         collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-        if let layout = collectionView?.collectionViewLayout as? MiniCardsLayout {
+        if let layout = collectionView?.collectionViewLayout as? MiniCardsFavoriteLayout {
             layout.delegate = self
         }
     }
@@ -70,7 +70,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardReuseIdentifier, for: indexPath) as! MiniCardFavoriteCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardFavoriteReuseIdentifier, for: indexPath) as! MiniCardFavoriteCell
 
         let mini: MiniLooksFavorite? = dataSource[indexPath.section]
 
@@ -101,7 +101,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
         if(kind == UICollectionElementKindSectionHeader) {
 
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHeaderReuseIdentifier, for: indexPath) as! MiniCardFavoriteHeaderView
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFavoriteHeaderReuseIdentifier, for: indexPath) as! MiniCardFavoriteHeaderView
 
             let date: DateInRegion? = dataSource[indexPath.section].date
 
@@ -114,7 +114,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
             return header
         } else {
-            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFooterReuseIdentifier, for: indexPath) as! MiniCardFavoriteFooterView
+            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier, for: indexPath) as! MiniCardFavoriteFooterView
         }
     }
 }
@@ -143,11 +143,6 @@ extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
     }
     
     func collectionViewMiniCardInset() -> UIEdgeInsets {
-        let top: CGFloat = 5.0
-        let left: CGFloat = 5.0
-        let bottom: CGFloat = 5.0
-        let right: CGFloat = 5.0
-        
-        return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+        return UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
     }
 }

@@ -101,15 +101,10 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Lxk-ax-vdQ">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HHH-5h-azb">
-                            <size key="itemSize" width="150" height="200"/>
-                            <size key="headerReferenceSize" width="50" height="250"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
+                        <collectionViewLayout key="collectionViewLayout" id="LsG-vu-RKo" customClass="MiniCardsHomeLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardHomeCell" id="bvA-AE-0Qk" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="250" width="166" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
@@ -233,102 +228,6 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeHeaderCell" id="Nj0-dd-ZkR" customClass="HomeHeaderView" customModule="fashionfrau" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DkX-qQ-Hac" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
-                                    <rect key="frame" x="137" y="18" width="100" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" id="6Rx-ae-jvh"/>
-                                        <constraint firstAttribute="width" constant="100" id="k2K-DL-FOL"/>
-                                    </constraints>
-                                </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-UJ-5JZ" userLabel="Likes Stack View">
-                                    <rect key="frame" x="-0.5" y="143" width="375" height="38"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o93-Md-ZL5">
-                                            <rect key="frame" x="0.0" y="0.0" width="118.5" height="38"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="291" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPP-Lv-icR">
-                                                    <rect key="frame" x="48" y="0.0" width="22.5" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
-                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gej-28-PIS">
-                                                    <rect key="frame" x="42" y="19" width="34.5" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
-                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-8p-RHK">
-                                            <rect key="frame" x="128.5" y="0.0" width="118" height="38"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-Gc-UN6">
-                                                    <rect key="frame" x="45.5" y="0.0" width="27" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
-                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhS-Dn-RRx">
-                                                    <rect key="frame" x="41.5" y="19" width="35" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
-                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uip-Ra-mf3">
-                                            <rect key="frame" x="256.5" y="0.0" width="118.5" height="38"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4315" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugt-lD-Es5">
-                                                    <rect key="frame" x="44" y="0.0" width="30.5" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
-                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDB-pd-ubi">
-                                                    <rect key="frame" x="43" y="19" width="33" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
-                                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT LIKED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3m-u9-haS">
-                                    <rect key="frame" x="142" y="218.5" width="91" height="16"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lov-gU-IXR" userLabel="Background Recent Likied">
-                                    <rect key="frame" x="0.0" y="211" width="375" height="31"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="width" secondItem="Nj0-dd-ZkR" secondAttribute="width" id="2Rl-Xr-ppx"/>
-                                <constraint firstItem="lov-gU-IXR" firstAttribute="width" secondItem="Nj0-dd-ZkR" secondAttribute="width" id="432-zW-ph6"/>
-                                <constraint firstItem="DkX-qQ-Hac" firstAttribute="top" secondItem="Nj0-dd-ZkR" secondAttribute="topMargin" constant="10" id="Je0-xq-hbL"/>
-                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="centerX" secondItem="DkX-qQ-Hac" secondAttribute="centerX" id="MIX-3E-r9R"/>
-                                <constraint firstItem="DkX-qQ-Hac" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="Ttf-7u-grl"/>
-                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerX" secondItem="lov-gU-IXR" secondAttribute="centerX" id="U54-ZT-xwL"/>
-                                <constraint firstItem="W3m-u9-haS" firstAttribute="centerY" secondItem="lov-gU-IXR" secondAttribute="centerY" id="WiA-Fw-6sZ"/>
-                                <constraint firstItem="lov-gU-IXR" firstAttribute="centerX" secondItem="Nj0-dd-ZkR" secondAttribute="centerX" id="edk-xR-a9F"/>
-                                <constraint firstItem="lov-gU-IXR" firstAttribute="height" secondItem="W3m-u9-haS" secondAttribute="height" constant="15" id="lMu-ya-W5A"/>
-                                <constraint firstItem="nRo-UJ-5JZ" firstAttribute="top" secondItem="DkX-qQ-Hac" secondAttribute="bottom" constant="25" id="mpw-Vh-8Qv"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="lov-gU-IXR" secondAttribute="bottom" id="wM9-KP-8uA"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="backgrounRecentLikedView" destination="lov-gU-IXR" id="ild-RL-aaz"/>
-                                <outlet property="profileImage" destination="DkX-qQ-Hac" id="CDt-yq-eQv"/>
-                            </connections>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="biX-Ud-EZJ" id="ohQ-Qe-yqA"/>
                             <outlet property="delegate" destination="biX-Ud-EZJ" id="D3X-aE-ijd"/>
@@ -529,11 +428,11 @@ Acabamentos desfiados.</string>
         <scene sceneID="jaQ-i8-n01">
             <objects>
                 <collectionViewController id="e9B-84-pFy" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="m0T-9s-OWw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="m0T-9s-OWw">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewLayout key="collectionViewLayout" id="bKa-RI-nM1" customClass="MiniCardsLayout" customModule="fashionfrau" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="bKa-RI-nM1" customClass="MiniCardsFavoriteLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardFavoriteCell" id="fVi-Pt-Hza" customClass="MiniCardFavoriteCell" customModule="fashionfrau" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>

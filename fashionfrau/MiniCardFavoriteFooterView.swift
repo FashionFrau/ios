@@ -17,7 +17,5 @@ class MiniCardFavoriteFooterView: UICollectionReusableView {
 
         dotView.layer.cornerRadius = dotView.frame.size.height / 2
         dotView.layer.masksToBounds = true
-        
-        
     }
 }
