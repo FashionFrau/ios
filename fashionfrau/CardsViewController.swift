@@ -45,9 +45,11 @@ class CardsViewController: UIViewController {
     }
 
     func fakeData() {
-        CardService.cs.get(cards: { (cards: [LookCard], error: NSError?) in
-            self.dataSource = cards
-            self.kolodaView.reloadData()
+        CardService.cs.get(cards: { (cards: [LookCard], error: Error?) in
+            if error == nil {
+                self.dataSource = cards
+                self.kolodaView.reloadData()
+            }
         })
     }
 

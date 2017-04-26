@@ -45,9 +45,11 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     func fakeData() {
-        CardService.cs.get(likedCards: { (cards: [MiniLookHome], error: NSError?) in
-            self.dataSource = cards
-            self.collectionView?.reloadData()
+        CardService.cs.get(likedCards: { (cards: [MiniLookHome], error: Error?) in
+            if error == nil {
+                self.dataSource = cards
+                self.collectionView?.reloadData()
+            }
         })
     }
 
@@ -73,7 +75,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         if let miniLook = mini {
             cell.model = miniLook
         }
-        
+
         return cell
     }
 
@@ -82,7 +84,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         cell.profileImage.af_setImage(withURL: NSURL(string:"https://scontent.cdninstagram.com/t51.2885-19/s150x150/17126950_1711879765768835_8298910554370605056_a.jpg")! as URL)
         return cell
     }
-    
+
     // MARK: UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

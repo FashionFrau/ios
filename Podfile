@@ -14,7 +14,9 @@ target 'fashionfrau' do
 
     pod 'SwiftDate', '~> 4.1'
     pod 'Device', '~> 3.0'
-    
+
+    pod 'Flurry-iOS-SDK/FlurrySDK', '~> 8.0'
+
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing

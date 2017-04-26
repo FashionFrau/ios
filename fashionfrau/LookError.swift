@@ -8,12 +8,14 @@
 
 import Foundation
 
+let MiniLookDomainError = "mini-look-domain"
+let LookDomainError = "look-domain"
 
 enum LookError: Error {
-    case MissingField
+    case MissingField(String)
 }
 
-enum MiniLookCardError: Error {
-    case MissingField
+enum MiniLookError: Error {
+    case MissingField(String)
     case ParseDate
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftDate
+import Flurry_iOS_SDK
 
 class MiniLooksFavoriteBuilder {
 
@@ -32,32 +33,33 @@ struct MiniLooksFavorite {
     init?(builder: MiniLooksFavoriteBuilder) throws {
 
         // Mandatory
+        guard let looks = builder.looks else {
+            throw MiniLookError.MissingField("looks")
+        }
 
-        if let dateString = builder.date, let looks = builder.looks {
+        var looksMiniCard: [MiniLookFavorite] = []
 
-            if let date = DateInRegion(string: dateString, format: .iso8601(options: .withFullDate)) {
-                self.date = date
-            } else {
-                throw MiniLookCardError.ParseDate
+        for look in looks {
+
+
+            let builder = try MiniLookFavorite(builder: look)
+
+            if let builded = builder {
+
+                looksMiniCard.append(builded)
             }
+        }
 
-            var looksMiniCard: [MiniLookFavorite] = []
+        self.looks = looksMiniCard
 
-            for look in looks {
+        guard let dateString = builder.date else {
+            throw MiniLookError.MissingField("date")
+        }
 
-                let builder = try MiniLookFavorite(builder: look)
-
-                if let builded = builder {
-
-                    looksMiniCard.append(builded)
-                }
-            }
-
-            self.looks = looksMiniCard
-            
+        if let date = DateInRegion(string: dateString, format: .iso8601(options: .withFullDate)) {
+            self.date = date
         } else {
-            
-            throw MiniLookCardError.MissingField
+            throw MiniLookError.ParseDate
         }
     }
 }

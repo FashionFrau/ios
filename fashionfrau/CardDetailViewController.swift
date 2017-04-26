@@ -33,7 +33,6 @@ class CardDetailViewController: UIViewController {
         super.viewDidLoad()
 
         setupSlider()
-
     }
 
     override func viewWillAppear(_ animated: Bool) {

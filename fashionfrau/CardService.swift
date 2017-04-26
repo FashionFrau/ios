@@ -9,20 +9,24 @@
 import Foundation
 import AlamofireObjectMapper
 import Alamofire
+import Flurry_iOS_SDK
+
 
 class CardService {
 
     static let cs = CardService()
 
-    let cardsUrl = "/cards"
+    private let cardServiceDomainError = "card-service"
 
-    let miniCardsUrl = "/mini-cards"
+    private let cardsUrl = "/cards"
 
-    let likedCardsUrl = "/liked"
+    private let miniCardsUrl = "/mini-cards"
 
-    let keyPath = "cards"
+    private let likedCardsUrl = "/liked"
 
-    func get(cards: (([LookCard], NSError?) -> Void)!) {
+    private let keyPath = "cards"
+
+    func get(cards: (([LookCard], Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)".asURL()
 
@@ -30,31 +34,37 @@ class CardService {
 
         Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[LookDTO]>) in
 
-            let looksDTO = response.result.value
+            if response.result.isFailure {
+                cards(looks, response.result.error)
+            } else {
 
-            let looksAsBuilder: [LookCardBuilder] = self.createLookCardBuilder(from: looksDTO)
+                let looksDTO = response.result.value
 
-            for lookAsBuilder in looksAsBuilder {
+                let looksAsBuilder: [LookCardBuilder] = self.createLookCardBuilder(from: looksDTO)
 
-                do {
+                for lookAsBuilder in looksAsBuilder {
 
-                    let look = try LookCard(builder: lookAsBuilder)
+                    do {
 
-                    if let look = look {
+                        let look = try LookCard(builder: lookAsBuilder)
 
-                        looks.append(look)
+                        if let look = look {
+
+                            looks.append(look)
+                        }
+
+                    } catch LookError.MissingField(let field) {
+                        Flurry.logError(LookDomainError, message: "MissingField: \(field)", error: nil)
+                    } catch let error {
+                        Flurry.logError("\(self.cardServiceDomainError).cards", message: error.localizedDescription, error: error)
                     }
-
-                } catch  let error as NSError {
-
-                    cards(looks, error)
                 }
+                cards(looks, nil)
             }
-            cards(looks, nil)
         }
     }
 
-    func get(miniCards: (([MiniLooksFavorite], NSError?) -> Void)!) {
+    func get(favoriteCards: (([MiniLooksFavorite], Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)".asURL()
 
@@ -62,31 +72,37 @@ class CardService {
 
         Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[MiniLookFavoriteDTO]>) in
 
-            let miniLooksDTO = response.result.value
+            if response.result.isFailure {
+                favoriteCards(looks, response.result.error)
+            } else {
 
-            let looksAsBuilder: [MiniLooksFavoriteBuilder] = self.createMiniLooksFavoriteBuilder(from: miniLooksDTO)
+                let miniLooksDTO = response.result.value
 
-            for lookAsBuilder in looksAsBuilder {
+                let looksAsBuilder: [MiniLooksFavoriteBuilder] = self.createMiniLooksFavoriteBuilder(from: miniLooksDTO)
 
-                do {
+                for lookAsBuilder in looksAsBuilder {
 
-                    let builded = try MiniLooksFavorite(builder: lookAsBuilder)
+                    do {
 
-                    if let look = builded {
+                        let builded = try MiniLooksFavorite(builder: lookAsBuilder)
 
-                        looks.append(look)
+                        if let look = builded {
+
+                            looks.append(look)
+                        }
+
+                    } catch MiniLookError.MissingField(let field) {
+                        Flurry.logError(MiniLookDomainError, message: "MissingField: \(field)", error: nil)
+                    } catch let error {
+                        Flurry.logError("\(self.cardServiceDomainError).miniCards", message: error.localizedDescription, error: error)
                     }
-
-                } catch  let error as NSError {
-
-                    miniCards(looks, error)
                 }
+                favoriteCards(looks, nil)
             }
-            miniCards(looks, nil)
         }
     }
 
-    func get(likedCards: (([MiniLookHome], NSError?) -> Void)!) {
+    func get(likedCards: (([MiniLookHome], Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
 
@@ -94,27 +110,32 @@ class CardService {
 
         Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[LookDTO]>) in
 
-            let looksDTO = response.result.value
+            if response.result.isFailure {
+                likedCards(looks, response.result.error)
+            } else {
 
-            let looksAsBuilder: [MiniLookHomeBuilder] = self.createMiniLookHomeBuilder(from: looksDTO)
+                let looksDTO = response.result.value
 
-            for lookAsBuilder in looksAsBuilder {
+                let looksAsBuilder: [MiniLookHomeBuilder] = self.createMiniLookHomeBuilder(from: looksDTO)
 
-                do {
+                for lookAsBuilder in looksAsBuilder {
 
-                    let builded = try MiniLookHome(builder: lookAsBuilder)
+                    do {
+                        let builded = try MiniLookHome(builder: lookAsBuilder)
 
-                    if let look = builded {
+                        if let look = builded {
 
-                        looks.append(look)
+                            looks.append(look)
+                        }
+
+                    } catch MiniLookError.MissingField(let field) {
+                        Flurry.logError(MiniLookDomainError, message: "MissingField: \(field)", error: nil)
+                    } catch let error {
+                        Flurry.logError("\(self.cardServiceDomainError).likedCards", message: error.localizedDescription, error: error)
                     }
-
-                } catch  let error as NSError {
-                    
-                    likedCards(looks, error)
                 }
+                likedCards(looks, nil)
             }
-            likedCards(looks, nil)
         }
     }
 }
@@ -197,25 +218,25 @@ extension  CardService {
         
         return looksAsBuilder
     }
-
+    
     fileprivate func createMiniLookHomeBuilder(from looksDTO: [LookDTO]?) -> [MiniLookHomeBuilder] {
-
+        
         var miniLookHomeAsBuilder: [MiniLookHomeBuilder] = []
-
+        
         if looksDTO?.isEmpty == false {
-
+            
             for dto in looksDTO! {
-
+                
                 let builder = MiniLookHomeBuilder {
-
+                    
                     $0.profileName = dto.profileName
-
+                    
                     $0.profileUrlString = dto.profileUrlString
-
+                    
                     $0.lookUrlString = dto.lookUrlString
-
+                    
                     $0.likes = dto.likes
-
+                    
                     $0.season = dto.season
                 }
                 

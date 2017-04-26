@@ -7,9 +7,17 @@
 //
 
 import UIKit
-import Device
+import AlamofireImage
+
 
 class MiniCardFavoriteCell: UICollectionViewCell {
+
+    var model: MiniLookFavorite? {
+        didSet {
+            updateUI()
+        }
+    }
+
 
     @IBOutlet weak var lookImage: UIImageView!
 
@@ -38,9 +46,28 @@ class MiniCardFavoriteCell: UICollectionViewCell {
         profileImage.layer.removeAllAnimations()
         profileImage.image = nil
     }
+}
+
+extension MiniCardFavoriteCell {
+
+    fileprivate func updateUI() {
+
+        if let model = self.model {
+
+            lookImage.af_setImage(withURL: model.lookUrl)
+
+            profileImage.af_setImage(withURL: model.profileUrl)
+
+            profileNameLabel.text = model.profileName
+
+            likesLabel.text = "\(model.likes)"
+
+            hashtagLabel.text = model.hashtag
+        }
+    }
 
 
-    func shadowEffect() {
+    fileprivate func shadowEffect() {
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize.zero
         layer.shadowOpacity = 0.15

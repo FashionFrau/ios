@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
 import SwiftDate
 import Device
 
@@ -21,7 +20,7 @@ private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
 
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-    private var dataSource: [MiniLooksFavorite] = []
+    fileprivate var dataSource: [MiniLooksFavorite] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,23 +48,14 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         fakeData()
     }
 
-    func fakeData() {
-        CardService.cs.get(miniCards: { (cards: [MiniLooksFavorite], error: NSError?) in
-            self.dataSource = cards
-            self.collectionView?.reloadData()
-        })
-    }
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return dataSource.count
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return dataSource[section].looks.count
     }
 
@@ -78,19 +68,11 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
             let looks: [MiniLookFavorite]? = miniLook.looks
 
-            if looks?.isEmpty == false {
+            if looks?.isEmpty == false && indexPath.row < looks!.count {
 
-                let look: MiniLookFavorite = looks![indexPath.row]
+                let look = looks![indexPath.row]
 
-                cell.lookImage.af_setImage(withURL: look.lookUrl)
-
-                cell.profileImage.af_setImage(withURL: look.profileUrl)
-
-                cell.profileNameLabel.text = look.profileName
-
-                cell.likesLabel.text = "\(look.likes)"
-
-                cell.hashtagLabel.text = look.hashtag
+                cell.model = look
             }
         }
 
@@ -119,6 +101,17 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     }
 }
 
+extension FavoritesCollectionViewController {
+    fileprivate func fakeData() {
+        CardService.cs.get(favoriteCards: { (cards: [MiniLooksFavorite], error: Error?) in
+            if error == nil {
+                self.dataSource = cards
+                self.collectionView?.reloadData()
+            }
+        })
+    }
+}
+
 extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
 
     func collectionView(collectionView:UICollectionView, heightForMiniCardWithWidth:CGFloat) -> CGFloat {
@@ -137,7 +130,7 @@ extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
     func collectionViewFooterHeight() -> CGFloat {
         return 25.0
     }
-
+    
     func collectionViewHeaderWidthPercentage() -> CGFloat {
         return 0.10
     }

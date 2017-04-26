@@ -11,10 +11,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Card.init(params : [String : String]) -&gt; Card:Card.swift">
+         contextName = "MiniLooksFavorite.init(builder : MiniLooksFavoriteBuilder) throws -&gt; MiniLooksFavorite?:MiniLooksFavorite.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CardsViewController.koloda(KolodaView, shouldSwipeCardAt : Int, in : SwipeResultDirection) -&gt; Bool:CardsViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "params[&quot;name&quot;]">
+               value = "dataSource.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -27,13 +30,8 @@
             <PersistentString
                value = "dataSource[indexPath.row]">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CardsViewController.koloda(KolodaView, shouldSwipeCardAt : Int, in : SwipeResultDirection) -&gt; Bool:CardsViewController.swift">
-         <PersistentStrings>
             <PersistentString
-               value = "dataSource.count">
+               value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -42,6 +40,30 @@
          <PersistentStrings>
             <PersistentString
                value = "params![&quot;name&quot;]&#10;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HomeCollectionViewController.(fakeData() -&gt; ()).(closure #1):HomeCollectionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error == nil">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FavoritesCollectionViewController.collectionView(UICollectionView, numberOfItemsInSection : Int) -&gt; Int:FavoritesCollectionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataSource[section].looks.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Card.init(params : [String : String]) -&gt; Card:Card.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "params[&quot;name&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

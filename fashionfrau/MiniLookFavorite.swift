@@ -26,7 +26,6 @@ class MiniLookFavoriteBuilder {
 
         buildClosure(self)
     }
-
 }
 
 struct MiniLookFavorite {
@@ -44,21 +43,30 @@ struct MiniLookFavorite {
     init?(builder: MiniLookFavoriteBuilder) throws {
 
         // Mandatory
-        if let lookUrl = builder.lookUrlString, let profileName = builder.profileName, let profileUrl = builder.profileUrlString, let likes = builder.likes, let hashtag = builder.hashtag {
-
-            self.profileName = profileName
-
-            self.profileUrl =  try profileUrl.asURL()
-
-            self.lookUrl = try lookUrl.asURL()
-
-            self.likes = likes
-            
-            self.hashtag = hashtag
-            
-        } else {
-            
-            throw LookError.MissingField
+        guard let lookUrl = builder.lookUrlString else {
+            throw MiniLookError.MissingField("lookUrl")
         }
+        guard let profileName = builder.profileName else {
+            throw MiniLookError.MissingField("profileName")
+        }
+        guard let profileUrl = builder.profileUrlString else {
+            throw MiniLookError.MissingField("profileUrl")
+        }
+        guard let likes = builder.likes else {
+            throw MiniLookError.MissingField("likes")
+        }
+        guard let hashtag = builder.hashtag  else {
+            throw MiniLookError.MissingField("hashtag")
+        }
+
+        self.profileName = profileName
+
+        self.profileUrl =  try profileUrl.asURL()
+
+        self.lookUrl = try lookUrl.asURL()
+
+        self.likes = likes
+        
+        self.hashtag = hashtag
     }
 }

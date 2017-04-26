@@ -44,36 +44,43 @@ struct LookCard {
     init?(builder: LookCardBuilder) throws {
 
         // Mandatory
-        if let lookUrl = builder.lookUrlString, let profileName = builder.profileName, let profileUrl = builder.profileUrlString, let gallery = builder.gallery {
-
-            self.profileName = profileName
-
-            self.profileUrl =  try profileUrl.asURL()
-
-            self.lookUrl = try lookUrl.asURL()
-
-            var galleryUrl = [URL]()
-
-            for urlString in gallery {
-
-                let url = try urlString.asURL()
-
-                galleryUrl.append(url)
-            }
-
-            self.gallery = galleryUrl
-
-        } else {
-
-            throw LookError.MissingField
+        guard let lookUrl = builder.lookUrlString  else {
+            throw LookError.MissingField("lookUrl")
         }
-        
+        guard let profileName = builder.profileName  else {
+            throw LookError.MissingField("profileName")
+        }
+        guard let profileUrl = builder.profileUrlString  else {
+            throw LookError.MissingField("profileUrl")
+        }
+        guard let gallery = builder.gallery  else {
+            throw LookError.MissingField("gallery")
+        }
+
+        self.profileName = profileName
+
+        self.profileUrl =  try profileUrl.asURL()
+
+        self.lookUrl = try lookUrl.asURL()
+
+        var galleryUrl = [URL]()
+
+        for urlString in gallery {
+
+            let url = try urlString.asURL()
+
+            galleryUrl.append(url)
+        }
+
+        self.gallery = galleryUrl
+
+
         // Optional
         if  let purchaseUrl = builder.purchaseUrl {
-            
+
             self.purchaseUrl = try purchaseUrl.asURL()
             
-        }else {
+        } else {
             
             self.purchaseUrl = nil
         }
