@@ -18,6 +18,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     private var dataSource: [MiniLookHome] = []
 
+    private var user: User?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,8 +27,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         let nibHeader = UINib(nibName: nibForHomeHeader, bundle: nil)
         self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier)
 
-
-        navigationItem.title = "Priscilla Hohel"
+        fakeUser()
 
         collectionView!.backgroundColor = .fashionfrau
 
@@ -51,6 +52,15 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
                 self.collectionView?.reloadData()
             }
         })
+    }
+
+    func fakeUser() {
+        UserService.us.get(userId: "1") { (user:User?, error: Error?) in
+            if error == nil {
+                self.user = user
+                self.navigationItem.title = user?.profileName
+            }
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -81,7 +91,10 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier, for: indexPath) as! MiniCardHomeHeaderView
-        cell.profileImage.af_setImage(withURL: NSURL(string:"https://scontent.cdninstagram.com/t51.2885-19/s150x150/17126950_1711879765768835_8298910554370605056_a.jpg")! as URL)
+
+        if let user = self.user {
+            cell.model = user
+        }
         return cell
     }
 

@@ -10,6 +10,12 @@ import UIKit
 
 class MiniCardHomeHeaderView: UICollectionReusableView {
 
+    var model: User? {
+        didSet{
+            updateUI()
+        }
+    }
+
     @IBOutlet weak var profileImage: RoundImageView!
 
     @IBOutlet weak var backgrounRecentLikedView: UIView! {
@@ -28,4 +34,11 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
         profileImage.image = nil
     }
 
+}
+
+extension MiniCardHomeHeaderView {
+
+    fileprivate func updateUI() {
+        profileImage.af_setImage(withURL: model!.profileUrl)
+    }
 }
