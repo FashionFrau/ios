@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="fashionfrau" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yti-g0-2U6" userLabel="Look">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIV-G8-hjP" userLabel="Gradient Layer">
+                    <rect key="frame" x="0.0" y="666" width="414" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="vI2-J0-pzb"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-AJ-EAM" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                    <rect key="frame" x="10" y="669" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Hxr-ja-tLT"/>
+                        <constraint firstAttribute="width" constant="60" id="R4u-lK-7TQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckB-Vk-YSQ">
+                    <rect key="frame" x="90" y="686.33333333333337" width="132" height="26.333333333333258"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Yti-g0-2U6" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="1Mm-bB-IAp"/>
+                <constraint firstItem="Yti-g0-2U6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Pw-vj-tv7"/>
+                <constraint firstAttribute="bottom" secondItem="rIV-G8-hjP" secondAttribute="bottom" id="9kS-E7-oqo"/>
+                <constraint firstItem="rIV-G8-hjP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="N5B-re-sVk"/>
+                <constraint firstItem="rIV-G8-hjP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RyA-7Z-w6W"/>
+                <constraint firstItem="Yti-g0-2U6" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="W2t-vl-FeW"/>
+                <constraint firstAttribute="trailing" secondItem="rIV-G8-hjP" secondAttribute="trailing" id="a6S-uH-A2M"/>
+                <constraint firstItem="Yti-g0-2U6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aIf-fH-Nzz"/>
+                <constraint firstItem="ckB-Vk-YSQ" firstAttribute="leading" secondItem="Hby-AJ-EAM" secondAttribute="trailing" constant="20" id="dvk-Dk-jfQ"/>
+                <constraint firstItem="Hby-AJ-EAM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="hiF-9I-6RK"/>
+                <constraint firstAttribute="bottom" secondItem="Hby-AJ-EAM" secondAttribute="bottom" constant="7" id="hw4-fk-P99"/>
+                <constraint firstItem="ckB-Vk-YSQ" firstAttribute="centerY" secondItem="Hby-AJ-EAM" secondAttribute="centerY" id="sRu-fe-twM"/>
+            </constraints>
+            <connections>
+                <outlet property="gradientView" destination="rIV-G8-hjP" id="HyB-Il-UcZ"/>
+                <outlet property="lookImage" destination="Yti-g0-2U6" id="3kC-BF-7OT"/>
+                <outlet property="nameLabel" destination="ckB-Vk-YSQ" id="dUN-5i-JMg"/>
+                <outlet property="profileImage" destination="Hby-AJ-EAM" id="3e4-vm-A0C"/>
+            </connections>
+        </view>
+    </objects>
+</document>

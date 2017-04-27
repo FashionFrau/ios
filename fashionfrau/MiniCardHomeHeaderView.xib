@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courgette-Regular.ttf">
+            <string>Courgette-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MiniCardHomeHeaderCell" id="vbn-O0-zOj" customClass="MiniCardHomeHeaderView" customModule="fashionfrau" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O7X-pD-41J" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                    <rect key="frame" x="137" y="18" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="LAA-lE-IUf"/>
+                        <constraint firstAttribute="height" constant="100" id="V40-Je-762"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-uY-4SN" userLabel="Likes Stack View">
+                    <rect key="frame" x="-0.5" y="143" width="375" height="38"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1d2-FM-lgE">
+                            <rect key="frame" x="0.0" y="0.0" width="118.5" height="38"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="291" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVT-PC-91x">
+                                    <rect key="frame" x="48" y="0.0" width="22.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyD-uF-nbi">
+                                    <rect key="frame" x="42" y="19" width="34.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BRF-cx-oMO">
+                            <rect key="frame" x="128.5" y="0.0" width="118" height="38"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXd-Ys-nJo">
+                                    <rect key="frame" x="45.5" y="0.0" width="27" height="19"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2l-QA-aMu">
+                                    <rect key="frame" x="41.5" y="19" width="35" height="19"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-om-dex">
+                            <rect key="frame" x="256.5" y="0.0" width="118.5" height="38"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4315" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rL-fk-T3X">
+                                    <rect key="frame" x="44" y="0.0" width="30.5" height="19"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zf-XK-nuS">
+                                    <rect key="frame" x="43" y="19" width="33" height="19"/>
+                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT LIKED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ath-qC-ebG">
+                    <rect key="frame" x="142" y="218.5" width="91" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.15000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtJ-dP-20T" userLabel="Background Recent Likied">
+                    <rect key="frame" x="0.0" y="211" width="375" height="31"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="eiy-uY-4SN" firstAttribute="top" secondItem="O7X-pD-41J" secondAttribute="bottom" constant="25" id="7G4-P7-sfn"/>
+                <constraint firstAttribute="bottomMargin" secondItem="VtJ-dP-20T" secondAttribute="bottom" id="BCI-Rz-KWj"/>
+                <constraint firstItem="VtJ-dP-20T" firstAttribute="width" secondItem="vbn-O0-zOj" secondAttribute="width" id="LCV-o7-Fmr"/>
+                <constraint firstItem="eiy-uY-4SN" firstAttribute="centerX" secondItem="O7X-pD-41J" secondAttribute="centerX" id="OSq-In-fp4"/>
+                <constraint firstItem="VtJ-dP-20T" firstAttribute="centerX" secondItem="vbn-O0-zOj" secondAttribute="centerX" id="Pe4-vK-UlB"/>
+                <constraint firstItem="Ath-qC-ebG" firstAttribute="centerY" secondItem="VtJ-dP-20T" secondAttribute="centerY" id="Pfa-qw-Tho"/>
+                <constraint firstItem="eiy-uY-4SN" firstAttribute="width" secondItem="vbn-O0-zOj" secondAttribute="width" id="SJy-r4-jjc"/>
+                <constraint firstItem="VtJ-dP-20T" firstAttribute="height" secondItem="Ath-qC-ebG" secondAttribute="height" constant="15" id="Sx9-IX-vdO"/>
+                <constraint firstItem="O7X-pD-41J" firstAttribute="top" secondItem="vbn-O0-zOj" secondAttribute="topMargin" constant="10" id="WKj-Od-LfH"/>
+                <constraint firstItem="Ath-qC-ebG" firstAttribute="centerX" secondItem="VtJ-dP-20T" secondAttribute="centerX" id="fHv-qc-DyI"/>
+                <constraint firstItem="O7X-pD-41J" firstAttribute="centerX" secondItem="vbn-O0-zOj" secondAttribute="centerX" id="nQ2-B5-75a"/>
+            </constraints>
+            <connections>
+                <outlet property="backgrounRecentLikedView" destination="VtJ-dP-20T" id="wLa-ws-fo7"/>
+                <outlet property="profileImage" destination="O7X-pD-41J" id="qdu-gz-89a"/>
+            </connections>
+        </collectionReusableView>
+    </objects>
+</document>

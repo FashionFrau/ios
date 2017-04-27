@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qT8-Ux-deu">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -17,41 +18,41 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="fashionfrau" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <userGuides>
                             <userLayoutGuide location="333" affinity="minY"/>
                         </userGuides>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Fw-k4t" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ff " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMQ-LU-8vv">
-                                <rect key="frame" x="169" y="160" width="76" height="87"/>
+                                <rect key="frame" x="149.5" y="160" width="76" height="86.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="69"/>
                                 <color key="textColor" red="0.98039215686274506" green="0.47058823529411764" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Frau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-k3-BZ1">
-                                <rect key="frame" x="98" y="267" width="218" height="48"/>
+                                <rect key="frame" x="78.5" y="266.5" width="218" height="47.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="38"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moda de todas,  para todas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-ci-Igi">
-                                <rect key="frame" x="135.66666666666669" y="321" width="143.00000000000006" height="53"/>
+                                <rect key="frame" x="117" y="320" width="142.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-Xt-b3J" userLabel="Login">
-                                <rect key="frame" x="57" y="636" width="309" height="45"/>
+                                <rect key="frame" x="37.5" y="567" width="309" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="FtG-Bx-AdX"/>
                                     <constraint firstAttribute="height" constant="45" id="QAP-RG-jPi"/>
@@ -59,7 +60,7 @@
                                 <state key="normal" image="Instagram Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l3-pF-IME">
-                                <rect key="frame" x="107" y="696" width="200" height="31"/>
+                                <rect key="frame" x="87.5" y="627" width="200" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="8aS-Ly-PKH"/>
                                     <constraint firstAttribute="width" constant="200" id="W8Z-dr-3Ht"/>
@@ -93,9 +94,569 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="32.608695652173914"/>
         </scene>
+        <!--Home Collection View Controller-->
+        <scene sceneID="Y7h-dk-hpE">
+            <objects>
+                <collectionViewController id="biX-Ud-EZJ" customClass="HomeCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Lxk-ax-vdQ">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewLayout key="collectionViewLayout" id="LsG-vu-RKo" customClass="MiniCardsHomeLayout" customModule="fashionfrau" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardHomeCell" id="bvA-AE-0Qk" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBr-7O-oJ8" userLabel="Content View" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fsi-R2-4Po">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="126"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-0E-zHc" userLabel="Profile Stack View">
+                                                    <rect key="frame" x="10" y="141" width="146" height="25"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-b5-Jic" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="fGp-cw-4bN"/>
+                                                                <constraint firstAttribute="width" constant="25" id="gUV-48-msP"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCn-4n-RMT">
+                                                            <rect key="frame" x="45" y="3" width="101" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="HF1-b5-Jic" firstAttribute="centerY" secondItem="Nxr-0E-zHc" secondAttribute="centerY" id="dRt-TF-c4I"/>
+                                                        <constraint firstItem="HF1-b5-Jic" firstAttribute="leading" secondItem="Nxr-0E-zHc" secondAttribute="leading" id="uGe-h7-PtS"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ySM-aq-8xm" userLabel="DividerStack View">
+                                                    <rect key="frame" x="0.0" y="176" width="166" height="1"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4qK-NM-Pfs" userLabel="Divider">
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="1"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="bWK-fI-qtS"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Heart" translatesAutoresizingMaskIntoConstraints="NO" id="hoJ-6b-3QP" userLabel="Heart">
+                                                    <rect key="frame" x="7" y="182" width="12" height="11"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-WI-xel" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
+                                                    <rect key="frame" x="130" y="182.5" width="28.5" height="12.5"/>
+                                                    <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
+                                                    <rect key="frame" x="130.5" y="183" width="28.5" height="12.5"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-gu-81C" userLabel="Likes Label">
+                                                    <rect key="frame" x="26" y="181.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <color key="textColor" red="0.74117647060000003" green="0.68627450980000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ySM-aq-8xm" firstAttribute="width" secondItem="mBr-7O-oJ8" secondAttribute="width" id="55M-dQ-YQI"/>
+                                                <constraint firstItem="fsi-R2-4Po" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="5Gv-Dj-JFG"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="centerY" secondItem="h3z-GV-mMx" secondAttribute="centerY" id="5k9-Rf-qan"/>
+                                                <constraint firstItem="Nxr-0E-zHc" firstAttribute="leading" secondItem="mBr-7O-oJ8" secondAttribute="leading" constant="10" id="AyA-el-bCW"/>
+                                                <constraint firstItem="hoJ-6b-3QP" firstAttribute="top" secondItem="ySM-aq-8xm" secondAttribute="bottom" constant="5" id="EX0-Ei-sX7"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="height" secondItem="h3z-GV-mMx" secondAttribute="height" id="FpU-vJ-quf"/>
+                                                <constraint firstItem="fOS-gu-81C" firstAttribute="baseline" secondItem="hoJ-6b-3QP" secondAttribute="baseline" id="Lh8-qi-OVt"/>
+                                                <constraint firstItem="Nxr-0E-zHc" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="Psp-9E-ejb"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="width" secondItem="h3z-GV-mMx" secondAttribute="width" id="SmP-Xl-aB4"/>
+                                                <constraint firstAttribute="trailing" secondItem="h3z-GV-mMx" secondAttribute="trailing" constant="7" id="T2I-L2-yPf"/>
+                                                <constraint firstItem="fOS-gu-81C" firstAttribute="leading" secondItem="hoJ-6b-3QP" secondAttribute="trailing" constant="7" id="TQF-6f-loT"/>
+                                                <constraint firstItem="ySM-aq-8xm" firstAttribute="centerX" secondItem="mBr-7O-oJ8" secondAttribute="centerX" id="ZhR-qk-ywp"/>
+                                                <constraint firstItem="Nxr-0E-zHc" firstAttribute="top" secondItem="fsi-R2-4Po" secondAttribute="bottom" constant="15" id="aK7-wA-gW4"/>
+                                                <constraint firstItem="hoJ-6b-3QP" firstAttribute="leading" secondItem="mBr-7O-oJ8" secondAttribute="leading" constant="7" id="cwK-AJ-gMT"/>
+                                                <constraint firstItem="fsi-R2-4Po" firstAttribute="top" secondItem="mBr-7O-oJ8" secondAttribute="top" id="gCh-H2-Cn0"/>
+                                                <constraint firstAttribute="bottom" secondItem="hoJ-6b-3QP" secondAttribute="bottom" constant="7" id="gke-tu-K6e"/>
+                                                <constraint firstItem="ySM-aq-8xm" firstAttribute="top" secondItem="Nxr-0E-zHc" secondAttribute="bottom" constant="10" id="i9V-It-knA"/>
+                                                <constraint firstItem="fsi-R2-4Po" firstAttribute="width" secondItem="mBr-7O-oJ8" secondAttribute="width" id="lDc-il-VZC"/>
+                                                <constraint firstItem="h3z-GV-mMx" firstAttribute="centerY" secondItem="fOS-gu-81C" secondAttribute="centerY" id="vRw-rM-c0K"/>
+                                                <constraint firstItem="2fX-WI-xel" firstAttribute="centerX" secondItem="h3z-GV-mMx" secondAttribute="centerX" id="wax-di-rvh"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="centerY" secondItem="bvA-AE-0Qk" secondAttribute="centerY" id="N4g-09-2Zd"/>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="width" secondItem="bvA-AE-0Qk" secondAttribute="width" id="TKK-Cb-wH6"/>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="height" secondItem="bvA-AE-0Qk" secondAttribute="height" id="hbS-Hq-iuf"/>
+                                    <constraint firstItem="mBr-7O-oJ8" firstAttribute="centerX" secondItem="bvA-AE-0Qk" secondAttribute="centerX" id="zBT-Fr-FT2"/>
+                                </constraints>
+                                <size key="customSize" width="166" height="200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="likesLabel" destination="fOS-gu-81C" id="Gjt-36-3OK"/>
+                                    <outlet property="lookImage" destination="fsi-R2-4Po" id="ikt-ov-sYv"/>
+                                    <outlet property="profileImage" destination="HF1-b5-Jic" id="qiZ-ht-g87"/>
+                                    <outlet property="profileNameLabel" destination="rCn-4n-RMT" id="Cck-cu-0A6"/>
+                                    <outlet property="seasonBackground" destination="2fX-WI-xel" id="XtV-ny-4tf"/>
+                                    <outlet property="seasonLabel" destination="h3z-GV-mMx" id="ASf-Zj-lqE"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="biX-Ud-EZJ" id="ohQ-Qe-yqA"/>
+                            <outlet property="delegate" destination="biX-Ud-EZJ" id="D3X-aE-ijd"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="DdF-6o-5hG"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4z9-Zd-Ju8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868" y="-673.31334332833592"/>
+        </scene>
+        <!--Cards View Controller-->
+        <scene sceneID="lXc-l5-eMp">
+            <objects>
+                <viewController id="Z2b-Oq-CGj" customClass="CardsViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GoP-4U-VQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fol-9v-PV8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="It5-Jh-NtJ">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1D-Fh-oZm" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="10" y="10" width="355" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="top" secondItem="GoP-4U-VQ6" secondAttribute="bottom" constant="10" id="lck-1r-uLR"/>
+                            <constraint firstItem="fol-9v-PV8" firstAttribute="top" secondItem="o1D-Fh-oZm" secondAttribute="bottom" constant="5" id="oHy-Wc-A0k"/>
+                            <constraint firstItem="o1D-Fh-oZm" firstAttribute="leading" secondItem="It5-Jh-NtJ" secondAttribute="leading" constant="10" id="yhK-hs-9SL"/>
+                            <constraint firstAttribute="trailing" secondItem="o1D-Fh-oZm" secondAttribute="trailing" constant="10" id="z4t-UZ-6eV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kDL-Cn-doy" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="o1D-Fh-oZm" id="ec2-aw-fuf"/>
+                        <segue destination="Alo-Bm-e7K" kind="presentation" identifier="CardDetailViewController" id="p8y-wR-8pL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3D-ac-ALy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868" y="42.728635682158924"/>
+        </scene>
+        <!--Card Detail View Controller-->
+        <scene sceneID="zeC-pa-jHc">
+            <objects>
+                <viewController id="Alo-Bm-e7K" customClass="CardDetailViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rqD-TH-QA5"/>
+                        <viewControllerLayoutGuide type="bottom" id="BJy-k5-FPD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bad-n0-9AI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AdG-9s-MDX" userLabel="Stack View - Gallery">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r98-m1-qFH" userLabel="SliderView" customClass="FFSliderView" customModule="fashionfrau" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="340" id="Y2v-XA-aub"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="iwp-qn-3gg"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rqS-tw-v4a" userLabel="Stack View - Buttons">
+                                <rect key="frame" x="15" y="350" width="345" height="85"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1V-q4-PQ8" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="17.5" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UYd-j1-Bez"/>
+                                            <constraint firstAttribute="width" constant="50" id="rTa-IV-Jkh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSX-cq-EHg">
+                                        <rect key="frame" x="65" y="30.5" width="109.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXw-Mc-fvw" userLabel="Cart">
+                                        <rect key="frame" x="237" y="22.5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1Nh-s4-RjX"/>
+                                            <constraint firstAttribute="width" constant="40" id="l24-tf-OoY"/>
+                                        </constraints>
+                                        <state key="normal" image="Cart"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBd-qF-ZhX" userLabel="Share">
+                                        <rect key="frame" x="307" y="23.5" width="38" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="cSr-hI-z2D"/>
+                                            <constraint firstAttribute="height" constant="38" id="feB-Tz-1tk"/>
+                                        </constraints>
+                                        <state key="normal" image="Share"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WBd-qF-ZhX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xXw-Mc-fvw" secondAttribute="trailing" constant="30" id="3RP-tH-9C4"/>
+                                    <constraint firstItem="wSX-cq-EHg" firstAttribute="leading" relation="lessThanOrEqual" secondItem="R1V-q4-PQ8" secondAttribute="trailing" constant="15" id="6sN-bV-dnZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbt-vb-1jX" userLabel="Stack View - Follow">
+                                <rect key="frame" x="21" y="440" width="38" height="27"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-eC-QEO">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        <state key="normal" title="Follow"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="863-Vv-Lpl" userLabel="Stack View - Text">
+                                <rect key="frame" x="0.0" y="472" width="375" height="128"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-Bf-7QK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Cachecol de tricot off white, Egrey.
+ Possui trama aberta e acabamento em franjas.
+Acabamentos desfiados.</string>
+                                        <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ta6-mV-JzN" userLabel="Stack View - Heart">
+                                <rect key="frame" x="26" y="610" width="323" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-35-NRo" userLabel="Unlike">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="loV-rl-HZ8"/>
+                                        </constraints>
+                                        <state key="normal" image="Unlike"/>
+                                        <connections>
+                                            <action selector="skipLook:" destination="Alo-Bm-e7K" eventType="touchUpInside" id="XDA-mo-vfO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSH-Np-dhA" userLabel="Like">
+                                        <rect key="frame" x="166.5" y="0.0" width="156.5" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="yF5-gq-Xv3"/>
+                                        </constraints>
+                                        <state key="normal" image="Like"/>
+                                        <connections>
+                                            <action selector="likeLook:" destination="Alo-Bm-e7K" eventType="touchUpInside" id="VPP-VB-l8M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AdG-9s-MDX" firstAttribute="centerX" secondItem="bad-n0-9AI" secondAttribute="centerX" id="0or-8Q-W1m"/>
+                            <constraint firstItem="Ta6-mV-JzN" firstAttribute="leading" secondItem="bad-n0-9AI" secondAttribute="leadingMargin" constant="10" id="98r-6L-XrE"/>
+                            <constraint firstItem="AdG-9s-MDX" firstAttribute="top" secondItem="rqD-TH-QA5" secondAttribute="bottom" id="F3w-u7-96R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ta6-mV-JzN" secondAttribute="trailing" constant="10" id="MEU-KI-sOI"/>
+                            <constraint firstItem="Ta6-mV-JzN" firstAttribute="top" secondItem="863-Vv-Lpl" secondAttribute="bottom" constant="10" id="N7v-UO-XC5"/>
+                            <constraint firstItem="BJy-k5-FPD" firstAttribute="top" secondItem="Ta6-mV-JzN" secondAttribute="bottom" constant="10" id="PYp-vh-Ttv"/>
+                            <constraint firstItem="863-Vv-Lpl" firstAttribute="width" secondItem="bad-n0-9AI" secondAttribute="width" id="WGf-qz-0Ue"/>
+                            <constraint firstItem="dbt-vb-1jX" firstAttribute="top" secondItem="rqS-tw-v4a" secondAttribute="bottom" constant="5" id="XEe-py-Bbr"/>
+                            <constraint firstItem="rqS-tw-v4a" firstAttribute="leading" secondItem="bad-n0-9AI" secondAttribute="leading" constant="15" id="doe-JI-FZP"/>
+                            <constraint firstItem="rqS-tw-v4a" firstAttribute="centerX" secondItem="bad-n0-9AI" secondAttribute="centerX" id="eQU-3Z-1gI"/>
+                            <constraint firstItem="AdG-9s-MDX" firstAttribute="width" secondItem="bad-n0-9AI" secondAttribute="width" id="oLf-3y-lOf"/>
+                            <constraint firstItem="dbt-vb-1jX" firstAttribute="centerX" secondItem="R1V-q4-PQ8" secondAttribute="centerX" id="t4w-oH-bzZ"/>
+                            <constraint firstItem="863-Vv-Lpl" firstAttribute="top" secondItem="dbt-vb-1jX" secondAttribute="bottom" constant="5" id="wLC-mD-HKc"/>
+                            <constraint firstItem="863-Vv-Lpl" firstAttribute="centerX" secondItem="bad-n0-9AI" secondAttribute="centerX" id="xxq-R0-FUa"/>
+                            <constraint firstItem="rqS-tw-v4a" firstAttribute="top" secondItem="AdG-9s-MDX" secondAttribute="bottom" constant="10" id="y1h-KW-Iaf"/>
+                            <constraint firstItem="Ta6-mV-JzN" firstAttribute="centerX" secondItem="bad-n0-9AI" secondAttribute="centerX" id="z2H-ie-02e"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="R1V-q4-PQ8" id="5CR-MK-aYz"/>
+                        <outlet property="profileNameLabel" destination="wSX-cq-EHg" id="qte-b5-q5d"/>
+                        <outlet property="sliderView" destination="r98-m1-qFH" id="TUo-fP-lxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxF-c7-CYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3789.375" y="42.25352112676056"/>
+        </scene>
+        <!--Favorites Collection View Controller-->
+        <scene sceneID="jaQ-i8-n01">
+            <objects>
+                <collectionViewController id="e9B-84-pFy" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="m0T-9s-OWw">
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="bKa-RI-nM1" customClass="MiniCardsFavoriteLayout" customModule="fashionfrau" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardFavoriteCell" id="fVi-Pt-Hza" customClass="MiniCardFavoriteCell" customModule="fashionfrau" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3G-VU-De2" userLabel="Content View" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-Wr-Zcp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="126"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-Pj-wa0" userLabel="Profile Stack View">
+                                                    <rect key="frame" x="10" y="141" width="146" height="25"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-2j-2iy" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="Nox-8W-yBi"/>
+                                                                <constraint firstAttribute="width" constant="25" id="jib-ZB-62a"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poF-Wh-A6U">
+                                                            <rect key="frame" x="45" y="3" width="101" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="ksF-2j-2iy" firstAttribute="leading" secondItem="dZs-Pj-wa0" secondAttribute="leading" id="KcP-Do-DV9"/>
+                                                        <constraint firstItem="ksF-2j-2iy" firstAttribute="centerY" secondItem="dZs-Pj-wa0" secondAttribute="centerY" id="hUu-YN-acW"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-aH-iYD" userLabel="DividerStack View">
+                                                    <rect key="frame" x="0.0" y="176" width="166" height="1"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mma-TD-TkP" userLabel="Divider">
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="1"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="pGn-bI-Bhs"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mini Heart" translatesAutoresizingMaskIntoConstraints="NO" id="2s1-td-RgU" userLabel="Heart">
+                                                    <rect key="frame" x="7" y="182" width="12" height="11"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ff1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-fX-rgd">
+                                                    <rect key="frame" x="135.5" y="181.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txH-Xz-MIE" userLabel="Likes Label">
+                                                    <rect key="frame" x="26" y="181.5" width="23.5" height="15"/>
+                                                    <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
+                                                    <color key="textColor" red="0.74117647058823533" green="0.68627450980392157" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Bj1-aH-iYD" firstAttribute="top" secondItem="dZs-Pj-wa0" secondAttribute="bottom" constant="10" id="168-mb-G1j"/>
+                                                <constraint firstItem="Bj1-aH-iYD" firstAttribute="centerX" secondItem="z3G-VU-De2" secondAttribute="centerX" id="Eaz-fg-BB3"/>
+                                                <constraint firstItem="txH-Xz-MIE" firstAttribute="baseline" secondItem="2s1-td-RgU" secondAttribute="baseline" id="FW8-6L-pn8"/>
+                                                <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="centerX" secondItem="z3G-VU-De2" secondAttribute="centerX" id="H7o-uP-aJ1"/>
+                                                <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="top" secondItem="z3G-VU-De2" secondAttribute="top" id="Hkw-Bm-fwA"/>
+                                                <constraint firstItem="iey-fX-rgd" firstAttribute="centerY" secondItem="txH-Xz-MIE" secondAttribute="centerY" id="Iyc-2l-TwK"/>
+                                                <constraint firstAttribute="trailing" secondItem="iey-fX-rgd" secondAttribute="trailing" constant="7" id="LBe-ay-Rpd"/>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="top" secondItem="Ovm-Wr-Zcp" secondAttribute="bottom" constant="15" id="SXS-Ec-YE1"/>
+                                                <constraint firstAttribute="bottom" secondItem="2s1-td-RgU" secondAttribute="bottom" constant="7" id="Wt8-wb-SP0"/>
+                                                <constraint firstItem="2s1-td-RgU" firstAttribute="leading" secondItem="z3G-VU-De2" secondAttribute="leading" constant="7" id="ZrX-lg-OsL"/>
+                                                <constraint firstItem="Bj1-aH-iYD" firstAttribute="width" secondItem="z3G-VU-De2" secondAttribute="width" id="hLs-TY-hua"/>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="centerX" secondItem="z3G-VU-De2" secondAttribute="centerX" id="mye-zn-GkG"/>
+                                                <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="width" secondItem="z3G-VU-De2" secondAttribute="width" id="nZh-iJ-8oO"/>
+                                                <constraint firstItem="txH-Xz-MIE" firstAttribute="leading" secondItem="2s1-td-RgU" secondAttribute="trailing" constant="7" id="tga-9T-xag"/>
+                                                <constraint firstItem="2s1-td-RgU" firstAttribute="top" secondItem="Bj1-aH-iYD" secondAttribute="bottom" constant="5" id="v65-ya-SMh"/>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="leading" secondItem="z3G-VU-De2" secondAttribute="leading" constant="10" id="xxR-dz-ZlH"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="height" secondItem="fVi-Pt-Hza" secondAttribute="height" id="FUH-8U-e0w"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="width" secondItem="fVi-Pt-Hza" secondAttribute="width" id="Hia-O6-OtT"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="centerX" secondItem="fVi-Pt-Hza" secondAttribute="centerX" id="QBa-Uw-7TN"/>
+                                    <constraint firstItem="z3G-VU-De2" firstAttribute="centerY" secondItem="fVi-Pt-Hza" secondAttribute="centerY" id="a6Q-f5-Sp5"/>
+                                </constraints>
+                                <size key="customSize" width="166" height="200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="hashtagLabel" destination="iey-fX-rgd" id="aYJ-gh-qqe"/>
+                                    <outlet property="likesLabel" destination="txH-Xz-MIE" id="QkX-pd-RtE"/>
+                                    <outlet property="lookImage" destination="Ovm-Wr-Zcp" id="xS6-Uv-PV8"/>
+                                    <outlet property="profileImage" destination="ksF-2j-2iy" id="WZl-ea-OZF"/>
+                                    <outlet property="profileNameLabel" destination="poF-Wh-A6U" id="4Jw-df-3cA"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="e9B-84-pFy" id="MaF-34-Pbm"/>
+                            <outlet property="delegate" destination="e9B-84-pFy" id="B7e-zY-dbz"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="jGw-Mn-DY0" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVf-Yr-Oy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868" y="735.38230884557731"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zu0-4l-Ruz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oFC-Ze-eb2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Heart" selectedImage="Heart Active" id="Qfm-ke-k4p">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="F5X-tF-lFx" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z2b-Oq-CGj" kind="relationship" relationship="rootViewController" id="sMt-o5-q4W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q04-Ow-nGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="43.206521739130437"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JDG-4N-QTo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qT8-Ux-deu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Bzg-79-ySP" customClass="FFTabBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.37250924110412598" green="0.37257683277130127" blue="0.37250030040740967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="X49-7b-D1O" kind="relationship" relationship="viewControllers" id="e4M-K8-5lf"/>
+                        <segue destination="oFC-Ze-eb2" kind="relationship" relationship="viewControllers" id="hpT-tV-woX"/>
+                        <segue destination="K8R-IU-poh" kind="relationship" relationship="viewControllers" id="Wcu-TV-Pca"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSC-gU-Vsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.6231884057972" y="43.206521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KOA-yD-kkQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8R-IU-poh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Star" selectedImage="Star Active" id="rG2-sn-d0z">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Ylp-8P-OGr" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e9B-84-pFy" kind="relationship" relationship="rootViewController" id="xRe-M6-Ech"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUZ-xM-eWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="737"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WQf-qM-kVk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X49-7b-D1O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="Home" selectedImage="Home Active" id="GU9-Jd-aey">
+                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="MST-Ms-QPI" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="biX-Ud-EZJ" kind="relationship" relationship="rootViewController" id="6YM-wu-VCX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgw-C1-DRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8" y="-671.51424287856082"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Cart" width="45" height="45"/>
+        <image name="Heart" width="37" height="32"/>
+        <image name="Heart Active" width="37" height="32"/>
+        <image name="Home" width="33" height="30"/>
+        <image name="Home Active" width="33" height="30"/>
         <image name="Instagram Button" width="520" height="80"/>
+        <image name="Like" width="54" height="45"/>
         <image name="Login" width="375" height="667"/>
+        <image name="Mini Heart" width="12" height="11"/>
+        <image name="Share" width="43" height="43"/>
+        <image name="Star" width="32" height="30"/>
+        <image name="Star Active" width="32" height="30"/>
+        <image name="Unlike" width="55" height="47"/>
     </resources>
 </document>
