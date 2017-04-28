@@ -40,13 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Frau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-k3-BZ1">
-                                <rect key="frame" x="78.5" y="266.5" width="218" height="47.5"/>
+                                <rect key="frame" x="79" y="266.5" width="218" height="47.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="38"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moda de todas,  para todas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-ci-Igi">
-                                <rect key="frame" x="117" y="320" width="142.5" height="52.5"/>
+                                <rect key="frame" x="116.5" y="320" width="142.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -415,6 +415,7 @@ Acabamentos desfiados.</string>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="descriptionView" destination="Hqa-Bf-7QK" id="waa-tC-PET"/>
                         <outlet property="profileImageView" destination="R1V-q4-PQ8" id="5CR-MK-aYz"/>
                         <outlet property="profileNameLabel" destination="wSX-cq-EHg" id="qte-b5-q5d"/>
                         <outlet property="sliderView" destination="r98-m1-qFH" id="TUo-fP-lxf"/>
@@ -428,7 +429,7 @@ Acabamentos desfiados.</string>
         <scene sceneID="jaQ-i8-n01">
             <objects>
                 <collectionViewController id="e9B-84-pFy" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="m0T-9s-OWw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="m0T-9s-OWw">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

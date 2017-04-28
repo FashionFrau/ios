@@ -8,6 +8,7 @@
 
 import UIKit
 import Koloda
+import Flurry_iOS_SDK
 
 private let kolodaCountOfVisibleCards = 2
 
@@ -15,7 +16,10 @@ private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
 
 private let cardDetailSegue = "CardDetailViewController"
 
+
 class CardsViewController: UIViewController {
+
+    private let cardsViewControllerDomainError = "cards-view-controller"
 
     @IBOutlet weak var kolodaView: KolodaView!
 
@@ -49,6 +53,8 @@ class CardsViewController: UIViewController {
             if error == nil {
                 self.dataSource = cards
                 self.kolodaView.reloadData()
+            } else {
+                Flurry.logError("\(self.cardsViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }
         })
     }

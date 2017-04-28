@@ -11,9 +11,17 @@ import Foundation
 
 class UserBuilder {
 
+    var id: String?
+
     var profileName: String?
 
     var profileUrlString: String?
+
+    var posts: Int?
+
+    var liked: Int?
+
+    var likes: Int?
 
     typealias BuilderClosure = (UserBuilder) -> ()
 
@@ -24,21 +32,51 @@ class UserBuilder {
 }
 
 struct User {
+
+    let id: String
+
     let profileUrl: URL
 
     let profileName: String
 
+    let posts: Int
+
+    let liked: Int
+
+    let likes: Int
+
+
     init?(builder: UserBuilder) throws {
 
+        guard let id = builder.id  else {
+            throw UserError.MissingField("id")
+        }
         guard let profileName = builder.profileName else {
             throw UserError.MissingField("profileName")
         }
         guard let profileUrl = builder.profileUrlString else {
             throw UserError.MissingField("profileUrl")
         }
+        guard let posts = builder.posts else {
+            throw UserError.MissingField("posts")
+        }
+        guard let liked = builder.liked else {
+            throw UserError.MissingField("liked")
+        }
+        guard let likes = builder.likes else {
+            throw UserError.MissingField("likes")
+        }
 
+        self.id = id
+        
         self.profileName = profileName
 
         self.profileUrl =  try profileUrl.asURL()
+
+        self.posts = posts
+
+        self.liked = liked
+
+        self.likes = likes
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftDate
 import Device
+import Flurry_iOS_SDK
 
 private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
 private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
@@ -19,6 +20,8 @@ private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
 private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
 
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+
+    fileprivate let favoritesCollecitonViewControllerDomainError = "favorites-collection-view-controller"
 
     fileprivate var dataSource: [MiniLooksFavorite] = []
 
@@ -107,6 +110,8 @@ extension FavoritesCollectionViewController {
             if error == nil {
                 self.dataSource = cards
                 self.collectionView?.reloadData()
+            } else {
+                Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }
         })
     }

@@ -10,6 +10,8 @@ import Foundation
 
 class MiniLookFavoriteBuilder {
 
+    var id: String?
+
     var profileUrlString: String?
 
     var profileName: String?
@@ -30,6 +32,8 @@ class MiniLookFavoriteBuilder {
 
 struct MiniLookFavorite {
 
+    let id: String
+    
     let profileUrl: URL
 
     let profileName: String
@@ -43,6 +47,9 @@ struct MiniLookFavorite {
     init?(builder: MiniLookFavoriteBuilder) throws {
 
         // Mandatory
+        guard let id = builder.id  else {
+            throw MiniLookError.MissingField("id")
+        }
         guard let lookUrl = builder.lookUrlString else {
             throw MiniLookError.MissingField("lookUrl")
         }
@@ -59,6 +66,8 @@ struct MiniLookFavorite {
             throw MiniLookError.MissingField("hashtag")
         }
 
+        self.id = id
+        
         self.profileName = profileName
 
         self.profileUrl =  try profileUrl.asURL()

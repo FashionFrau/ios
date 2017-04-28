@@ -20,6 +20,8 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet weak var sliderView: FFSliderView!
 
+    @IBOutlet weak var descriptionView: UITextView!
+
     var look: LookCard {
         get {
             return _look
@@ -41,6 +43,8 @@ class CardDetailViewController: UIViewController {
         profileNameLabel.text = look.profileName
 
         profileImageView.af_setImage(withURL: look.profileUrl)
+
+        descriptionView.text = look.description
 
     }
     override func didReceiveMemoryWarning() {

@@ -11,6 +11,8 @@ import ObjectMapper
 
 class LookDTO: Mappable {
 
+    var id: String?
+
     var profileUrlString: String?
 
     var profileName: String?
@@ -25,11 +27,16 @@ class LookDTO: Mappable {
 
     var season: String?
 
+    var description: String?
+
     required init?(map: Map) {
         /// This function can be used to validate JSON prior to mapping. Return nil to cancel mapping at this point
     }
 
     func mapping(map: Map) {
+
+        id <- map["id"]
+
         profileUrlString <- map["profileUrl"]
 
         profileName <- map["profileName"]
@@ -43,5 +50,7 @@ class LookDTO: Mappable {
         gallery <- map["gallery"]
 
         season <- map["season"]
+
+        description <- map["description"]
     }
 }

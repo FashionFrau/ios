@@ -17,6 +17,8 @@ target 'fashionfrau' do
 
     pod 'Flurry-iOS-SDK/FlurrySDK', '~> 8.0'
 
+    pod 'UIEmptyState', '~> 0.5'
+
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing

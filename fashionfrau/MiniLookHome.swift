@@ -11,6 +11,8 @@ import UIKit
 
 class MiniLookHomeBuilder {
 
+    var id: String?
+
     var profileUrlString: String?
 
     var profileName: String?
@@ -31,6 +33,8 @@ class MiniLookHomeBuilder {
 
 struct MiniLookHome {
 
+    let id: String
+
     let profileUrl: URL
 
     let profileName: String
@@ -44,6 +48,9 @@ struct MiniLookHome {
     init?(builder: MiniLookHomeBuilder) throws {
 
         // Mandatory
+        guard let id = builder.id  else {
+            throw MiniLookError.MissingField("id")
+        }
         guard let lookUrl = builder.lookUrlString else {
             throw MiniLookError.MissingField("lookUrl")
         }
@@ -63,6 +70,8 @@ struct MiniLookHome {
         guard let season = builder.season else {
             throw MiniLookError.MissingField("season")
         }
+
+        self.id = id
 
         self.profileName = profileName
 

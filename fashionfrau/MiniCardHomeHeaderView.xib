@@ -34,8 +34,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1d2-FM-lgE">
                             <rect key="frame" x="0.0" y="0.0" width="118.5" height="38"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="291" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVT-PC-91x">
-                                    <rect key="frame" x="48" y="0.0" width="22.5" height="19"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVT-PC-91x">
+                                    <rect key="frame" x="55.5" y="0.0" width="7" height="19"/>
                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -51,8 +51,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BRF-cx-oMO">
                             <rect key="frame" x="128.5" y="0.0" width="118" height="38"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXd-Ys-nJo">
-                                    <rect key="frame" x="45.5" y="0.0" width="27" height="19"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXd-Ys-nJo">
+                                    <rect key="frame" x="55.5" y="0.0" width="7" height="19"/>
                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -68,8 +68,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aCm-om-dex">
                             <rect key="frame" x="256.5" y="0.0" width="118.5" height="38"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4315" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rL-fk-T3X">
-                                    <rect key="frame" x="44" y="0.0" width="30.5" height="19"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rL-fk-T3X">
+                                    <rect key="frame" x="56" y="0.0" width="7" height="19"/>
                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -110,6 +110,9 @@
             </constraints>
             <connections>
                 <outlet property="backgrounRecentLikedView" destination="VtJ-dP-20T" id="wLa-ws-fo7"/>
+                <outlet property="likedNumber" destination="sXd-Ys-nJo" id="huo-bF-Llf"/>
+                <outlet property="likesNumber" destination="7rL-fk-T3X" id="haB-uI-9g6"/>
+                <outlet property="postsNumber" destination="bVT-PC-91x" id="2kw-iI-1cZ"/>
                 <outlet property="profileImage" destination="O7X-pD-41J" id="qdu-gz-89a"/>
             </connections>
         </collectionReusableView>

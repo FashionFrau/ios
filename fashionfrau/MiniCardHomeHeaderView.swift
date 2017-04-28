@@ -18,6 +18,12 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var profileImage: RoundImageView!
 
+    @IBOutlet weak var postsNumber: UILabel!
+
+    @IBOutlet weak var likedNumber: UILabel!
+
+    @IBOutlet weak var likesNumber: UILabel!
+
     @IBOutlet weak var backgrounRecentLikedView: UIView! {
         didSet{
             self.backgrounRecentLikedView.layer.borderColor = UIColor.white.cgColor
@@ -40,5 +46,11 @@ extension MiniCardHomeHeaderView {
 
     fileprivate func updateUI() {
         profileImage.af_setImage(withURL: model!.profileUrl)
+
+        postsNumber.text = String(model!.posts)
+
+        likedNumber.text = String(model!.liked)
+
+        likesNumber.text = String(model!.likes)
     }
 }

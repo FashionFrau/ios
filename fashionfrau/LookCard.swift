@@ -10,6 +10,8 @@ import Foundation
 
 class LookCardBuilder {
 
+    var id: String?
+
     var profileUrlString: String?
 
     var profileName: String?
@@ -20,16 +22,19 @@ class LookCardBuilder {
 
     var gallery: [String]?
 
+    var description: String?
+
     typealias BuilderClosure = (LookCardBuilder) -> ()
 
     init(buildClosure: BuilderClosure) {
 
         buildClosure(self)
     }
-
 }
 
 struct LookCard {
+
+    let id: String
 
     let profileUrl: URL
 
@@ -41,9 +46,14 @@ struct LookCard {
 
     let gallery: [URL]
 
+    let description: String
+
     init?(builder: LookCardBuilder) throws {
 
         // Mandatory
+        guard let id = builder.id  else {
+            throw LookError.MissingField("id")
+        }
         guard let lookUrl = builder.lookUrlString  else {
             throw LookError.MissingField("lookUrl")
         }
@@ -56,6 +66,11 @@ struct LookCard {
         guard let gallery = builder.gallery  else {
             throw LookError.MissingField("gallery")
         }
+        guard let description = builder.description  else {
+            throw LookError.MissingField("description")
+        }
+
+        self.id = id
 
         self.profileName = profileName
 
@@ -74,6 +89,7 @@ struct LookCard {
 
         self.gallery = galleryUrl
 
+        self.description = description
 
         // Optional
         if  let purchaseUrl = builder.purchaseUrl {

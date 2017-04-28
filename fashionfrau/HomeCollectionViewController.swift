@@ -8,6 +8,7 @@
 
 import UIKit
 import Device
+import Flurry_iOS_SDK
 
 private let miniCardHomeHeaderReuseIdentifier = "MiniCardHomeHeaderCell"
 private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
@@ -15,6 +16,8 @@ private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
 private let nibForHomeHeader = "MiniCardHomeHeaderView"
 
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+
+    private let homeCollectionViewControllerDomainError = "home-collection-view-controller"
 
     private var dataSource: [MiniLookHome] = []
 
@@ -50,15 +53,19 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             if error == nil {
                 self.dataSource = cards
                 self.collectionView?.reloadData()
+            } else {
+                Flurry.logError("\(self.homeCollectionViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }
         })
     }
 
     func fakeUser() {
         UserService.us.get(userId: "1") { (user:User?, error: Error?) in
-            if error == nil {
+            if error == nil, let user = user {
                 self.user = user
-                self.navigationItem.title = user?.profileName
+                self.navigationItem.title = user.profileName
+            } else {
+                Flurry.logError("\(self.homeCollectionViewControllerDomainError).fakeUser", message: error?.localizedDescription, error: error)
             }
         }
     }

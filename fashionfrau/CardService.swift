@@ -153,6 +153,8 @@ extension  CardService {
 
                 let builder = LookCardBuilder {
 
+                    $0.id = dto.id
+
                     $0.profileName = dto.profileName
 
                     $0.profileUrlString = dto.profileUrlString
@@ -160,6 +162,8 @@ extension  CardService {
                     $0.lookUrlString = dto.lookUrlString
 
                     $0.gallery = dto.gallery
+
+                    $0.description = dto.description
                 }
 
                 looksAsBuilder.append(builder)
@@ -201,6 +205,8 @@ extension  CardService {
 
                 let builder = MiniLookFavoriteBuilder {
 
+                    $0.id = dto.id
+
                     $0.profileName = dto.profileName
 
                     $0.profileUrlString = dto.profileUrlString
@@ -228,6 +234,8 @@ extension  CardService {
             for dto in looksDTO! {
                 
                 let builder = MiniLookHomeBuilder {
+
+                    $0.id = dto.id
                     
                     $0.profileName = dto.profileName
                     
