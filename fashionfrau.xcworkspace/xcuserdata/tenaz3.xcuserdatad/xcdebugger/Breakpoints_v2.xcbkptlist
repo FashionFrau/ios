@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "fashionfrau/FavoritesCollectionViewController.swift"
-            timestampString = "515093258.668267"
+            filePath = "fashionfrau/CardService.swift"
+            timestampString = "515097069.942567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "fakeData()"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "get(favoriteCards:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fashionfrau/CardService.swift"
-            timestampString = "515093284.705088"
+            timestampString = "515097079.663367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "get(cards:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "get(favoriteCards:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "fashionfrau/CardService.swift"
-            timestampString = "515093285.569794"
+            timestampString = "515097080.769319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "get(cards:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "get(favoriteCards:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

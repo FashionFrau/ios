@@ -9,19 +9,26 @@
 import UIKit
 import Device
 import Flurry_iOS_SDK
+import UIEmptyState
 
 private let miniCardHomeHeaderReuseIdentifier = "MiniCardHomeHeaderCell"
 private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
 
-private let nibForHomeHeader = "MiniCardHomeHeaderView"
+class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
-class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    private let nibForHomeHeader = "MiniCardHomeHeaderView"
+    
     private let homeCollectionViewControllerDomainError = "home-collection-view-controller"
 
     private var dataSource: [MiniLookHome] = []
 
     private var user: User?
+
+    private let emptyAttributes = [ NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Courgette-Regular", size: 15) ??  UIFont.systemFont(ofSize: 15)]
+
+    var emptyStateViewAdjustsToFitBars: Bool =  true
+
+    var emptyStateTitle: NSAttributedString { get { return NSAttributedString(string: "Pull to refresh", attributes: emptyAttributes) } }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +36,9 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         // Register cell classes
         let nibHeader = UINib(nibName: nibForHomeHeader, bundle: nil)
         self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier)
+
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
 
         fakeUser()
 
@@ -53,6 +63,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             if error == nil {
                 self.dataSource = cards
                 self.collectionView?.reloadData()
+                self.reloadEmptyState(forCollectionView: self.collectionView!)
             } else {
                 Flurry.logError("\(self.homeCollectionViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }
@@ -64,6 +75,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
             if error == nil, let user = user {
                 self.user = user
                 self.navigationItem.title = user.profileName
+                self.collectionView?.reloadData()
             } else {
                 Flurry.logError("\(self.homeCollectionViewControllerDomainError).fakeUser", message: error?.localizedDescription, error: error)
             }

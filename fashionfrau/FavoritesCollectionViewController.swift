@@ -11,19 +11,24 @@ import Alamofire
 import SwiftDate
 import Device
 import Flurry_iOS_SDK
+import UIEmptyState
 
 private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
 private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
 private let miniCardFavoriteFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
 
-private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
-private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
+class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
-class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
+    private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
 
     fileprivate let favoritesCollecitonViewControllerDomainError = "favorites-collection-view-controller"
 
     fileprivate var dataSource: [MiniLooksFavorite] = []
+
+    private let emptyAttributes = [ NSForegroundColorAttributeName: UIColor.fashionfrau, NSFontAttributeName: UIFont(name: "Courgette-Regular", size: 15) ??  UIFont.systemFont(ofSize: 15)]
+
+    var emptyStateTitle: NSAttributedString { get { return NSAttributedString(string: "Pull to refresh", attributes: emptyAttributes) } }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +40,8 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         let nibFooter = UINib(nibName: nibForFavoriteFooter, bundle: nil)
         self.collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier)
 
+        self.emptyStateDataSource = self
+        self.emptyStateDelegate = self
 
         collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
         if let layout = collectionView?.collectionViewLayout as? MiniCardsFavoriteLayout {
@@ -110,6 +117,7 @@ extension FavoritesCollectionViewController {
             if error == nil {
                 self.dataSource = cards
                 self.collectionView?.reloadData()
+                self.reloadEmptyState(forCollectionView: self.collectionView!)
             } else {
                 Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }

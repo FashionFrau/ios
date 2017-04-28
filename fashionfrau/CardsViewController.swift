@@ -10,14 +10,13 @@ import UIKit
 import Koloda
 import Flurry_iOS_SDK
 
-private let kolodaCountOfVisibleCards = 2
-
-private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
-
 private let cardDetailSegue = "CardDetailViewController"
 
-
 class CardsViewController: UIViewController {
+
+    private let kolodaCountOfVisibleCards = 2
+
+    private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
 
     private let cardsViewControllerDomainError = "cards-view-controller"
 
@@ -29,23 +28,18 @@ class CardsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        //        fakeData()
+        fakeData()
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
 
         kolodaView.delegate = self
         kolodaView.dataSource = self
-    }
+   }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fakeData()
     }
 
     func fakeData() {
