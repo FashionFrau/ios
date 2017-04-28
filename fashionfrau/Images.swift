@@ -15,6 +15,4 @@ struct Images {
 
     static let PageOn = "Dot Active"
     static let PageOff = "Dot"
-
-    static let EmptyMiniCard = "NoImage"
 }
