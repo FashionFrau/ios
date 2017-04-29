@@ -29,6 +29,22 @@ class UserBuilder {
 
         buildClosure(self)
     }
+
+    static func map(dto: UserDTO) -> UserBuilder {
+        return UserBuilder {
+            $0.id = dto.id
+
+            $0.profileName = dto.profileName
+
+            $0.profileUrlString = dto.profileUrl
+
+            $0.posts = dto.posts
+
+            $0.liked = dto.liked
+
+            $0.likes = dto.likes
+        }
+    }
 }
 
 struct User {

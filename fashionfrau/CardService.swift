@@ -26,6 +26,36 @@ class CardService {
 
     private let keyPath = "cards"
 
+    func get(cardId: String) throws -> LookCard {
+        let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
+
+        var look: LookCard?
+        var error: Error?
+
+        Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<LookDTO>) in
+            if response.result.isFailure {
+                error = response.result.error
+            } else {
+                let dto = response.result.value
+
+                let builder = LookCardBuilder.map(dto: dto!)
+
+                do {
+                    look = try LookCard(builder: builder)
+                } catch LookError.MissingField(let field) {
+                    Flurry.logError(LookDomainError, message: "MissingField: \(field)", error: nil)
+                } catch let e {
+                    error = e
+                    Flurry.logError("\(self.cardServiceDomainError).card", message: e.localizedDescription, error: e)
+                }
+            }
+        }
+        guard let lookCard = look else {
+            throw error ?? LookError.Unknown("Fail to get Card with id: \(cardId)")
+        }
+        return lookCard
+    }
+
     func get(cards: (([LookCard], Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)".asURL()
@@ -52,7 +82,6 @@ class CardService {
 
                             looks.append(look)
                         }
-
                     } catch LookError.MissingField(let field) {
                         Flurry.logError(LookDomainError, message: "MissingField: \(field)", error: nil)
                     } catch let error {
@@ -151,21 +180,7 @@ extension  CardService {
 
             for dto in looksDTO! {
 
-                let builder = LookCardBuilder {
-
-                    $0.id = dto.id
-
-                    $0.profileName = dto.profileName
-
-                    $0.profileUrlString = dto.profileUrlString
-
-                    $0.lookUrlString = dto.lookUrlString
-
-                    $0.gallery = dto.gallery
-
-                    $0.description = dto.description
-                }
-
+                let builder = LookCardBuilder.map(dto: dto)
                 looksAsBuilder.append(builder)
             }
         }
@@ -203,20 +218,7 @@ extension  CardService {
 
             for dto in looksDTO! {
 
-                let builder = MiniLookFavoriteBuilder {
-
-                    $0.id = dto.id
-
-                    $0.profileName = dto.profileName
-
-                    $0.profileUrlString = dto.profileUrlString
-
-                    $0.lookUrlString = dto.lookUrlString
-
-                    $0.likes = dto.likes
-                    
-                    $0.hashtag = dto.hashtag
-                }
+                let builder = MiniLookFavoriteBuilder.map(dto: dto)
                 
                 looksAsBuilder.append(builder)
             }
@@ -233,21 +235,7 @@ extension  CardService {
             
             for dto in looksDTO! {
                 
-                let builder = MiniLookHomeBuilder {
-
-                    $0.id = dto.id
-                    
-                    $0.profileName = dto.profileName
-                    
-                    $0.profileUrlString = dto.profileUrlString
-                    
-                    $0.lookUrlString = dto.lookUrlString
-                    
-                    $0.likes = dto.likes
-                    
-                    $0.season = dto.season
-                }
-                
+                let builder = MiniLookHomeBuilder.map(dto: dto)
                 miniLookHomeAsBuilder.append(builder)
             }
         }

@@ -22,17 +22,19 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-HC-fLP">
                     <rect key="frame" x="5" y="0.0" width="26" height="31.5"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="25"/>
                     <color key="textColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIl-jF-5B4">
-                    <rect key="frame" x="9" y="31.5" width="19.5" height="17.5"/>
+                    <rect key="frame" x="8.5" y="31.5" width="19.5" height="17.5"/>
                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="14"/>
                     <color key="textColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="4pP-HC-fLP" firstAttribute="leading" secondItem="HEZ-ij-2GP" secondAttribute="leading" constant="5" id="6BD-uT-Eim"/>
                 <constraint firstItem="MIl-jF-5B4" firstAttribute="top" secondItem="4pP-HC-fLP" secondAttribute="bottom" id="YVl-AR-812"/>

@@ -29,6 +29,23 @@ class MiniLookHomeBuilder {
 
         buildClosure(self)
     }
+
+    static func map(dto: LookDTO) -> MiniLookHomeBuilder {
+        return MiniLookHomeBuilder {
+
+            $0.id = dto.id
+
+            $0.profileName = dto.profileName
+
+            $0.profileUrlString = dto.profileUrlString
+
+            $0.lookUrlString = dto.lookUrlString
+
+            $0.likes = dto.likes
+
+            $0.season = dto.season
+        }
+    }
 }
 
 struct MiniLookHome {
@@ -72,11 +89,11 @@ struct MiniLookHome {
         }
 
         self.id = id
-
+        
         self.profileName = profileName
-
+        
         self.profileUrl =  try profileUrl.asURL()
-
+        
         self.lookUrl = try lookUrl.asURL()
         
         self.likes = likes

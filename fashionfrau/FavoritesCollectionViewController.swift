@@ -17,6 +17,8 @@ private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
 private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
 private let miniCardFavoriteFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
 
+private let miniCardDetailSegue =  "CardDetailViewController"
+
 class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
     private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
@@ -47,15 +49,21 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         if let layout = collectionView?.collectionViewLayout as? MiniCardsFavoriteLayout {
             layout.delegate = self
         }
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         fakeData()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CardDetailViewController {
+            if let selectedLook = sender as? MiniLookFavorite {
+                do {
+                    let look = try CardService.cs.get(cardId: selectedLook.id)
+                    destination.look = look
+                } catch let error {
+                    Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).open-mini-card", message: error.localizedDescription, error: error)
+                }
+            }
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -85,7 +93,6 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
                 cell.model = look
             }
         }
-
         return cell
     }
 
@@ -99,15 +106,25 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
             if let date = date {
 
-                header.dateLabel.text = "\(date.day)"
+                header.model = date
 
-                header.dayLabel.text = date.weekdayName.cut(at: 2)
+
+                let tapHeader = createTagGestureHeader()
+
+                header.tag = indexPath.section
+                header.isUserInteractionEnabled = true
+
+                header.addGestureRecognizer(tapHeader)
             }
 
             return header
         } else {
             return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier, for: indexPath) as! MiniCardFavoriteFooterView
         }
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: miniCardDetailSegue, sender: dataSource[indexPath.section].looks[indexPath.row])
     }
 }
 
@@ -122,6 +139,25 @@ extension FavoritesCollectionViewController {
                 Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }
         })
+    }
+
+    fileprivate func createTagGestureHeader() -> UITapGestureRecognizer {
+        let action = #selector(openHeaderOnDate(sender:))
+        let tapGesture = UITapGestureRecognizer(target: self, action: action)
+
+        tapGesture.delegate = self as? UIGestureRecognizerDelegate
+        tapGesture.numberOfTapsRequired = 1
+
+        return tapGesture
+    }
+
+    func openHeaderOnDate(sender: UITapGestureRecognizer) {
+        //        let section = sender.view?.tag
+
+        //        if let section = section {
+        //            TODO
+        //            print(dataSource[section].date)
+        //        }
     }
 }
 
@@ -139,7 +175,7 @@ extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
         default:              return 200
         }
     }
-
+    
     func collectionViewFooterHeight() -> CGFloat {
         return 25.0
     }

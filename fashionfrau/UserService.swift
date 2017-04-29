@@ -33,19 +33,7 @@ class UserService {
                 let dto = response.result.value
 
                 do {
-                    let builder = UserBuilder {
-                        $0.id = dto?.id
-
-                        $0.profileName = dto?.profileName
-
-                        $0.profileUrlString = dto?.profileUrl
-
-                        $0.posts = dto?.posts
-
-                        $0.liked = dto?.liked
-
-                        $0.likes = dto?.likes
-                    }
+                    let builder = UserBuilder.map(dto: dto!)
 
                     currentUser = try User(builder: builder)
 

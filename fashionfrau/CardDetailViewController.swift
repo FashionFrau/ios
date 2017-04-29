@@ -47,10 +47,6 @@ class CardDetailViewController: UIViewController {
         descriptionView.text = look.description
 
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     override var prefersStatusBarHidden: Bool { return true }
 

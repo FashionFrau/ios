@@ -13,6 +13,7 @@ let LookDomainError = "look-domain"
 
 enum LookError: Error {
     case MissingField(String)
+    case Unknown(String)
 }
 
 enum MiniLookError: Error {

@@ -28,6 +28,23 @@ class MiniLookFavoriteBuilder {
 
         buildClosure(self)
     }
+
+    static func map(dto: LookDTO) -> MiniLookFavoriteBuilder {
+        return MiniLookFavoriteBuilder {
+
+            $0.id = dto.id
+
+            $0.profileName = dto.profileName
+
+            $0.profileUrlString = dto.profileUrlString
+
+            $0.lookUrlString = dto.lookUrlString
+
+            $0.likes = dto.likes
+
+            $0.hashtag = dto.hashtag
+        }
+    }
 }
 
 struct MiniLookFavorite {

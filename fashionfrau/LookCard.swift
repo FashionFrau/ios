@@ -30,6 +30,24 @@ class LookCardBuilder {
 
         buildClosure(self)
     }
+
+
+    static func map(dto: LookDTO) -> LookCardBuilder{
+        return LookCardBuilder {
+
+            $0.id = dto.id
+
+            $0.profileName = dto.profileName
+
+            $0.profileUrlString = dto.profileUrlString
+
+            $0.lookUrlString = dto.lookUrlString
+
+            $0.gallery = dto.gallery
+
+            $0.description = dto.description
+        }
+    }
 }
 
 struct LookCard {
@@ -88,12 +106,12 @@ struct LookCard {
         }
 
         self.gallery = galleryUrl
-
+        
         self.description = description
-
+        
         // Optional
         if  let purchaseUrl = builder.purchaseUrl {
-
+            
             self.purchaseUrl = try purchaseUrl.asURL()
             
         } else {
