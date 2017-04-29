@@ -26,15 +26,15 @@ class CardService {
 
     private let keyPath = "cards"
 
-    func get(cardId: String) throws -> LookCard {
+    func get(cardId: String, card: ((LookCard?, Error?) -> Void)!) {
         let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
 
         var look: LookCard?
-        var error: Error?
 
         Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<LookDTO>) in
             if response.result.isFailure {
-                error = response.result.error
+                let error = response.result.error
+                card(look, error)
             } else {
                 let dto = response.result.value
 
@@ -42,18 +42,15 @@ class CardService {
 
                 do {
                     look = try LookCard(builder: builder)
+                    card(look, nil)
                 } catch LookError.MissingField(let field) {
                     Flurry.logError(LookDomainError, message: "MissingField: \(field)", error: nil)
-                } catch let e {
-                    error = e
-                    Flurry.logError("\(self.cardServiceDomainError).card", message: e.localizedDescription, error: e)
+                } catch let error {
+                    Flurry.logError("\(self.cardServiceDomainError).card", message: error.localizedDescription, error: error)
+                    card(look, error)
                 }
             }
         }
-        guard let lookCard = look else {
-            throw error ?? LookError.Unknown("Fail to get Card with id: \(cardId)")
-        }
-        return lookCard
     }
 
     func get(cards: (([LookCard], Error?) -> Void)!) {

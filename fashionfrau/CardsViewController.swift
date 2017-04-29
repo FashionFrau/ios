@@ -57,6 +57,7 @@ class CardsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CardDetailViewController {
             if let selectedLook = sender as? LookCard {
+                destination.idCard = selectedLook.id
                 destination.look = selectedLook
             }
         }

@@ -56,12 +56,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CardDetailViewController {
             if let selectedLook = sender as? MiniLookFavorite {
-                do {
-                    let look = try CardService.cs.get(cardId: selectedLook.id)
-                    destination.look = look
-                } catch let error {
-                    Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).open-mini-card", message: error.localizedDescription, error: error)
-                }
+                destination.idCard = selectedLook.id
             }
         }
     }

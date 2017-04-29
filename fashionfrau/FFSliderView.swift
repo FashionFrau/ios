@@ -18,12 +18,12 @@ public protocol FFSliderDataSource: class {
 
 public class FFSliderView: UIView {
 
-    public weak var datasource    : FFSliderDataSource?
+    public weak var datasource: FFSliderDataSource?
 
 
-    var numbersOfSlides    : Int = 0
-    var ffSliderScrollView : UIScrollView!
-    var pageControl        : UIPageControl!
+    var numbersOfSlides: Int = 0
+    var ffSliderScrollView: UIScrollView!
+    var pageControl: UIPageControl!
 
 
     public required init?(coder aDecoder: NSCoder) {
@@ -110,15 +110,6 @@ public class FFSliderView: UIView {
         self.pageControl.frame.origin.x = self.center.x
         self.pageControl.frame.origin.y = self.frame.size.height - 20
     }
-
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-
 }
 
 extension FFSliderView: UIScrollViewDelegate {
