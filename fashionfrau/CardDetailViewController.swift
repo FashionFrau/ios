@@ -94,9 +94,9 @@ extension CardDetailViewController: FFSliderDataSource {
             let url = look.gallery[index]
 
             imageView.af_setImage(withURL: url)
+
+            imageView.contentMode = .scaleAspectFill
         }
-        
-        imageView.contentMode = .scaleAspectFill
         return imageView
     }
 }
