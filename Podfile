@@ -19,6 +19,8 @@ target 'fashionfrau' do
 
     pod 'UIEmptyState', '~> 0.5'
 
+    pod 'SwiftyGif', '~> 3.0'
+
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing

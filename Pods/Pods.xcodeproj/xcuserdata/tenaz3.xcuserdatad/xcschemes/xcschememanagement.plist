@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyGif.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UIEmptyState.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>004D8C6A5143A809FA8648CAF722EE02</key>
+		<key>003D6AADF880B936381B8FE365442B25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>380D04F9EB4323618B059D6BEF9AD58F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4646576BAE3511AC833E41713263F74A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5E90024CA4621EC0A8B8C777C958214A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81D854A66B56A1A3774E2844E176686A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4D109F75C8E420D8DC2E3B06DABA0D4</key>
+		<key>F191331157BB92BBD5848583637BA768</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F413434D93532E968E9D2FE9723D31F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

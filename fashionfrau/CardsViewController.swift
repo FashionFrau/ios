@@ -9,6 +9,7 @@
 import UIKit
 import Koloda
 import Flurry_iOS_SDK
+import SwiftyGif
 
 private let cardDetailSegue = "CardDetailViewController"
 
@@ -20,7 +21,11 @@ class CardsViewController: UIViewController {
 
     private let cardsViewControllerDomainError = "cards-view-controller"
 
+    let gifManager = SwiftyGifManager(memoryLimit:20)
+
     @IBOutlet weak var kolodaView: KolodaView!
+
+    @IBOutlet weak var loadingView: UIImageView!
 
     var dataSource: [LookCard] = []
 
@@ -28,6 +33,8 @@ class CardsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let loadingImage = UIImage(gifName: "Loading.gif")
+        loadingView.setGifImage(loadingImage, manager: gifManager)
         fakeData()
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
@@ -43,8 +50,10 @@ class CardsViewController: UIViewController {
     }
 
     func fakeData() {
+        self.loadingView.isHidden = false
         CardService.cs.get(cards: { (cards: [LookCard], error: Error?) in
             if error == nil {
+                self.loadingView.isHidden = true
                 self.dataSource = cards
                 self.kolodaView.reloadData()
             } else {
