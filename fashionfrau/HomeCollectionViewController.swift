@@ -14,6 +14,8 @@ import UIEmptyState
 private let miniCardHomeHeaderReuseIdentifier = "MiniCardHomeHeaderCell"
 private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
 
+private let miniCardDetailSegue =  "CardDetailViewController"
+
 class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIEmptyStateDataSource, UIEmptyStateDelegate {
 
     private let nibForHomeHeader = "MiniCardHomeHeaderView"
@@ -82,6 +84,14 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CardDetailViewController {
+            if let selectedLook = sender as? MiniLookHome {
+                destination.idCard = selectedLook.id
+            }
+        }
+    }
+
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -128,7 +138,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
+        performSegue(withIdentifier: miniCardDetailSegue, sender: dataSource[indexPath.row])
     }
 }
 

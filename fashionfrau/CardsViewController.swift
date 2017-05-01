@@ -21,7 +21,7 @@ class CardsViewController: UIViewController {
 
     private let cardsViewControllerDomainError = "cards-view-controller"
 
-    let gifManager = SwiftyGifManager(memoryLimit:20)
+    let gifManager = SwiftyGifManager(memoryLimit:7)
 
     @IBOutlet weak var kolodaView: KolodaView!
 

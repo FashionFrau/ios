@@ -104,12 +104,12 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
                 header.model = date
 
 
-                let tapHeader = createTagGestureHeader()
-
-                header.tag = indexPath.section
-                header.isUserInteractionEnabled = true
-
-                header.addGestureRecognizer(tapHeader)
+//                let tapHeader = createTagGestureHeader()
+//
+//                header.tag = indexPath.section
+//                header.isUserInteractionEnabled = true
+//
+//                header.addGestureRecognizer(tapHeader)
             }
 
             return header
@@ -136,24 +136,24 @@ extension FavoritesCollectionViewController {
         })
     }
 
-    fileprivate func createTagGestureHeader() -> UITapGestureRecognizer {
-        let action = #selector(openHeaderOnDate(sender:))
-        let tapGesture = UITapGestureRecognizer(target: self, action: action)
+//    fileprivate func createTagGestureHeader() -> UITapGestureRecognizer {
+//        let action = #selector(openHeaderOnDate(sender:))
+//        let tapGesture = UITapGestureRecognizer(target: self, action: action)
+//
+//        tapGesture.delegate = self as? UIGestureRecognizerDelegate
+//        tapGesture.numberOfTapsRequired = 1
+//
+//        return tapGesture
+//    }
 
-        tapGesture.delegate = self as? UIGestureRecognizerDelegate
-        tapGesture.numberOfTapsRequired = 1
-
-        return tapGesture
-    }
-
-    func openHeaderOnDate(sender: UITapGestureRecognizer) {
+//    func openHeaderOnDate(sender: UITapGestureRecognizer) {
         //        let section = sender.view?.tag
 
         //        if let section = section {
         //            TODO
         //            print(dataSource[section].date)
         //        }
-    }
+//    }
 }
 
 extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {

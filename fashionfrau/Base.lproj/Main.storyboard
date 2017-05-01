@@ -234,6 +234,9 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="DdF-6o-5hG"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <segue destination="Alo-Bm-e7K" kind="presentation" identifier="CardDetailViewController" id="DVq-dU-Ebh"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4z9-Zd-Ju8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,7 +277,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kDL-Cn-doy" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="kolodaView" destination="o1D-Fh-oZm" id="ec2-aw-fuf"/>
                         <outlet property="loadingView" destination="JAc-3E-ovt" id="c30-jg-QkP"/>
@@ -442,8 +444,6 @@
                             <constraint firstItem="MW9-jF-snL" firstAttribute="centerY" secondItem="bad-n0-9AI" secondAttribute="centerY" id="zaJ-ck-nwx"/>
                         </constraints>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="descriptionView" destination="Hqa-Bf-7QK" id="waa-tC-PET"/>
                         <outlet property="profileImageView" destination="R1V-q4-PQ8" id="5CR-MK-aYz"/>
@@ -583,7 +583,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="jGw-Mn-DY0" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
                     <connections>
-                        <segue destination="Alo-Bm-e7K" kind="show" identifier="CardDetailViewController" action="showDetailViewController:sender:" id="Yfc-kL-hOU"/>
+                        <segue destination="Alo-Bm-e7K" kind="presentation" identifier="CardDetailViewController" id="Yfc-kL-hOU"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVf-Yr-Oy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -598,8 +598,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="F5X-tF-lFx" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="F5X-tF-lFx" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -641,8 +640,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Ylp-8P-OGr" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Ylp-8P-OGr" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -663,8 +661,7 @@
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="MST-Ms-QPI" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MST-Ms-QPI" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
