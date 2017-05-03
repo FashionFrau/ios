@@ -9,79 +9,88 @@
 import UIKit
 import Device
 import Flurry_iOS_SDK
-import UIEmptyState
+import Alamofire
 
 private let miniCardHomeHeaderReuseIdentifier = "MiniCardHomeHeaderCell"
 private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
 
 private let miniCardDetailSegue =  "CardDetailViewController"
 
-class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIEmptyStateDataSource, UIEmptyStateDelegate {
+class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let nibForHomeHeader = "MiniCardHomeHeaderView"
-    
-    private let homeCollectionViewControllerDomainError = "home-collection-view-controller"
 
-    private var dataSource: [MiniLookHome] = []
+    private let homeCollectionViewControllerDomainError = "com.fashionfrau.home-collection-view-controller.error"
+
+    private var dataSource = [MiniLookHome]()
 
     private var user: User?
 
-    private let emptyAttributes = [ NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Courgette-Regular", size: 15) ??  UIFont.systemFont(ofSize: 15)]
-
-    var emptyStateViewAdjustsToFitBars: Bool =  true
-
-    var emptyStateTitle: NSAttributedString { get { return NSAttributedString(string: "Pull to refresh", attributes: emptyAttributes) } }
+    var refresher: UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Register cell classes
         let nibHeader = UINib(nibName: nibForHomeHeader, bundle: nil)
-        self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier)
 
-        self.emptyStateDataSource = self
-        self.emptyStateDelegate = self
+        collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier)
 
-        fakeUser()
+        collectionView!.dataSource = self
+
+        collectionView!.alwaysBounceVertical = true
+
+        setupRefreshControl()
 
         collectionView!.backgroundColor = .fashionfrau
 
-        if let layout = collectionView?.collectionViewLayout as? MiniCardsHomeLayout {
+        if let layout = collectionView!.collectionViewLayout as? MiniCardsHomeLayout {
             layout.delegate = self
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fakeData()
-    }
-
     func fakeData() {
+
+        fakeUser()
+
         CardService.cs.get(likedCards: { (cards: [MiniLookHome], error: Error?) in
-            if error == nil {
-                self.dataSource = cards
-                self.collectionView?.reloadData()
-                self.reloadEmptyState(forCollectionView: self.collectionView!)
-            } else {
-                Flurry.logError("\(self.homeCollectionViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
+
+            self.refresher.endRefreshing()
+
+            self.dataSource = cards
+
+            self.collectionView!.reloadData()
+
+            if let error = error {
+
+                Flurry.logError("\(self.homeCollectionViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
         })
     }
 
     func fakeUser() {
-        UserService.us.get(userId: "1") { (user:User?, error: Error?) in
-            if error == nil, let user = user {
-                self.user = user
-                self.navigationItem.title = user.profileName
-                self.collectionView?.reloadData()
-            } else {
-                Flurry.logError("\(self.homeCollectionViewControllerDomainError).fakeUser", message: error?.localizedDescription, error: error)
-            }
+        UserService.us.get(userId: "1", success: { (user: User) in
+
+            self.user = user
+
+            self.navigationItem.title = user.profileName
+
+            self.collectionView!.reloadData()
+
+        }) { (error: Error?) in
+
+            Flurry.logError("\(self.homeCollectionViewControllerDomainError).fake-user", message: error?.localizedDescription, error: error)
         }
+    }
+
+    func setupRefreshControl() {
+        refresher = UIRefreshControl()
+
+        refresher.tintColor = UIColor.white
+
+        refresher.addTarget(self, action: #selector(fakeData), for: .valueChanged)
+
+        collectionView!.addSubview(refresher)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

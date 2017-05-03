@@ -64,11 +64,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIEmptyState.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,17 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>003D6AADF880B936381B8FE365442B25</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1C83757A7DA8A3F26F8A92783214BDC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>20151774CE2F5FA6B8126D4F5ED1C5FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D8DFFF5F10F876A1D1E2A0589FD5EF8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81D854A66B56A1A3774E2844E176686A</key>
+		<key>7C59F6B620E92DF846D35A00BCC4BAEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +132,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F191331157BB92BBD5848583637BA768</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F413434D93532E968E9D2FE9723D31F8</key>
+		<key>A2565BBFF0BBC40223317083E5F083F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

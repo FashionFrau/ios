@@ -60,6 +60,7 @@ class MiniCardsHomeLayout: UICollectionViewLayout {
 
 
     override func prepare() {
+
         if (collectionView == nil) {
             return
         }

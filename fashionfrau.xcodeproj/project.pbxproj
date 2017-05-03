@@ -14,7 +14,7 @@
 		0C0712D01EA54247004B17C9 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CF1EA54247004B17C9 /* CornerView.swift */; };
 		0C093DA21EA3F77F001C1646 /* LookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA11EA3F77F001C1646 /* LookDTO.swift */; };
 		0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */; };
-		0C460BE61EB260BD00B34347 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C460BE51EB260BD00B34347 /* UserDTO.swift */; };
+		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
 		0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */; };
 		0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */; };
 		0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57021E9A7C4E009B5BC8 /* Assets.xcassets */; };
@@ -53,7 +53,6 @@
 		0CD2E6241EACD86800F93DAE /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */; };
 		0CD2E6281EACF1D300F93DAE /* MiniCardHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */; };
 		0CD435AF1EB13BD400B05EFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD435AE1EB13BD400B05EFF /* User.swift */; };
-		0CD435B11EB13C6600B05EFF /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD435B01EB13C6600B05EFF /* UserError.swift */; };
 		0CD435B31EB13CFC00B05EFF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD435B21EB13CFC00B05EFF /* UserService.swift */; };
 		0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
@@ -85,7 +84,7 @@
 		0C0712CF1EA54247004B17C9 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		0C093DA11EA3F77F001C1646 /* LookDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookDTO.swift; sourceTree = "<group>"; };
 		0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookFavorite.swift; sourceTree = "<group>"; };
-		0C460BE51EB260BD00B34347 /* UserDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		0C8F56F81E9A7C4E009B5BC8 /* fashionfrau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionfrau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C8F57001E9A7C4E009B5BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,7 +129,6 @@
 		0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardHomeHeaderView.swift; sourceTree = "<group>"; };
 		0CD435AE1EB13BD400B05EFF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		0CD435B01EB13C6600B05EFF /* UserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		0CD435B21EB13CFC00B05EFF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsHomeLayout.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 			children = (
 				0C093DA11EA3F77F001C1646 /* LookDTO.swift */,
 				0C0712C81EA43BAA004B17C9 /* MiniLookFavoriteDTO.swift */,
-				0C460BE51EB260BD00B34347 /* UserDTO.swift */,
 			);
 			name = DataTransferObject;
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				0C8F573C1E9D5B1E009B5BC8 /* LookError.swift */,
-				0CD435B01EB13C6600B05EFF /* UserError.swift */,
 			);
 			name = Exception;
 			sourceTree = "<group>";
@@ -365,6 +361,7 @@
 				0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */,
 				0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */,
 				0CD435B21EB13CFC00B05EFF /* UserService.swift */,
+				0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -704,6 +701,7 @@
 				0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */,
 				0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */,
 				0C9A160F1EA02DEC0092B6F1 /* FFNavigationBar.swift in Sources */,
+				0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */,
 				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
@@ -722,14 +720,12 @@
 				0CD435AF1EB13BD400B05EFF /* User.swift in Sources */,
 				0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */,
 				0CD2E6201EABE3E800F93DAE /* MiniCardHomeCell.swift in Sources */,
-				0C460BE61EB260BD00B34347 /* UserDTO.swift in Sources */,
 				0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */,
 				0C8F573D1E9D5B1E009B5BC8 /* LookError.swift in Sources */,
 				0C0712CC1EA4D733004B17C9 /* Util.swift in Sources */,
 				0C0712C91EA43BAA004B17C9 /* MiniLookFavoriteDTO.swift in Sources */,
 				0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */,
 				0CAEF5F91EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift in Sources */,
-				0CD435B11EB13C6600B05EFF /* UserError.swift in Sources */,
 				0C0712C71EA43513004B17C9 /* MiniLooksFavorite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

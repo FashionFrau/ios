@@ -9,92 +9,46 @@
 import Foundation
 import UIKit
 
-class MiniLookHomeBuilder {
+struct MiniLookHome: ResponseObjectSerializable, ResponseCollectionSerializable {
 
-    var id: String?
+    var id: String
 
-    var profileUrlString: String?
+    var profileUrl: String
 
-    var profileName: String?
+    var profileName: String
 
-    var lookUrlString: String?
+    var lookUrl: String
 
-    var likes: Int?
+    var likes: Int
 
-    var season: String?
+    var season: String
 
-    typealias BuilderClosure = (MiniLookHomeBuilder) -> ()
+    init?(response: HTTPURLResponse, representation: Any) {
 
-    init(buildClosure: BuilderClosure) {
+        guard
+            let representation = representation as? [String: Any],
 
-        buildClosure(self)
-    }
+            let id = representation["id"] as? String,
 
-    static func map(dto: LookDTO) -> MiniLookHomeBuilder {
-        return MiniLookHomeBuilder {
+            let profileUrl = representation["profileUrl"] as? String,
 
-            $0.id = dto.id
+            let profileName = representation["profileName"] as? String,
 
-            $0.profileName = dto.profileName
+            let lookUrl = representation["lookUrl"] as? String,
 
-            $0.profileUrlString = dto.profileUrlString
+            let likes = representation["likes"] as? Int,
 
-            $0.lookUrlString = dto.lookUrlString
+            let season = representation["season"] as? String
 
-            $0.likes = dto.likes
-
-            $0.season = dto.season
-        }
-    }
-}
-
-struct MiniLookHome {
-
-    let id: String
-
-    let profileUrl: URL
-
-    let profileName: String
-
-    let lookUrl: URL
-
-    let likes: Int
-
-    let season: String
-
-    init?(builder: MiniLookHomeBuilder) throws {
-
-        // Mandatory
-        guard let id = builder.id  else {
-            throw MiniLookError.MissingField("id")
-        }
-        guard let lookUrl = builder.lookUrlString else {
-            throw MiniLookError.MissingField("lookUrl")
-        }
-
-        guard let profileName = builder.profileName else {
-            throw MiniLookError.MissingField("profileName")
-        }
-
-        guard let profileUrl = builder.profileUrlString else {
-            throw MiniLookError.MissingField("profileUrl")
-        }
-
-        guard let likes = builder.likes else {
-            throw MiniLookError.MissingField("likes")
-        }
-
-        guard let season = builder.season else {
-            throw MiniLookError.MissingField("season")
-        }
+        else { return nil }
 
         self.id = id
         
         self.profileName = profileName
         
-        self.profileUrl =  try profileUrl.asURL()
+        self.profileUrl = profileUrl
         
-        self.lookUrl = try lookUrl.asURL()
+        self.lookUrl = lookUrl
         
         self.likes = likes
         

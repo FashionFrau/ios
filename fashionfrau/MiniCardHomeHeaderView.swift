@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 class MiniCardHomeHeaderView: UICollectionReusableView {
+
+    fileprivate let miniCardHomeHeaderViewDomainError = "com.fashionfrau.mini-card-home-header.error"
 
     var model: User? {
         didSet{
@@ -45,7 +48,16 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
 extension MiniCardHomeHeaderView {
 
     fileprivate func updateUI() {
-        profileImage.af_setImage(withURL: model!.profileUrl)
+
+        do {
+            let url = try model!.profileUrl.asURL()
+
+            profileImage.af_setImage(withURL: url)
+
+        } catch let error {
+
+            Flurry.logError("\(self.miniCardHomeHeaderViewDomainError).profile-image.url", message: error.localizedDescription, error: error)
+        }
 
         postsNumber.text = String(model!.posts)
 

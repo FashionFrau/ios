@@ -20,29 +20,19 @@ class UserService {
 
     private let usersUrl = "/users"
 
-    func get(userId: String, user: ((User?, Error?) -> Void)!) {
+    func get(userId: String, success: ((User) -> Void)!, failure: ((Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(usersUrl)/\(userId)".asURL()
 
-        var currentUser: User?
+        Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<User>) in
 
-        Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<UserDTO>) in
-            if response.result.isFailure {
-                user(currentUser, response.result.error)
+            if let currentUser = response.result.value {
+
+                success(currentUser)
+
             } else {
-                let dto = response.result.value
 
-                do {
-                    let builder = UserBuilder.map(dto: dto!)
-
-                    currentUser = try User(builder: builder)
-
-                }  catch UserError.MissingField(let field) {
-                    Flurry.logError(UserDomainError, message: "MissingField: \(field)", error: nil)
-                } catch let error {
-                    Flurry.logError("\(self.userServiceDomainError).cards", message: error.localizedDescription, error: error)
-                }
-                user(currentUser, nil)
+                failure(response.result.error)
             }
         }
     }

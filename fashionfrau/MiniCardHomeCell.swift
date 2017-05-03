@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Flurry_iOS_SDK
 
 class MiniCardHomeCell: UICollectionViewCell {
+
+    fileprivate let miniCardHomeCellDomainError = "com.fashionfrau.mini-card-home-cell.error"
+
+    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
 
     var model: MiniLookHome? {
         didSet {
@@ -31,47 +36,55 @@ class MiniCardHomeCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        profileImage.af_cancelImageRequest()
-        profileImage.layer.removeAllAnimations()
-        profileImage.image = nil
-
-        lookImage.af_cancelImageRequest()
-        lookImage.layer.removeAllAnimations()
-        lookImage.image = nil
-
         seasonLabel.layer.cornerRadius = 5
         seasonLabel.layer.masksToBounds = true
 
         shadowEffect()
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+//        profileImage.af_cancelImageRequest()
+//        profileImage.layer.removeAllAnimations()
+//        profileImage.image = nil
+//
+//        lookImage.af_cancelImageRequest()
+//        lookImage.layer.removeAllAnimations()
+//        lookImage.image = nil
+
+    }
 }
 
 extension MiniCardHomeCell {
 
-    fileprivate func updateUI() {
-        if let model = self.model {
+    func updateUI() {
 
-            lookImage.af_setImage(withURL: model.lookUrl)
+        setupProfileImage()
 
-            profileImage.af_setImage(withURL: model.profileUrl)
+        setupLookImage()
 
-            profileNameLabel.text = model.profileName
+        profileNameLabel.text = model!.profileName
 
-            likesLabel.text = "\(model.likes)"
+        likesLabel.text = "\(model!.likes)"
 
-            seasonLabel.text = " \(model.season) "
+        seasonLabel.text = " \(model!.season) "
 
-            seasonBackground.backgroundColor = seasonColor()
-        }
+        seasonBackground.backgroundColor = seasonColor()
+
     }
 
     fileprivate func seasonColor() -> UIColor {
         let season = model?.season ?? ""
 
         switch season {
+
         case "winter": return UIColor.fashionfrauWinter
+
         case "summer": return UIColor.fashionfrauSummer
+
         case "fall": return UIColor.fashionfrauFall
+
         case "spring": return UIColor.fashionfrauSpring
 
         default:
@@ -86,5 +99,29 @@ extension MiniCardHomeCell {
         layer.shadowRadius = 10
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
+    }
+
+    fileprivate func setupProfileImage() {
+        do {
+            let url = try model!.profileUrl.asURL()
+
+            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+
+        } catch let error {
+
+            Flurry.logError("\(self.miniCardHomeCellDomainError).profile-image.url", message: error.localizedDescription, error: error)
+        }
+    }
+
+    fileprivate func setupLookImage() {
+        do {
+            let url = try model!.lookUrl.asURL()
+
+            lookImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+
+        } catch let error {
+
+            Flurry.logError("\(self.miniCardHomeCellDomainError).look-image.url", message: error.localizedDescription, error: error)
+        }
     }
 }

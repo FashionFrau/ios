@@ -24,7 +24,7 @@
                         <constraint firstAttribute="height" constant="70" id="vI2-J0-pzb"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-AJ-EAM" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-AJ-EAM" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                     <rect key="frame" x="10" y="669" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Hxr-ja-tLT"/>
@@ -32,7 +32,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckB-Vk-YSQ">
-                    <rect key="frame" x="90" y="686.33333333333337" width="132" height="26.333333333333258"/>
+                    <rect key="frame" x="90" y="686" width="132" height="27"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -61,4 +61,7 @@
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="Profile Placeholder" width="61" height="73"/>
+    </resources>
 </document>

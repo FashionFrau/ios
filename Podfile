@@ -17,8 +17,6 @@ target 'fashionfrau' do
 
     pod 'Flurry-iOS-SDK/FlurrySDK', '~> 8.0'
 
-    pod 'UIEmptyState', '~> 0.5'
-
     pod 'SwiftyGif', '~> 3.0'
 
     target 'fashionfrauTests' do

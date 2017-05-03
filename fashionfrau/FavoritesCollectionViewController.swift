@@ -11,7 +11,6 @@ import Alamofire
 import SwiftDate
 import Device
 import Flurry_iOS_SDK
-import UIEmptyState
 
 private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
 private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
@@ -19,7 +18,7 @@ private let miniCardFavoriteFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
 
 private let miniCardDetailSegue =  "CardDetailViewController"
 
-class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIEmptyStateDataSource, UIEmptyStateDelegate {
+class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
     private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
@@ -28,25 +27,22 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
     fileprivate var dataSource: [MiniLooksFavorite] = []
 
-    private let emptyAttributes = [ NSForegroundColorAttributeName: UIColor.fashionfrau, NSFontAttributeName: UIFont(name: "Courgette-Regular", size: 15) ??  UIFont.systemFont(ofSize: 15)]
-
-    var emptyStateTitle: NSAttributedString { get { return NSAttributedString(string: "Pull to refresh", attributes: emptyAttributes) } }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Register cell classes
         let nibHeader = UINib(nibName: nibForFavoriteHeader, bundle: nil)
-        self.collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardFavoriteHeaderReuseIdentifier)
+
+        collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardFavoriteHeaderReuseIdentifier)
 
         let nibFooter = UINib(nibName: nibForFavoriteFooter, bundle: nil)
-        self.collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier)
 
-        self.emptyStateDataSource = self
-        self.emptyStateDelegate = self
+        collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier)
 
-        collectionView?.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-        if let layout = collectionView?.collectionViewLayout as? MiniCardsFavoriteLayout {
+
+        collectionView!.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+
+        if let layout = collectionView!.collectionViewLayout as? MiniCardsFavoriteLayout {
             layout.delegate = self
         }
 
@@ -128,8 +124,7 @@ extension FavoritesCollectionViewController {
         CardService.cs.get(favoriteCards: { (cards: [MiniLooksFavorite], error: Error?) in
             if error == nil {
                 self.dataSource = cards
-                self.collectionView?.reloadData()
-                self.reloadEmptyState(forCollectionView: self.collectionView!)
+                self.collectionView!.reloadData()
             } else {
                 Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
             }
