@@ -15,8 +15,6 @@ class MiniCardFavoriteCell: UICollectionViewCell {
 
     fileprivate let miniCardFavoriteCellDomainError = "com.fashionfrau.mini-card-favorite-cell.error"
 
-    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
-
     var model: MiniLookFavorite? {
         didSet {
             updateUI()
@@ -69,7 +67,6 @@ extension MiniCardFavoriteCell {
         
     }
 
-
     fileprivate func shadowEffect() {
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize.zero
@@ -82,7 +79,7 @@ extension MiniCardFavoriteCell {
         do {
             let url = try model!.profileUrl.asURL()
 
-            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            profileImage.af_setImage(withURL: url)
 
         } catch let error {
 
@@ -94,7 +91,7 @@ extension MiniCardFavoriteCell {
         do {
             let url = try model!.lookUrl.asURL()
 
-            lookImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            lookImage.af_setImage(withURL: url)
 
         } catch let error {
 

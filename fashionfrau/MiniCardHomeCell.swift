@@ -14,8 +14,6 @@ class MiniCardHomeCell: UICollectionViewCell {
 
     fileprivate let miniCardHomeCellDomainError = "com.fashionfrau.mini-card-home-cell.error"
 
-    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
-
     var model: MiniLookHome? {
         didSet {
             updateUI()
@@ -106,7 +104,7 @@ extension MiniCardHomeCell {
         do {
             let url = try model!.profileUrl.asURL()
 
-            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            profileImage.af_setImage(withURL: url)
 
         } catch let error {
 
@@ -114,11 +112,11 @@ extension MiniCardHomeCell {
         }
     }
 
-    fileprivate func setupLookImage() {
+    fileprivate func setupLookImage() -> Void {
         do {
             let url = try model!.lookUrl.asURL()
 
-            lookImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            lookImage.af_setImage(withURL: url)
 
         } catch let error {
 
