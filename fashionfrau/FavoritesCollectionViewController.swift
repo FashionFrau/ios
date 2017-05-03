@@ -23,7 +23,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
     private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
 
-    fileprivate let favoritesCollecitonViewControllerDomainError = "favorites-collection-view-controller"
+    fileprivate let favoritesCollecitonViewControllerDomainError = "com.fashionfrau.favorites-collection-view-controller.error"
 
     fileprivate var dataSource: [MiniLooksFavorite] = []
 
@@ -43,16 +43,25 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
         collectionView!.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
 
         if let layout = collectionView!.collectionViewLayout as? MiniCardsFavoriteLayout {
+
             layout.delegate = self
         }
 
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fakeData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if let destination = segue.destination as? CardDetailViewController {
+
             if let selectedLook = sender as? MiniLookFavorite {
-                destination.idCard = selectedLook.id
+
+                destination.lookId = selectedLook.id
             }
         }
     }
@@ -120,13 +129,16 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 }
 
 extension FavoritesCollectionViewController {
+
     fileprivate func fakeData() {
         CardService.cs.get(favoriteCards: { (cards: [MiniLooksFavorite], error: Error?) in
-            if error == nil {
-                self.dataSource = cards
-                self.collectionView!.reloadData()
-            } else {
-                Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
+
+            self.dataSource = cards
+
+            self.collectionView!.reloadData()
+
+            if let error = error {
+                Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
         })
     }

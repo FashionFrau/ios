@@ -8,58 +8,37 @@
 
 import Foundation
 import SwiftDate
-import Flurry_iOS_SDK
 
-class MiniLooksFavoriteBuilder {
 
-    var date: String?
+struct MiniLooksFavorite: ResponseObjectSerializable, ResponseCollectionSerializable {
 
-    var looks: [MiniLookFavoriteBuilder]?
+    var date: DateInRegion?
 
-    typealias BuilderClosure = (MiniLooksFavoriteBuilder) -> ()
+    var looks: [MiniLookFavorite]
 
-    init(buildClosure: BuilderClosure) {
 
-        buildClosure(self)
-    }
-}
+    init?(response: HTTPURLResponse, representation: Any) {
 
-struct MiniLooksFavorite {
 
-    let date: DateInRegion
+        guard
+            let representation = representation as? [String: Any],
 
-    let looks: [MiniLookFavorite]
+            let date = representation["date"] as? String,
 
-    init?(builder: MiniLooksFavoriteBuilder) throws {
+            let looks = representation["looks"] as? [[String: Any]]
 
-        // Mandatory
-        guard let looks = builder.looks else {
-            throw MiniLookError.MissingField("looks")
-        }
+            else { return nil }
 
-        var looksMiniCard: [MiniLookFavorite] = []
+        var collection: [MiniLookFavorite] = []
 
         for look in looks {
-
-
-            let builder = try MiniLookFavorite(builder: look)
-
-            if let builded = builder {
-
-                looksMiniCard.append(builded)
+            if let l = MiniLookFavorite(response: response, representation: look) {
+                collection.append(l)
             }
         }
 
-        self.looks = looksMiniCard
+        self.looks = collection
 
-        guard let dateString = builder.date else {
-            throw MiniLookError.MissingField("date")
-        }
-
-        if let date = DateInRegion(string: dateString, format: .iso8601(options: .withFullDate)) {
-            self.date = date
-        } else {
-            throw MiniLookError.ParseDate
-        }
+        self.date = DateInRegion(string: date, format: .iso8601(options: .withFullDate))
     }
 }

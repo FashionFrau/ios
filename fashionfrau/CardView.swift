@@ -8,8 +8,11 @@
 
 import UIKit
 import AlamofireImage
+import Flurry_iOS_SDK
 
 class CardView: UIView {
+
+    fileprivate let cardViewDomainError = "com.fashionfrau.card-view.error"
 
     @IBOutlet weak var gradientView: UIView!
 
@@ -18,14 +21,6 @@ class CardView: UIView {
     @IBOutlet weak var profileImage: RoundImageView!
 
     @IBOutlet weak var nameLabel: UILabel!
-
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,13 +37,24 @@ class CardView: UIView {
     }
 
 
-    func update(look: LookCard) {
+    func update(look: Look) {
 
         nameLabel.text = look.profileName
 
-        profileImage.af_setImage(withURL: look.profileUrl)
+        do {
 
-        lookImage.af_setImage(withURL: look.lookUrl)
+            let profileUrl = try look.profileUrl.asURL()
+
+            profileImage.af_setImage(withURL: profileUrl)
+
+            let lookUrl = try look.lookUrl.asURL()
+
+            lookImage.af_setImage(withURL: lookUrl)
+
+        } catch let error {
+
+            Flurry.logError("\(self.cardViewDomainError).update.image.url", message: error.localizedDescription, error: error)
+        }
     }
 
     private func gradientEffect() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 import Flurry_iOS_SDK
 
 class MiniCardHomeCell: UICollectionViewCell {
@@ -45,13 +46,13 @@ class MiniCardHomeCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
 
-//        profileImage.af_cancelImageRequest()
-//        profileImage.layer.removeAllAnimations()
-//        profileImage.image = nil
-//
-//        lookImage.af_cancelImageRequest()
-//        lookImage.layer.removeAllAnimations()
-//        lookImage.image = nil
+        profileImage.af_cancelImageRequest()
+        profileImage.layer.removeAllAnimations()
+        profileImage.image = nil
+
+        lookImage.af_cancelImageRequest()
+        lookImage.layer.removeAllAnimations()
+        lookImage.image = nil
 
     }
 }

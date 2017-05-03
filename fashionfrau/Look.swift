@@ -1,14 +1,14 @@
 //
-//  MiniLookFavorite.swift
+//  Look.swift
 //  fashionfrau
 //
-//  Created by Nilson Junior on 16/04/2017.
+//  Created by Nilson Junior on 11/04/2017.
 //  Copyright © 2017 Fashion Frau. All rights reserved.
 //
 
 import Foundation
 
-struct MiniLookFavorite: ResponseObjectSerializable, ResponseCollectionSerializable {
+struct Look: ResponseObjectSerializable, ResponseCollectionSerializable {
 
     var id: String
 
@@ -18,9 +18,11 @@ struct MiniLookFavorite: ResponseObjectSerializable, ResponseCollectionSerializa
 
     var lookUrl: String
 
-    var likes: Int
+    var purchaseUrl: String?
 
-    var hashtag: String
+    var gallery: [String]
+
+    var description: String
 
 
     init?(response: HTTPURLResponse, representation: Any) {
@@ -36,22 +38,31 @@ struct MiniLookFavorite: ResponseObjectSerializable, ResponseCollectionSerializa
 
             let lookUrl = representation["lookUrl"] as? String,
 
-            let likes = representation["likes"] as? Int,
+            let gallery = representation["gallery"] as? [String],
 
-            let hashtag = representation["hashtag"] as? String
-            
+            let description = representation["description"] as? String
+
             else { return nil }
 
         self.id = id
-        
+
         self.profileName = profileName
 
         self.profileUrl = profileUrl
 
         self.lookUrl = lookUrl
 
-        self.likes = likes
-        
-        self.hashtag = hashtag
+        self.gallery = gallery
+
+        self.description = description
+
+
+        // Optional
+
+        if let purchaseUrl = representation["purchaseUrl"] as? String {
+
+            self.purchaseUrl = purchaseUrl
+        }
     }
+    
 }

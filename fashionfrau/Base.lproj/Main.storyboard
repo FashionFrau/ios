@@ -120,6 +120,7 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-b5-Jic" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <color key="backgroundColor" white="0.90901692710000004" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="fGp-cw-4bN"/>
                                                                 <constraint firstAttribute="width" constant="25" id="gUV-48-msP"/>
@@ -153,7 +154,7 @@
                                                     <rect key="frame" x="7" y="182" width="12" height="11"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-WI-xel" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                                    <rect key="frame" x="130" y="183" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="130" y="182.5" width="28.5" height="12.5"/>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -162,7 +163,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
-                                                    <rect key="frame" x="130.5" y="183.5" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="130.5" y="183" width="28.5" height="12.5"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -320,6 +321,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="R1V-q4-PQ8" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="0.90901692710000004" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="UYd-j1-Bez"/>
                                                     <constraint firstAttribute="width" constant="50" id="rTa-IV-Jkh"/>
@@ -483,6 +485,7 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-2j-2iy" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <color key="backgroundColor" white="0.90901692708333337" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="25" id="Nox-8W-yBi"/>
                                                                 <constraint firstAttribute="width" constant="25" id="jib-ZB-62a"/>
@@ -692,6 +695,6 @@
         <image name="Unlike" width="55" height="47"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DVq-dU-Ebh"/>
+        <segue reference="p8y-wR-8pL"/>
     </inferredMetricsTieBreakers>
 </document>

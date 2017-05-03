@@ -96,7 +96,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CardDetailViewController {
             if let selectedLook = sender as? MiniLookHome {
-                destination.idCard = selectedLook.id
+                destination.lookId = selectedLook.id
             }
         }
     }

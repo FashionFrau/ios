@@ -16,8 +16,6 @@ class UserService {
 
     static let us = UserService()
 
-    private let userServiceDomainError = "user-service"
-
     private let usersUrl = "/users"
 
     func get(userId: String, success: ((User) -> Void)!, failure: ((Error?) -> Void)!) {

@@ -16,7 +16,7 @@ class CardService {
 
     static let cs = CardService()
 
-    private let cardServiceDomainError = "card-service"
+    private let cardServiceDomainError = "com.fashionfrau.card-service.error"
 
     private let cardsUrl = "/cards"
 
@@ -24,74 +24,37 @@ class CardService {
 
     private let likedCardsUrl = "/liked"
 
-    private let keyPath = "cards"
+    func get(cardId: String, success: ((Look) -> Void)!, failure: ((Error?) -> Void)!) {
 
-    func get(cardId: String, card: ((LookCard?, Error?) -> Void)!) {
         let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
 
-        var look: LookCard?
 
-        Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<LookDTO>) in
-            if response.result.isFailure {
-                let error = response.result.error
-                card(look, error)
+        Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<Look>) in
+
+            if let look = response.result.value {
+
+                success(look)
+
             } else {
-                let dto = response.result.value
 
-                let builder = LookCardBuilder.map(dto: dto!)
-
-                do {
-                    look = try LookCard(builder: builder)
-                    card(look, nil)
-                } catch LookError.MissingField(let field) {
-                    Flurry.logError(LookDomainError, message: "MissingField: \(field)", error: nil)
-                } catch let error {
-                    Flurry.logError("\(self.cardServiceDomainError).card", message: error.localizedDescription, error: error)
-                    card(look, error)
-                }
+                failure(response.result.error)
             }
         }
     }
 
-    func get(cards: (([LookCard], Error?) -> Void)!) {
+    func get(cards: (([Look], Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)".asURL()
 
-        var looks: [LookCard] = []
+        Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[Look]>) in
 
-        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[LookDTO]>) in
+            if let looks = response.result.value {
 
-            if response.result.isFailure {
-
-                cards(looks, response.result.error)
+                cards(looks, nil)
 
             } else {
 
-                let looksDTO = response.result.value
-
-                let looksAsBuilder: [LookCardBuilder] = self.createLookCardBuilder(from: looksDTO)
-
-                for lookAsBuilder in looksAsBuilder {
-
-                    do {
-
-                        let look = try LookCard(builder: lookAsBuilder)
-
-                        if let look = look {
-
-                            looks.append(look)
-                        }
-                    } catch LookError.MissingField(let field) {
-
-                        Flurry.logError(LookDomainError, message: "MissingField: \(field)", error: nil)
-
-                    } catch let error {
-
-                        Flurry.logError("\(self.cardServiceDomainError).cards", message: error.localizedDescription, error: error)
-                    }
-                }
-
-                cards(looks, nil)
+                cards([], response.result.error)
             }
         }
     }
@@ -100,126 +63,33 @@ class CardService {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)".asURL()
 
-        var looks: [MiniLooksFavorite] = []
+        Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[MiniLooksFavorite]>) in
 
-        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath) { (response: DataResponse<[MiniLookFavoriteDTO]>) in
+            if let looks = response.result.value {
 
-            if response.result.isFailure {
-                favoriteCards(looks, response.result.error)
+                favoriteCards(looks, nil)
+
             } else {
 
-                let miniLooksDTO = response.result.value
-
-                let looksAsBuilder: [MiniLooksFavoriteBuilder] = self.createMiniLooksFavoriteBuilder(from: miniLooksDTO)
-
-                for lookAsBuilder in looksAsBuilder {
-
-                    do {
-
-                        let builded = try MiniLooksFavorite(builder: lookAsBuilder)
-
-                        if let look = builded {
-
-                            looks.append(look)
-                        }
-
-                    } catch MiniLookError.MissingField(let field) {
-                        Flurry.logError(MiniLookDomainError, message: "MissingField: \(field)", error: nil)
-                    } catch let error {
-                        Flurry.logError("\(self.cardServiceDomainError).miniCards", message: error.localizedDescription, error: error)
-                    }
-                }
-                favoriteCards(looks, nil)
+                favoriteCards([], response.result.error)
             }
         }
-    }
-
-    func getLikedCards(completionHandler: @escaping (DataResponse<[LookDTO]>) -> Void) {
-        let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
-
-        Alamofire.request(url, headers: defaultHeaders).validate().responseArray(keyPath: keyPath, completionHandler: completionHandler)
     }
 
     func get(likedCards: (([MiniLookHome], Error?) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
-
+        
         Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[MiniLookHome]>) in
-
+            
             if let looks = response.result.value {
-
+                
                 likedCards(looks, nil)
-
+                
             } else {
-
+                
                 likedCards([], response.result.error)
             }
         }
-    }
-}
-
-
-extension  CardService {
-
-    fileprivate func createLookCardBuilder(from looksDTO: [LookDTO]?) -> [LookCardBuilder] {
-
-        var looksAsBuilder = [LookCardBuilder]()
-
-        var builder: LookCardBuilder
-
-        if looksDTO?.isEmpty == false {
-
-            for dto in looksDTO! {
-
-                builder = LookCardBuilder.map(dto: dto)
-
-                looksAsBuilder.append(builder)
-            }
-        }
-
-        return looksAsBuilder
-    }
-
-    fileprivate func createMiniLooksFavoriteBuilder(from miniLooksDTO: [MiniLookFavoriteDTO]?) -> [MiniLooksFavoriteBuilder] {
-
-        var looksAsBuilder = [MiniLooksFavoriteBuilder]()
-
-        var builder: MiniLooksFavoriteBuilder
-        
-        if miniLooksDTO?.isEmpty == false {
-            
-            for dto in miniLooksDTO! {
-                
-                builder = MiniLooksFavoriteBuilder {
-                    
-                    $0.date = dto.date
-                    
-                    $0.looks = self.createMiniLookFavoriteBuilder(from: dto.looks)
-                }
-                
-                looksAsBuilder.append(builder)
-            }
-        }
-        
-        return looksAsBuilder
-    }
-    
-    fileprivate func createMiniLookFavoriteBuilder(from looksDTO: [LookDTO]?) -> [MiniLookFavoriteBuilder] {
-        
-        var looksAsBuilder = [MiniLookFavoriteBuilder]()
-        
-        var builder: MiniLookFavoriteBuilder
-        
-        if looksDTO?.isEmpty == false {
-            
-            for dto in looksDTO! {
-                
-                builder = MiniLookFavoriteBuilder.map(dto: dto)
-                
-                looksAsBuilder.append(builder)
-            }
-        }
-        
-        return looksAsBuilder
     }
 }

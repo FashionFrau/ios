@@ -27,11 +27,13 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var likesNumber: UILabel!
 
-    @IBOutlet weak var backgrounRecentLikedView: UIView! {
-        didSet{
-            self.backgrounRecentLikedView.layer.borderColor = UIColor.white.cgColor
-            self.backgrounRecentLikedView.layer.borderWidth = 1
-        }
+    @IBOutlet weak var backgrounRecentLikedView: UIView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        self.backgrounRecentLikedView.layer.borderColor = UIColor.white.cgColor
+        self.backgrounRecentLikedView.layer.borderWidth = 1
     }
 
     override func prepareForReuse() {

@@ -12,7 +12,9 @@ import Flurry_iOS_SDK
 
 class CardDetailViewController: UIViewController {
 
-    private let cardDetailViewControllerDomainError = "card-detail-view-controller"
+    fileprivate let cardDetailViewControllerDomainError = "com.fashionfrau.card-detail-view-controller.error"
+
+    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
 
     @IBOutlet weak var profileImageView: RoundImageView!
 
@@ -22,9 +24,9 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet weak var descriptionView: UITextView!
 
-    var idCard: String!
+    var lookId: String!
 
-    var look: LookCard?
+    var look: Look?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,28 +54,35 @@ class CardDetailViewController: UIViewController {
     }
 
     private func fetch() {
-        CardService.cs.get(cardId: idCard, card: { (card: LookCard?, error: Error?) in
+        CardService.cs.get(cardId: lookId, success: { (look: Look) in
 
-            if error == nil {
+            self.look = look
 
-                self.look = card
+            self.sliderView.datasource = self
 
-                self.sliderView.datasource = self
+            self.updateUI()
 
-                self.updateUI()
+            self.sliderView.layoutSubviews()
 
-                self.sliderView.layoutSubviews()
+        }) { (error: Error?) in
 
-            } else {
-                Flurry.logError("\(self.cardDetailViewControllerDomainError).fetch", message: error?.localizedDescription, error: error)
-            }
-        })
+            Flurry.logError("\(self.cardDetailViewControllerDomainError).fetch", message: error?.localizedDescription, error: error)
+        }
     }
 
     private func updateUI() {
+
         profileNameLabel.text = look!.profileName
 
-        profileImageView.af_setImage(withURL: look!.profileUrl)
+        do {
+            let url = try look!.profileUrl.asURL()
+
+            profileImageView.af_setImage(withURL: url, placeholderImage: placeholderImage)
+
+        } catch let error {
+
+            Flurry.logError("\(self.cardDetailViewControllerDomainError).update-ui.profile-image.url", message: error.localizedDescription, error: error)
+        }
 
         descriptionView.text = look!.description
 
@@ -87,16 +96,21 @@ extension CardDetailViewController: FFSliderDataSource {
     }
 
     func slider(slider: FFSliderView, viewForSlideAtIndex index: Int) -> UIView {
+
         let imageView = UIImageView()
 
-        if let look = look {
-
-            let url = look.gallery[index]
+        do {
+            let url = try look!.gallery[index].asURL()
 
             imageView.af_setImage(withURL: url)
 
             imageView.contentMode = .scaleAspectFill
+
+        } catch let error {
+
+            Flurry.logError("\(self.cardDetailViewControllerDomainError).slider.gallery-image.url", message: error.localizedDescription, error: error)
         }
+
         return imageView
     }
 }

@@ -8,9 +8,14 @@
 
 import UIKit
 import AlamofireImage
+import Flurry_iOS_SDK
 
 
 class MiniCardFavoriteCell: UICollectionViewCell {
+
+    fileprivate let miniCardFavoriteCellDomainError = "com.fashionfrau.mini-card-favorite-cell.error"
+
+    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
 
     var model: MiniLookFavorite? {
         didSet {
@@ -52,18 +57,16 @@ extension MiniCardFavoriteCell {
 
     fileprivate func updateUI() {
 
-        if let model = self.model {
+        setupProfileImage()
 
-            lookImage.af_setImage(withURL: model.lookUrl)
+        setupLookImage()
 
-            profileImage.af_setImage(withURL: model.profileUrl)
+        profileNameLabel.text = model!.profileName
 
-            profileNameLabel.text = model.profileName
+        likesLabel.text = "\(model!.likes)"
 
-            likesLabel.text = "\(model.likes)"
-
-            hashtagLabel.text = model.hashtag
-        }
+        hashtagLabel.text = model!.hashtag
+        
     }
 
 
@@ -75,4 +78,29 @@ extension MiniCardFavoriteCell {
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         layer.shouldRasterize = true
     }
+
+    fileprivate func setupProfileImage() {
+        do {
+            let url = try model!.profileUrl.asURL()
+
+            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+
+        } catch let error {
+
+            Flurry.logError("\(self.miniCardFavoriteCellDomainError).profile-image.url", message: error.localizedDescription, error: error)
+        }
+    }
+
+    fileprivate func setupLookImage() {
+        do {
+            let url = try model!.lookUrl.asURL()
+
+            lookImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+
+        } catch let error {
+
+            Flurry.logError("\(self.miniCardFavoriteCellDomainError).look-image.url", message: error.localizedDescription, error: error)
+        }
+    }
+
 }

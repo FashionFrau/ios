@@ -19,7 +19,7 @@ class CardsViewController: UIViewController {
 
     private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
 
-    private let cardsViewControllerDomainError = "cards-view-controller"
+    private let cardsViewControllerDomainError = "com.fashionfrau.cards-view-controller.error"
 
     let gifManager = SwiftyGifManager(memoryLimit:7)
 
@@ -27,7 +27,7 @@ class CardsViewController: UIViewController {
 
     @IBOutlet weak var loadingView: UIImageView!
 
-    var dataSource: [LookCard] = []
+    var dataSource = [Look]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,22 +51,30 @@ class CardsViewController: UIViewController {
 
     func fakeData() {
         self.loadingView.isHidden = false
-        CardService.cs.get(cards: { (cards: [LookCard], error: Error?) in
-            if error == nil {
-                self.loadingView.isHidden = true
-                self.dataSource = cards
-                self.kolodaView.reloadData()
-            } else {
-                Flurry.logError("\(self.cardsViewControllerDomainError).fakeData", message: error?.localizedDescription, error: error)
+
+        CardService.cs.get(cards: { (cards: [Look], error: Error?) in
+
+            self.loadingView.isHidden = true
+
+            self.dataSource = cards
+
+            self.kolodaView.reloadData()
+
+            if let error = error {
+                Flurry.logError("\(self.cardsViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
         })
     }
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         if let destination = segue.destination as? CardDetailViewController {
-            if let selectedLook = sender as? LookCard {
-                destination.idCard = selectedLook.id
+
+            if let selectedLook = sender as? Look {
+
+                destination.lookId = selectedLook.id
+
                 destination.look = selectedLook
             }
         }
