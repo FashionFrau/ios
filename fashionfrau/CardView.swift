@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import Flurry_iOS_SDK
 
-class CardView: UIView {
+class CardView: CornerView {
 
     fileprivate let cardViewDomainError = "com.fashionfrau.card-view.error"
 

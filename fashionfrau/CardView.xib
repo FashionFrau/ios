@@ -53,6 +53,11 @@
                 <constraint firstAttribute="bottom" secondItem="Hby-AJ-EAM" secondAttribute="bottom" constant="7" id="hw4-fk-P99"/>
                 <constraint firstItem="ckB-Vk-YSQ" firstAttribute="centerY" secondItem="Hby-AJ-EAM" secondAttribute="centerY" id="sRu-fe-twM"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="gradientView" destination="rIV-G8-hjP" id="HyB-Il-UcZ"/>
                 <outlet property="lookImage" destination="Yti-g0-2U6" id="3kC-BF-7OT"/>
