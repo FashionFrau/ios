@@ -10,11 +10,8 @@ import Foundation
 
 
 struct Images {
-    static let Heart = "Heart"
-    static let HeartActive = "Heart Active"
+    static let Heart = "heart"
+    static let HeartActive = "heart-active"
 
-    static let PageOn = "Dot Active"
-    static let PageOff = "Dot"
-
-    static let ProfilePlaceHolder = "Profile Placeholder"
+    static let ProfilePlaceHolder = "profile-placeholder"
 }

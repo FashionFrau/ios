@@ -24,7 +24,7 @@
                         <constraint firstAttribute="height" constant="70" id="vI2-J0-pzb"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-AJ-EAM" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-AJ-EAM" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                     <rect key="frame" x="10" y="669" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Hxr-ja-tLT"/>
@@ -67,6 +67,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Profile Placeholder" width="61" height="73"/>
+        <image name="profile-placeholder" width="61" height="73"/>
     </resources>
 </document>
