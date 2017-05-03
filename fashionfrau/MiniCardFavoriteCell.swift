@@ -76,7 +76,6 @@ extension MiniCardFavoriteCell {
         layer.shadowOpacity = 0.15
         layer.shadowRadius = 10
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        layer.shouldRasterize = true
     }
 
     fileprivate func setupProfileImage() {
