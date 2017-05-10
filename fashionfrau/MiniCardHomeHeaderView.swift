@@ -13,6 +13,8 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
 
     fileprivate let miniCardHomeHeaderViewDomainError = "com.fashionfrau.mini-card-home-header.error"
 
+    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
+    
     var model: User? {
         didSet{
             updateUI()
@@ -54,7 +56,7 @@ extension MiniCardHomeHeaderView {
         do {
             let url = try model!.profileUrl.asURL()
 
-            profileImage.af_setImage(withURL: url)
+            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
 
         } catch let error {
 

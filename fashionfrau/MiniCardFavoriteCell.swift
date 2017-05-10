@@ -15,6 +15,8 @@ class MiniCardFavoriteCell: UICollectionViewCell {
 
     fileprivate let miniCardFavoriteCellDomainError = "com.fashionfrau.mini-card-favorite-cell.error"
 
+    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
+
     var model: MiniLookFavorite? {
         didSet {
             updateUI()
@@ -79,7 +81,7 @@ extension MiniCardFavoriteCell {
         do {
             let url = try model!.profileUrl.asURL()
 
-            profileImage.af_setImage(withURL: url)
+            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
 
         } catch let error {
 

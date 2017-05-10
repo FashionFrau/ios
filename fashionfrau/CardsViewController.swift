@@ -33,8 +33,10 @@ class CardsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let loadingImage = UIImage(gifName: "Loading.gif")
+
+        let loadingImage = UIImage(gifName: Images.LoadingImages)
         loadingView.setGifImage(loadingImage, manager: gifManager)
+
         fakeData()
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
@@ -43,11 +45,6 @@ class CardsViewController: UIViewController {
         kolodaView.delegate = self
         kolodaView.dataSource = self
    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     func fakeData() {
         self.loadingView.isHidden = false

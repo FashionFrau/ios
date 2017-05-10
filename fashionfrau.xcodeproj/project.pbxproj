@@ -13,6 +13,7 @@
 		0C0712D01EA54247004B17C9 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CF1EA54247004B17C9 /* CornerView.swift */; };
 		0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */; };
 		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
+		0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */; };
 		0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */; };
 		0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */; };
 		0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57021E9A7C4E009B5BC8 /* Assets.xcassets */; };
@@ -38,7 +39,6 @@
 		0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */; };
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
 		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
-		0CC0A8B11EB776E800BDF8E5 /* Loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0CC0A8B01EB776E800BDF8E5 /* Loading.gif */; };
 		0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */; };
 		0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */; };
 		0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */; };
@@ -80,6 +80,7 @@
 		0C0712CF1EA54247004B17C9 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookFavorite.swift; sourceTree = "<group>"; };
 		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-cards.gif"; sourceTree = "<group>"; };
 		0C8F56F81E9A7C4E009B5BC8 /* fashionfrau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionfrau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C8F57001E9A7C4E009B5BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
-		0CC0A8B01EB776E800BDF8E5 /* Loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Loading.gif; sourceTree = "<group>"; };
 		0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookHome.swift; sourceTree = "<group>"; };
 		0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardHomeHeaderView.xib; sourceTree = "<group>"; };
 		0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteHeaderView.xib; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		0C8F57291E9A7D80009B5BC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0CC0A8B01EB776E800BDF8E5 /* Loading.gif */,
+				0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */,
 				0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */,
 				0CF4B9A71E9ECD80000F2AC4 /* Images.swift */,
 				0C9A16101EA02F2C0092B6F1 /* Colors.swift */,
@@ -253,9 +253,9 @@
 			isa = PBXGroup;
 			children = (
 				0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */,
+				0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */,
 				0C460BE71EB2709F00B34347 /* Match */,
 				0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */,
-				0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -499,9 +499,9 @@
 				0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */,
 				0C8F57331E9C22CA009B5BC8 /* CustomOverlayView.xib in Resources */,
 				0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */,
+				0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */,
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
 				0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */,
-				0CC0A8B11EB776E800BDF8E5 /* Loading.gif in Resources */,
 				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
 				0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */,
 			);

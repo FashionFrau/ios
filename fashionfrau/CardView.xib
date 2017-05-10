@@ -26,6 +26,7 @@
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Hby-AJ-EAM" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                     <rect key="frame" x="10" y="669" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.90901692710000004" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Hxr-ja-tLT"/>
                         <constraint firstAttribute="width" constant="60" id="R4u-lK-7TQ"/>

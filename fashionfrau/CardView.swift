@@ -14,6 +14,8 @@ class CardView: CornerView {
 
     fileprivate let cardViewDomainError = "com.fashionfrau.card-view.error"
 
+    fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
+
     @IBOutlet weak var gradientView: UIView!
 
     @IBOutlet weak var lookImage: UIImageView!
@@ -45,7 +47,7 @@ class CardView: CornerView {
 
             let profileUrl = try look.profileUrl.asURL()
 
-            profileImage.af_setImage(withURL: profileUrl)
+            profileImage.af_setImage(withURL: profileUrl, placeholderImage: placeholderImage)
 
             let lookUrl = try look.lookUrl.asURL()
 

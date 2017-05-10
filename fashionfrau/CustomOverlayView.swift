@@ -10,7 +10,7 @@ import UIKit
 import Koloda
 
 
-private let overlayLikeImage = "Like"
+
 
 class CustomOverlayView: OverlayView {
 
@@ -22,20 +22,11 @@ class CustomOverlayView: OverlayView {
             case .left? :
                 backgroundColor = UIColor.clear
             case .right? :
-                likeImageView.image = UIImage(named: overlayLikeImage)
+                likeImageView.image = UIImage(named: Images.OverlayLikeImage)
                 backgroundColor = UIColor.fashionfrau.withAlphaComponent(0.1)
             default:
                 backgroundColor = UIColor.clear
             }
         }
     }
-
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
 }

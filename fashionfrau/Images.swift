@@ -14,4 +14,8 @@ struct Images {
     static let HeartActive = "heart-active"
 
     static let ProfilePlaceHolder = "profile-placeholder"
+
+    static let OverlayLikeImage = "like"
+
+    static let LoadingImages = "loading-cards"
 }
