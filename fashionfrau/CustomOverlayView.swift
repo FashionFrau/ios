@@ -20,6 +20,7 @@ class CustomOverlayView: OverlayView {
         didSet {
             switch overlayState {
             case .left? :
+                likeImageView.image = UIImage()
                 backgroundColor = UIColor.clear
             case .right? :
                 likeImageView.image = UIImage(named: Images.OverlayLikeImage)
