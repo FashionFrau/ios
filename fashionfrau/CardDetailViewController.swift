@@ -24,12 +24,17 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet weak var descriptionView: UITextView!
 
+    @IBOutlet var tapGesture: UITapGestureRecognizer!
+
     var lookId: String!
 
     var look: Look?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tapGesture.addTarget(self, action: #selector(skipLook(_:)))
+        sliderView.addGestureRecognizer(tapGesture)
     }
 
     override func viewWillAppear(_ animated: Bool) {

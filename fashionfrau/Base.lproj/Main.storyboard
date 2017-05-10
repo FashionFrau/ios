@@ -154,7 +154,7 @@
                                                     <rect key="frame" x="10" y="179" width="12" height="11"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-WI-xel" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                                    <rect key="frame" x="131" y="179" width="27.5" height="12"/>
+                                                    <rect key="frame" x="131" y="179.5" width="27.5" height="12"/>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -163,7 +163,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
-                                                    <rect key="frame" x="131.5" y="179.5" width="27.5" height="12"/>
+                                                    <rect key="frame" x="131.5" y="180" width="27.5" height="12"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -452,9 +452,11 @@
                         <outlet property="profileImageView" destination="R1V-q4-PQ8" id="5CR-MK-aYz"/>
                         <outlet property="profileNameLabel" destination="wSX-cq-EHg" id="qte-b5-q5d"/>
                         <outlet property="sliderView" destination="r98-m1-qFH" id="TUo-fP-lxf"/>
+                        <outlet property="tapGesture" destination="dC0-7J-nB3" id="LEd-2X-Nnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxF-c7-CYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dC0-7J-nB3"/>
             </objects>
             <point key="canvasLocation" x="3789.375" y="42.25352112676056"/>
         </scene>
