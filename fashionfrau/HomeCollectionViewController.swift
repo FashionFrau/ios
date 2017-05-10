@@ -52,6 +52,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
         CardService.cs.get(likedCards: { (cards: [MiniLookHome], error: Error?) in
 
+            self.collectionView!.es_stopPullToRefresh()
+
             self.dataSource = cards
 
             self.collectionView!.reloadData()
@@ -65,8 +67,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     func fakeUser() {
         UserService.us.get(userId: "1", success: { (user: User) in
-
-            self.collectionView!.es_stopPullToRefresh()
 
             self.user = user
 
@@ -91,6 +91,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         collectionView!.es_addPullToRefresh(animator: header) { 
             self.fakeData()
         }
+
+        collectionView!.es_startPullToRefresh()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

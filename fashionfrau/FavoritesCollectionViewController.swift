@@ -136,6 +136,7 @@ extension FavoritesCollectionViewController {
             self.collectionView!.reloadData()
 
             if let error = error {
+                
                 Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
         })
@@ -147,6 +148,8 @@ extension FavoritesCollectionViewController {
         collectionView!.es_addPullToRefresh {
             self.fakeData()
         }
+
+        collectionView!.es_startPullToRefresh()
     }
 
 //    fileprivate func createTagGestureHeader() -> UITapGestureRecognizer {

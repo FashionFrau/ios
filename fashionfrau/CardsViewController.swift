@@ -47,7 +47,7 @@ class CardsViewController: UIViewController {
    }
 
     func fakeData() {
-        self.loadingView.isHidden = false
+        loadingView.isHidden = false
 
         CardService.cs.get(cards: { (cards: [Look], error: Error?) in
 
@@ -58,6 +58,9 @@ class CardsViewController: UIViewController {
             self.kolodaView.reloadData()
 
             if let error = error {
+
+//                self.loadingView.isHidden = false
+
                 Flurry.logError("\(self.cardsViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
         })

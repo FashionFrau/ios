@@ -127,7 +127,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCn-4n-RMT">
-                                                            <rect key="frame" x="45" y="3" width="101" height="19"/>
+                                                            <rect key="frame" x="45" y="4" width="101" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                                                     <rect key="frame" x="10" y="179" width="12" height="11"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-WI-xel" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                                    <rect key="frame" x="130" y="180" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="131" y="180" width="27.5" height="12"/>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -163,13 +163,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
-                                                    <rect key="frame" x="130.5" y="180.5" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="131.5" y="180.5" width="27.5" height="12"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOS-gu-81C" userLabel="Likes Label">
-                                                    <rect key="frame" x="29" y="178.5" width="23.5" height="15"/>
+                                                    <rect key="frame" x="29" y="178.5" width="24" height="14"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
                                                     <color key="textColor" red="0.74117647060000003" green="0.68627450980000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -479,7 +479,7 @@
                                             <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-Wr-Zcp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="123"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="128"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-Pj-wa0" userLabel="Profile Stack View">
                                                     <rect key="frame" x="10" y="138" width="146" height="25"/>
@@ -493,7 +493,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poF-Wh-A6U">
-                                                            <rect key="frame" x="45" y="3" width="101" height="19"/>
+                                                            <rect key="frame" x="45" y="4" width="101" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -520,13 +520,13 @@
                                                     <rect key="frame" x="10" y="179" width="12" height="11"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ff1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iey-fX-rgd">
-                                                    <rect key="frame" x="135.5" y="178.5" width="23.5" height="15"/>
+                                                    <rect key="frame" x="138.5" y="178.5" width="20.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txH-Xz-MIE" userLabel="Likes Label">
-                                                    <rect key="frame" x="29" y="178.5" width="23.5" height="15"/>
+                                                    <rect key="frame" x="29" y="178.5" width="24" height="14"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
                                                     <color key="textColor" red="0.74117647058823533" green="0.68627450980392157" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -542,7 +542,7 @@
                                                 <constraint firstItem="Ovm-Wr-Zcp" firstAttribute="top" secondItem="z3G-VU-De2" secondAttribute="top" id="Hkw-Bm-fwA"/>
                                                 <constraint firstItem="iey-fX-rgd" firstAttribute="centerY" secondItem="txH-Xz-MIE" secondAttribute="centerY" id="Iyc-2l-TwK"/>
                                                 <constraint firstAttribute="trailing" secondItem="iey-fX-rgd" secondAttribute="trailing" constant="7" id="LBe-ay-Rpd"/>
-                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="top" secondItem="Ovm-Wr-Zcp" secondAttribute="bottom" constant="15" id="SXS-Ec-YE1"/>
+                                                <constraint firstItem="dZs-Pj-wa0" firstAttribute="top" secondItem="Ovm-Wr-Zcp" secondAttribute="bottom" constant="10" id="SXS-Ec-YE1"/>
                                                 <constraint firstAttribute="bottom" secondItem="2s1-td-RgU" secondAttribute="bottom" constant="10" id="Wt8-wb-SP0"/>
                                                 <constraint firstItem="2s1-td-RgU" firstAttribute="leading" secondItem="z3G-VU-De2" secondAttribute="leading" constant="10" id="ZrX-lg-OsL"/>
                                                 <constraint firstItem="Bj1-aH-iYD" firstAttribute="width" secondItem="z3G-VU-De2" secondAttribute="width" id="hLs-TY-hua"/>

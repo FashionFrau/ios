@@ -15,5 +15,4 @@ class FFTabBarController: UITabBarController {
 
         selectedIndex = 1
     }
-
 }
