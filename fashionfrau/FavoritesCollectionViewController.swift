@@ -11,6 +11,7 @@ import Alamofire
 import SwiftDate
 import Device
 import Flurry_iOS_SDK
+import ESPullToRefresh
 
 private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
 private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
@@ -47,12 +48,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
             layout.delegate = self
         }
 
-
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fakeData()
+        setupESPullToRefresh()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -133,6 +129,8 @@ extension FavoritesCollectionViewController {
     fileprivate func fakeData() {
         CardService.cs.get(favoriteCards: { (cards: [MiniLooksFavorite], error: Error?) in
 
+            self.collectionView!.es_stopPullToRefresh()
+            
             self.dataSource = cards
 
             self.collectionView!.reloadData()
@@ -141,6 +139,14 @@ extension FavoritesCollectionViewController {
                 Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
         })
+    }
+
+    fileprivate func setupESPullToRefresh() {
+        collectionView!.alwaysBounceVertical = true
+
+        collectionView!.es_addPullToRefresh {
+            self.fakeData()
+        }
     }
 
 //    fileprivate func createTagGestureHeader() -> UITapGestureRecognizer {

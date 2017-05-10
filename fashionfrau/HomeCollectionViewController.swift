@@ -37,8 +37,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
         collectionView!.dataSource = self
 
-        collectionView!.alwaysBounceVertical = true
-
         collectionView!.backgroundColor = .fashionfrau
 
         if let layout = collectionView!.collectionViewLayout as? MiniCardsHomeLayout {
@@ -83,11 +81,14 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     func setupESPullToRefresh() {
+
+        collectionView!.alwaysBounceVertical = true
+
         var header: ESRefreshProtocol & ESRefreshAnimatorProtocol
 
         header = FFRefreshHeaderAnimator.init(frame: CGRect.zero)
 
-        self.collectionView!.es_addPullToRefresh(animator: header) { 
+        collectionView!.es_addPullToRefresh(animator: header) { 
             self.fakeData()
         }
     }
