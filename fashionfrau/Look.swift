@@ -24,6 +24,8 @@ struct Look: ResponseObjectSerializable, ResponseCollectionSerializable {
 
     var description: String
 
+    var userHasLiked: Bool = false
+
 
     init?(response: HTTPURLResponse, representation: Any) {
 
@@ -62,6 +64,11 @@ struct Look: ResponseObjectSerializable, ResponseCollectionSerializable {
         if let purchaseUrl = representation["purchaseUrl"] as? String {
 
             self.purchaseUrl = purchaseUrl
+        }
+
+        if let userHasLiked = representation["user_has_liked"] as? Bool {
+
+            self.userHasLiked = userHasLiked
         }
     }
     

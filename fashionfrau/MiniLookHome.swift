@@ -39,6 +39,7 @@ struct MiniLookHome: ResponseObjectSerializable, ResponseCollectionSerializable 
 
             let season = representation["season"] as? String
 
+
         else { return nil }
 
         self.id = id
@@ -52,6 +53,5 @@ struct MiniLookHome: ResponseObjectSerializable, ResponseCollectionSerializable 
         self.likes = likes
         
         self.season = season
-        
     }
 }

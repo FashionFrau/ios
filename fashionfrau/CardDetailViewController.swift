@@ -26,6 +26,8 @@ class CardDetailViewController: UIViewController {
 
     @IBOutlet var tapGesture: UITapGestureRecognizer!
 
+    @IBOutlet weak var heartsView: UIView!
+    
     var lookId: String!
 
     var look: Look?
@@ -91,6 +93,14 @@ class CardDetailViewController: UIViewController {
 
         descriptionView.text = look!.description
 
+        if look!.userHasLiked {
+
+            heartsView.isHidden = true
+
+        } else {
+
+            heartsView.isHidden = false
+        }
     }
 }
 
