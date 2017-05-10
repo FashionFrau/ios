@@ -24,6 +24,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ESPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Flurry-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,6 +82,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>10F0C3C80828CC88CE8154B17E6E0B8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1C83757A7DA8A3F26F8A92783214BDC9</key>
 		<dict>
 			<key>primary</key>
@@ -82,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2D8DFFF5F10F876A1D1E2A0589FD5EF8</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<key>3ABA02C19439D29CA30272D07C9A15F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +117,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C59F6B620E92DF846D35A00BCC4BAEC</key>
+		<key>83D04EDAE5838FE3657C87DD12181688</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>860899DE43AF1F92B8A00D3550BF484A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E0104F4433158E4C194F59214D21960</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -128,11 +153,6 @@
 			<true/>
 		</dict>
 		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2565BBFF0BBC40223317083E5F083F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

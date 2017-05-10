@@ -19,6 +19,8 @@ target 'fashionfrau' do
 
     pod 'SwiftyGif', '~> 3.0'
 
+    pod 'ESPullToRefresh', '~> 2.6'
+
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing

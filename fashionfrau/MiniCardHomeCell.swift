@@ -120,7 +120,6 @@ extension MiniCardHomeCell {
         do {
             let url = try model!.lookUrl.asURL()
 
-            print(url)
             lookImage.af_setImage(withURL: url, placeholderImage: placeholderLookImage)
 
         } catch let error {

@@ -27,8 +27,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     private var user: User?
 
-    var refresher: UIRefreshControl!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,13 +39,13 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
         collectionView!.alwaysBounceVertical = true
 
-        setupRefreshControl()
-
         collectionView!.backgroundColor = .fashionfrau
 
         if let layout = collectionView!.collectionViewLayout as? MiniCardsHomeLayout {
             layout.delegate = self
         }
+
+        setupESPullToRefresh()
     }
 
     func fakeData() {
@@ -55,8 +53,6 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         fakeUser()
 
         CardService.cs.get(likedCards: { (cards: [MiniLookHome], error: Error?) in
-
-            self.refresher.endRefreshing()
 
             self.dataSource = cards
 
@@ -72,6 +68,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     func fakeUser() {
         UserService.us.get(userId: "1", success: { (user: User) in
 
+            self.collectionView!.es_stopPullToRefresh()
+
             self.user = user
 
             self.navigationItem.title = user.profileName
@@ -84,14 +82,14 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         }
     }
 
-    func setupRefreshControl() {
-        refresher = UIRefreshControl()
+    func setupESPullToRefresh() {
+        var header: ESRefreshProtocol & ESRefreshAnimatorProtocol
 
-        refresher.tintColor = UIColor.white
+        header = FFRefreshHeaderAnimator.init(frame: CGRect.zero)
 
-        refresher.addTarget(self, action: #selector(fakeData), for: .valueChanged)
-
-        collectionView!.addSubview(refresher)
+        self.collectionView!.es_addPullToRefresh(animator: header) { 
+            self.fakeData()
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
