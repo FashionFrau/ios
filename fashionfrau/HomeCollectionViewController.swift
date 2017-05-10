@@ -10,6 +10,7 @@ import UIKit
 import Device
 import Flurry_iOS_SDK
 import Alamofire
+import ESPullToRefresh
 
 private let miniCardHomeHeaderReuseIdentifier = "MiniCardHomeHeaderCell"
 private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
