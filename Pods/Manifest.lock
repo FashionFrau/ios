@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - AlamofireNetworkActivityIndicator (2.1.0):
+    - Alamofire (~> 4.1)
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
@@ -18,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.2)
+  - AlamofireNetworkActivityIndicator (~> 2.1)
   - AlamofireObjectMapper (~> 4.1)
   - Device (~> 3.0)
   - ESPullToRefresh (~> 2.6)
@@ -29,6 +32,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   Device: c793851589633bc515b65e08a2b5a223bc87c45a
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
@@ -39,6 +43,6 @@ SPEC CHECKSUMS:
   SwiftDate: ae615078806a322183e5f64e02e80ca8d939bf48
   SwiftyGif: 89a0bb19709bdb6990e10405ad456d8bea804a65
 
-PODFILE CHECKSUM: 4640180133e6bf18a15509f2c742ac61acd96d03
+PODFILE CHECKSUM: 78fdfa6eea65dcee43a2dd72a5417eb68c21cac6
 
 COCOAPODS: 1.2.1.rc.1

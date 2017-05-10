@@ -23,6 +23,8 @@ target 'fashionfrau' do
 
     pod 'AlamofireNetworkActivityIndicator', '~> 2.1'
 
+    pod 'EmptyKit', '~> 3.1'
+
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing
