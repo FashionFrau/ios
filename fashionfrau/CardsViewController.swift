@@ -37,21 +37,28 @@ class CardsViewController: UIViewController {
         let loadingImage = UIImage(gifName: Images.LoadingImages)
         loadingView.setGifImage(loadingImage, manager: gifManager)
 
-        fakeData()
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
 
         kolodaView.delegate = self
         kolodaView.dataSource = self
+
+
+        fakeData()
    }
 
     func fakeData() {
+
         loadingView.isHidden = false
+
+        kolodaView.isHidden = true
 
         CardService.cs.get(cards: { (cards: [Look], error: Error?) in
 
             self.loadingView.isHidden = true
+
+            self.kolodaView.isHidden = false
 
             self.dataSource = cards
 
@@ -84,6 +91,7 @@ class CardsViewController: UIViewController {
 extension CardsViewController: KolodaViewDelegate {
 
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+        fakeData()
         kolodaView.resetCurrentCardIndex()
     }
 
