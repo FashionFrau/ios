@@ -22,6 +22,10 @@ struct User: ResponseObjectSerializable {
 
     var likes: Int
 
+    var askUserFollow: Bool = false
+
+    var askUserFeedback: Bool = false
+
     init?(response: HTTPURLResponse, representation: Any) {
 
         guard
@@ -53,5 +57,16 @@ struct User: ResponseObjectSerializable {
         self.liked = liked
 
         self.likes = likes
+
+
+        if let askUserFollow = representation["ask_user_follow"] as? Bool {
+
+            self.askUserFollow = askUserFollow
+        }
+
+        if let askUserFeedback = representation["ask_user_feedback"] as? Bool {
+
+            self.askUserFeedback = askUserFeedback
+        }
     }
 }
