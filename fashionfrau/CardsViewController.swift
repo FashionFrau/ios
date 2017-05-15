@@ -52,13 +52,9 @@ class CardsViewController: UIViewController {
 
         loadingView.isHidden = false
 
-        kolodaView.isHidden = true
-
         CardService.cs.get(cards: { (cards: [Look], error: Error?) in
 
             self.loadingView.isHidden = true
-
-            self.kolodaView.isHidden = false
 
             self.dataSource = cards
 
@@ -117,6 +113,5 @@ extension CardsViewController: KolodaViewDataSource {
         return Bundle.main.loadNibNamed("CustomOverlayView",
                                         owner: self, options: nil)?.first as? OverlayView
     }
-    
 }
 
