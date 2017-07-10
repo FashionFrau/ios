@@ -2,8 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>InstagramAppRedirectURL</key>
+	<string>http://localhost:8080/api/auth/callback</string>
+	<key>InstagramAppClientId</key>
+	<string>b0a5c417a94a43df83943434131f820b</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>mockable.io</key>

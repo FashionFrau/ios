@@ -36,17 +36,21 @@ class CardsViewController: UIViewController {
 
         let loadingImage = UIImage(gifName: Images.LoadingImages)
         loadingView.setGifImage(loadingImage, manager: gifManager)
-
+        loadingView.isHidden = true
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
 
         kolodaView.delegate = self
         kolodaView.dataSource = self
+   }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
 
         fakeData()
-   }
+    }
 
     func fakeData() {
 
@@ -97,6 +101,10 @@ extension CardsViewController: KolodaViewDelegate {
 }
 
 extension CardsViewController: KolodaViewDataSource {
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .moderate
+    }
+
 
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
         return dataSource.count

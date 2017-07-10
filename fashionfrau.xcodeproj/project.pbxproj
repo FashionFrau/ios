@@ -39,6 +39,7 @@
 		0CAEF6001EA3DBC500AB4ED7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */; };
 		0CAEF6021EA3DCC600AB4ED7 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */; };
 		0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */; };
+		0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */; };
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
 		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
 		0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */; };
@@ -114,6 +115,7 @@
 		0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
+		0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookHome.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */,
+				0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */,
 				0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */,
 				0C460BE71EB2709F00B34347 /* Match */,
 				0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */,
@@ -685,6 +688,7 @@
 				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
+				0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */,
 				0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */,
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,

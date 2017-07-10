@@ -6,7 +6,7 @@ target 'fashionfrau' do
     use_frameworks!
 
     # Pods for fashionfrau
-    pod 'Koloda', '~> 4.0'
+    pod 'Koloda', '~> 4.1'
 
     pod 'Alamofire', '~> 4.4'
     pod 'AlamofireObjectMapper', '~> 4.1'
@@ -22,7 +22,7 @@ target 'fashionfrau' do
     pod 'ESPullToRefresh', '~> 2.6'
 
     pod 'AlamofireNetworkActivityIndicator', '~> 2.1'
-
+    
     target 'fashionfrauTests' do
         inherit! :search_paths
         # Pods for testing
