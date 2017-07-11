@@ -9,9 +9,6 @@
 import UIKit
 import Koloda
 
-
-
-
 class CustomOverlayView: OverlayView {
 
     @IBOutlet weak var likeImageView: UIImageView!
