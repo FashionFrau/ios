@@ -10,10 +10,10 @@ PODS:
   - Device (3.0.1)
   - ESPullToRefresh (2.6)
   - Flurry-iOS-SDK/FlurrySDK (8.0.1)
-  - Koloda (4.0):
+  - Koloda (4.1):
     - pop (~> 1.0)
   - ObjectMapper (2.2.5)
-  - pop (1.0.9)
+  - pop (1.0.10)
   - SwiftDate (4.1.1)
   - SwiftyGif (3.0.3)
 
@@ -25,7 +25,7 @@ DEPENDENCIES:
   - Device (~> 3.0)
   - ESPullToRefresh (~> 2.6)
   - Flurry-iOS-SDK/FlurrySDK (~> 8.0)
-  - Koloda (~> 4.0)
+  - Koloda (~> 4.1)
   - SwiftDate (~> 4.1)
   - SwiftyGif (~> 3.0)
 
@@ -37,12 +37,12 @@ SPEC CHECKSUMS:
   Device: c793851589633bc515b65e08a2b5a223bc87c45a
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   Flurry-iOS-SDK: 7fd65ee59e78576e80fd08219376bfd7ba0db306
-  Koloda: cb171633afc6182a77821b7951e38b2cb272ba7c
+  Koloda: 6c4fa3ce9a68776a8ef973311e53fdda432799a8
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
-  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SwiftDate: ae615078806a322183e5f64e02e80ca8d939bf48
   SwiftyGif: 89a0bb19709bdb6990e10405ad456d8bea804a65
 
-PODFILE CHECKSUM: 78fdfa6eea65dcee43a2dd72a5417eb68c21cac6
+PODFILE CHECKSUM: a777fb0522e86392856204aff0a15cbc2d156888
 
-COCOAPODS: 1.2.1.rc.1
+COCOAPODS: 1.2.1
