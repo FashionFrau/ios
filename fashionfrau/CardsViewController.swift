@@ -36,23 +36,26 @@ class CardsViewController: UIViewController {
 
         let loadingImage = UIImage(gifName: Images.LoadingImages)
         loadingView.setGifImage(loadingImage, manager: gifManager)
-        loadingView.isHidden = true
+
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
 
-        kolodaView.delegate = self
         kolodaView.dataSource = self
-   }
+        kolodaView.delegate = self
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-
         fakeData()
     }
 
-    func fakeData() {
+    fileprivate func fakeData() {
+
+        if !dataSource.isEmpty {
+            return
+        }
 
         loadingView.isHidden = false
 
@@ -65,8 +68,6 @@ class CardsViewController: UIViewController {
             self.kolodaView.reloadData()
 
             if let error = error {
-
-//                self.loadingView.isHidden = false
 
                 Flurry.logError("\(self.cardsViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
@@ -91,8 +92,9 @@ class CardsViewController: UIViewController {
 extension CardsViewController: KolodaViewDelegate {
 
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        fakeData()
         kolodaView.resetCurrentCardIndex()
+        dataSource.removeAll()
+        fakeData()
     }
 
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
@@ -101,10 +103,10 @@ extension CardsViewController: KolodaViewDelegate {
 }
 
 extension CardsViewController: KolodaViewDataSource {
-    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        return .moderate
-    }
 
+    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+        return .`default`
+    }
 
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
         return dataSource.count
@@ -112,11 +114,15 @@ extension CardsViewController: KolodaViewDataSource {
 
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let view = Bundle.main.loadNibNamed("CardView", owner: self, options: nil)?.first as! CardView
-        view.update(look: dataSource[index])
+
+        let look = dataSource[index]
+
+        view.update(look: look)
+        
         return view
-
+        
     }
-
+    
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return Bundle.main.loadNibNamed("CustomOverlayView",
                                         owner: self, options: nil)?.first as? OverlayView
