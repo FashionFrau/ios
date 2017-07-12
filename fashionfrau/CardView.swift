@@ -29,6 +29,10 @@ class CardView: CornerView {
 
         gradientEffect()
 
+        clean()
+    }
+
+    func clean() {
         profileImage.af_cancelImageRequest()
         profileImage.layer.removeAllAnimations()
         profileImage.image = nil
@@ -38,8 +42,8 @@ class CardView: CornerView {
         lookImage.image = nil
     }
 
-
     func update(look: Look) {
+        clean()
 
         nameLabel.text = look.profileName
 
