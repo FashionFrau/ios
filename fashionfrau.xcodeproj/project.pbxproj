@@ -23,7 +23,7 @@
 		0C8F57111E9A7C4E009B5BC8 /* fashionfrauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57101E9A7C4E009B5BC8 /* fashionfrauTests.swift */; };
 		0C8F571C1E9A7C4E009B5BC8 /* fashionfrauUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F571B1E9A7C4E009B5BC8 /* fashionfrauUITests.swift */; };
 		0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */; };
-		0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */; };
+		0C8F572D1E9AC096009B5BC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572C1E9AC096009B5BC8 /* MainViewController.swift */; };
 		0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */; };
 		0C8F57331E9C22CA009B5BC8 /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */; };
 		0C8F57351E9C284E009B5BC8 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57341E9C284E009B5BC8 /* CardView.xib */; };
@@ -99,7 +99,7 @@
 		0C8F571B1E9A7C4E009B5BC8 /* fashionfrauUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fashionfrauUITests.swift; sourceTree = "<group>"; };
 		0C8F571D1E9A7C4E009B5BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
-		0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0C8F572C1E9AC096009B5BC8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		0C8F57341E9C284E009B5BC8 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		0C8F572E1E9AC09C009B5BC8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */,
+				0C8F572C1E9AC096009B5BC8 /* MainViewController.swift */,
 				0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */,
 				0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */,
 				0C460BE71EB2709F00B34347 /* Match */,
@@ -685,7 +685,7 @@
 				0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */,
 				0C9A160F1EA02DEC0092B6F1 /* FFNavigationBar.swift in Sources */,
 				0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */,
-				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
+				0C8F572D1E9AC096009B5BC8 /* MainViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
 				0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */,

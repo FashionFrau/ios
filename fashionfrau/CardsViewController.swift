@@ -100,6 +100,10 @@ extension CardsViewController: KolodaViewDelegate {
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         performSegue(withIdentifier: cardDetailSegue, sender: dataSource[index])
     }
+
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
+        return CGFloat(0.5)
+    }
 }
 
 extension CardsViewController: KolodaViewDataSource {

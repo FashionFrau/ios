@@ -54,7 +54,7 @@ extension MiniCardHomeHeaderView {
     fileprivate func updateUI() {
 
         do {
-            let url = try model!.profileUrl.asURL()
+            let url = try model!.profilePicture.asURL()
 
             profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
 

@@ -70,7 +70,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
             self.user = user
 
-            self.navigationItem.title = user.profileName
+            self.navigationItem.title = user.username
 
             self.collectionView!.reloadData()
 

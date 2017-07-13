@@ -10,11 +10,13 @@ import Foundation
 
 struct User: ResponseObjectSerializable {
 
-    var id: String
+    var uid: String
 
-    var profileUrl: String
+    var profilePicture: String
 
-    var profileName: String
+    var username: String
+
+    var authToken: String
 
     var posts: Int
 
@@ -31,11 +33,13 @@ struct User: ResponseObjectSerializable {
         guard
             let representation = representation as? [String: Any],
 
-            let id = representation["id"] as? String,
+            let uid = representation["uid"] as? String,
 
-            let profileUrl = representation["profileUrl"] as? String,
+            let profilePicture = representation["profile_picture"] as? String,
 
-            let profileName = representation["profileName"] as? String,
+            let username = representation["username"] as? String,
+
+            let authToken = representation["auth_token"] as? String,
 
             let posts = representation["posts"] as? Int,
 
@@ -43,14 +47,16 @@ struct User: ResponseObjectSerializable {
 
             let likes = representation["likes"] as? Int
 
-        else { return nil }
+            else { return nil }
 
 
-        self.id = id
+        self.uid = uid
 
-        self.profileName = profileName
+        self.username = username
 
-        self.profileUrl =  profileUrl
+        self.profilePicture = profilePicture
+
+        self.authToken = authToken
 
         self.posts = posts
 

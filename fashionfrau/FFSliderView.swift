@@ -20,7 +20,6 @@ public class FFSliderView: UIView {
 
     public weak var datasource: FFSliderDataSource?
 
-
     var numbersOfSlides: Int = 0
     var ffSliderScrollView: UIScrollView!
     var pageControl: UIPageControl!

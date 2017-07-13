@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  MainViewController.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 09/04/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
