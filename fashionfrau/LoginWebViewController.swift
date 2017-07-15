@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireObjectMapper
+import WebKit
 
 protocol LoginDataSource: class {
 
@@ -22,20 +21,29 @@ enum ResponseError: Error {
     case statusCodeNot200
     case createUserError
     case parseJsonError
+    case authDomainNotMatch
 }
 
-class LoginWebViewController: UIViewController {
+class LoginWebViewController: UIViewController, WKNavigationDelegate {
 
     private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
 
-    @IBOutlet weak var webView: UIWebView!
+    var webView: WKWebView!
 
     public weak var datasource: LoginDataSource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadURL()
+        let webConfiguration = WKWebViewConfiguration()
+
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+
+        webView.navigationDelegate = self
+
+        view = webView
+
+        loadUrl()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,81 +51,71 @@ class LoginWebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func loadURL() {
+    func loadUrl() {
 
         guard let url = URL(string: authUrl) else { return }
 
-        let config = URLSessionConfiguration.default
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0 )
 
-        let session = URLSession(configuration: config)
-
-        var request = URLRequest(url: url)//, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0 )
         request.httpMethod = "GET"
-        request.setValue("WhateverYouWant", forHTTPHeaderField: "x-YourHeaderField")
 
+        webView.load(request)
+    }
 
-        let task = session.dataTask(with: request) { (data, response, error) in //TIMEOUT
-            guard error == nil else {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
-                self.dismiss(animated: true, completion: {
+        if let url = webView.url {
+            dismiss(animated: true, completion: {
+                if self.urlMatchDomain(url: url) {
 
-                    self.datasource?.error = error
-                })
-                return
-            }
-            if let response = response {
+                    webView.evaluateJavaScript("document.documentElement.innerText.toString()") { (representation: Any?, error: Error?) in
 
-                let mimeType = response.mimeType ?? ""
+                        do {
+                            if let representation = representation as? String {
+                                let data = representation.data(using: String.Encoding.utf8, allowLossyConversion: false)
 
-                let encoding = response.textEncodingName ?? ""
+                                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
 
-                guard let httpResponse = response as? HTTPURLResponse else {
+                                if let json = json {
 
-                    self.dismiss(animated: true, completion: {
+                                    let user = User(representation: json)
 
-                        self.datasource?.error = ResponseError.notHTTPURLResponse
-                    })
-                    return
-                }
+                                    if let user = user {
 
-                if httpResponse.statusCode == 200 {
+                                        self.datasource?.user = user
 
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String : Any]
+                                    } else {
 
-                        if let parsedJson = json {
+                                        self.datasource?.error = ResponseError.createUserError
+                                    }
+                                } else {
 
-                            let user = User(response: httpResponse, representation: parsedJson)
-
-                            if let user = user {
-
-                                self.datasource?.user = user
+                                    self.datasource?.error = ResponseError.parseJsonError
+                                }
                             } else {
 
-                                self.datasource?.error = ResponseError.createUserError
+                                self.datasource?.error = ResponseError.parseJsonError
                             }
+                        } catch let error {
 
-                        } else {
-
-                            self.datasource?.error = ResponseError.parseJsonError
+                            self.datasource?.error = error
                         }
-
-                    } catch let error {
-                        
-                        self.datasource?.error = error
                     }
-
                 } else {
-                    
-                    self.datasource?.error = ResponseError.statusCodeNot200
-                }
-                
-                self.webView.load(data!, mimeType: mimeType, textEncodingName: encoding, baseURL: url)
 
-                self.dismiss(animated: true, completion: nil)
-            }
+                    self.datasource?.error = ResponseError.authDomainNotMatch
+                }
+            })
         }
-        task.resume()
     }
     
+    
+    private func urlMatchDomain(url: URL) -> Bool {
+        
+        if let _ = url.absoluteString.range(of: regexBaseUrl, options: .regularExpression) {
+            
+            return true
+        }
+        return false
+    }
 }

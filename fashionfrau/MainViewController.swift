@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, LoginDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +21,32 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "InstagramSegue" {
+
+            let loginViewController = segue.destination as! LoginWebViewController
+
+            loginViewController.datasource = self
+        }
+    }
+
+    var user: User {
+        get {
+            return self.user
+        }
+
+        set {
+            print(newValue)
+        }
+    }
+
+    var error: Error? {
+        get {
+            return self.error
+        }
+
+        set {
+            print(newValue)
+        }
+    }
 }
