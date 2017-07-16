@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, LoginDataSource {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,27 +26,16 @@ class MainViewController: UIViewController, LoginDataSource {
 
             let loginViewController = segue.destination as! LoginWebViewController
 
-            loginViewController.datasource = self
+            loginViewController.delegate = self
         }
     }
+}
 
-    var user: User {
-        get {
-            return self.user
-        }
 
-        set {
-            print(newValue)
-        }
-    }
+extension MainViewController: LoginFlowDelegate {
 
-    var error: Error? {
-        get {
-            return self.error
-        }
-
-        set {
-            print(newValue)
-        }
+    func didFinishLogin(user: User?, error: Error?) {
+        print(user ?? "")
+        print(error ?? "")
     }
 }

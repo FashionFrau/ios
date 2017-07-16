@@ -9,11 +9,9 @@
 import UIKit
 import WebKit
 
-protocol LoginDataSource: class {
+protocol LoginFlowDelegate: class {
 
-    var user: User { get set }
-
-    var error: Error? { get set }
+    func didFinishLogin(user: User?, error: Error?)
 }
 
 enum ResponseError: Error {
@@ -31,7 +29,11 @@ class LoginWebViewController: UIViewController {
 
     var webView: WKWebView!
 
-    public weak var datasource: LoginDataSource?
+    public weak var delegate: LoginFlowDelegate?
+
+    var currentUser: User?
+
+    var authError: Error?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +90,7 @@ extension LoginWebViewController: WKNavigationDelegate {
 
                                     if let user = user {
 
-                                        self.datasource?.user = user
+                                        self.currentUser = user
 
                                     } else {
 
@@ -96,29 +98,28 @@ extension LoginWebViewController: WKNavigationDelegate {
 
                                         if let exception = exception {
 
-                                            self.datasource?.error =  exception.error
+                                            self.authError =  exception.error
                                         } else {
 
-                                            self.datasource?.error = ResponseError.createUserError
+                                            self.authError = ResponseError.createUserError
                                         }
                                     }
                                 } else {
 
-                                    self.datasource?.error = ResponseError.parseJsonError
+                                    self.authError = ResponseError.parseJsonError
                                 }
                             } else {
 
-                                self.datasource?.error = ResponseError.parseJsonError
+                                self.authError = ResponseError.parseJsonError
                             }
                         } catch let error {
 
-                            self.datasource?.error = error
+                            self.authError = error
                         }
+
+                        self.delegate?.didFinishLogin(user: self.currentUser, error: self.authError)
                     }
                 })
-            } else {
-
-                self.datasource?.error = ResponseError.authDomainNotMatch
             }
         }
     }
@@ -127,7 +128,9 @@ extension LoginWebViewController: WKNavigationDelegate {
         
         dismiss(animated: false) {
             
-            self.datasource?.error = ResponseError.failNavigation
+            self.authError = ResponseError.failNavigation
+
+            self.delegate?.didFinishLogin(user: self.currentUser, error: self.authError)
         }
     }
     
@@ -135,7 +138,9 @@ extension LoginWebViewController: WKNavigationDelegate {
         
         dismiss(animated: false) {
             
-            self.datasource?.error = ResponseError.failNavigation
+            self.authError = ResponseError.failNavigation
+
+            self.delegate?.didFinishLogin(user: self.currentUser, error: self.authError)
         }
     }
     
