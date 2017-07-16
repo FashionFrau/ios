@@ -10,7 +10,8 @@ import Foundation
 
 public let baseUrl = "https://demo5494816.mockable.io"
 
-public let regexBaseUrl = "http:\\/\\/localhost.+api\\/auth\\/callback"
-//public let regexBaseUrl = "http:\\/\\/fashionfrau.+api\\/auth\\/callback"
+public let regexBaseUrl = "^http:\\/\\/localhost.+api\\/auth\\/callback"
+//public let regexBaseUrl = "^http:\\/\\/fashionfrau.+api\\/auth\\/callback"
+
 
 var defaultHeaders = ["Accept": "application/json"]

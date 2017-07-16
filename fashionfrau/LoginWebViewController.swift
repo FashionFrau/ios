@@ -22,9 +22,10 @@ enum ResponseError: Error {
     case createUserError
     case parseJsonError
     case authDomainNotMatch
+    case failNavigation
 }
 
-class LoginWebViewController: UIViewController, WKNavigationDelegate {
+class LoginWebViewController: UIViewController {
 
     private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
 
@@ -61,12 +62,17 @@ class LoginWebViewController: UIViewController, WKNavigationDelegate {
 
         webView.load(request)
     }
+}
+
+extension LoginWebViewController: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
 
         if let url = webView.url {
-            dismiss(animated: true, completion: {
-                if self.urlMatchDomain(url: url) {
+
+            if self.urlMatchDomain(url: url) {
+
+                dismiss(animated: false, completion: {
 
                     webView.evaluateJavaScript("document.documentElement.innerText.toString()") { (representation: Any?, error: Error?) in
 
@@ -86,7 +92,15 @@ class LoginWebViewController: UIViewController, WKNavigationDelegate {
 
                                     } else {
 
-                                        self.datasource?.error = ResponseError.createUserError
+                                        let exception = AuthException(representation: json)
+
+                                        if let exception = exception {
+
+                                            self.datasource?.error =  exception.error
+                                        } else {
+
+                                            self.datasource?.error = ResponseError.createUserError
+                                        }
                                     }
                                 } else {
 
@@ -101,14 +115,29 @@ class LoginWebViewController: UIViewController, WKNavigationDelegate {
                             self.datasource?.error = error
                         }
                     }
-                } else {
+                })
+            } else {
 
-                    self.datasource?.error = ResponseError.authDomainNotMatch
-                }
-            })
+                self.datasource?.error = ResponseError.authDomainNotMatch
+            }
+        }
+    }
+
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        
+        dismiss(animated: false) {
+            
+            self.datasource?.error = ResponseError.failNavigation
         }
     }
     
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        
+        dismiss(animated: false) {
+            
+            self.datasource?.error = ResponseError.failNavigation
+        }
+    }
     
     private func urlMatchDomain(url: URL) -> Bool {
         

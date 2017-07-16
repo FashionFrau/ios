@@ -56,6 +56,7 @@
 		0CD435B31EB13CFC00B05EFF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD435B21EB13CFC00B05EFF /* UserService.swift */; };
 		0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
+		0CFAA8F11F1BDE0D005EC922 /* AuthException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFAA8F01F1BDE0D005EC922 /* AuthException.swift */; };
 		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
 		D8692DA5B4468E4E7B60A3D1 /* Pods_fashionfrau.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6734B70CC49085F4B106EF9 /* Pods_fashionfrau.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +133,7 @@
 		0CD435B21EB13CFC00B05EFF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsHomeLayout.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		0CFAA8F01F1BDE0D005EC922 /* AuthException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthException.swift; sourceTree = "<group>"; };
 		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
 		30472B2F4CE15AF9841E4E48 /* Pods-fashionfrauTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauTests/Pods-fashionfrauTests.release.xcconfig"; sourceTree = "<group>"; };
 		450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fashionfrauUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +295,7 @@
 				0C0712C61EA43513004B17C9 /* MiniLooksFavorite.swift */,
 				0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */,
 				0CD435AE1EB13BD400B05EFF /* User.swift */,
+				0CFAA8F01F1BDE0D005EC922 /* AuthException.swift */,
 			);
 			name = DataObjects;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CD2E6281EACF1D300F93DAE /* MiniCardHomeHeaderView.swift in Sources */,
+				0CFAA8F11F1BDE0D005EC922 /* AuthException.swift in Sources */,
 				0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */,
 				0CD2E61B1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift in Sources */,
 				0CD2E6241EACD86800F93DAE /* HomeCollectionViewController.swift in Sources */,
