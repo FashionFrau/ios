@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qT8-Ux-deu">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -39,13 +39,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fashion Frau" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-k3-BZ1">
-                                <rect key="frame" x="51" y="266.5" width="218" height="47.5"/>
+                                <rect key="frame" x="51.5" y="266.5" width="218" height="47.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="38"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="moda de todas,  para todas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lq-ci-Igi">
-                                <rect key="frame" x="89.5" y="320" width="142.5" height="52.5"/>
+                                <rect key="frame" x="89" y="320" width="142.5" height="52.5"/>
                                 <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="21"/>
                                 <color key="textColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
         <scene sceneID="Y7h-dk-hpE">
             <objects>
                 <collectionViewController id="biX-Ud-EZJ" customClass="HomeCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" id="Lxk-ax-vdQ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="Lxk-ax-vdQ">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="LsG-vu-RKo" customClass="MiniCardsHomeLayout" customModule="fashionfrau" customModuleProvider="target"/>
@@ -175,7 +175,7 @@
                                                     <rect key="frame" x="10" y="179" width="12" height="11"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-WI-xel" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                                    <rect key="frame" x="130" y="179.5" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="130" y="180" width="28.5" height="12.5"/>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -184,7 +184,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3z-GV-mMx">
-                                                    <rect key="frame" x="130.5" y="180" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="130.5" y="180.5" width="28.5" height="12.5"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -486,7 +486,7 @@
         <scene sceneID="jaQ-i8-n01">
             <objects>
                 <collectionViewController id="e9B-84-pFy" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="m0T-9s-OWw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="m0T-9s-OWw">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
