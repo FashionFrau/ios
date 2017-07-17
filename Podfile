@@ -24,6 +24,8 @@ target 'fashionfrau' do
     pod 'AlamofireNetworkActivityIndicator', '~> 2.1'
 
     pod 'JSSAlertView', '~> 3.0'
+
+    pod 'BWWalkthrough', '~> 2.1'
     
     target 'fashionfrauTests' do
         inherit! :search_paths

@@ -9,6 +9,7 @@
 import UIKit
 import JSSAlertView
 import Flurry_iOS_SDK
+import BWWalkthrough
 
 class MainViewController: UIViewController {
 
@@ -51,14 +52,11 @@ extension MainViewController: LoginFlowDelegate {
 
             Flurry.logError("\(self.mainViewControllerDomainError).did-finish- login", message: error.localizedDescription, error: error)
         }
-        
-        print(user ?? "")
-        print(error ?? "")
     }
 
     private func showMessage() {
 
-        let alert = JSSAlertView().show(self, title: "Opss", text: Translations.SomethingWentWrong, 			                                    buttonText: Translations.Ok, color: UIColor.fashionfrau)
+        let alert = JSSAlertView().show(self, title: "Ops", text: Translations.SomethingWentWrong, 			                                    buttonText: Translations.Ok, color: UIColor.fashionfrau)
 
         let font = "Courgette-Regular"
 
@@ -73,6 +71,31 @@ extension MainViewController: LoginFlowDelegate {
 
     private func redirectToTutorial(user: User) {
 
+        let stb = UIStoryboard(name: "Tutorial", bundle: nil)
+        let walkthrough = stb.instantiateViewController(withIdentifier: "walk") as! BWWalkthroughViewController
+
+        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
+        let page_two = stb.instantiateViewController(withIdentifier: "walk2")
+        let page_three = stb.instantiateViewController(withIdentifier: "walk3")
+        let page_four = stb.instantiateViewController(withIdentifier: "walk4")
+
+        // Attach the pages to the master
+        walkthrough.delegate = self
+        walkthrough.add(viewController:page_one)
+        walkthrough.add(viewController:page_two)
+        walkthrough.add(viewController:page_three)
+        walkthrough.add(viewController:page_four)
+
+        self.present(walkthrough, animated: true, completion: nil)
     }
 
 }
+
+extension MainViewController: BWWalkthroughViewControllerDelegate {
+
+    func walkthroughCloseButtonPressed() {
+        self.dismiss(animated: false, completion: nil)
+    }
+}
+
+

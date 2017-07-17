@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BWWalkthrough.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Device.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,11 +97,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C2D94934E71D6447E18A726E293CA94</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>10F0C3C80828CC88CE8154B17E6E0B8F</key>
 		<dict>
 			<key>primary</key>
@@ -122,12 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3FA19D52CF30B4302A197CACC8E7264B</key>
+		<key>4646576BAE3511AC833E41713263F74A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4646576BAE3511AC833E41713263F74A</key>
+		<key>55A9655F985FFD359295F9BF066BD7D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83D04EDAE5838FE3657C87DD12181688</key>
+		<key>76969D5EFC9E6BF94985E772EF2B5204</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86BF71655A306A07F057714C8A56458C</key>
+		<key>83D04EDAE5838FE3657C87DD12181688</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,7 +152,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>94AC9407C53863810461E61C8E538FA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9889562781163BF5CB84E06A985BCE44</key>
 		<dict>
 			<key>primary</key>
 			<true/>

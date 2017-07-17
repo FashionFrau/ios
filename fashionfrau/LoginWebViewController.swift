@@ -29,9 +29,9 @@ class LoginWebViewController: UIViewController {
 
     fileprivate let loginWebViewControllerDomainError = "com.fashionfrau.login-web-view-controller.error"
 
-    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
+//    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
 
-//    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=https%3A%2F%2F9b4a42a0.ngrok.io%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
+    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=https%3A%2F%2F0821ea93.ngrok.io%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
 
     var webView: WKWebView!
 

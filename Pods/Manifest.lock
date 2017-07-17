@@ -7,6 +7,7 @@ PODS:
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - BWWalkthrough (2.1.1)
   - Device (3.0.1)
   - ESPullToRefresh (2.6)
   - Flurry-iOS-SDK/FlurrySDK (8.0.1)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - AlamofireImage (~> 3.2)
   - AlamofireNetworkActivityIndicator (~> 2.1)
   - AlamofireObjectMapper (~> 4.1)
+  - BWWalkthrough (~> 2.1)
   - Device (~> 3.0)
   - ESPullToRefresh (~> 2.6)
   - Flurry-iOS-SDK/FlurrySDK (~> 8.0)
@@ -36,6 +38,7 @@ SPEC CHECKSUMS:
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  BWWalkthrough: b8e3f38beb77349d9fa7f30e1dafeaa39e50e007
   Device: c793851589633bc515b65e08a2b5a223bc87c45a
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   Flurry-iOS-SDK: 7fd65ee59e78576e80fd08219376bfd7ba0db306
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   SwiftDate: ae615078806a322183e5f64e02e80ca8d939bf48
   SwiftyGif: 89a0bb19709bdb6990e10405ad456d8bea804a65
 
-PODFILE CHECKSUM: 6cf8cadbb664c3d4e6716d8027bf94d910866e3f
+PODFILE CHECKSUM: d1c819f895d15634b6c788d5e67abc19c7cb4c44
 
 COCOAPODS: 1.2.1

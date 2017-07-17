@@ -14,6 +14,7 @@
 		0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */; };
 		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
 		0C6011561F1D436700D3410C /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6011551F1D436700D3410C /* Translations.swift */; };
+		0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6011571F1D503600D3410C /* Tutorial.storyboard */; };
 		0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */; };
 		0C71B2A61EC37E4500AF31D0 /* FFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C71B2A51EC37E4500AF31D0 /* FFTabBarController.swift */; };
 		0C71B2A81EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C71B2A71EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift */; };
@@ -86,6 +87,7 @@
 		0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookFavorite.swift; sourceTree = "<group>"; };
 		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		0C6011551F1D436700D3410C /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
+		0C6011571F1D503600D3410C /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-cards.gif"; sourceTree = "<group>"; };
 		0C71B2A51EC37E4500AF31D0 /* FFTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBarController.swift; sourceTree = "<group>"; };
 		0C71B2A71EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFEsRefreshHeaderAnimator.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */,
 				0C8F57041E9A7C4E009B5BC8 /* LaunchScreen.storyboard */,
 				0C71B2A71EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift */,
+				0C6011571F1D503600D3410C /* Tutorial.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
 				0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */,
 				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
+				0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */,
 				0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
