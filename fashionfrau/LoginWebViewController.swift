@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Flurry_iOS_SDK
 
 protocol LoginFlowDelegate: class {
 
@@ -21,11 +22,16 @@ enum ResponseError: Error {
     case parseJsonError
     case authDomainNotMatch
     case failNavigation
+    case domainNotWhiteListed
 }
 
 class LoginWebViewController: UIViewController {
 
-    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
+    fileprivate let loginWebViewControllerDomainError = "com.fashionfrau.login-web-view-controller.error"
+
+//    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
+
+    private let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=https%3A%2F%2F9b4a42a0.ngrok.io%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes"
 
     var webView: WKWebView!
 
@@ -78,8 +84,14 @@ extension LoginWebViewController: WKNavigationDelegate {
 
                     webView.evaluateJavaScript("document.documentElement.innerText.toString()") { (representation: Any?, error: Error?) in
 
+                        if let error = error {
+                            self.authError = error
+                            return
+                        }
+
                         do {
                             if let representation = representation as? String {
+
                                 let data = representation.data(using: String.Encoding.utf8, allowLossyConversion: false)
 
                                 let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
@@ -120,6 +132,17 @@ extension LoginWebViewController: WKNavigationDelegate {
                         self.delegate?.didFinishLogin(user: self.currentUser, error: self.authError)
                     }
                 })
+            } else if !isWhiteListedDomain(url: url){
+
+                dismiss(animated: false, completion: { 
+
+                    self.authError = ResponseError.domainNotWhiteListed
+
+                    self.delegate?.didFinishLogin(user: self.currentUser, error: self.authError)
+                })
+            } else {
+
+                 Flurry.logError("\(self.loginWebViewControllerDomainError).did-finish", message: "Login flow fail. Reason: Unknown", error: ResponseError.failNavigation)
             }
         }
     }
@@ -143,7 +166,7 @@ extension LoginWebViewController: WKNavigationDelegate {
             self.delegate?.didFinishLogin(user: self.currentUser, error: self.authError)
         }
     }
-    
+
     private func urlMatchDomain(url: URL) -> Bool {
         
         if let _ = url.absoluteString.range(of: regexBaseUrl, options: .regularExpression) {
@@ -152,4 +175,15 @@ extension LoginWebViewController: WKNavigationDelegate {
         }
         return false
     }
+
+    private func isWhiteListedDomain(url: URL) -> Bool {
+
+        if let host = url.host {
+
+            return whitListUrl.contains(host)
+        }
+
+        return false
+    }
 }
+
