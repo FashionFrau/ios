@@ -13,6 +13,8 @@ import BWWalkthrough
 
 class MainViewController: UIViewController {
 
+    var user: User?
+
     fileprivate let mainViewControllerDomainError = "com.fashionfrau.main-view-controller.error"
 
     override func viewDidLoad() {
@@ -42,10 +44,12 @@ extension MainViewController: LoginFlowDelegate {
 
         if let user = user {
 
-            redirectToTutorial(user: user)
+            self.user = user
+
+            redirectToTutorial()
         } else {
 
-            showMessage()
+            showMessageError()
         }
 
         if let error = error {
@@ -54,7 +58,7 @@ extension MainViewController: LoginFlowDelegate {
         }
     }
 
-    private func showMessage() {
+    private func showMessageError() {
 
         let alert = JSSAlertView().show(self, title: "Ops", text: Translations.SomethingWentWrong, 			                                    buttonText: Translations.Ok, color: UIColor.fashionfrau)
 
@@ -69,7 +73,7 @@ extension MainViewController: LoginFlowDelegate {
         alert.setTextTheme(.light)
     }
 
-    private func redirectToTutorial(user: User) {
+    private func redirectToTutorial() {
 
         let stb = UIStoryboard(name: "Tutorial", bundle: nil)
         let walkthrough = stb.instantiateViewController(withIdentifier: "walk") as! BWWalkthroughViewController
@@ -79,7 +83,6 @@ extension MainViewController: LoginFlowDelegate {
         let page_three = stb.instantiateViewController(withIdentifier: "walk3")
         let page_four = stb.instantiateViewController(withIdentifier: "walk4")
 
-        // Attach the pages to the master
         walkthrough.delegate = self
         walkthrough.add(viewController:page_one)
         walkthrough.add(viewController:page_two)
@@ -88,13 +91,42 @@ extension MainViewController: LoginFlowDelegate {
 
         self.present(walkthrough, animated: true, completion: nil)
     }
-
 }
 
 extension MainViewController: BWWalkthroughViewControllerDelegate {
 
     func walkthroughCloseButtonPressed() {
-        self.dismiss(animated: false, completion: nil)
+
+        self.dismiss(animated: false, completion: {
+
+            if self.user!.askUserFollow {
+
+                self.showMessageAskUserFollow()
+            }
+        })
+    }
+
+    private func showMessageAskUserFollow() {
+
+
+        let alert = JSSAlertView().show(self, title: Translations.AskUserFollowTitle,
+                                            buttonText: Translations.Ok, cancelButtonText: Translations.Cancel, color: UIColor.fashionfrau)
+
+        let font = "Courgette-Regular"
+
+        alert.setTitleFont(font)
+
+        alert.setTextFont(font)
+
+        alert.setButtonFont(font)
+
+        alert.setTextTheme(.light)
+
+        alert.addAction(followUs)
+    }
+
+    private func followUs() {
+        print("follow")
     }
 }
 

@@ -34,4 +34,10 @@ class UserService {
             }
         }
     }
+
+    func askUserFollow() {
+        let url = try! "\(baseUrl)\(usersUrl)/follow-us".asURL()
+
+//        Alamofire.request(url, method: .post, parameters: [], encoding: <#T##ParameterEncoding#>, headers: <#T##HTTPHeaders?#>)
+    }
 }

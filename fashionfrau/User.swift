@@ -64,7 +64,6 @@ struct User: ResponseObjectSerializable {
 
         self.likes = likes
 
-
         if let askUserFollow = representation["ask_user_follow"] as? Bool {
 
             self.askUserFollow = askUserFollow

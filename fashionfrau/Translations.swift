@@ -14,4 +14,8 @@ struct Translations {
 
     static let Ok =  NSLocalizedString("Ok", comment: "")
 
+    static let Cancel =  NSLocalizedString("Cancel", comment: "")
+
+    static let AskUserFollowTitle =  NSLocalizedString("Would like to follow us ?", comment: "")
+
 }
