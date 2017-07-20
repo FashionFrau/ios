@@ -44,9 +44,21 @@ extension MainViewController: LoginFlowDelegate {
 
         if let user = user {
 
-            self.user = user
+            do {
+                self.user = user
 
-            redirectToTutorial()
+                try UserService.us.saveCurrentUser(user: user)
+
+                defaultHeaders["Authorization"] = user.authToken
+
+                redirectToTutorial()
+
+            } catch let error {
+
+                defaultHeaders.removeValue(forKey: "Authorization")
+
+                Flurry.logError("\(self.mainViewControllerDomainError).did-finish-login:save-user", message: error.localizedDescription, error: error)
+            }
         } else {
 
             showMessageError()
@@ -54,7 +66,7 @@ extension MainViewController: LoginFlowDelegate {
 
         if let error = error {
 
-            Flurry.logError("\(self.mainViewControllerDomainError).did-finish- login", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.mainViewControllerDomainError).did-finish-login", message: error.localizedDescription, error: error)
         }
     }
 
@@ -111,8 +123,7 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
 
         let alert = JSSAlertView().show(self, title: Translations.AskUserFollowTitle,
                                             buttonText: Translations.Ok, cancelButtonText: Translations.Cancel, color: UIColor.fashionfrau)
-
-        let font = "Courgette-Regular"
+        let font = "Baskerville"
 
         alert.setTitleFont(font)
 
@@ -126,6 +137,7 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
     }
 
     private func followUs() {
+        UserService.us.askUserFollow()
         print("follow")
     }
 }

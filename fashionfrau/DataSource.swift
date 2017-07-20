@@ -8,7 +8,7 @@
 
 import Foundation
 
-public let baseUrl = "https://demo5494816.mockable.io"
+public let baseUrl = "https://0821ea93.ngrok.io"
 
 //public let regexBaseUrl = "^https:\\/\\/localhost.+api\\/auth\\/callback"
 public let regexBaseUrl = "^https:\\/\\/0821ea93.ngrok.io.+api\\/auth\\/callback"

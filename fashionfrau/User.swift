@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: ResponseObjectSerializable {
+struct User: ResponseObjectSerializable, NSObject, NSCoding {
 
     var uid: String
 
@@ -121,5 +121,24 @@ struct User: ResponseObjectSerializable {
             
             self.askUserFeedback = askUserFeedback
         }
+    }
+
+    //    MARK: - NSCoding Protocol
+
+    required init?(coder aDecoder: NSCoder) {
+        self.uid = aDecoder.decodeObject(forKey: "uid") as! String
+
+    }
+
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(uid, forKey: "uid")
+        aCoder.encode(profilePicture, forKey: "profilePicture")
+        aCoder.encode(username, forKey: "username")
+        aCoder.encode(authToken, forKey: "authToken")
+        aCoder.encode(posts, forKey: "posts")
+        aCoder.encode(liked, forKey: "liked")
+        aCoder.encode(likes, forKey: "likes")
+        aCoder.encode(askUserFollow, forKey: "askUserFollow")
+        aCoder.encode(askUserFeedback, forKey: "askUserFeedback")
     }
 }
