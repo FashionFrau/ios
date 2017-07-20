@@ -25,11 +25,11 @@ class UserService {
 
     private let usersUrl = "/users"
 
-    func getCurrentUser() throws -> User {
+    func getCurrentUser() throws -> CurrentUser {
 
         if let data = UserDefaults.standard.object(forKey: UserKey) as? NSData {
 
-            if let user = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as? User {
+            if let user = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as? CurrentUser {
 
                 return user
             }
@@ -40,9 +40,23 @@ class UserService {
 
     func saveCurrentUser(user: User) throws {
 
-        UserDefaults.standard.setValue(user, forKey: UserKey)
+        let currentUser = CurrentUser()
 
-        if !UserDefaults.standard.synchronize() {
+        currentUser.uid = user.uid
+        currentUser.profilePicture = user.profilePicture
+        currentUser.username = user.username
+        currentUser.authToken = user.authToken
+        currentUser.posts = user.posts
+        currentUser.liked = user.liked
+        currentUser.likes = user.likes
+        currentUser.askUserFollow = user.askUserFollow
+        currentUser.askUserFeedback = user.askUserFeedback
+
+        let ud = UserDefaults.standard
+
+        ud.setValue(NSKeyedArchiver.archivedData(withRootObject: currentUser), forKey: UserKey)
+
+        if !ud.synchronize() {
 
             throw UserError.NotSaved
         }

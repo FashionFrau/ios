@@ -13,8 +13,6 @@ import BWWalkthrough
 
 class MainViewController: UIViewController {
 
-    var user: User?
-
     fileprivate let mainViewControllerDomainError = "com.fashionfrau.main-view-controller.error"
 
     override func viewDidLoad() {
@@ -45,7 +43,6 @@ extension MainViewController: LoginFlowDelegate {
         if let user = user {
 
             do {
-                self.user = user
 
                 try UserService.us.saveCurrentUser(user: user)
 
@@ -74,7 +71,7 @@ extension MainViewController: LoginFlowDelegate {
 
         let alert = JSSAlertView().show(self, title: "Ops", text: Translations.SomethingWentWrong, 			                                    buttonText: Translations.Ok, color: UIColor.fashionfrau)
 
-        let font = "Courgette-Regular"
+        let font = "Baskerville"
 
         alert.setTitleFont(font)
 
@@ -111,34 +108,58 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
 
         self.dismiss(animated: false, completion: {
 
-            if self.user!.askUserFollow {
+            do {
+                let user = try UserService.us.getCurrentUser()
 
-                self.showMessageAskUserFollow()
+                if user.askUserFollow {
+
+                    self.showMessageAskUserFollow()
+
+                } else {
+
+                    self.redirectToApp()
+                }
+            } catch let error {
+
+                Flurry.logError("\(self.mainViewControllerDomainError).walk-through:get-current-user", message: error.localizedDescription, error: error)
             }
         })
     }
 
     private func showMessageAskUserFollow() {
 
-
         let alert = JSSAlertView().show(self, title: Translations.AskUserFollowTitle,
-                                            buttonText: Translations.Ok, cancelButtonText: Translations.Cancel, color: UIColor.fashionfrau)
+                                        buttonText: Translations.Ok, cancelButtonText: Translations.Cancel, color: UIColor.fashionfrau)
         let font = "Baskerville"
-
+        
         alert.setTitleFont(font)
-
+        
         alert.setTextFont(font)
-
+        
         alert.setButtonFont(font)
-
+        
         alert.setTextTheme(.light)
-
+        
         alert.addAction(followUs)
     }
-
+    
     private func followUs() {
+
         UserService.us.askUserFollow()
-        print("follow")
+
+        redirectToApp()
+    }
+
+    private func redirectToApp() {
+
+//        let stb = UIStoryboard(name: "App", bundle: nil)
+
+//        let tab = stb.instantiateViewController(withIdentifier: "tab") as! BWWalkthroughViewController
+
+//        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
+//        walkthrough.add(viewController:page_four)
+
+//        self.present(tab, animated: true, completion: nil)
     }
 }
 
