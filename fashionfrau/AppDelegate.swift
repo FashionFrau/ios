@@ -20,6 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.shared.isEnabled = true
         NetworkActivityIndicatorManager.shared.startDelay = 1.0
 
+        do {
+
+            let _ = try UserService.us.getCurrentUser()
+
+            let stb = UIStoryboard(name: "App", bundle: nil)
+
+            self.window?.rootViewController = stb.instantiateViewController(withIdentifier: "tab") as! FFTabBarController
+
+        } catch {}
+
         return true
     }
 

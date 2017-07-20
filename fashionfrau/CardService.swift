@@ -28,7 +28,6 @@ class CardService {
 
         let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
 
-
         Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<Look>) in
 
             if let look = response.result.value {

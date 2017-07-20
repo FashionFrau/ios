@@ -46,7 +46,7 @@ extension MainViewController: LoginFlowDelegate {
 
                 try UserService.us.saveCurrentUser(user: user)
 
-                defaultHeaders["Authorization"] = user.authToken
+                defaultHeaders["Authorization"] = "Bearer \(user.authToken)"
 
                 redirectToTutorial()
 
@@ -152,14 +152,11 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
 
     private func redirectToApp() {
 
-//        let stb = UIStoryboard(name: "App", bundle: nil)
+        let stb = UIStoryboard(name: "App", bundle: nil)
 
-//        let tab = stb.instantiateViewController(withIdentifier: "tab") as! BWWalkthroughViewController
+        let tab = stb.instantiateViewController(withIdentifier: "tab") as! FFTabBarController
 
-//        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
-//        walkthrough.add(viewController:page_four)
-
-//        self.present(tab, animated: true, completion: nil)
+        self.present(tab, animated: true, completion: nil)
     }
 }
 

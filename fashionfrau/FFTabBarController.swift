@@ -11,6 +11,7 @@ import UIKit
 class FFTabBarController: UITabBarController {
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
         selectedIndex = 1

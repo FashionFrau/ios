@@ -37,7 +37,6 @@ class CardsViewController: UIViewController {
         let loadingImage = UIImage(gifName: Images.LoadingImages)
         loadingView.setGifImage(loadingImage, manager: gifManager)
 
-
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
 
