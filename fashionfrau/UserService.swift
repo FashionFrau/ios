@@ -74,7 +74,6 @@ class UserService {
 
                 Flurry.logError("\(self.userServiceDomainError).ask-user-follow", message: error.localizedDescription, error: error)
             }
-            
         }
     }
 }

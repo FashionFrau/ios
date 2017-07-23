@@ -14,6 +14,7 @@
 		0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */; };
 		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
 		0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */; };
+		0C3ABDB41F24CC060010C38F /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB31F24CC060010C38F /* loading.gif */; };
 		0C6011561F1D436700D3410C /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6011551F1D436700D3410C /* Translations.swift */; };
 		0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6011571F1D503600D3410C /* Tutorial.storyboard */; };
 		0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */; };
@@ -91,6 +92,7 @@
 		0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookFavorite.swift; sourceTree = "<group>"; };
 		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
+		0C3ABDB31F24CC060010C38F /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		0C6011551F1D436700D3410C /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		0C6011571F1D503600D3410C /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-cards.gif"; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		0C8F57291E9A7D80009B5BC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0C3ABDB31F24CC060010C38F /* loading.gif */,
 				0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */,
 				0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */,
 				0CF4B9A71E9ECD80000F2AC4 /* Images.swift */,
@@ -533,6 +536,7 @@
 				0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */,
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
 				0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */,
+				0C3ABDB41F24CC060010C38F /* loading.gif in Resources */,
 				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
 				0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */,
 				0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */,

@@ -16,5 +16,7 @@ struct Images {
 
     static let OverlayLikeImage = "like"
 
-    static let LoadingImages = "loading-cards"
+    static let LoadingCards = "loading-cards"
+
+    static let LoadingImages = "loading"
 }

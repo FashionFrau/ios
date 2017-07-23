@@ -23,7 +23,6 @@ public class FFSliderView: UIView {
     var ffSliderScrollView: UIScrollView!
     var pageControl: UIPageControl!
 
-
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self._setupUI()
@@ -33,7 +32,6 @@ public class FFSliderView: UIView {
         super.init(frame: frame)
         self._setupUI()
     }
-
 
     public override func layoutSubviews() {
         super.layoutSubviews()

@@ -90,4 +90,45 @@ class CardService {
             }
         }
     }
+
+    func like(cardId: String, success: ((HTTPURLResponse?) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
+
+        let url = try! "\(baseUrl)\(cardsUrl)\(cardId)/like".asURL()
+
+        let parameters: Parameters = [:]
+
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: defaultHeaders).validate().response { (response: DefaultDataResponse) in
+
+            if let error = response.error {
+
+                failure(ErrorResponse(response: response.response, error: response.error))
+
+                Flurry.logError("\(self.cardServiceDomainError).like", message: error.localizedDescription, error: error)
+            } else {
+
+                success(response.response)
+            }
+        }
+    }
+
+    func unlike(cardId: String, success: ((HTTPURLResponse?) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
+
+        let url = try! "\(baseUrl)\(cardsUrl)\(cardId)/unlike".asURL()
+
+        let parameters: Parameters = [:]
+
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: defaultHeaders).validate().response { (response: DefaultDataResponse) in
+
+            if let error = response.error {
+
+                failure(ErrorResponse(response: response.response, error: response.error))
+
+                Flurry.logError("\(self.cardServiceDomainError).like", message: error.localizedDescription, error: error)
+            } else {
+
+                success(response.response)
+            }
+        }
+    }
+
 }

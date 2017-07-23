@@ -118,7 +118,8 @@ extension CardDetailViewController: FFSliderDataSource {
 
     func slider(slider: FFSliderView, viewForSlideAtIndex index: Int) -> UIView {
 
-        let imageView = UIImageView()
+        let loadingImage = UIImage(gifName: Images.LoadingImages)
+        let imageView = UIImageView(image: loadingImage)
 
         do {
             let url = try look!.gallery[index].asURL()
