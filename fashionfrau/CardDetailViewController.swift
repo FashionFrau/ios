@@ -43,7 +43,7 @@ class CardDetailViewController: UIViewController {
         super.viewWillAppear(animated)
 
         if look == nil {
-            fetch()
+            loadData()
         } else {
             sliderView.datasource = self
             self.updateUI()
@@ -60,9 +60,10 @@ class CardDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    private func fetch() {
-        CardService.cs.get(cardId: lookId, success: { (look: Look) in
+    private func loadData() {
 
+        CardService.cs.get(cardId: lookId, success: { (look: Look) in
+            
             self.look = look
 
             self.sliderView.datasource = self
@@ -71,9 +72,14 @@ class CardDetailViewController: UIViewController {
 
             self.sliderView.layoutSubviews()
 
-        }) { (error: Error?) in
+        }) { (errorResponse: ErrorResponse) in
 
-            Flurry.logError("\(self.cardDetailViewControllerDomainError).fetch", message: error?.localizedDescription, error: error)
+            if self.isUnauthorized(response: errorResponse.response) {
+
+                self.redirectToLogin()
+            }
+
+            Flurry.logError("\(self.cardDetailViewControllerDomainError).fetch", message: errorResponse.error?.localizedDescription, error: errorResponse.error)
         }
     }
 

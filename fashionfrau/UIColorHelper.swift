@@ -1,5 +1,5 @@
 //
-//  Colors.swift
+//  UIColorHelper.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 14/04/2017.

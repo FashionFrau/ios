@@ -16,9 +16,7 @@ struct MiniLooksFavorite: ResponseObjectSerializable, ResponseCollectionSerializ
 
     var looks: [MiniLookFavorite]
 
-
     init?(response: HTTPURLResponse, representation: Any) {
-
 
         guard
             let representation = representation as? [String: Any],

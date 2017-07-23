@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Translations {
     static let SomethingWentWrong =  NSLocalizedString("Sorry, something went wrong", comment: "")
 

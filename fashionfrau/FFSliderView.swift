@@ -15,7 +15,6 @@ public protocol FFSliderDataSource: class {
     func slider(slider: FFSliderView, viewForSlideAtIndex index: Int) -> UIView
 }
 
-
 public class FFSliderView: UIView {
 
     public weak var datasource: FFSliderDataSource?

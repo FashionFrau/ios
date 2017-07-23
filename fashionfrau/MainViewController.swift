@@ -17,8 +17,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,47 +56,13 @@ extension MainViewController: LoginFlowDelegate {
             }
         } else {
 
-            showMessageError()
+            showMessageError(title: "Ops", text: Translations.SomethingWentWrong)
         }
 
         if let error = error {
 
             Flurry.logError("\(self.mainViewControllerDomainError).did-finish-login", message: error.localizedDescription, error: error)
         }
-    }
-
-    private func showMessageError() {
-
-        let alert = JSSAlertView().show(self, title: "Ops", text: Translations.SomethingWentWrong, 			                                    buttonText: Translations.Ok, color: UIColor.fashionfrau)
-
-        let font = "Baskerville"
-
-        alert.setTitleFont(font)
-
-        alert.setTextFont(font)
-
-        alert.setButtonFont(font)
-
-        alert.setTextTheme(.light)
-    }
-
-    private func redirectToTutorial() {
-
-        let stb = UIStoryboard(name: "Tutorial", bundle: nil)
-        let walkthrough = stb.instantiateViewController(withIdentifier: "walk") as! BWWalkthroughViewController
-
-        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
-        let page_two = stb.instantiateViewController(withIdentifier: "walk2")
-        let page_three = stb.instantiateViewController(withIdentifier: "walk3")
-        let page_four = stb.instantiateViewController(withIdentifier: "walk4")
-
-        walkthrough.delegate = self
-        walkthrough.add(viewController:page_one)
-        walkthrough.add(viewController:page_two)
-        walkthrough.add(viewController:page_three)
-        walkthrough.add(viewController:page_four)
-
-        self.present(walkthrough, animated: true, completion: nil)
     }
 }
 
@@ -113,7 +77,7 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
 
                 if user.askUserFollow {
 
-                    self.showMessageAskUserFollow()
+                    self.askUserToFollowUs(self.actionFollowUs)
 
                 } else {
 
@@ -126,38 +90,40 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
         })
     }
 
-    private func showMessageAskUserFollow() {
-
-        let alert = JSSAlertView().show(self, title: Translations.AskUserFollowTitle,
-                                        buttonText: Translations.Ok, cancelButtonText: Translations.Cancel, color: UIColor.fashionfrau)
-        let font = "Baskerville"
-        
-        alert.setTitleFont(font)
-        
-        alert.setTextFont(font)
-        
-        alert.setButtonFont(font)
-        
-        alert.setTextTheme(.light)
-        
-        alert.addAction(followUs)
-    }
-    
-    private func followUs() {
+    private func actionFollowUs() {
 
         UserService.us.askUserFollow()
 
-        redirectToApp()
+        self.redirectToApp()
     }
 
-    private func redirectToApp() {
+    func redirectToTutorial() {
 
-        let stb = UIStoryboard(name: "App", bundle: nil)
+        let stb = UIStoryboard(name: "Tutorial", bundle: nil)
 
-        let tab = stb.instantiateViewController(withIdentifier: "tab") as! FFTabBarController
+        let walkthrough = stb.instantiateViewController(withIdentifier: "walk") as! BWWalkthroughViewController
 
-        self.present(tab, animated: true, completion: nil)
+        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
+
+        let page_two = stb.instantiateViewController(withIdentifier: "walk2")
+
+        let page_three = stb.instantiateViewController(withIdentifier: "walk3")
+
+        let page_four = stb.instantiateViewController(withIdentifier: "walk4")
+
+        walkthrough.delegate = self
+
+        walkthrough.add(viewController:page_one)
+
+        walkthrough.add(viewController:page_two)
+
+        walkthrough.add(viewController:page_three)
+
+        walkthrough.add(viewController:page_four)
+        
+        self.present(walkthrough, animated: true, completion: nil)
     }
+    
 }
 
 

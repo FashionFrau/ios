@@ -11,7 +11,6 @@ import AlamofireObjectMapper
 import Alamofire
 import Flurry_iOS_SDK
 
-
 class CardService {
 
     static let cs = CardService()
@@ -24,7 +23,7 @@ class CardService {
 
     private let likedCardsUrl = "/liked"
 
-    func get(cardId: String, success: ((Look) -> Void)!, failure: ((Error?) -> Void)!) {
+    func get(cardId: String, success: ((Look) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
 
@@ -36,12 +35,12 @@ class CardService {
 
             } else {
 
-                failure(response.result.error)
+                failure(ErrorResponse(response: response.response, error: response.error))
             }
         }
     }
 
-    func get(cards: (([Look], Error?) -> Void)!) {
+    func get(cards: (([Look], ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)".asURL()
 
@@ -49,16 +48,16 @@ class CardService {
 
             if let looks = response.result.value {
 
-                cards(looks, nil)
+                cards(looks, ErrorResponse(response: response.response, error: response.error))
 
             } else {
 
-                cards([], response.result.error)
+                cards([], ErrorResponse(response: response.response, error: response.error))
             }
         }
     }
 
-    func get(favoriteCards: (([MiniLooksFavorite], Error?) -> Void)!) {
+    func get(favoriteCards: (([MiniLooksFavorite], ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)".asURL()
 
@@ -66,16 +65,16 @@ class CardService {
 
             if let looks = response.result.value {
 
-                favoriteCards(looks, nil)
+                favoriteCards(looks, ErrorResponse(response: response.response, error: response.error))
 
             } else {
 
-                favoriteCards([], response.result.error)
+                favoriteCards([], ErrorResponse(response: response.response, error: response.error))
             }
         }
     }
 
-    func get(likedCards: (([MiniLookHome], Error?) -> Void)!) {
+    func get(likedCards: (([MiniLookHome], ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
         
@@ -83,11 +82,11 @@ class CardService {
             
             if let looks = response.result.value {
                 
-                likedCards(looks, nil)
+                likedCards(looks, ErrorResponse(response: response.response, error: response.error))
                 
             } else {
                 
-                likedCards([], response.result.error)
+                likedCards([], ErrorResponse(response: response.response, error: response.error))
             }
         }
     }

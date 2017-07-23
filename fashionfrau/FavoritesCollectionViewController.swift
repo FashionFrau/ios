@@ -126,27 +126,33 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
 extension FavoritesCollectionViewController {
 
-    fileprivate func fakeData() {
-        CardService.cs.get(favoriteCards: { (cards: [MiniLooksFavorite], error: Error?) in
+    fileprivate func loadData() {
 
-            self.collectionView!.es_stopPullToRefresh()
+        CardService.cs.get { (cards: [MiniLooksFavorite], errorResponse: ErrorResponse) in
+
+            if self.isUnauthorized(response: errorResponse.response) {
+
+                self.redirectToLogin()
+            }
             
+            self.collectionView!.es_stopPullToRefresh()
+
             self.dataSource = cards
 
             self.collectionView!.reloadData()
 
-            if let error = error {
-                
+            if let error = errorResponse.error {
+
                 Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
-        })
+        }
     }
 
     fileprivate func setupESPullToRefresh() {
         collectionView!.alwaysBounceVertical = true
 
         collectionView!.es_addPullToRefresh {
-            self.fakeData()
+            self.loadData()
         }
 
         collectionView!.es_startPullToRefresh()

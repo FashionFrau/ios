@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Images {
     static let Heart = "heart"
     static let HeartActive = "heart-active"

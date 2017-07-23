@@ -1,5 +1,5 @@
 //
-//  Util.swift
+//  StringHelper.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 17/04/2017.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 
 extension String {
 

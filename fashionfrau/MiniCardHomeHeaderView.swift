@@ -15,7 +15,7 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
 
     fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
     
-    var model: User? {
+    var model: CurrentUser? {
         didSet{
             updateUI()
         }
@@ -46,7 +46,6 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
         profileImage.layer.removeAllAnimations()
         profileImage.image = nil
     }
-
 }
 
 extension MiniCardHomeHeaderView {
@@ -54,19 +53,19 @@ extension MiniCardHomeHeaderView {
     fileprivate func updateUI() {
 
         do {
-            let url = try model!.profilePicture.asURL()
+            let url = try model!.profilePicture?.asURL()
 
-            profileImage.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            profileImage.af_setImage(withURL: url!, placeholderImage: placeholderImage)
 
         } catch let error {
 
             Flurry.logError("\(self.miniCardHomeHeaderViewDomainError).profile-image.url", message: error.localizedDescription, error: error)
         }
 
-        postsNumber.text = String(model!.posts)
+        postsNumber.text = String(describing: model!.posts!)
 
-        likedNumber.text = String(model!.liked)
+        likedNumber.text = String(describing: model!.liked!)
 
-        likesNumber.text = String(model!.likes)
+        likesNumber.text = String(describing: model!.likes!)
     }
 }

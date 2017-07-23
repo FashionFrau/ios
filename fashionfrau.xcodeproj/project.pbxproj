@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		06BBF2844766FF0089A9C8C2 /* Pods_fashionfrauTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFDA3C1CBB350ED246EDCF /* Pods_fashionfrauTests.framework */; };
 		0C0712C71EA43513004B17C9 /* MiniLooksFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712C61EA43513004B17C9 /* MiniLooksFavorite.swift */; };
-		0C0712CC1EA4D733004B17C9 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CB1EA4D733004B17C9 /* Util.swift */; };
+		0C0712CC1EA4D733004B17C9 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CB1EA4D733004B17C9 /* StringHelper.swift */; };
 		0C0712D01EA54247004B17C9 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CF1EA54247004B17C9 /* CornerView.swift */; };
 		0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */; };
 		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
+		0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */; };
 		0C6011561F1D436700D3410C /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6011551F1D436700D3410C /* Translations.swift */; };
 		0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6011571F1D503600D3410C /* Tutorial.storyboard */; };
 		0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */; };
@@ -34,7 +35,7 @@
 		0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57361E9C308D009B5BC8 /* CardView.swift */; };
 		0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57391E9D55EF009B5BC8 /* Look.swift */; };
 		0C9A160F1EA02DEC0092B6F1 /* FFNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */; };
-		0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16101EA02F2C0092B6F1 /* Colors.swift */; };
+		0C9A16111EA02F2C0092B6F1 /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16101EA02F2C0092B6F1 /* UIColorHelper.swift */; };
 		0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16141EA030E70092B6F1 /* FFTabBar.swift */; };
 		0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */; };
 		0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */; };
@@ -47,6 +48,7 @@
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
 		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
 		0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */; };
+		0CCEA20F1F24BA2F0079B55D /* UIViewControllerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEA20E1F24BA2F0079B55D /* UIViewControllerMessages.swift */; };
 		0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */; };
 		0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */; };
 		0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */; };
@@ -84,10 +86,11 @@
 
 /* Begin PBXFileReference section */
 		0C0712C61EA43513004B17C9 /* MiniLooksFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLooksFavorite.swift; sourceTree = "<group>"; };
-		0C0712CB1EA4D733004B17C9 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		0C0712CB1EA4D733004B17C9 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		0C0712CF1EA54247004B17C9 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookFavorite.swift; sourceTree = "<group>"; };
 		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
+		0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		0C6011551F1D436700D3410C /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		0C6011571F1D503600D3410C /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-cards.gif"; sourceTree = "<group>"; };
@@ -115,7 +118,7 @@
 		0C8F57361E9C308D009B5BC8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0C8F57391E9D55EF009B5BC8 /* Look.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
 		0C9A160E1EA02DEC0092B6F1 /* FFNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationBar.swift; sourceTree = "<group>"; };
-		0C9A16101EA02F2C0092B6F1 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0C9A16101EA02F2C0092B6F1 /* UIColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
 		0C9A16141EA030E70092B6F1 /* FFTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBar.swift; sourceTree = "<group>"; };
 		0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationItem.swift; sourceTree = "<group>"; };
 		0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookHome.swift; sourceTree = "<group>"; };
+		0CCEA20E1F24BA2F0079B55D /* UIViewControllerMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerMessages.swift; sourceTree = "<group>"; };
 		0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardHomeHeaderView.xib; sourceTree = "<group>"; };
 		0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteHeaderView.xib; sourceTree = "<group>"; };
 		0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteFooterView.xib; sourceTree = "<group>"; };
@@ -181,12 +185,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C0712CA1EA4D72C004B17C9 /* Util */ = {
+		0C0712CA1EA4D72C004B17C9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0C0712CB1EA4D733004B17C9 /* Util.swift */,
+				0C9A16101EA02F2C0092B6F1 /* UIColorHelper.swift */,
+				0C0712CB1EA4D733004B17C9 /* StringHelper.swift */,
+				0CCEA20E1F24BA2F0079B55D /* UIViewControllerMessages.swift */,
+				0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */,
 			);
-			name = Util;
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		0C460BE71EB2709F00B34347 /* Match */ = {
@@ -223,7 +230,7 @@
 		0C8F56FA1E9A7C4E009B5BC8 /* fashionfrau */ = {
 			isa = PBXGroup;
 			children = (
-				0C0712CA1EA4D72C004B17C9 /* Util */,
+				0C0712CA1EA4D72C004B17C9 /* Extensions */,
 				0CAEF5FE1EA3DBA300AB4ED7 /* Services */,
 				0C8F572E1E9AC09C009B5BC8 /* Controller */,
 				0C8F57381E9D55D6009B5BC8 /* DataObjects */,
@@ -260,7 +267,6 @@
 				0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */,
 				0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */,
 				0CF4B9A71E9ECD80000F2AC4 /* Images.swift */,
-				0C9A16101EA02F2C0092B6F1 /* Colors.swift */,
 				0C6011551F1D436700D3410C /* Translations.swift */,
 			);
 			name = Resources;
@@ -698,7 +704,7 @@
 				0CD2E61B1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift in Sources */,
 				0CD2E6241EACD86800F93DAE /* HomeCollectionViewController.swift in Sources */,
 				0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */,
-				0C9A16111EA02F2C0092B6F1 /* Colors.swift in Sources */,
+				0C9A16111EA02F2C0092B6F1 /* UIColorHelper.swift in Sources */,
 				0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */,
 				0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */,
 				0C6011561F1D436700D3410C /* Translations.swift in Sources */,
@@ -709,6 +715,7 @@
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
 				0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */,
 				0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */,
+				0CCEA20F1F24BA2F0079B55D /* UIViewControllerMessages.swift in Sources */,
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
 				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,
@@ -717,6 +724,7 @@
 				0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */,
 				0CD435B31EB13CFC00B05EFF /* UserService.swift in Sources */,
 				0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */,
+				0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */,
 				0C8072531F214240003324BD /* CurrentUser.swift in Sources */,
 				0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */,
 				0CD2E6221EABE4A100F93DAE /* RoundImageView.swift in Sources */,
@@ -725,7 +733,7 @@
 				0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */,
 				0CD2E6201EABE3E800F93DAE /* MiniCardHomeCell.swift in Sources */,
 				0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */,
-				0C0712CC1EA4D733004B17C9 /* Util.swift in Sources */,
+				0C0712CC1EA4D733004B17C9 /* StringHelper.swift in Sources */,
 				0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */,
 				0CAEF5F91EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift in Sources */,
 				0C71B2A81EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift in Sources */,

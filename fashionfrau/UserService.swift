@@ -62,23 +62,6 @@ class UserService {
         }
     }
 
-    func get(userId: String, success: ((User) -> Void)!, failure: ((Error?) -> Void)!) {
-
-        let url = try! "\(baseUrl)\(usersUrl)/\(userId)".asURL()
-
-        Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<User>) in
-
-            if let currentUser = response.result.value {
-
-                success(currentUser)
-
-            } else {
-
-                failure(response.result.error)
-            }
-        }
-    }
-
     func askUserFollow() {
 
         let url = try! "\(baseUrl)\(usersUrl)/follow-us".asURL()

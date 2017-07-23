@@ -47,10 +47,10 @@ class CardsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        fakeData()
+        loadData()
     }
 
-    fileprivate func fakeData() {
+    fileprivate func loadData() {
 
         if !dataSource.isEmpty {
             return
@@ -58,7 +58,12 @@ class CardsViewController: UIViewController {
 
         loadingView.isHidden = false
 
-        CardService.cs.get(cards: { (cards: [Look], error: Error?) in
+        CardService.cs.get { (cards: [Look], errorResponse: ErrorResponse) in
+
+            if self.isUnauthorized(response: errorResponse.response) {
+
+                self.redirectToLogin()
+            }
 
             self.loadingView.isHidden = true
 
@@ -66,11 +71,11 @@ class CardsViewController: UIViewController {
 
             self.kolodaView.reloadData()
 
-            if let error = error {
+            if let error = errorResponse.error {
 
                 Flurry.logError("\(self.cardsViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
             }
-        })
+        }
     }
 
     // MARK: - Navigation
@@ -93,7 +98,7 @@ extension CardsViewController: KolodaViewDelegate {
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         kolodaView.resetCurrentCardIndex()
         dataSource.removeAll()
-        fakeData()
+        loadData()
     }
 
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
