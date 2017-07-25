@@ -9,6 +9,12 @@
 import UIKit
 import AlamofireImage
 import Flurry_iOS_SDK
+import Koloda
+
+protocol CardDetailDelegate {
+
+    func didSwipeCard(cardId: String, in direction: SwipeResultDirection) -> Void
+}
 
 class CardDetailViewController: UIViewController {
 
@@ -32,10 +38,12 @@ class CardDetailViewController: UIViewController {
 
     var look: Look?
 
+    var delegate: CardDetailDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tapGesture.addTarget(self, action: #selector(skipLook(_:)))
+        tapGesture.addTarget(self, action: #selector(closeLook(_:)))
         sliderView.addGestureRecognizer(tapGesture)
     }
 
@@ -53,10 +61,21 @@ class CardDetailViewController: UIViewController {
     override var prefersStatusBarHidden: Bool { return true }
 
     @IBAction func likeLook(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+
+        dismiss(animated: true, completion: {
+
+            self.delegate?.didSwipeCard(cardId: self.lookId, in: .right)
+        })
     }
 
-    @IBAction func skipLook(_ sender: Any) {
+    @IBAction func unlikeLook(_ sender: Any) {
+        dismiss(animated: true, completion: {
+
+            self.delegate?.didSwipeCard(cardId: self.lookId, in: .left)
+        })
+    }
+
+    func closeLook(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 

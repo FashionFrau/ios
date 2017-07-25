@@ -44,7 +44,7 @@ extension MainViewController: LoginFlowDelegate {
 
                 try UserService.us.saveCurrentUser(user: user)
 
-                defaultHeaders["Authorization"] = "Bearer \(user.authToken)"
+                defaultHeaders["Authorization"] = user.authToken
 
                 redirectToTutorial()
 

@@ -77,15 +77,15 @@ class CardService {
     func get(likedCards: (([MiniLookHome], ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
-        
+
         Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[MiniLookHome]>) in
-            
+
             if let looks = response.result.value {
-                
+
                 likedCards(looks, ErrorResponse(response: response.response, error: response.error))
-                
+
             } else {
-                
+
                 likedCards([], ErrorResponse(response: response.response, error: response.error))
             }
         }
@@ -93,9 +93,11 @@ class CardService {
 
     func like(cardId: String, success: ((HTTPURLResponse?) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
 
-        let url = try! "\(baseUrl)\(cardsUrl)\(cardId)/like".asURL()
+        let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)/like".asURL()
 
         let parameters: Parameters = [:]
+
+        self.setAuthHeader()
 
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: defaultHeaders).validate().response { (response: DefaultDataResponse) in
 
@@ -113,9 +115,11 @@ class CardService {
 
     func unlike(cardId: String, success: ((HTTPURLResponse?) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
 
-        let url = try! "\(baseUrl)\(cardsUrl)\(cardId)/unlike".asURL()
+        let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)/unlike".asURL()
 
         let parameters: Parameters = [:]
+
+        self.setAuthHeader()
 
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: defaultHeaders).validate().response { (response: DefaultDataResponse) in
 
@@ -130,5 +134,20 @@ class CardService {
             }
         }
     }
+    
+    func setAuthHeader() {
 
+        guard let _ = defaultHeaders["Authorization"] else {
+
+            do {
+                let user = try UserService.us.getCurrentUser()
+
+                defaultHeaders["Authorization"] = user.authToken!
+            } catch let error {
+
+                Flurry.logError("\(self.cardServiceDomainError).set-auth-header", message: error.localizedDescription, error: error)
+            }
+            return
+        }
+    }
 }
