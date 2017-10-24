@@ -81,10 +81,21 @@
             ReferencedContainer = "container:fashionfrau.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-Wglobal-constructors"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "OS_ACTIVITY_MODE"
             value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "DYLD_PRINT_STATISTICS"
+            value = "1"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

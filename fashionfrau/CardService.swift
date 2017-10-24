@@ -142,7 +142,7 @@ class CardService {
             do {
                 let user = try UserService.us.getCurrentUser()
 
-                defaultHeaders["Authorization"] = user.authToken!
+                defaultHeaders["Authorization"] = "Bearer \(user.authToken!)"
             } catch let error {
 
                 Flurry.logError("\(self.cardServiceDomainError).set-auth-header", message: error.localizedDescription, error: error)
