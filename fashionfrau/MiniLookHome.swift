@@ -20,7 +20,7 @@ struct MiniLookHome: ResponseObjectSerializable, ResponseCollectionSerializable 
 
     var likes: Int
 
-    var season: String
+//    var season: String
 
     init?(response: HTTPURLResponse, representation: Any) {
 
@@ -35,9 +35,9 @@ struct MiniLookHome: ResponseObjectSerializable, ResponseCollectionSerializable 
 
             let lookUrl = representation["lookUrl"] as? String,
 
-            let likes = representation["likes"] as? Int,
+            let likes = representation["likes"] as? Int
 
-            let season = representation["season"] as? String
+//            let season = representation["season"] as? String
 
 
         else { return nil }
@@ -52,6 +52,6 @@ struct MiniLookHome: ResponseObjectSerializable, ResponseCollectionSerializable 
         
         self.likes = likes
         
-        self.season = season
+//        self.season = season
     }
 }

@@ -28,6 +28,9 @@ class CardService {
 
     private let likedCardsUrl = "/liked"
 
+    private let favoritesCardsUrl = "/favorites"
+
+
     func get(cardId: String, success: ((Look) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
@@ -68,7 +71,7 @@ class CardService {
 
     func get(favoriteCards: (([MiniLooksFavorite], ErrorResponse) -> Void)!) {
 
-        let url = try! "\(baseUrl)\(miniCardsUrl)".asURL()
+        let url = try! "\(baseUrl)\(miniCardsUrl)\(favoritesCardsUrl)".asURL()
 
         self.setAuthHeader()
 

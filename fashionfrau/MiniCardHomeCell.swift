@@ -71,14 +71,14 @@ extension MiniCardHomeCell {
 
         likesLabel.text = "\(model!.likes)"
 
-        seasonLabel.text = " \(model!.season) "
+//        seasonLabel.text = " \(model!.season) "
 
         seasonBackground.backgroundColor = seasonColor()
 
     }
 
     fileprivate func seasonColor() -> UIColor {
-        let season = model?.season ?? ""
+        let season = ""//model?.season ?? ""
 
         switch season {
 
