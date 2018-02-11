@@ -65,8 +65,8 @@ extension MiniCardFavoriteCell {
 
         likesLabel.text = "\(model!.likes)"
 
-        hashtagLabel.text = model!.hashtag
-        
+//        hashtagLabel.text = model!.hashtag
+
     }
 
     fileprivate func shadowEffect() {

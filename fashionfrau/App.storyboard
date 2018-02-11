@@ -439,7 +439,7 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnp-FH-l3r" userLabel="Divider">
                                                             <rect key="frame" x="0.0" y="0.0" width="166" height="1"/>
-                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.92306857639999995" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="VN7-ka-Pfw"/>
                                                             </constraints>
@@ -625,6 +625,6 @@
         <image name="unlike" width="55" height="47"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QYY-0U-X8b"/>
+        <segue reference="Dhc-ea-wn0"/>
     </inferredMetricsTieBreakers>
 </document>

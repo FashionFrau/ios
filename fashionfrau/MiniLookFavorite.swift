@@ -20,7 +20,7 @@ struct MiniLookFavorite: ResponseObjectSerializable, ResponseCollectionSerializa
 
     var likes: Int
 
-    var hashtag: String
+//    var hashtag: String
 
 
     init?(response: HTTPURLResponse, representation: Any) {
@@ -36,10 +36,10 @@ struct MiniLookFavorite: ResponseObjectSerializable, ResponseCollectionSerializa
 
             let lookUrl = representation["lookUrl"] as? String,
 
-            let likes = representation["likes"] as? Int,
+            let likes = representation["likes"] as? Int
 
-            let hashtag = representation["hashtag"] as? String
-            
+//            let hashtag = representation["hashtag"] as? String
+
             else { return nil }
 
         self.id = id
@@ -52,6 +52,6 @@ struct MiniLookFavorite: ResponseObjectSerializable, ResponseCollectionSerializa
 
         self.likes = likes
         
-        self.hashtag = hashtag
+//        self.hashtag = hashtag
     }
 }
