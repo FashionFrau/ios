@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Courgette-Regular.ttf">
             <string>Courgette-Regular</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -19,11 +22,11 @@
             <objects>
                 <collectionViewController id="6Ay-5R-Scg" customClass="HomeCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="jyh-Vc-E5e">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="Rli-Af-wvT" customClass="MiniCardsHomeLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardHomeCell" id="WBP-Xd-pxU" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="MiniCardHomeCell" id="WBP-Xd-pxU" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -31,13 +34,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stv-38-hNe" userLabel="Content View" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="87"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-My-jCR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="15"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kCb-Rg-Rld" userLabel="Profile Stack View">
-                                                    <rect key="frame" x="10" y="138" width="146" height="25"/>
+                                                    <rect key="frame" x="10" y="25" width="146" height="25"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Zdw-be-rWF" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -60,7 +63,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-Ns-TR1" userLabel="DividerStack View">
-                                                    <rect key="frame" x="0.0" y="173" width="166" height="1"/>
+                                                    <rect key="frame" x="0.0" y="60" width="166" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g87-lk-taq" userLabel="Divider">
                                                             <rect key="frame" x="0.0" y="0.0" width="166" height="1"/>
@@ -72,10 +75,10 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mini-heart" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-Fd-IrX" userLabel="Heart">
-                                                    <rect key="frame" x="10" y="179" width="12" height="11"/>
+                                                    <rect key="frame" x="10" y="66" width="12" height="11"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQG-3Z-iGh" userLabel="background Season" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                                    <rect key="frame" x="130" y="179.5" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="130" y="67" width="28.5" height="12.5"/>
                                                     <color key="backgroundColor" red="0.98039215690000003" green="0.47058823529999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -84,13 +87,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-1e-Aq4">
-                                                    <rect key="frame" x="130.5" y="180" width="28.5" height="12.5"/>
+                                                    <rect key="frame" x="130.5" y="67.5" width="28.5" height="12.5"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="10"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po9-Kj-TOW" userLabel="Likes Label">
-                                                    <rect key="frame" x="29" y="178.5" width="23.5" height="15"/>
+                                                    <rect key="frame" x="29" y="65.5" width="23.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
                                                     <color key="textColor" red="0.74117647060000003" green="0.68627450980000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -174,7 +177,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qYe-Zc-tbR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cfj-fI-HVR">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDu-al-Bi4" customClass="KolodaView" customModule="Koloda">
@@ -284,6 +287,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="27"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                                                 <state key="normal" title="Follow"/>
+                                                <connections>
+                                                    <action selector="didFollowClicked:" destination="oha-0F-GuP" eventType="touchUpInside" id="liq-7c-2QJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -387,12 +393,12 @@
             <objects>
                 <collectionViewController id="bUM-u0-KvH" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oKA-0R-yZZ">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewLayout key="collectionViewLayout" id="4ZS-zL-7qL" customClass="MiniCardsFavoriteLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MiniCardFavoriteCell" id="7Fx-Do-KNf" customClass="MiniCardFavoriteCell" customModule="fashionfrau" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="MiniCardFavoriteCell" id="7Fx-Do-KNf" customClass="MiniCardFavoriteCell" customModule="fashionfrau" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -400,13 +406,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIU-Dp-rQP" userLabel="Content View" customClass="CornerView" customModule="fashionfrau" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.5" width="166" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="87"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eQb-wz-14g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="166" height="15"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jNI-2y-IXO" userLabel="Profile Stack View">
-                                                    <rect key="frame" x="10" y="138" width="146" height="25"/>
+                                                    <rect key="frame" x="10" y="25" width="146" height="25"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="DXG-cS-jRt" userLabel="Profile" customClass="RoundImageView" customModule="fashionfrau" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -429,7 +435,7 @@
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UOo-pw-W5y" userLabel="DividerStack View">
-                                                    <rect key="frame" x="0.0" y="173" width="166" height="1"/>
+                                                    <rect key="frame" x="0.0" y="60" width="166" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnp-FH-l3r" userLabel="Divider">
                                                             <rect key="frame" x="0.0" y="0.0" width="166" height="1"/>
@@ -441,16 +447,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mini-heart" translatesAutoresizingMaskIntoConstraints="NO" id="bbV-t8-rmG" userLabel="Heart">
-                                                    <rect key="frame" x="10" y="179" width="12" height="11"/>
+                                                    <rect key="frame" x="10" y="66" width="12" height="11"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#ff1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-UU-SpR">
-                                                    <rect key="frame" x="135.5" y="178.5" width="23.5" height="15"/>
+                                                    <rect key="frame" x="135.5" y="65.5" width="23.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-Kl-IX5" userLabel="Likes Label">
-                                                    <rect key="frame" x="29" y="178.5" width="23.5" height="15"/>
+                                                    <rect key="frame" x="29" y="65.5" width="23.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="Courgette-Regular" family="Courgette" pointSize="12"/>
                                                     <color key="textColor" red="0.74117647060000003" green="0.68627450980000004" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -528,7 +534,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SdH-K0-YIn" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -543,7 +549,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="kS6-mi-i4j">
             <objects>
-                <tabBarController storyboardIdentifier="tab" automaticallyAdjustsScrollViewInsets="NO" id="cfX-DZ-h4O" customClass="FFTabBarController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="cfX-DZ-h4O" customClass="FFTabBarController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="lzm-ks-3W1" customClass="FFTabBar" customModule="fashionfrau" customModuleProvider="target">
@@ -570,7 +576,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wYQ-X6-1CH" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -591,7 +597,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ehH-0h-bI9" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

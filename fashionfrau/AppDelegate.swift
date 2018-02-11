@@ -19,15 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.shared.isEnabled = true
         NetworkActivityIndicatorManager.shared.startDelay = 1.0
 
-        do {
-
-            let _ = try UserService.us.getCurrentUser()
-
-            let stb = UIStoryboard(name: "App", bundle: nil)
-
-            self.window?.rootViewController = stb.instantiateViewController(withIdentifier: "tab") as! FFTabBarController
-
-        } catch {}
+        openStoryboard()
 
         return true
     }
@@ -54,6 +46,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    private func openStoryboard() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        checkUserAlreadyLogged()
+    }
 
+    private func checkUserAlreadyLogged() {
+        let service = UserService.us
+
+        if(service.isCurrentUserValid() == true) {
+            redirectToMain()
+
+        } else {
+            redirectToLogin()
+        }
+    }
+
+    private func redirectToMain() {
+
+        let stb = UIStoryboard(name: "App", bundle: nil)
+
+        let tab = stb.instantiateViewController(withIdentifier: "TabBarController") as! FFTabBarController
+
+        window?.rootViewController = tab
+    }
+
+    private func redirectToLogin() {
+
+        let stb = UIStoryboard(name: "Main", bundle: nil)
+
+        let loginController = stb.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+
+        window?.rootViewController = loginController
+    }
 }
-

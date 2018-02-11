@@ -70,5 +70,14 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>fb</string>
+		<string>fbapi</string>
+		<string>fbauth2</string>
+		<string>fb-messenger-api</string>
+		<string>fbshareextension</string>
+	</array>
 </dict>
 </plist>

@@ -104,6 +104,15 @@ class CardDetailViewController: UIViewController {
 
     private func updateUI() {
 
+        updateProfile()
+        updateDescription()
+
+        updateLikeSkipButton()
+    }
+
+    private func updateProfile() {
+        setupOpenUserProfileInstagramAction()
+
         profileNameLabel.text = look!.profileName
 
         do {
@@ -115,15 +124,52 @@ class CardDetailViewController: UIViewController {
 
             Flurry.logError("\(self.cardDetailViewControllerDomainError).update-ui.profile-image.url", message: error.localizedDescription, error: error)
         }
+    }
 
+    private func setupOpenUserProfileInstagramAction() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(openUserProfileInstagram(_:)))
+        gesture.numberOfTapsRequired = 1
+
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.addGestureRecognizer(gesture)
+    }
+
+    @objc func openUserProfileInstagram(_ sender: UIButton) {
+        let urlString = "instagram://user?username=\(look!.profileName)"
+        openInstagram(urlString: urlString)
+    }
+
+    private func openInstagram(urlString: String) {
+        do {
+            let url = try urlString.asURL()
+            Utils.openURL(url: url)
+        } catch let error {
+            Flurry.logError("\(self.cardDetailViewControllerDomainError).open-instagram", message: error.localizedDescription, error: error)
+        }
+    }
+
+    @IBAction func didFollowClicked(_ sender: UIButton) {
+        blinkButton(button: sender)
+
+        let us = UserService.us
+        guard let id = look?.id else { return }
+        us.userFollowUsername(lookId: id)
+    }
+
+    private func updateDescription() {
         descriptionView.text = look!.description
+    }
 
+    func blinkButton(button: UIButton) {
+        UIView.animate(withDuration: 0.2, delay: 0.2, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            button.alpha = 0.0
+        }, completion: nil)
+    }
+
+    private func updateLikeSkipButton() {
         if look!.userHasLiked {
-
             heartsView.isHidden = true
-
         } else {
-
             heartsView.isHidden = false
         }
     }

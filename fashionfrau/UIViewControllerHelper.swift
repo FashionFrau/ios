@@ -23,17 +23,16 @@ extension UIViewController {
 
         let stb = UIStoryboard(name: "Main", bundle: nil)
 
-        let mainController = stb.instantiateViewController(withIdentifier: "main") as! MainViewController
+        let mainController = stb.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
 
         self.present(mainController, animated: false, completion: nil)
-
     }
 
     func redirectToApp() {
 
         let stb = UIStoryboard(name: "App", bundle: nil)
 
-        let tab = stb.instantiateViewController(withIdentifier: "tab") as! FFTabBarController
+        let tab = stb.instantiateViewController(withIdentifier: "TabBarController") as! FFTabBarController
 
         self.present(tab, animated: true, completion: nil)
     }

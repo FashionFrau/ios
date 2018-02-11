@@ -13,19 +13,26 @@ import Flurry_iOS_SDK
 
 class CardService {
 
-    static let cs = CardService()
+    class var cs : CardService {
+        struct Static {
+            static let instance: CardService = CardService()
+        }
+        return Static.instance
+    }
 
     private let cardServiceDomainError = "com.fashionfrau.card-service.error"
 
-    private let cardsUrl = "/cards"
+    private let cardsUrl = "/api/cards"
 
-    private let miniCardsUrl = "/mini-cards"
+    private let miniCardsUrl = "/api/mini-cards"
 
     private let likedCardsUrl = "/liked"
 
     func get(cardId: String, success: ((Look) -> Void)!, failure: ((ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(cardsUrl)/\(cardId)".asURL()
+
+        self.setAuthHeader()
 
         Alamofire.request(url, headers: defaultHeaders).validate().responseObject { (response: DataResponse<Look>) in
 
@@ -44,6 +51,8 @@ class CardService {
 
         let url = try! "\(baseUrl)\(cardsUrl)".asURL()
 
+        self.setAuthHeader()
+
         Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[Look]>) in
 
             if let looks = response.result.value {
@@ -61,6 +70,8 @@ class CardService {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)".asURL()
 
+        self.setAuthHeader()
+
         Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[MiniLooksFavorite]>) in
 
             if let looks = response.result.value {
@@ -77,6 +88,8 @@ class CardService {
     func get(likedCards: (([MiniLookHome], ErrorResponse) -> Void)!) {
 
         let url = try! "\(baseUrl)\(miniCardsUrl)\(likedCardsUrl)".asURL()
+
+        self.setAuthHeader()
 
         Alamofire.request(url, headers: defaultHeaders).validate().responseCollection { (response: DataResponse<[MiniLookHome]>) in
 

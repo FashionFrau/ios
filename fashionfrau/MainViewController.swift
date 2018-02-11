@@ -92,7 +92,7 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
 
     private func actionFollowUs() {
 
-        UserService.us.askUserFollow()
+        UserService.us.askUserFollowFashionFrau()
 
         self.redirectToApp()
     }

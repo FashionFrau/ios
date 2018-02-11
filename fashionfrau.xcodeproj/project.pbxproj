@@ -39,6 +39,7 @@
 		0C9A16111EA02F2C0092B6F1 /* UIColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16101EA02F2C0092B6F1 /* UIColorHelper.swift */; };
 		0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16141EA030E70092B6F1 /* FFTabBar.swift */; };
 		0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */; };
+		0CA3980D200A720A00CF3838 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3980C200A720A00CF3838 /* Utils.swift */; };
 		0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */; };
 		0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F51EA2997900AB4ED7 /* MiniCardFavoriteCell.swift */; };
 		0CAEF5F91EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F81EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift */; };
@@ -123,6 +124,7 @@
 		0C9A16101EA02F2C0092B6F1 /* UIColorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorHelper.swift; sourceTree = "<group>"; };
 		0C9A16141EA030E70092B6F1 /* FFTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBar.swift; sourceTree = "<group>"; };
 		0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationItem.swift; sourceTree = "<group>"; };
+		0CA3980C200A720A00CF3838 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 		0CAEF5F51EA2997900AB4ED7 /* MiniCardFavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFavoriteCell.swift; sourceTree = "<group>"; };
 		0CAEF5F81EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFavoritHeaderView.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 		0CAEF5FE1EA3DBA300AB4ED7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0CA3980C200A720A00CF3838 /* Utils.swift */,
 				0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */,
 				0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */,
 				0CD435B21EB13CFC00B05EFF /* UserService.swift */,
@@ -719,6 +722,7 @@
 				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
 				0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */,
 				0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */,
+				0CA3980D200A720A00CF3838 /* Utils.swift in Sources */,
 				0CCEA20F1F24BA2F0079B55D /* UIViewControllerMessages.swift in Sources */,
 				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,

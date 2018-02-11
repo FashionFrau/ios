@@ -22,7 +22,7 @@ struct Look: ResponseObjectSerializable, ResponseCollectionSerializable {
 
     var gallery: [String]
 
-    var description: String
+    var description: String?
 
     var userHasLiked: Bool = false
 
@@ -40,9 +40,7 @@ struct Look: ResponseObjectSerializable, ResponseCollectionSerializable {
 
             let lookUrl = representation["lookUrl"] as? String,
 
-            let gallery = representation["gallery"] as? [String],
-
-            let description = representation["description"] as? String
+            let gallery = representation["gallery"] as? [String]
 
             else { return nil }
 
@@ -56,17 +54,19 @@ struct Look: ResponseObjectSerializable, ResponseCollectionSerializable {
 
         self.gallery = gallery
 
-        self.description = description
-
-
         // Optional
+
+        if let description = representation["description"] as? String {
+
+            self.description = description
+        }
 
         if let purchaseUrl = representation["purchaseUrl"] as? String {
 
             self.purchaseUrl = purchaseUrl
         }
 
-        if let userHasLiked = representation["user_has_liked"] as? Bool {
+        if let userHasLiked = representation["userHasLiked"] as? Bool {
 
             self.userHasLiked = userHasLiked
         }
