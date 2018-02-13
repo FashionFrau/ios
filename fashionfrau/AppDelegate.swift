@@ -8,13 +8,18 @@
 
 import UIKit
 import AlamofireNetworkActivityIndicator
+import Flurry_iOS_SDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private let apiKey = "PVHSVZGQYDYG7M43B25T"
+
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        setupFlurry()
 
         NetworkActivityIndicatorManager.shared.isEnabled = true
         NetworkActivityIndicatorManager.shared.startDelay = 1.0
@@ -45,6 +50,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
+    private func setupFlurry() {
+        let flurrySession =  FlurrySessionBuilder()
+            .withLogLevel(FlurryLogLevelDebug)
+            .withCrashReporting(true)
+
+        Flurry.startSession(apiKey, with: flurrySession)
+    }
+
 
     private func openStoryboard() {
         window = UIWindow(frame: UIScreen.main.bounds)

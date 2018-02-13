@@ -12,7 +12,6 @@ import Flurry_iOS_SDK
 import Koloda
 
 protocol CardDetailDelegate {
-
     func didSwipeCard(cardId: String, in direction: SwipeResultDirection) -> Void
 }
 
