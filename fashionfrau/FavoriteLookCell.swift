@@ -1,5 +1,5 @@
 //
-//  MiniCardFavoriteCell.swift
+//  FavoriteLookCell.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 15/04/2017.
@@ -11,13 +11,13 @@ import AlamofireImage
 import Flurry_iOS_SDK
 
 
-class MiniCardFavoriteCell: UICollectionViewCell {
+class FavoriteLookCell: UICollectionViewCell {
 
-    fileprivate let miniCardFavoriteCellDomainError = "com.fashionfrau.mini-card-favorite-cell.error"
+    fileprivate let favoriteLookdCellDomainError = "com.fashionfrau.favorite-look-cell.error"
 
     fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
 
-    var model: MiniLookFavorite? {
+    var model: FavoriteLook? {
         didSet {
             updateUI()
         }
@@ -53,7 +53,7 @@ class MiniCardFavoriteCell: UICollectionViewCell {
     }
 }
 
-extension MiniCardFavoriteCell {
+extension FavoriteLookCell {
 
     fileprivate func updateUI() {
 
@@ -85,7 +85,7 @@ extension MiniCardFavoriteCell {
 
         } catch let error {
 
-            Flurry.logError("\(self.miniCardFavoriteCellDomainError).profile-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.favoriteLookdCellDomainError).profile-image.url", message: error.localizedDescription, error: error)
         }
     }
 
@@ -97,7 +97,7 @@ extension MiniCardFavoriteCell {
 
         } catch let error {
 
-            Flurry.logError("\(self.miniCardFavoriteCellDomainError).look-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.favoriteLookdCellDomainError).look-image.url", message: error.localizedDescription, error: error)
         }
     }
 

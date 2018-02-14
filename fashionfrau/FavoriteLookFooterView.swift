@@ -1,5 +1,5 @@
 //
-//  MiniCardFavoriteFooterView.swift
+//  FavoriteFooterView.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 21.04.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MiniCardFavoriteFooterView: UICollectionReusableView {
+class FavoriteLookFooterView: UICollectionReusableView {
         
     @IBOutlet weak var dotView: UIView!
 

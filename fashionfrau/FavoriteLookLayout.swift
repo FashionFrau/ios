@@ -1,5 +1,5 @@
 //
-//  MiniCardsFavoriteLayout.swift
+//  FavoriteLookLayout.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 21.04.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MiniCardsLayoutDelegate {
+protocol FavoriteLookLayoutDelegate {
 
     func collectionViewMiniCardInset() -> UIEdgeInsets
     func collectionViewHeaderWidthPercentage() -> CGFloat
@@ -16,9 +16,9 @@ protocol MiniCardsLayoutDelegate {
     func collectionView(collectionView:UICollectionView, heightForMiniCardWithWidth:CGFloat) -> CGFloat
 }
 
-class MiniCardsFavoriteLayout: UICollectionViewLayout {
+class FavoriteLookLayout: UICollectionViewLayout {
 
-    var delegate: MiniCardsLayoutDelegate!
+    var delegate: FavoriteLookLayoutDelegate!
 
     let numberOfColumns = 2
 

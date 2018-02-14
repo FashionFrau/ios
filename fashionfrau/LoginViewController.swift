@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  LoginViewController.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 09/04/2017.
@@ -11,9 +11,9 @@ import JSSAlertView
 import Flurry_iOS_SDK
 import BWWalkthrough
 
-class MainViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    fileprivate let mainViewControllerDomainError = "com.fashionfrau.main-view-controller.error"
+    fileprivate let loginViewControllerDomainError = "com.fashionfrau.login-view-controller.error"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: LoginFlowDelegate {
+extension LoginViewController: LoginFlowDelegate {
 
     func didFinishLogin(user: User?, error: Error?) {
 
@@ -52,7 +52,7 @@ extension MainViewController: LoginFlowDelegate {
 
                 defaultHeaders.removeValue(forKey: "Authorization")
 
-                Flurry.logError("\(self.mainViewControllerDomainError).did-finish-login:save-user", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.loginViewControllerDomainError).did-finish-login:save-user", message: error.localizedDescription, error: error)
             }
         } else {
 
@@ -61,12 +61,12 @@ extension MainViewController: LoginFlowDelegate {
 
         if let error = error {
 
-            Flurry.logError("\(self.mainViewControllerDomainError).did-finish-login", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.loginViewControllerDomainError).did-finish-login", message: error.localizedDescription, error: error)
         }
     }
 }
 
-extension MainViewController: BWWalkthroughViewControllerDelegate {
+extension LoginViewController: BWWalkthroughViewControllerDelegate {
 
     func walkthroughCloseButtonPressed() {
 
@@ -85,7 +85,7 @@ extension MainViewController: BWWalkthroughViewControllerDelegate {
                 }
             } catch let error {
 
-                Flurry.logError("\(self.mainViewControllerDomainError).walk-through:get-current-user", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.loginViewControllerDomainError).walk-through:get-current-user", message: error.localizedDescription, error: error)
             }
         })
     }

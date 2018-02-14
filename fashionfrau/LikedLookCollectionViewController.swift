@@ -1,5 +1,5 @@
 //
-//  HomeCollectionViewController.swift
+//  LikedLookCollectionViewController.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 23.04.17.
@@ -12,18 +12,11 @@ import Flurry_iOS_SDK
 import Alamofire
 import ESPullToRefresh
 
-private let miniCardHomeHeaderReuseIdentifier = "MiniCardHomeHeaderCell"
-private let miniCardHomeReuseIdentifier = "MiniCardHomeCell"
+class LikedLookCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-private let miniCardDetailSegue =  "CardDetailViewController"
+    private let likedLookCollectionViewControllerDomainError = "com.fashionfrau.liked-look-collection-view-controller.error"
 
-class HomeCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
-    private let nibForHomeHeader = "MiniCardHomeHeaderView"
-
-    private let homeCollectionViewControllerDomainError = "com.fashionfrau.home-collection-view-controller.error"
-
-    private var dataSource = [MiniLookHome]()
+    private var dataSource = [LikedLook]()
 
     private var user: CurrentUser?
 
@@ -31,15 +24,15 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
         super.viewDidLoad()
 
         // Register cell classes
-        let nibHeader = UINib(nibName: nibForHomeHeader, bundle: nil)
+        let nibHeader = UINib(nibName: nibForLikedLookHeader, bundle: nil)
 
-        collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier)
+        collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: LikedLookHeaderReuseIdentifier)
 
         collectionView!.dataSource = self
 
         collectionView!.backgroundColor = .fashionfrau
 
-        if let layout = collectionView!.collectionViewLayout as? MiniCardsHomeLayout {
+        if let layout = collectionView!.collectionViewLayout as? LikedLookLayout {
             layout.delegate = self
         }
 
@@ -50,7 +43,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
         loadUser()
 
-        CardService.cs.get { (cards: [MiniLookHome], errorResponse: ErrorResponse) in
+        LookService.ls.get { (cards: [LikedLook], errorResponse: ErrorResponse) in
             self.collectionView!.es_stopPullToRefresh()
 
             self.dataSource = cards
@@ -59,7 +52,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
             if let error = errorResponse.error {
 
-                Flurry.logError("\(self.homeCollectionViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.likedLookCollectionViewControllerDomainError).load-data", message: error.localizedDescription, error: error)
             }
 
         }
@@ -76,7 +69,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
         } catch let error {
 
-            Flurry.logError("\(self.homeCollectionViewControllerDomainError).fake-user", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.likedLookCollectionViewControllerDomainError).load-user", message: error.localizedDescription, error: error)
 
             self.redirectToLogin()
 
@@ -99,8 +92,8 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? CardDetailViewController {
-            if let selectedLook = sender as? MiniLookHome {
+        if let destination = segue.destination as? LookDetailViewController {
+            if let selectedLook = sender as? LikedLook {
                 destination.lookId = selectedLook.id
             }
         }
@@ -120,9 +113,9 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardHomeReuseIdentifier, for: indexPath)  as! MiniCardHomeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LikedLookReuseIdentifier, for: indexPath)  as! LikedLookCell
 
-        let mini: MiniLookHome? = dataSource[indexPath.row]
+        let mini: LikedLook? = dataSource[indexPath.row]
 
         if let miniLook = mini {
 
@@ -133,7 +126,7 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardHomeHeaderReuseIdentifier, for: indexPath) as! MiniCardHomeHeaderView
+        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LikedLookHeaderReuseIdentifier, for: indexPath) as! LikedLookHeaderView
 
         if let user = self.user {
 
@@ -155,11 +148,11 @@ class HomeCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: miniCardDetailSegue, sender: dataSource[indexPath.row])
+        performSegue(withIdentifier: LookDetailSegue, sender: dataSource[indexPath.row])
     }
 }
 
-extension HomeCollectionViewController: MiniCardsHomeLayoutDelegate {
+extension LikedLookCollectionViewController: LikedLookLayoutDelegate {
 
     func collectionViewMiniCardInset() -> UIEdgeInsets {
 

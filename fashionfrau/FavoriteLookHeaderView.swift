@@ -1,5 +1,5 @@
 //
-//  MiniCardFavoriteHeaderView.swift
+//  FavoriteHeaderView.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 15/04/2017.
@@ -9,7 +9,7 @@
 import UIKit
 import SwiftDate
 
-class MiniCardFavoriteHeaderView: UICollectionReusableView {
+class FavoriteLookHeaderView: UICollectionReusableView {
 
     var model: DateInRegion? {
         didSet {

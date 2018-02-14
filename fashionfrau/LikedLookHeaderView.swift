@@ -1,5 +1,5 @@
 //
-//  MiniCardHomeHeaderView.swift
+//  LikedLookHeaderView.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 23.04.17.
@@ -9,9 +9,9 @@
 import UIKit
 import Flurry_iOS_SDK
 
-class MiniCardHomeHeaderView: UICollectionReusableView {
+class LikedLookHeaderView: UICollectionReusableView {
 
-    fileprivate let miniCardHomeHeaderViewDomainError = "com.fashionfrau.mini-card-home-header.error"
+    fileprivate let homeHeaderViewDomainError = "com.fashionfrau.home-header.error"
 
     fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
     
@@ -48,7 +48,7 @@ class MiniCardHomeHeaderView: UICollectionReusableView {
     }
 }
 
-extension MiniCardHomeHeaderView {
+extension LikedLookHeaderView {
 
     fileprivate func updateUI() {
 
@@ -59,7 +59,7 @@ extension MiniCardHomeHeaderView {
 
         } catch let error {
 
-            Flurry.logError("\(self.miniCardHomeHeaderViewDomainError).profile-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.homeHeaderViewDomainError).profile-image.url", message: error.localizedDescription, error: error)
         }
 
         postsNumber.text = String(describing: model!.posts!)

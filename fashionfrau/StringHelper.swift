@@ -12,7 +12,7 @@ extension String {
 
     func cut(at index: Int) -> String {
 
-        if index >= self.characters.count {
+        if index >= self.count {
             return self
         }
 

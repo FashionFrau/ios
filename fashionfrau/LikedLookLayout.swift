@@ -1,5 +1,5 @@
 //
-//  MiniCardsHomeLayout.swift
+//  LikedLookLayout.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 25.04.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MiniCardsHomeLayoutDelegate {
+protocol LikedLookLayoutDelegate {
 
     func collectionViewMiniCardInset() -> UIEdgeInsets
     func collectionViewHeaderHeight() -> CGFloat
@@ -16,9 +16,9 @@ protocol MiniCardsHomeLayoutDelegate {
 }
 
 
-class MiniCardsHomeLayout: UICollectionViewLayout {
+class LikedLookLayout: UICollectionViewLayout {
 
-    var delegate: MiniCardsHomeLayoutDelegate!
+    var delegate: LikedLookLayoutDelegate!
 
     let numberOfColumns = 2
 

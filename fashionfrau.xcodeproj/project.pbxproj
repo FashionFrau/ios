@@ -8,29 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		06BBF2844766FF0089A9C8C2 /* Pods_fashionfrauTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFDA3C1CBB350ED246EDCF /* Pods_fashionfrauTests.framework */; };
-		0C0712C71EA43513004B17C9 /* MiniLooksFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712C61EA43513004B17C9 /* MiniLooksFavorite.swift */; };
+		0C0712C71EA43513004B17C9 /* FavoritesLooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712C61EA43513004B17C9 /* FavoritesLooks.swift */; };
 		0C0712CC1EA4D733004B17C9 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CB1EA4D733004B17C9 /* StringHelper.swift */; };
 		0C0712D01EA54247004B17C9 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0712CF1EA54247004B17C9 /* CornerView.swift */; };
-		0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */; };
+		0C093DA41EA40A66001C1646 /* FavoriteLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C093DA31EA40A66001C1646 /* FavoriteLook.swift */; };
 		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
 		0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */; };
 		0C3ABDB41F24CC060010C38F /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB31F24CC060010C38F /* loading.gif */; };
 		0C6011561F1D436700D3410C /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6011551F1D436700D3410C /* Translations.swift */; };
 		0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6011571F1D503600D3410C /* Tutorial.storyboard */; };
-		0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */; };
+		0C71B2A41EC2C5F000AF31D0 /* loading-looks.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-looks.gif */; };
 		0C71B2A61EC37E4500AF31D0 /* FFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C71B2A51EC37E4500AF31D0 /* FFTabBarController.swift */; };
 		0C71B2A81EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C71B2A71EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift */; };
 		0C8072531F214240003324BD /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8072521F214240003324BD /* CurrentUser.swift */; };
 		0C8072551F21561F003324BD /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8072541F21561F003324BD /* App.storyboard */; };
 		0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */; };
-		0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */; };
+		0C8F57011E9A7C4E009B5BC8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F56FF1E9A7C4E009B5BC8 /* Login.storyboard */; };
 		0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57021E9A7C4E009B5BC8 /* Assets.xcassets */; };
 		0C8F57061E9A7C4E009B5BC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57041E9A7C4E009B5BC8 /* LaunchScreen.storyboard */; };
 		0C8F57111E9A7C4E009B5BC8 /* fashionfrauTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57101E9A7C4E009B5BC8 /* fashionfrauTests.swift */; };
 		0C8F571C1E9A7C4E009B5BC8 /* fashionfrauUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F571B1E9A7C4E009B5BC8 /* fashionfrauUITests.swift */; };
 		0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */; };
-		0C8F572D1E9AC096009B5BC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572C1E9AC096009B5BC8 /* MainViewController.swift */; };
-		0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */; };
+		0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */; };
+		0C8F57301E9C1D88009B5BC8 /* LooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F572F1E9C1D88009B5BC8 /* LooksViewController.swift */; };
 		0C8F57331E9C22CA009B5BC8 /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */; };
 		0C8F57351E9C284E009B5BC8 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8F57341E9C284E009B5BC8 /* CardView.xib */; };
 		0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F57361E9C308D009B5BC8 /* CardView.swift */; };
@@ -40,29 +40,30 @@
 		0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16141EA030E70092B6F1 /* FFTabBar.swift */; };
 		0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */; };
 		0CA3980D200A720A00CF3838 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3980C200A720A00CF3838 /* Utils.swift */; };
-		0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */; };
-		0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F51EA2997900AB4ED7 /* MiniCardFavoriteCell.swift */; };
-		0CAEF5F91EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F81EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift */; };
+		0CAEF5F41EA296B300AB4ED7 /* FavoriteLooksCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F31EA296B300AB4ED7 /* FavoriteLooksCollectionViewController.swift */; };
+		0CAEF5F61EA2997900AB4ED7 /* FavoriteLookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F51EA2997900AB4ED7 /* FavoriteLookCell.swift */; };
+		0CAEF5F91EA2A7F200AB4ED7 /* FavoriteLookHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5F81EA2A7F200AB4ED7 /* FavoriteLookHeaderView.swift */; };
 		0CAEF6001EA3DBC500AB4ED7 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */; };
-		0CAEF6021EA3DCC600AB4ED7 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */; };
+		0CAEF6021EA3DCC600AB4ED7 /* LookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEF6011EA3DCC600AB4ED7 /* LookService.swift */; };
 		0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */; };
 		0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */; };
 		0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */; };
-		0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */; };
-		0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */; };
+		0CBC939E1EA0FDE200458169 /* LookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC939D1EA0FDE200458169 /* LookDetailViewController.swift */; };
+		0CC712F7203368B300D6B1CF /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC712F6203368B300D6B1CF /* Identifier.swift */; };
+		0CCC72AD1EAE83B7009E73E4 /* LikedLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCC72AC1EAE83B7009E73E4 /* LikedLook.swift */; };
 		0CCEA20F1F24BA2F0079B55D /* UIViewControllerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEA20E1F24BA2F0079B55D /* UIViewControllerMessages.swift */; };
-		0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */; };
-		0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */; };
-		0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */; };
-		0CD2E61B1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61A1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift */; };
-		0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61C1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift */; };
-		0CD2E6201EABE3E800F93DAE /* MiniCardHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61F1EABE3E800F93DAE /* MiniCardHomeCell.swift */; };
+		0CD067381EAFED7F003726F4 /* LikedLookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD067371EAFED7F003726F4 /* LikedLookHeaderView.xib */; };
+		0CD2E6171EAA8EAB00F93DAE /* FavoriteLookHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6161EAA8EAB00F93DAE /* FavoriteLookHeaderView.xib */; };
+		0CD2E6191EAA8F8A00F93DAE /* FavoriteLookFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2E6181EAA8F8A00F93DAE /* FavoriteLookFooterView.xib */; };
+		0CD2E61B1EAA902500F93DAE /* FavoriteLookFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61A1EAA902500F93DAE /* FavoriteLookFooterView.swift */; };
+		0CD2E61D1EAA923800F93DAE /* FavoriteLookLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61C1EAA923800F93DAE /* FavoriteLookLayout.swift */; };
+		0CD2E6201EABE3E800F93DAE /* LikedLookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E61F1EABE3E800F93DAE /* LikedLookCell.swift */; };
 		0CD2E6221EABE4A100F93DAE /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6211EABE4A100F93DAE /* RoundImageView.swift */; };
-		0CD2E6241EACD86800F93DAE /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */; };
-		0CD2E6281EACF1D300F93DAE /* MiniCardHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */; };
+		0CD2E6241EACD86800F93DAE /* LikedLookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6231EACD86800F93DAE /* LikedLookCollectionViewController.swift */; };
+		0CD2E6281EACF1D300F93DAE /* LikedLookHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2E6271EACF1D300F93DAE /* LikedLookHeaderView.swift */; };
 		0CD435AF1EB13BD400B05EFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD435AE1EB13BD400B05EFF /* User.swift */; };
 		0CD435B31EB13CFC00B05EFF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD435B21EB13CFC00B05EFF /* UserService.swift */; };
-		0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */; };
+		0CD9D42D1EAFF23800B50EA2 /* LikedLookLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD9D42C1EAFF23800B50EA2 /* LikedLookLayout.swift */; };
 		0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4B9A71E9ECD80000F2AC4 /* Images.swift */; };
 		0CFAA8F11F1BDE0D005EC922 /* AuthException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFAA8F01F1BDE0D005EC922 /* AuthException.swift */; };
 		4D2B22F4D29184FB12CEDF08 /* Pods_fashionfrauUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450E57F73CBFBBBA499B3FFC /* Pods_fashionfrauUITests.framework */; };
@@ -87,23 +88,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C0712C61EA43513004B17C9 /* MiniLooksFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLooksFavorite.swift; sourceTree = "<group>"; };
+		0C0712C61EA43513004B17C9 /* FavoritesLooks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesLooks.swift; sourceTree = "<group>"; };
 		0C0712CB1EA4D733004B17C9 /* StringHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		0C0712CF1EA54247004B17C9 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
-		0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookFavorite.swift; sourceTree = "<group>"; };
+		0C093DA31EA40A66001C1646 /* FavoriteLook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteLook.swift; sourceTree = "<group>"; };
 		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		0C3ABDB31F24CC060010C38F /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		0C6011551F1D436700D3410C /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		0C6011571F1D503600D3410C /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
-		0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-cards.gif"; sourceTree = "<group>"; };
+		0C71B2A31EC2C5F000AF31D0 /* loading-looks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-looks.gif"; sourceTree = "<group>"; };
 		0C71B2A51EC37E4500AF31D0 /* FFTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBarController.swift; sourceTree = "<group>"; };
 		0C71B2A71EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFEsRefreshHeaderAnimator.swift; sourceTree = "<group>"; };
 		0C8072521F214240003324BD /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		0C8072541F21561F003324BD /* App.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
 		0C8F56F81E9A7C4E009B5BC8 /* fashionfrau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fashionfrau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C8F56FB1E9A7C4E009B5BC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C8F57001E9A7C4E009B5BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C8F57001E9A7C4E009B5BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		0C8F57021E9A7C4E009B5BC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C8F57051E9A7C4E009B5BC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C8F57071E9A7C4E009B5BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,8 +115,8 @@
 		0C8F571B1E9A7C4E009B5BC8 /* fashionfrauUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fashionfrauUITests.swift; sourceTree = "<group>"; };
 		0C8F571D1E9A7C4E009B5BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courgette-Regular.ttf"; sourceTree = "<group>"; };
-		0C8F572C1E9AC096009B5BC8 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0C8F572F1E9C1D88009B5BC8 /* LooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LooksViewController.swift; sourceTree = "<group>"; };
 		0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		0C8F57341E9C284E009B5BC8 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		0C8F57361E9C308D009B5BC8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -125,29 +126,30 @@
 		0C9A16141EA030E70092B6F1 /* FFTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFTabBar.swift; sourceTree = "<group>"; };
 		0C9A16161EA03BC40092B6F1 /* FFNavigationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNavigationItem.swift; sourceTree = "<group>"; };
 		0CA3980C200A720A00CF3838 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
-		0CAEF5F51EA2997900AB4ED7 /* MiniCardFavoriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFavoriteCell.swift; sourceTree = "<group>"; };
-		0CAEF5F81EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFavoritHeaderView.swift; sourceTree = "<group>"; };
+		0CAEF5F31EA296B300AB4ED7 /* FavoriteLooksCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteLooksCollectionViewController.swift; sourceTree = "<group>"; };
+		0CAEF5F51EA2997900AB4ED7 /* FavoriteLookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteLookCell.swift; sourceTree = "<group>"; };
+		0CAEF5F81EA2A7F200AB4ED7 /* FavoriteLookHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteLookHeaderView.swift; sourceTree = "<group>"; };
 		0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		0CAEF6011EA3DCC600AB4ED7 /* LookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookService.swift; sourceTree = "<group>"; };
 		0CB282FA1EA261BD00EABBDF /* FFSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFSliderView.swift; sourceTree = "<group>"; };
 		0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
 		0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
-		0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
-		0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniLookHome.swift; sourceTree = "<group>"; };
+		0CBC939D1EA0FDE200458169 /* LookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookDetailViewController.swift; sourceTree = "<group>"; };
+		0CC712F6203368B300D6B1CF /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		0CCC72AC1EAE83B7009E73E4 /* LikedLook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedLook.swift; sourceTree = "<group>"; };
 		0CCEA20E1F24BA2F0079B55D /* UIViewControllerMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerMessages.swift; sourceTree = "<group>"; };
-		0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardHomeHeaderView.xib; sourceTree = "<group>"; };
-		0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteHeaderView.xib; sourceTree = "<group>"; };
-		0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniCardFavoriteFooterView.xib; sourceTree = "<group>"; };
-		0CD2E61A1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardFavoriteFooterView.swift; sourceTree = "<group>"; };
-		0CD2E61C1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsFavoriteLayout.swift; sourceTree = "<group>"; };
-		0CD2E61F1EABE3E800F93DAE /* MiniCardHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardHomeCell.swift; sourceTree = "<group>"; };
+		0CD067371EAFED7F003726F4 /* LikedLookHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LikedLookHeaderView.xib; sourceTree = "<group>"; };
+		0CD2E6161EAA8EAB00F93DAE /* FavoriteLookHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteLookHeaderView.xib; sourceTree = "<group>"; };
+		0CD2E6181EAA8F8A00F93DAE /* FavoriteLookFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteLookFooterView.xib; sourceTree = "<group>"; };
+		0CD2E61A1EAA902500F93DAE /* FavoriteLookFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteLookFooterView.swift; sourceTree = "<group>"; };
+		0CD2E61C1EAA923800F93DAE /* FavoriteLookLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteLookLayout.swift; sourceTree = "<group>"; };
+		0CD2E61F1EABE3E800F93DAE /* LikedLookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedLookCell.swift; sourceTree = "<group>"; };
 		0CD2E6211EABE4A100F93DAE /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
-		0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
-		0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardHomeHeaderView.swift; sourceTree = "<group>"; };
+		0CD2E6231EACD86800F93DAE /* LikedLookCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedLookCollectionViewController.swift; sourceTree = "<group>"; };
+		0CD2E6271EACF1D300F93DAE /* LikedLookHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedLookHeaderView.swift; sourceTree = "<group>"; };
 		0CD435AE1EB13BD400B05EFF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0CD435B21EB13CFC00B05EFF /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardsHomeLayout.swift; sourceTree = "<group>"; };
+		0CD9D42C1EAFF23800B50EA2 /* LikedLookLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedLookLayout.swift; sourceTree = "<group>"; };
 		0CF4B9A71E9ECD80000F2AC4 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		0CFAA8F01F1BDE0D005EC922 /* AuthException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthException.swift; sourceTree = "<group>"; };
 		22AF9C620E3B0582FEF0A08F /* Pods-fashionfrauUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fashionfrauUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fashionfrauUITests/Pods-fashionfrauUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,13 +202,13 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		0C460BE71EB2709F00B34347 /* Match */ = {
+		0C460BE71EB2709F00B34347 /* Heart */ = {
 			isa = PBXGroup;
 			children = (
-				0C8F572F1E9C1D88009B5BC8 /* CardsViewController.swift */,
-				0CBC939D1EA0FDE200458169 /* CardDetailViewController.swift */,
+				0C8F572F1E9C1D88009B5BC8 /* LooksViewController.swift */,
+				0CBC939D1EA0FDE200458169 /* LookDetailViewController.swift */,
 			);
-			name = Match;
+			name = Heart;
 			sourceTree = "<group>";
 		};
 		0C8F56EF1E9A7C4D009B5BC8 = {
@@ -269,10 +271,11 @@
 			isa = PBXGroup;
 			children = (
 				0C3ABDB31F24CC060010C38F /* loading.gif */,
-				0C71B2A31EC2C5F000AF31D0 /* loading-cards.gif */,
+				0C71B2A31EC2C5F000AF31D0 /* loading-looks.gif */,
 				0C8F572A1E9A7D99009B5BC8 /* Courgette-Regular.ttf */,
 				0CF4B9A71E9ECD80000F2AC4 /* Images.swift */,
 				0C6011551F1D436700D3410C /* Translations.swift */,
+				0CC712F6203368B300D6B1CF /* Identifier.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -280,11 +283,10 @@
 		0C8F572E1E9AC09C009B5BC8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0C8F572C1E9AC096009B5BC8 /* MainViewController.swift */,
-				0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */,
-				0CD2E6231EACD86800F93DAE /* HomeCollectionViewController.swift */,
-				0C460BE71EB2709F00B34347 /* Match */,
-				0CAEF5F31EA296B300AB4ED7 /* FavoritesCollectionViewController.swift */,
+				0CC712F820336D3B00D6B1CF /* Login */,
+				0C460BE71EB2709F00B34347 /* Heart */,
+				0CC712F9203393DE00D6B1CF /* LikedLook */,
+				0CC712FA203393E400D6B1CF /* FavoriteLook */,
 				0C71B2A51EC37E4500AF31D0 /* FFTabBarController.swift */,
 			);
 			name = Controller;
@@ -296,15 +298,15 @@
 				0CA1AE6D1EA2657900591856 /* Navigation */,
 				0CA1AE6C1EA2651D00591856 /* Slider */,
 				0CA1AE6E1EA2658700591856 /* Cards */,
-				0CD2E61E1EABE3A100F93DAE /* MiniCardsHome */,
-				0CAEF5F71EA2998700AB4ED7 /* MiniCardsFavorite */,
+				0CD2E61E1EABE3A100F93DAE /* LikedLook */,
+				0CAEF5F71EA2998700AB4ED7 /* FavoriteLook */,
 				0CD2E6211EABE4A100F93DAE /* RoundImageView.swift */,
 				0C0712CF1EA54247004B17C9 /* CornerView.swift */,
-				0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */,
+				0C8072541F21561F003324BD /* App.storyboard */,
+				0C8F56FF1E9A7C4E009B5BC8 /* Login.storyboard */,
 				0C8F57041E9A7C4E009B5BC8 /* LaunchScreen.storyboard */,
 				0C71B2A71EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift */,
 				0C6011571F1D503600D3410C /* Tutorial.storyboard */,
-				0C8072541F21561F003324BD /* App.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,9 +315,9 @@
 			isa = PBXGroup;
 			children = (
 				0C8F57391E9D55EF009B5BC8 /* Look.swift */,
-				0C093DA31EA40A66001C1646 /* MiniLookFavorite.swift */,
-				0C0712C61EA43513004B17C9 /* MiniLooksFavorite.swift */,
-				0CCC72AC1EAE83B7009E73E4 /* MiniLookHome.swift */,
+				0C093DA31EA40A66001C1646 /* FavoriteLook.swift */,
+				0C0712C61EA43513004B17C9 /* FavoritesLooks.swift */,
+				0CCC72AC1EAE83B7009E73E4 /* LikedLook.swift */,
 				0CD435AE1EB13BD400B05EFF /* User.swift */,
 				0CFAA8F01F1BDE0D005EC922 /* AuthException.swift */,
 				0C8072521F214240003324BD /* CurrentUser.swift */,
@@ -352,17 +354,17 @@
 			name = Cards;
 			sourceTree = "<group>";
 		};
-		0CAEF5F71EA2998700AB4ED7 /* MiniCardsFavorite */ = {
+		0CAEF5F71EA2998700AB4ED7 /* FavoriteLook */ = {
 			isa = PBXGroup;
 			children = (
-				0CAEF5F51EA2997900AB4ED7 /* MiniCardFavoriteCell.swift */,
-				0CAEF5F81EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift */,
-				0CD2E6161EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib */,
-				0CD2E6181EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib */,
-				0CD2E61A1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift */,
-				0CD2E61C1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift */,
+				0CAEF5F51EA2997900AB4ED7 /* FavoriteLookCell.swift */,
+				0CAEF5F81EA2A7F200AB4ED7 /* FavoriteLookHeaderView.swift */,
+				0CD2E6161EAA8EAB00F93DAE /* FavoriteLookHeaderView.xib */,
+				0CD2E6181EAA8F8A00F93DAE /* FavoriteLookFooterView.xib */,
+				0CD2E61A1EAA902500F93DAE /* FavoriteLookFooterView.swift */,
+				0CD2E61C1EAA923800F93DAE /* FavoriteLookLayout.swift */,
 			);
-			name = MiniCardsFavorite;
+			name = FavoriteLook;
 			sourceTree = "<group>";
 		};
 		0CAEF5FE1EA3DBA300AB4ED7 /* Services */ = {
@@ -370,22 +372,47 @@
 			children = (
 				0CA3980C200A720A00CF3838 /* Utils.swift */,
 				0CAEF5FF1EA3DBC500AB4ED7 /* DataSource.swift */,
-				0CAEF6011EA3DCC600AB4ED7 /* CardService.swift */,
+				0CAEF6011EA3DCC600AB4ED7 /* LookService.swift */,
 				0CD435B21EB13CFC00B05EFF /* UserService.swift */,
 				0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
 		};
-		0CD2E61E1EABE3A100F93DAE /* MiniCardsHome */ = {
+		0CC712F820336D3B00D6B1CF /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0CD2E61F1EABE3E800F93DAE /* MiniCardHomeCell.swift */,
-				0CD2E6271EACF1D300F93DAE /* MiniCardHomeHeaderView.swift */,
-				0CD067371EAFED7F003726F4 /* MiniCardHomeHeaderView.xib */,
-				0CD9D42C1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift */,
+				0C8F572C1E9AC096009B5BC8 /* LoginViewController.swift */,
+				0CB663B91ECB8EAD00E84AE3 /* LoginWebViewController.swift */,
 			);
-			name = MiniCardsHome;
+			name = Login;
+			sourceTree = "<group>";
+		};
+		0CC712F9203393DE00D6B1CF /* LikedLook */ = {
+			isa = PBXGroup;
+			children = (
+				0CD2E6231EACD86800F93DAE /* LikedLookCollectionViewController.swift */,
+			);
+			name = LikedLook;
+			sourceTree = "<group>";
+		};
+		0CC712FA203393E400D6B1CF /* FavoriteLook */ = {
+			isa = PBXGroup;
+			children = (
+				0CAEF5F31EA296B300AB4ED7 /* FavoriteLooksCollectionViewController.swift */,
+			);
+			name = FavoriteLook;
+			sourceTree = "<group>";
+		};
+		0CD2E61E1EABE3A100F93DAE /* LikedLook */ = {
+			isa = PBXGroup;
+			children = (
+				0CD2E61F1EABE3E800F93DAE /* LikedLookCell.swift */,
+				0CD2E6271EACF1D300F93DAE /* LikedLookHeaderView.swift */,
+				0CD067371EAFED7F003726F4 /* LikedLookHeaderView.xib */,
+				0CD9D42C1EAFF23800B50EA2 /* LikedLookLayout.swift */,
+			);
+			name = LikedLook;
 			sourceTree = "<group>";
 		};
 		113692F2CB128CF80858A0A2 /* Frameworks */ = {
@@ -535,14 +562,14 @@
 				0C8072551F21561F003324BD /* App.storyboard in Resources */,
 				0C8F57031E9A7C4E009B5BC8 /* Assets.xcassets in Resources */,
 				0C8F57331E9C22CA009B5BC8 /* CustomOverlayView.xib in Resources */,
-				0CD067381EAFED7F003726F4 /* MiniCardHomeHeaderView.xib in Resources */,
-				0C71B2A41EC2C5F000AF31D0 /* loading-cards.gif in Resources */,
+				0CD067381EAFED7F003726F4 /* LikedLookHeaderView.xib in Resources */,
+				0C71B2A41EC2C5F000AF31D0 /* loading-looks.gif in Resources */,
 				0C8F572B1E9A7D99009B5BC8 /* Courgette-Regular.ttf in Resources */,
-				0CD2E6171EAA8EAB00F93DAE /* MiniCardFavoriteHeaderView.xib in Resources */,
+				0CD2E6171EAA8EAB00F93DAE /* FavoriteLookHeaderView.xib in Resources */,
 				0C3ABDB41F24CC060010C38F /* loading.gif in Resources */,
-				0C8F57011E9A7C4E009B5BC8 /* Main.storyboard in Resources */,
+				0C8F57011E9A7C4E009B5BC8 /* Login.storyboard in Resources */,
 				0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */,
-				0CD2E6191EAA8F8A00F93DAE /* MiniCardFavoriteFooterView.xib in Resources */,
+				0CD2E6191EAA8F8A00F93DAE /* FavoriteLookFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,26 +732,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD2E6281EACF1D300F93DAE /* MiniCardHomeHeaderView.swift in Sources */,
+				0CD2E6281EACF1D300F93DAE /* LikedLookHeaderView.swift in Sources */,
 				0CFAA8F11F1BDE0D005EC922 /* AuthException.swift in Sources */,
-				0CBC939E1EA0FDE200458169 /* CardDetailViewController.swift in Sources */,
-				0CD2E61B1EAA902500F93DAE /* MiniCardFavoriteFooterView.swift in Sources */,
-				0CD2E6241EACD86800F93DAE /* HomeCollectionViewController.swift in Sources */,
+				0CBC939E1EA0FDE200458169 /* LookDetailViewController.swift in Sources */,
+				0CD2E61B1EAA902500F93DAE /* FavoriteLookFooterView.swift in Sources */,
+				0CD2E6241EACD86800F93DAE /* LikedLookCollectionViewController.swift in Sources */,
 				0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */,
 				0C9A16111EA02F2C0092B6F1 /* UIColorHelper.swift in Sources */,
 				0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */,
-				0CAEF5F41EA296B300AB4ED7 /* FavoritesCollectionViewController.swift in Sources */,
+				0CAEF5F41EA296B300AB4ED7 /* FavoriteLooksCollectionViewController.swift in Sources */,
 				0C6011561F1D436700D3410C /* Translations.swift in Sources */,
 				0C9A160F1EA02DEC0092B6F1 /* FFNavigationBar.swift in Sources */,
 				0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */,
-				0C8F572D1E9AC096009B5BC8 /* MainViewController.swift in Sources */,
+				0C8F572D1E9AC096009B5BC8 /* LoginViewController.swift in Sources */,
 				0C8F56FC1E9A7C4E009B5BC8 /* AppDelegate.swift in Sources */,
-				0CAEF5F61EA2997900AB4ED7 /* MiniCardFavoriteCell.swift in Sources */,
+				0CAEF5F61EA2997900AB4ED7 /* FavoriteLookCell.swift in Sources */,
 				0CB663BA1ECB8EAD00E84AE3 /* LoginWebViewController.swift in Sources */,
-				0CD2E61D1EAA923800F93DAE /* MiniCardsFavoriteLayout.swift in Sources */,
+				0CD2E61D1EAA923800F93DAE /* FavoriteLookLayout.swift in Sources */,
 				0CA3980D200A720A00CF3838 /* Utils.swift in Sources */,
 				0CCEA20F1F24BA2F0079B55D /* UIViewControllerMessages.swift in Sources */,
-				0C8F57301E9C1D88009B5BC8 /* CardsViewController.swift in Sources */,
+				0C8F57301E9C1D88009B5BC8 /* LooksViewController.swift in Sources */,
 				0C8F57371E9C308D009B5BC8 /* CardView.swift in Sources */,
 				0C9A16171EA03BC40092B6F1 /* FFNavigationItem.swift in Sources */,
 				0CAEF6001EA3DBC500AB4ED7 /* DataSource.swift in Sources */,
@@ -734,18 +761,19 @@
 				0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */,
 				0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */,
 				0C8072531F214240003324BD /* CurrentUser.swift in Sources */,
+				0CC712F7203368B300D6B1CF /* Identifier.swift in Sources */,
 				0CF4B9A81E9ECD80000F2AC4 /* Images.swift in Sources */,
 				0CD2E6221EABE4A100F93DAE /* RoundImageView.swift in Sources */,
-				0CAEF6021EA3DCC600AB4ED7 /* CardService.swift in Sources */,
+				0CAEF6021EA3DCC600AB4ED7 /* LookService.swift in Sources */,
 				0CD435AF1EB13BD400B05EFF /* User.swift in Sources */,
-				0CCC72AD1EAE83B7009E73E4 /* MiniLookHome.swift in Sources */,
-				0CD2E6201EABE3E800F93DAE /* MiniCardHomeCell.swift in Sources */,
-				0CD9D42D1EAFF23800B50EA2 /* MiniCardsHomeLayout.swift in Sources */,
+				0CCC72AD1EAE83B7009E73E4 /* LikedLook.swift in Sources */,
+				0CD2E6201EABE3E800F93DAE /* LikedLookCell.swift in Sources */,
+				0CD9D42D1EAFF23800B50EA2 /* LikedLookLayout.swift in Sources */,
 				0C0712CC1EA4D733004B17C9 /* StringHelper.swift in Sources */,
-				0C093DA41EA40A66001C1646 /* MiniLookFavorite.swift in Sources */,
-				0CAEF5F91EA2A7F200AB4ED7 /* MiniCardFavoritHeaderView.swift in Sources */,
+				0C093DA41EA40A66001C1646 /* FavoriteLook.swift in Sources */,
+				0CAEF5F91EA2A7F200AB4ED7 /* FavoriteLookHeaderView.swift in Sources */,
 				0C71B2A81EC3850200AF31D0 /* FFEsRefreshHeaderAnimator.swift in Sources */,
-				0C0712C71EA43513004B17C9 /* MiniLooksFavorite.swift in Sources */,
+				0C0712C71EA43513004B17C9 /* FavoritesLooks.swift in Sources */,
 				0C71B2A61EC37E4500AF31D0 /* FFTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,12 +810,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0C8F56FF1E9A7C4E009B5BC8 /* Main.storyboard */ = {
+		0C8F56FF1E9A7C4E009B5BC8 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0C8F57001E9A7C4E009B5BC8 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		0C8F57041E9A7C4E009B5BC8 /* LaunchScreen.storyboard */ = {

@@ -17,16 +17,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home Collection View Controller-->
+        <!--Liked Look Collection View Controller-->
         <scene sceneID="y17-Cu-5PE">
             <objects>
-                <collectionViewController id="6Ay-5R-Scg" customClass="HomeCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="6Ay-5R-Scg" customClass="LikedLookCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="jyh-Vc-E5e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="Rli-Af-wvT" customClass="MiniCardsHomeLayout" customModule="fashionfrau" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Rli-Af-wvT" customClass="LikedLookLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="MiniCardHomeCell" id="WBP-Xd-pxU" customClass="MiniCardHomeCell" customModule="fashionfrau" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="LikedLookReuseIdentifier" id="WBP-Xd-pxU" customClass="LikedLookCell" customModule="fashionfrau" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -161,17 +161,17 @@
                     <navigationItem key="navigationItem" id="qSy-Lc-xUO"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <segue destination="oha-0F-GuP" kind="presentation" identifier="CardDetailViewController" id="4M5-ww-P6r"/>
+                        <segue destination="oha-0F-GuP" kind="presentation" identifier="LookDetailViewController" id="4M5-ww-P6r"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzb-km-bUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2868" y="-673.31334332833592"/>
         </scene>
-        <!--Cards View Controller-->
+        <!--Looks View Controller-->
         <scene sceneID="7xq-77-oEU">
             <objects>
-                <viewController id="AYm-fB-JJB" customClass="CardsViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AYm-fB-JJB" customClass="LooksViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="17q-UD-IxN"/>
                         <viewControllerLayoutGuide type="bottom" id="qYe-Zc-tbR"/>
@@ -206,17 +206,17 @@
                     <connections>
                         <outlet property="kolodaView" destination="DDu-al-Bi4" id="4QA-7d-NXA"/>
                         <outlet property="loadingView" destination="k8l-Ef-1nC" id="yBM-Di-NzF"/>
-                        <segue destination="oha-0F-GuP" kind="presentation" identifier="CardDetailViewController" id="QYY-0U-X8b"/>
+                        <segue destination="oha-0F-GuP" kind="presentation" identifier="LookDetailViewController" id="QYY-0U-X8b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeR-nr-jWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2868" y="42.728635682158924"/>
         </scene>
-        <!--Card Detail View Controller-->
+        <!--Look Detail View Controller-->
         <scene sceneID="wLW-1W-CaC">
             <objects>
-                <viewController id="oha-0F-GuP" customClass="CardDetailViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oha-0F-GuP" customClass="LookDetailViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yt4-Dd-jmn"/>
                         <viewControllerLayoutGuide type="bottom" id="r5c-Kr-3h5"/>
@@ -388,17 +388,17 @@
             </objects>
             <point key="canvasLocation" x="4202" y="42"/>
         </scene>
-        <!--Favorites Collection View Controller-->
+        <!--Favorite Looks Collection View Controller-->
         <scene sceneID="jB1-67-Eau">
             <objects>
-                <collectionViewController id="bUM-u0-KvH" customClass="FavoritesCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="bUM-u0-KvH" customClass="FavoriteLooksCollectionViewController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="oKA-0R-yZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewLayout key="collectionViewLayout" id="4ZS-zL-7qL" customClass="MiniCardsFavoriteLayout" customModule="fashionfrau" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="4ZS-zL-7qL" customClass="FavoriteLookLayout" customModule="fashionfrau" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="MiniCardFavoriteCell" id="7Fx-Do-KNf" customClass="MiniCardFavoriteCell" customModule="fashionfrau" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" reuseIdentifier="FavoriteLookReuseIdentifier" id="7Fx-Do-KNf" customClass="FavoriteLookCell" customModule="fashionfrau" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="166" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -518,7 +518,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="GhO-hb-HMc" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
                     <connections>
-                        <segue destination="oha-0F-GuP" kind="presentation" identifier="CardDetailViewController" id="Dhc-ea-wn0"/>
+                        <segue destination="oha-0F-GuP" kind="presentation" identifier="LookDetailViewController" id="Dhc-ea-wn0"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb5-fP-Az8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -625,6 +625,6 @@
         <image name="unlike" width="55" height="47"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4M5-ww-P6r"/>
+        <segue reference="Dhc-ea-wn0"/>
     </inferredMetricsTieBreakers>
 </document>

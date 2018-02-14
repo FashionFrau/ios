@@ -2,42 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>InstagramAppRedirectURL</key>
-	<string>http://localhost:8080/api/auth/callback</string>
-	<key>InstagramAppClientId</key>
-	<string>b0a5c417a94a43df83943434131f820b</string>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>mockable.io</key>
-			<dict/>
-			<key>NSExceptionRequiresForwardSecrecy</key>
-			<false/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
-			<key>instagram.com</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>cdninstagram.com</key>
-			<dict>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-		</dict>
-	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Courgette-Regular.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -56,20 +20,10 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
+	<key>InstagramAppClientId</key>
+	<string>b0a5c417a94a43df83943434131f820b</string>
+	<key>InstagramAppRedirectURL</key>
+	<string>http://localhost:8080/api/auth/callback</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>instagram</string>
@@ -78,6 +32,52 @@
 		<string>fbauth2</string>
 		<string>fb-messenger-api</string>
 		<string>fbshareextension</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>NSExceptionRequiresForwardSecrecy</key>
+			<false/>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>cdninstagram.com</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>instagram.com</key>
+			<dict>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>mockable.io</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Courgette-Regular.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Login</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 </dict>
 </plist>

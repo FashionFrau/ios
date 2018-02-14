@@ -1,5 +1,5 @@
 //
-//  FavoritesCollectionViewController.swift
+//  FavoriteLooksCollectionViewController.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 15/04/2017.
@@ -13,37 +13,29 @@ import Device
 import Flurry_iOS_SDK
 import ESPullToRefresh
 
-private let miniCardFavoriteReuseIdentifier = "MiniCardFavoriteCell"
-private let miniCardFavoriteHeaderReuseIdentifier = "MiniCardFavoriteHeaderCell"
-private let miniCardFavoriteFooterReuseIdentifier = "MiniCardFavoriteFooterCell"
 
-private let miniCardDetailSegue =  "CardDetailViewController"
+class FavoriteLooksCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
-class FavoritesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    fileprivate let favoriteLooksCollecitonViewControllerDomainError = "com.fashionfrau.favorites-collection-view-controller.error"
 
-    private let nibForFavoriteHeader = "MiniCardFavoriteHeaderView"
-    private let nibForFavoriteFooter = "MiniCardFavoriteFooterView"
-
-    fileprivate let favoritesCollecitonViewControllerDomainError = "com.fashionfrau.favorites-collection-view-controller.error"
-
-    fileprivate var dataSource: [MiniLooksFavorite] = []
+    fileprivate var dataSource: [FavoritesLooks] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Register cell classes
-        let nibHeader = UINib(nibName: nibForFavoriteHeader, bundle: nil)
+        let nibHeader = UINib(nibName: nibForFavoriteLookHeader, bundle: nil)
 
-        collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: miniCardFavoriteHeaderReuseIdentifier)
+        collectionView!.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: FavoriteLookHeaderReuseIdentifier)
 
-        let nibFooter = UINib(nibName: nibForFavoriteFooter, bundle: nil)
+        let nibFooter = UINib(nibName: nibForFavoriteLookFooter, bundle: nil)
 
-        collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier)
+        collectionView!.register(nibFooter, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: FavoriteLookFooterReuseIdentifier)
 
 
         collectionView!.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
 
-        if let layout = collectionView!.collectionViewLayout as? MiniCardsFavoriteLayout {
+        if let layout = collectionView!.collectionViewLayout as? FavoriteLookLayout {
 
             layout.delegate = self
         }
@@ -53,9 +45,9 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let destination = segue.destination as? CardDetailViewController {
+        if let destination = segue.destination as? LookDetailViewController {
 
-            if let selectedLook = sender as? MiniLookFavorite {
+            if let selectedLook = sender as? FavoriteLook {
 
                 destination.lookId = selectedLook.id
             }
@@ -74,13 +66,13 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: miniCardFavoriteReuseIdentifier, for: indexPath) as! MiniCardFavoriteCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteLookReuseIdentifier, for: indexPath) as! FavoriteLookCell
 
-        let mini: MiniLooksFavorite? = dataSource[indexPath.section]
+        let mini: FavoritesLooks? = dataSource[indexPath.section]
 
         if let miniLook = mini {
 
-            let looks: [MiniLookFavorite]? = miniLook.looks
+            let looks: [FavoriteLook]? = miniLook.looks
 
             if looks?.isEmpty == false && indexPath.row < looks!.count {
 
@@ -96,7 +88,7 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
         if(kind == UICollectionElementKindSectionHeader) {
 
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFavoriteHeaderReuseIdentifier, for: indexPath) as! MiniCardFavoriteHeaderView
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FavoriteLookHeaderReuseIdentifier, for: indexPath) as! FavoriteLookHeaderView
 
             let date: DateInRegion? = dataSource[indexPath.section].date
 
@@ -115,20 +107,20 @@ class FavoritesCollectionViewController: UICollectionViewController, UICollectio
 
             return header
         } else {
-            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: miniCardFavoriteFooterReuseIdentifier, for: indexPath) as! MiniCardFavoriteFooterView
+            return collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FavoriteLookFooterReuseIdentifier, for: indexPath) as! FavoriteLookFooterView
         }
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: miniCardDetailSegue, sender: dataSource[indexPath.section].looks[indexPath.row])
+        performSegue(withIdentifier: LookDetailSegue, sender: dataSource[indexPath.section].looks[indexPath.row])
     }
 }
 
-extension FavoritesCollectionViewController {
+extension FavoriteLooksCollectionViewController {
 
     fileprivate func loadData() {
 
-        CardService.cs.get { (cards: [MiniLooksFavorite], errorResponse: ErrorResponse) in
+        LookService.ls.get { (cards: [FavoritesLooks], errorResponse: ErrorResponse) in
 
             if self.isUnauthorized(response: errorResponse.response) {
 
@@ -143,7 +135,7 @@ extension FavoritesCollectionViewController {
 
             if let error = errorResponse.error {
 
-                Flurry.logError("\(self.favoritesCollecitonViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.favoriteLooksCollecitonViewControllerDomainError).load-favorites-data", message: error.localizedDescription, error: error)
             }
         }
     }
@@ -178,7 +170,7 @@ extension FavoritesCollectionViewController {
 //    }
 }
 
-extension FavoritesCollectionViewController : MiniCardsLayoutDelegate {
+extension FavoriteLooksCollectionViewController : FavoriteLookLayoutDelegate {
 
     func collectionView(collectionView:UICollectionView, heightForMiniCardWithWidth:CGFloat) -> CGFloat {
 

@@ -21,16 +21,16 @@ extension UIViewController {
 
     func redirectToLogin() {
 
-        let stb = UIStoryboard(name: "Main", bundle: nil)
+        let stb = UIStoryboard(name: LoginStoryboard, bundle: nil)
 
-        let mainController = stb.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let loginController = stb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
 
-        self.present(mainController, animated: false, completion: nil)
+        self.present(loginController, animated: false, completion: nil)
     }
 
     func redirectToApp() {
 
-        let stb = UIStoryboard(name: "App", bundle: nil)
+        let stb = UIStoryboard(name: AppStoryboard, bundle: nil)
 
         let tab = stb.instantiateViewController(withIdentifier: "TabBarController") as! FFTabBarController
 

@@ -1,5 +1,5 @@
 //
-//  CardDetailViewController.swift
+//  LookDetailViewController.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 14/04/2017.
@@ -11,13 +11,13 @@ import AlamofireImage
 import Flurry_iOS_SDK
 import Koloda
 
-protocol CardDetailDelegate {
+protocol LookDetailDelegate {
     func didSwipeCard(cardId: String, in direction: SwipeResultDirection) -> Void
 }
 
-class CardDetailViewController: UIViewController {
+class LookDetailViewController: UIViewController {
 
-    fileprivate let cardDetailViewControllerDomainError = "com.fashionfrau.card-detail-view-controller.error"
+    fileprivate let lookDetailViewControllerDomainError = "com.fashionfrau.look-detail-view-controller.error"
 
     fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
 
@@ -37,7 +37,7 @@ class CardDetailViewController: UIViewController {
 
     var look: Look?
 
-    var delegate: CardDetailDelegate?
+    var delegate: LookDetailDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +80,7 @@ class CardDetailViewController: UIViewController {
 
     private func loadData() {
 
-        CardService.cs.get(cardId: lookId, success: { (look: Look) in
+        LookService.ls.get(lookId: lookId, success: { (look: Look) in
             
             self.look = look
 
@@ -97,7 +97,7 @@ class CardDetailViewController: UIViewController {
                 self.redirectToLogin()
             }
 
-            Flurry.logError("\(self.cardDetailViewControllerDomainError).fetch", message: errorResponse.error?.localizedDescription, error: errorResponse.error)
+            Flurry.logError("\(self.lookDetailViewControllerDomainError).fetch", message: errorResponse.error?.localizedDescription, error: errorResponse.error)
         }
     }
 
@@ -121,7 +121,7 @@ class CardDetailViewController: UIViewController {
 
         } catch let error {
 
-            Flurry.logError("\(self.cardDetailViewControllerDomainError).update-ui.profile-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.lookDetailViewControllerDomainError).update-ui.profile-image.url", message: error.localizedDescription, error: error)
         }
     }
 
@@ -143,7 +143,7 @@ class CardDetailViewController: UIViewController {
             let url = try urlString.asURL()
             Utils.openURL(url: url)
         } catch let error {
-            Flurry.logError("\(self.cardDetailViewControllerDomainError).open-instagram", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.lookDetailViewControllerDomainError).open-instagram", message: error.localizedDescription, error: error)
         }
     }
 
@@ -174,7 +174,7 @@ class CardDetailViewController: UIViewController {
     }
 }
 
-extension CardDetailViewController: FFSliderDataSource {
+extension LookDetailViewController: FFSliderDataSource {
 
     func slider(ffSliderNumberOfSlides slider: FFSliderView) -> Int {
         return look?.gallery.count ?? 0
@@ -194,7 +194,7 @@ extension CardDetailViewController: FFSliderDataSource {
 
         } catch let error {
 
-            Flurry.logError("\(self.cardDetailViewControllerDomainError).slider.gallery-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.lookDetailViewControllerDomainError).slider.gallery-image.url", message: error.localizedDescription, error: error)
         }
 
         return imageView

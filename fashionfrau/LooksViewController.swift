@@ -1,5 +1,5 @@
 //
-//  CardsViewController.swift
+//  LooksViewController.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 10/04/2017.
@@ -11,15 +11,13 @@ import Koloda
 import Flurry_iOS_SDK
 import SwiftyGif
 
-private let cardDetailSegue = "CardDetailViewController"
-
-class CardsViewController: UIViewController {
+class LooksViewController: UIViewController {
 
     private let kolodaCountOfVisibleCards = 2
 
     private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
 
-    fileprivate let cardsViewControllerDomainError = "com.fashionfrau.cards-view-controller.error"
+    fileprivate let looksViewControllerDomainError = "com.fashionfrau.looks-view-controller.error"
 
     let gifManager = SwiftyGifManager(memoryLimit:7)
 
@@ -32,7 +30,7 @@ class CardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let loadingImage = UIImage(gifName: Images.LoadingCards)
+        let loadingImage = UIImage(gifName: Images.LoadingLooks)
         loadingView.setGifImage(loadingImage, manager: gifManager)
 
         kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
@@ -56,11 +54,11 @@ class CardsViewController: UIViewController {
 
         loadingView.isHidden = false
 
-        CardService.cs.get { (cards: [Look], errorResponse: ErrorResponse) in
+        LookService.ls.get { (cards: [Look], errorResponse: ErrorResponse) in
 
             if let error = errorResponse.error {
 
-                Flurry.logError("\(self.cardsViewControllerDomainError).fake-data", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.looksViewControllerDomainError).load-data", message: error.localizedDescription, error: error)
             }
 
             if self.isUnauthorized(response: errorResponse.response) {
@@ -79,7 +77,7 @@ class CardsViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if let destination = segue.destination as? CardDetailViewController {
+        if let destination = segue.destination as? LookDetailViewController {
 
             if let selectedLook = sender as? Look {
 
@@ -94,13 +92,13 @@ class CardsViewController: UIViewController {
 
     func swipeToLike(cardId: String) {
 
-        CardService.cs.like(cardId: cardId, success: { (response: HTTPURLResponse?) in
+        LookService.ls.like(lookId: cardId, success: { (response: HTTPURLResponse?) in
 
         }, failure: { (errorResponse: ErrorResponse) in
 
             if let error = errorResponse.error {
 
-                Flurry.logError("\(self.cardsViewControllerDomainError).did-swipe-card-at:like", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.looksViewControllerDomainError).did-swipe-look-at:like", message: error.localizedDescription, error: error)
             }
 
             if self.isUnauthorized(response: errorResponse.response) {
@@ -110,15 +108,15 @@ class CardsViewController: UIViewController {
         })
     }
 
-    func swipeToUnlike(cardId: String) {
+    func swipeToUnlike(lookId: String) {
 
-        CardService.cs.unlike(cardId: cardId, success: { (response: HTTPURLResponse?) in
+        LookService.ls.unlike(lookId: lookId, success: { (response: HTTPURLResponse?) in
 
         }, failure: { (errorResponse: ErrorResponse) in
 
             if let error = errorResponse.error {
 
-                Flurry.logError("\(self.cardsViewControllerDomainError).did-swipe-card-at:unlike", message: error.localizedDescription, error: error)
+                Flurry.logError("\(self.looksViewControllerDomainError).did-swipe-look-at:unlike", message: error.localizedDescription, error: error)
             }
 
             if self.isUnauthorized(response: errorResponse.response) {
@@ -129,7 +127,7 @@ class CardsViewController: UIViewController {
     }
 }
 
-extension CardsViewController: KolodaViewDelegate {
+extension LooksViewController: KolodaViewDelegate {
 
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
 
@@ -139,7 +137,7 @@ extension CardsViewController: KolodaViewDelegate {
     }
 
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        performSegue(withIdentifier: cardDetailSegue, sender: dataSource[index])
+        performSegue(withIdentifier: LookDetailSegue, sender: dataSource[index])
     }
 
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
@@ -152,7 +150,7 @@ extension CardsViewController: KolodaViewDelegate {
 
         switch direction {
 
-        case .left: self.swipeToUnlike(cardId: card.id)
+        case .left: self.swipeToUnlike(lookId: card.id)
 
         case .right: self.swipeToLike(cardId: card.id)
 
@@ -162,7 +160,7 @@ extension CardsViewController: KolodaViewDelegate {
     }
 }
 
-extension CardsViewController: KolodaViewDataSource {
+extension LooksViewController: KolodaViewDataSource {
 
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .`default`
@@ -188,7 +186,7 @@ extension CardsViewController: KolodaViewDataSource {
     }
 }
 
-extension CardsViewController: CardDetailDelegate {
+extension LooksViewController: LookDetailDelegate {
 
     func didSwipeCard(cardId: String, in direction: SwipeResultDirection) {
 

@@ -8,18 +8,18 @@
 
 import Foundation
 
-private let ngrok = "e258eebf"
-//public let baseUrl = "https://\(ngrok).ngrok.io"
-public let baseUrl = "http://0.0.0.0:3000"
+private let ngrok = "1d6cd7c2"
+public let baseUrl = "https://\(ngrok).ngrok.io"
+//public let baseUrl = "http://0.0.0.0:3000"
 
-public let regexBaseUrl = "^http:\\/\\/0.0.0.0.+api\\/auth\\/callback"
-//public let regexBaseUrl = "^https:\\/\\/\(ngrok).+api\\/auth\\/callback"
+//public let regexBaseUrl = "^http:\\/\\/0.0.0.0.+api\\/auth\\/callback"
+public let regexBaseUrl = "^https:\\/\\/\(ngrok).+api\\/auth\\/callback"
 //public let regexBaseUrl = "^http:\\/\\/fashionfrau.+api\\/auth\\/callback"
 
 
-public let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2F0.0.0.0%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes+relationships"
+//public let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=http%3A%2F%2F0.0.0.0%3A3000%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes+relationships"
 
-//public let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=https%3A%2F%2F\(ngrok).ngrok.io%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes+relationships"
+public let authUrl = "https://api.instagram.com/oauth/authorize/?client_id=b0a5c417a94a43df83943434131f820b&redirect_uri=https%3A%2F%2F\(ngrok).ngrok.io%2Fapi%2Fauth%2Fcallback&response_type=code&scope=basic+public_content+likes+relationships"
 
 
 

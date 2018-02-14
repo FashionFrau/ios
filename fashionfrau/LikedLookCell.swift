@@ -1,5 +1,5 @@
 //
-//  MiniCardHomeCell.swift
+//  LikedLookCell.swift
 //  fashionfrau
 //
 //  Created by Nilson Junior on 22.04.17.
@@ -10,15 +10,15 @@ import UIKit
 import AlamofireImage
 import Flurry_iOS_SDK
 
-class MiniCardHomeCell: UICollectionViewCell {
+class LikedLookCell: UICollectionViewCell {
 
-    fileprivate let miniCardHomeCellDomainError = "com.fashionfrau.mini-card-home-cell.error"
+    fileprivate let likedLookCellDomainError = "com.fashionfrau.home-cell.error"
 
     fileprivate let placeholderImage = UIImage(named: Images.ProfilePlaceHolder)
 
     fileprivate var placeholderLookImage = UIImage()
 
-    var model: MiniLookHome? {
+    var model: LikedLook? {
         didSet {
             updateUI()
         }
@@ -59,7 +59,7 @@ class MiniCardHomeCell: UICollectionViewCell {
     }
 }
 
-extension MiniCardHomeCell {
+extension LikedLookCell {
 
     func updateUI() {
 
@@ -112,7 +112,7 @@ extension MiniCardHomeCell {
 
         } catch let error {
 
-            Flurry.logError("\(self.miniCardHomeCellDomainError).profile-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.likedLookCellDomainError).profile-image.url", message: error.localizedDescription, error: error)
         }
     }
 
@@ -124,7 +124,7 @@ extension MiniCardHomeCell {
 
         } catch let error {
 
-            Flurry.logError("\(self.miniCardHomeCellDomainError).look-image.url", message: error.localizedDescription, error: error)
+            Flurry.logError("\(self.likedLookCellDomainError).look-image.url", message: error.localizedDescription, error: error)
         }
     }
 }

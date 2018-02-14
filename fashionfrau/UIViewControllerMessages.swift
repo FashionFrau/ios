@@ -27,7 +27,7 @@ extension UIViewController {
         alert.setTextTheme(.light)
     }
 
-    func askUserToFollowUs(_ action: @escaping ()->Void) {
+    func askUserToFollowUs(_ action: @escaping () -> Void) {
 
         let alert = JSSAlertView().show(self, title: Translations.AskUserFollowTitle,
                                         buttonText: Translations.Ok, cancelButtonText: Translations.Cancel, color: UIColor.fashionfrau)

@@ -69,16 +69,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let service = UserService.us
 
         if(service.isCurrentUserValid() == true) {
-            redirectToMain()
+            redirectToApp()
 
         } else {
             redirectToLogin()
         }
     }
 
-    private func redirectToMain() {
+    private func redirectToApp() {
 
-        let stb = UIStoryboard(name: "App", bundle: nil)
+        let stb = UIStoryboard(name: AppStoryboard, bundle: nil)
 
         let tab = stb.instantiateViewController(withIdentifier: "TabBarController") as! FFTabBarController
 
@@ -87,9 +87,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func redirectToLogin() {
 
-        let stb = UIStoryboard(name: "Main", bundle: nil)
+        let stb = UIStoryboard(name: LoginStoryboard, bundle: nil)
 
-        let loginController = stb.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let loginController = stb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
 
         window?.rootViewController = loginController
     }
