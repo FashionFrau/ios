@@ -8,7 +8,7 @@
 
 import Foundation
 
-private let ngrok = "1d6cd7c2"
+private let ngrok = "8d033750"
 public let baseUrl = "https://\(ngrok).ngrok.io"
 //public let baseUrl = "http://0.0.0.0:3000"
 
