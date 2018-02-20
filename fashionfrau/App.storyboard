@@ -180,32 +180,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDu-al-Bi4" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="10" y="10" width="355" height="539"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TXQ-kP-tVB" customClass="TopMenuCollectionView" customModule="fashionfrau" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7J4-j3-fJ5">
+                                    <size key="itemSize" width="83" height="45"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopMenuCellReuseIdentifier" id="mdG-HD-E1D" customClass="TopMenuCollectionViewCell" customModule="fashionfrau" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-2.5" width="83" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="83" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbc-Fs-jlR">
+                                                    <rect key="frame" x="3" y="10.5" width="77" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="xnH-h6-YKT"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Category">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.99296465970000003" green="0.99296465970000003" blue="0.99296465970000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="14" name="Courgette-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="rbc-Fs-jlR" firstAttribute="centerY" secondItem="mdG-HD-E1D" secondAttribute="centerY" id="4cy-X6-pf2"/>
+                                            <constraint firstItem="rbc-Fs-jlR" firstAttribute="centerX" secondItem="mdG-HD-E1D" secondAttribute="centerX" id="sBQ-Oc-iSi"/>
+                                            <constraint firstItem="rbc-Fs-jlR" firstAttribute="leading" secondItem="mdG-HD-E1D" secondAttribute="leading" constant="3" id="xYJ-pg-rZc"/>
+                                            <constraint firstAttribute="trailing" secondItem="rbc-Fs-jlR" secondAttribute="trailing" constant="3" id="yZD-wR-caK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="categoryLabel" destination="rbc-Fs-jlR" id="yBx-CC-jdj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k8l-Ef-1nC" userLabel="Loading View">
-                                <rect key="frame" x="139" y="214" width="97" height="126"/>
+                                <rect key="frame" x="0.0" y="214" width="375" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="B5O-Le-W1V"/>
-                                    <constraint firstAttribute="width" constant="97" id="xzd-Po-TXd"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDu-al-Bi4" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="10" y="50" width="355" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k8l-Ef-1nC" firstAttribute="centerX" secondItem="Cfj-fI-HVR" secondAttribute="centerX" id="6Vi-gD-5el"/>
-                            <constraint firstItem="DDu-al-Bi4" firstAttribute="top" secondItem="17q-UD-IxN" secondAttribute="bottom" constant="10" id="CzY-nv-O5G"/>
+                            <constraint firstItem="DDu-al-Bi4" firstAttribute="top" secondItem="17q-UD-IxN" secondAttribute="bottom" constant="50" id="CzY-nv-O5G"/>
                             <constraint firstItem="qYe-Zc-tbR" firstAttribute="top" secondItem="DDu-al-Bi4" secondAttribute="bottom" constant="5" id="Dg9-4U-X3O"/>
                             <constraint firstItem="k8l-Ef-1nC" firstAttribute="centerY" secondItem="Cfj-fI-HVR" secondAttribute="centerY" id="Eyd-ax-gp7"/>
                             <constraint firstAttribute="trailing" secondItem="DDu-al-Bi4" secondAttribute="trailing" constant="10" id="QbK-OX-yIt"/>
+                            <constraint firstItem="k8l-Ef-1nC" firstAttribute="centerY" secondItem="Cfj-fI-HVR" secondAttribute="centerY" id="Qz8-pQ-oNL"/>
+                            <constraint firstItem="TXQ-kP-tVB" firstAttribute="width" secondItem="Cfj-fI-HVR" secondAttribute="width" id="S6K-yR-C7g"/>
+                            <constraint firstItem="k8l-Ef-1nC" firstAttribute="width" secondItem="Cfj-fI-HVR" secondAttribute="width" id="bzi-P3-ogB"/>
+                            <constraint firstItem="k8l-Ef-1nC" firstAttribute="centerX" secondItem="Cfj-fI-HVR" secondAttribute="centerX" id="dcs-yi-gnL"/>
+                            <constraint firstItem="TXQ-kP-tVB" firstAttribute="centerX" secondItem="Cfj-fI-HVR" secondAttribute="centerX" id="fnw-NK-0EL"/>
                             <constraint firstItem="DDu-al-Bi4" firstAttribute="leading" secondItem="Cfj-fI-HVR" secondAttribute="leading" constant="10" id="gEx-IY-3qT"/>
+                            <constraint firstItem="DDu-al-Bi4" firstAttribute="top" secondItem="TXQ-kP-tVB" secondAttribute="bottom" constant="10" id="hEA-q7-HwW"/>
+                            <constraint firstItem="k8l-Ef-1nC" firstAttribute="top" secondItem="17q-UD-IxN" secondAttribute="bottom" constant="214" id="kMJ-2U-vdB"/>
+                            <constraint firstItem="TXQ-kP-tVB" firstAttribute="top" secondItem="17q-UD-IxN" secondAttribute="bottom" id="nEh-pX-qf2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t2v-fQ-Ync" customClass="FFNavigationItem" customModule="fashionfrau" customModuleProvider="target"/>
                     <connections>
                         <outlet property="kolodaView" destination="DDu-al-Bi4" id="4QA-7d-NXA"/>
                         <outlet property="loadingView" destination="k8l-Ef-1nC" id="yBM-Di-NzF"/>
+                        <outlet property="topMenuCollectionView" destination="TXQ-kP-tVB" id="aI6-z2-Qtc"/>
                         <segue destination="oha-0F-GuP" kind="presentation" identifier="LookDetailViewController" id="QYY-0U-X8b"/>
                     </connections>
                 </viewController>
@@ -534,7 +589,6 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SdH-K0-YIn" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -552,6 +606,7 @@
                 <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="cfX-DZ-h4O" customClass="FFTabBarController" customModule="fashionfrau" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="lzm-ks-3W1" customClass="FFTabBar" customModule="fashionfrau" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -576,7 +631,6 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wYQ-X6-1CH" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -597,7 +651,6 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ehH-0h-bI9" customClass="FFNavigationBar" customModule="fashionfrau" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -625,6 +678,6 @@
         <image name="unlike" width="55" height="47"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dhc-ea-wn0"/>
+        <segue reference="QYY-0U-X8b"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,7 +12,7 @@ let LikedLookReuseIdentifier = "LikedLookReuseIdentifier"
 let LikedLookHeaderReuseIdentifier = "LikedLookHeaderReuseIdentifier"
 let nibForLikedLookHeader = "LikedLookHeaderView"
 
-
+let TopMenuCellReuseIdentifier = "TopMenuCellReuseIdentifier"
 let LookDetailSegue =  "LookDetailViewController"
 
 let FavoriteLookReuseIdentifier = "FavoriteLookReuseIdentifier"

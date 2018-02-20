@@ -15,6 +15,8 @@
 		0C10DF971EBA3E3900269E51 /* AlamofireExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */; };
 		0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */; };
 		0C3ABDB41F24CC060010C38F /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C3ABDB31F24CC060010C38F /* loading.gif */; };
+		0C3C3B99203B7D5C007D905C /* TopMenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C3B98203B7D5C007D905C /* TopMenuCollectionView.swift */; };
+		0C3C3B9D203CB95A007D905C /* TopMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C3B9C203CB95A007D905C /* TopMenuCollectionViewCell.swift */; };
 		0C6011561F1D436700D3410C /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6011551F1D436700D3410C /* Translations.swift */; };
 		0C6011581F1D503600D3410C /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6011571F1D503600D3410C /* Tutorial.storyboard */; };
 		0C71B2A41EC2C5F000AF31D0 /* loading-looks.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0C71B2A31EC2C5F000AF31D0 /* loading-looks.gif */; };
@@ -95,6 +97,8 @@
 		0C10DF961EBA3E3900269E51 /* AlamofireExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireExtension.swift; sourceTree = "<group>"; };
 		0C3ABDB11F24C30D0010C38F /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		0C3ABDB31F24CC060010C38F /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		0C3C3B98203B7D5C007D905C /* TopMenuCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuCollectionView.swift; sourceTree = "<group>"; };
+		0C3C3B9C203CB95A007D905C /* TopMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C6011551F1D436700D3410C /* Translations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		0C6011571F1D503600D3410C /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		0C71B2A31EC2C5F000AF31D0 /* loading-looks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-looks.gif"; sourceTree = "<group>"; };
@@ -346,9 +350,11 @@
 		0CA1AE6E1EA2658700591856 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */,
+				0C3C3B98203B7D5C007D905C /* TopMenuCollectionView.swift */,
+				0C3C3B9C203CB95A007D905C /* TopMenuCollectionViewCell.swift */,
 				0C8F57341E9C284E009B5BC8 /* CardView.xib */,
 				0C8F57361E9C308D009B5BC8 /* CardView.swift */,
+				0C8F57321E9C22CA009B5BC8 /* CustomOverlayView.xib */,
 				0CBC939B1EA0CF1200458169 /* CustomOverlayView.swift */,
 			);
 			name = Cards;
@@ -737,6 +743,7 @@
 				0CBC939E1EA0FDE200458169 /* LookDetailViewController.swift in Sources */,
 				0CD2E61B1EAA902500F93DAE /* FavoriteLookFooterView.swift in Sources */,
 				0CD2E6241EACD86800F93DAE /* LikedLookCollectionViewController.swift in Sources */,
+				0C3C3B9D203CB95A007D905C /* TopMenuCollectionViewCell.swift in Sources */,
 				0C8F573A1E9D55EF009B5BC8 /* Look.swift in Sources */,
 				0C9A16111EA02F2C0092B6F1 /* UIColorHelper.swift in Sources */,
 				0CBC939C1EA0CF1200458169 /* CustomOverlayView.swift in Sources */,
@@ -758,6 +765,7 @@
 				0C0712D01EA54247004B17C9 /* CornerView.swift in Sources */,
 				0CB282FB1EA261BD00EABBDF /* FFSliderView.swift in Sources */,
 				0CD435B31EB13CFC00B05EFF /* UserService.swift in Sources */,
+				0C3C3B99203B7D5C007D905C /* TopMenuCollectionView.swift in Sources */,
 				0C9A16151EA030E70092B6F1 /* FFTabBar.swift in Sources */,
 				0C3ABDB21F24C30D0010C38F /* UIViewControllerHelper.swift in Sources */,
 				0C8072531F214240003324BD /* CurrentUser.swift in Sources */,

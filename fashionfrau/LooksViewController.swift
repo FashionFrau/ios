@@ -13,6 +13,8 @@ import SwiftyGif
 
 class LooksViewController: UIViewController {
 
+    fileprivate let categories = ["All", "Bikini", "Vestido", "Saia", "Top", "Body"]
+
     private let kolodaCountOfVisibleCards = 2
 
     private let kolodaAlphaValueSemiTransparent: CGFloat = 0.0
@@ -20,6 +22,8 @@ class LooksViewController: UIViewController {
     fileprivate let looksViewControllerDomainError = "com.fashionfrau.looks-view-controller.error"
 
     let gifManager = SwiftyGifManager(memoryLimit:7)
+
+    @IBOutlet weak var topMenuCollectionView: TopMenuCollectionView!
 
     @IBOutlet weak var kolodaView: KolodaView!
 
@@ -38,6 +42,9 @@ class LooksViewController: UIViewController {
 
         kolodaView.dataSource = self
         kolodaView.delegate = self
+
+        topMenuCollectionView.delegate = self
+        topMenuCollectionView.dataSource = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -191,6 +198,29 @@ extension LooksViewController: LookDetailDelegate {
     func didSwipeCard(cardId: String, in direction: SwipeResultDirection) {
 
         self.kolodaView.swipe(direction)
+    }
+}
+
+extension LooksViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TopMenuCollectionViewCell
+
+        cell.didTouchIn()
+    }
+}
+
+extension LooksViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopMenuCellReuseIdentifier, for: indexPath) as! TopMenuCollectionViewCell
+
+        cell.category = categories[indexPath.row]
+
+        return cell
     }
 }
 
